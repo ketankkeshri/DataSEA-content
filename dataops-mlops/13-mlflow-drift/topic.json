@@ -1,0 +1,38 @@
+{
+  "id": "13-mlflow-drift",
+  "section": "dataops-mlops",
+  "tier": "advanced",
+  "moduleOrder": 13,
+  "version": 1,
+  "title": "MLflow + Drift Tracking",
+  "shortDescription": "MLflow + Drift Tracking \u2014 beginner to advanced concepts and code.",
+  "icon": "13-mlflow-drift",
+  "estimatedMinutes": 32,
+  "isPro": true,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-data-drift-vs-concept",
+      "title": "Data Drift Vs Concept",
+      "minutes": 8
+    },
+    {
+      "id": "03-evidently-integration",
+      "title": "Evidently Integration",
+      "minutes": 8
+    },
+    {
+      "id": "04-alerting",
+      "title": "Alerting",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

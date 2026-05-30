@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "05-pre-commit-hooks",
+  "type": "module",
+  "questions": [
+    {
+      "id": "05-pre-commit-hooks-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is a pre-commit hook?",
+      "options": [
+        { "id": "a", "text": "A tool to manage database migrations." },
+        { "id": "b", "text": "A script that runs before a commit is made." },
+        { "id": "c", "text": "An API for querying data." },
+        { "id": "d", "text": "A method for sending alerts." }
+      ],
+      "answer": "b",
+      "explanation": "Pre-commit hooks are scripts that run automatically before changes are committed to a version control system, ensuring code quality."
+    },
+    {
+      "id": "05-pre-commit-hooks-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which tool checks SQL code formatting?",
+      "options": [
+        { "id": "a", "text": "Prettier" },
+        { "id": "b", "text": "SQLFluff" },
+        { "id": "c", "text": "Black" },
+        { "id": "d", "text": "Flake8" }
+      ],
+      "answer": "b",
+      "explanation": "SQLFluff is specifically designed to lint SQL code, ensuring correct formatting and style."
+    },
+    {
+      "id": "05-pre-commit-hooks-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to run SQLFluff:",
+      "language": "bash",
+      "code_template": "sqlfluff lint ____",
+      "blanks": [
+        { "id": "b1", "options": ["myfile.sql", "myfile.py", "myfile.txt", "myfile.csv"], "answer": "myfile.sql" }
+      ],
+      "explanation": "SQLFluff is a linter for SQL files, so you should provide a SQL file name to lint."
+    },
+    {
+      "id": "05-pre-commit-hooks-q4",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Black is a code formatter for Python only.",
+      "answer": true,
+      "explanation": "Black is specifically designed to format Python code, ensuring consistent style across Python projects."
+    },
+    {
+      "id": "05-pre-commit-hooks-q5",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the primary purpose of dbt checks?",
+      "options": [
+        { "id": "a", "text": "To format SQL code." },
+        { "id": "b", "text": "To enforce data quality in transformations." },
+        { "id": "c", "text": "To manage version control." },
+        { "id": "d", "text": "To generate documentation." }
+      ],
+      "answer": "b",
+      "explanation": "dbt checks are used to enforce data quality checks during transformations, ensuring data integrity."
+    },
+    {
+      "id": "05-pre-commit-hooks-q6",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(['a' * i for i in range(3)])",
+      "options": [
+        { "id": "a", "text": "['', 'a', 'aa']" },
+        { "id": "b", "text": "['a', 'aa', 'aaa']" },
+        { "id": "c", "text": "['a', 'aa', 'aaa', 'aaaa']" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The list comprehension generates an empty string for i=0, 'a' for i=1, and 'aa' for i=2."
+    },
+    {
+      "id": "05-pre-commit-hooks-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to set up a pre-commit hook:",
+      "steps": [
+        { "id": "s1", "text": "Install pre-commit package." },
+        { "id": "s2", "text": "Create .pre-commit-config.yaml file." },
+        { "id": "s3", "text": "Add hooks to the configuration file." },
+        { "id": "s4", "text": "Run pre-commit install." }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "You need to install the package first, then create and configure the hooks before running the install command."
+    },
+    {
+      "id": "05-pre-commit-hooks-q8",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which command is used to format Python code with Black?",
+      "options": [
+        { "id": "a", "text": "black myscript.py" },
+        { "id": "b", "text": "python -m black myscript.py" },
+        { "id": "c", "text": "format myscript.py" },
+        { "id": "d", "text": "black-format myscript.py" }
+      ],
+      "answer": "a",
+      "explanation": "The command 'black myscript.py' formats the specified Python script using Black."
+    },
+    {
+      "id": "05-pre-commit-hooks-q9",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "SQLFluff can only check syntax errors in SQL files.",
+      "answer": false,
+      "explanation": "SQLFluff checks both formatting and syntax errors, ensuring SQL code adheres to best practices."
+    },
+    {
+      "id": "05-pre-commit-hooks-q10",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What happens if you skip running pre-commit hooks?",
+      "options": [
+        { "id": "a", "text": "Your code will always pass tests." },
+        { "id": "b", "text": "You might commit unformatted or erroneous code." },
+        { "id": "c", "text": "Nothing happens." },
+        { "id": "d", "text": "The commit will be automatically rejected." }
+      ],
+      "answer": "b",
+      "explanation": "Skipping pre-commit hooks can result in committing code that is unformatted or contains errors, leading to potential issues later."
+    },
+    {
+      "id": "05-pre-commit-hooks-q11",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Fill in the blank to run dbt checks:",
+      "language": "bash",
+      "code_template": "dbt ____",
+      "blanks": [
+        { "id": "b1", "options": ["run", "test", "check", "execute"], "answer": "test" }
+      ],
+      "explanation": "The 'dbt test' command runs the defined tests to ensure data quality in your dbt project."
+    },
+    {
+      "id": "05-pre-commit-hooks-q12",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the benefit of using pre-commit hooks?",
+      "options": [
+        { "id": "a", "text": "They speed up the commit process." },
+        { "id": "b", "text": "They ensure code quality before commits." },
+        { "id": "c", "text": "They simplify the version control." },
+        { "id": "d", "text": "They provide a backup of code." }
+      ],
+      "answer": "b",
+      "explanation": "Pre-commit hooks enforce coding standards and checks, ensuring that only high-quality code is committed."
+    },
+    {
+      "id": "05-pre-commit-hooks-q13",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Pre-commit hooks can only be used with Git.",
+      "answer": false,
+      "explanation": "While pre-commit hooks are commonly associated with Git, they can also be configured for other version control systems."
+    },
+    {
+      "id": "05-pre-commit-hooks-q14",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print({x: x**2 for x in [1, 2, 3]})",
+      "options": [
+        { "id": "a", "text": "{1: 1, 2: 4, 3: 9}" },
+        { "id": "b", "text": "[1, 4, 9]" },
+        { "id": "c", "text": "{1, 2, 3}" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The dictionary comprehension creates a mapping of numbers to their squares."
+    },
+    {
+      "id": "05-pre-commit-hooks-q15",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to configure SQLFluff in a pre-commit hook:",
+      "steps": [
+        { "id": "s1", "text": "Add SQLFluff to the .pre-commit-config.yaml file." },
+        { "id": "s2", "text": "Install pre-commit." },
+        { "id": "s3", "text": "Run pre-commit install." },
+        { "id": "s4", "text": "Create a SQLFluff configuration file." }
+      ],
+      "correctOrder": ["s2", "s1", "s4", "s3"],
+      "explanation": "You install pre-commit first, then configure SQLFluff, and finally install the hooks."
+    }
+  ]
+}

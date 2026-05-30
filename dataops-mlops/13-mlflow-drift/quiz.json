@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "13-mlflow-drift",
+  "type": "module",
+  "questions": [
+    {
+      "id": "13-mlflow-drift-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is MLflow primarily used for?",
+      "options": [
+        { "id": "a", "text": "Data storage" },
+        { "id": "b", "text": "Model management" },
+        { "id": "c", "text": "Data visualization" },
+        { "id": "d", "text": "Database querying" }
+      ],
+      "answer": "b",
+      "explanation": "MLflow is a platform for managing the machine learning lifecycle, including experimentation, reproducibility, and deployment.",
+      "tags": ["mlflow"]
+    },
+    {
+      "id": "13-mlflow-drift-q2",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to log a model with MLflow:",
+      "language": "python",
+      "code_template": "mlflow.log_model(model, ____) ",
+      "blanks": [
+        { "id": "b1", "options": ["model_name", "artifact_path", "model_uri", "run_id"], "answer": "artifact_path" }
+      ],
+      "explanation": "The 'artifact_path' parameter specifies the location where the model will be stored in MLflow's tracking server."
+    },
+    {
+      "id": "13-mlflow-drift-q3",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print({x: x**2 for x in range(3)})",
+      "options": [
+        { "id": "a", "text": "{0: 0, 1: 1, 2: 4}" },
+        { "id": "b", "text": "{0, 1, 2}" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "{0: 0, 1: 1, 2: 2}" }
+      ],
+      "answer": "a",
+      "explanation": "The dictionary comprehension creates a mapping of each number to its square, resulting in {0: 0, 1: 1, 2: 4}.",
+      "tags": ["python", "mlflow"]
+    },
+    {
+      "id": "13-mlflow-drift-q4",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "MLflow supports tracking experiments in a collaborative way.",
+      "answer": true,
+      "explanation": "True. MLflow allows multiple users to log and compare their experiments, facilitating collaboration within teams.",
+      "tags": ["mlflow"]
+    },
+    {
+      "id": "13-mlflow-drift-q5",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps for setting up drift tracking:",
+      "steps": [
+        { "id": "s1", "text": "Analyze model performance against baseline." },
+        { "id": "s2", "text": "Define thresholds for acceptable drift." },
+        { "id": "s3", "text": "Collect ongoing data." },
+        { "id": "s4", "text": "Integrate drift detection into MLflow." }
+      ],
+      "correctOrder": ["s3", "s4", "s2", "s1"],
+      "explanation": "First, you need to collect ongoing data, then integrate drift detection into MLflow, define thresholds, and finally analyze performance.",
+      "tags": ["drift tracking", "mlflow"]
+    },
+    {
+      "id": "13-mlflow-drift-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is data drift?",
+      "options": [
+        { "id": "a", "text": "Change in the model's performance over time" },
+        { "id": "b", "text": "Change in the data distribution" },
+        { "id": "c", "text": "Change in the model architecture" },
+        { "id": "d", "text": "Change in the training algorithm" }
+      ],
+      "answer": "b",
+      "explanation": "Data drift refers to changes in the data distribution that can affect model performance.",
+      "tags": ["data drift"]
+    },
+    {
+      "id": "13-mlflow-drift-q7",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the code to set up an alert in MLflow:",
+      "language": "python",
+      "code_template": "mlflow.tracking.___('alert_name', ...) ",
+      "blanks": [
+        { "id": "b1", "options": ["set_alert", "create_alert", "log_alert", "send_alert"], "answer": "set_alert" }
+      ],
+      "explanation": "The 'set_alert' function is used to define an alert configuration in MLflow."
+    },
+    {
+      "id": "13-mlflow-drift-q8",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Concept drift refers to changes in the underlying relationships in data.",
+      "answer": true,
+      "explanation": "True. Concept drift occurs when the statistical properties of the target variable change, affecting model predictions.",
+      "tags": ["concept drift"]
+    },
+    {
+      "id": "13-mlflow-drift-q9",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following is NOT a method for detecting data drift?",
+      "options": [
+        { "id": "a", "text": "Statistical tests" },
+        { "id": "b", "text": "Visual inspection" },
+        { "id": "c", "text": "Re-training the model" },
+        { "id": "d", "text": "Monitoring performance metrics" }
+      ],
+      "answer": "c",
+      "explanation": "Re-training the model is an action taken after drift is detected, rather than a method for detection.",
+      "tags": ["data drift", "detection"]
+    },
+    {
+      "id": "13-mlflow-drift-q10",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the code for logging a model's performance metrics:",
+      "language": "python",
+      "code_template": "mlflow.log_metric('____', value) ",
+      "blanks": [
+        { "id": "b1", "options": ["accuracy", "loss", "precision", "recall"], "answer": "accuracy" }
+      ],
+      "explanation": "Logging accuracy is essential for monitoring model performance over time."
+    },
+    {
+      "id": "13-mlflow-drift-q11",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this code print?",
+      "language": "python",
+      "code": "print(mlflow.active_run().info.run_id)",
+      "options": [
+        { "id": "a", "text": "Current run ID" },
+        { "id": "b", "text": "None" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "Last run ID" }
+      ],
+      "answer": "a",
+      "explanation": "This code prints the run ID of the currently active MLflow run.",
+      "tags": ["mlflow"]
+    },
+    {
+      "id": "13-mlflow-drift-q12",
+      "type": "order_the_steps",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Order the steps to integrate MLflow with a data pipeline:",
+      "steps": [
+        { "id": "s1", "text": "Install MLflow package." },
+        { "id": "s2", "text": "Initialize tracking URI." },
+        { "id": "s3", "text": "Log parameters and metrics." },
+        { "id": "s4", "text": "Start a run." }
+      ],
+      "correctOrder": ["s1", "s2", "s4", "s3"],
+      "explanation": "First, install the package, initialize the tracking URI, start a run, and then log parameters and metrics.",
+      "tags": ["mlflow"]
+    },
+    {
+      "id": "13-mlflow-drift-q13",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which feature allows you to visualize model performance over time in MLflow?",
+      "options": [
+        { "id": "a", "text": "Model registry" },
+        { "id": "b", "text": "Experiment tracking" },
+        { "id": "c", "text": "Data versioning" },
+        { "id": "d", "text": "Artifact storage" }
+      ],
+      "answer": "b",
+      "explanation": "Experiment tracking in MLflow allows you to visualize and compare metrics across different runs.",
+      "tags": ["mlflow", "visualization"]
+    },
+    {
+      "id": "13-mlflow-drift-q14",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "MLflow only supports Python-based models.",
+      "answer": false,
+      "explanation": "False. MLflow supports models from various frameworks, including R, Java, and others.",
+      "tags": ["mlflow"]
+    },
+    {
+      "id": "13-mlflow-drift-q15",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What is a primary benefit of using drift tracking in MLflow?",
+      "options": [
+        { "id": "a", "text": "It eliminates the need for hyperparameter tuning." },
+        { "id": "b", "text": "It automates model deployment." },
+        { "id": "c", "text": "It helps maintain model reliability." },
+        { "id": "d", "text": "It simplifies data preprocessing." }
+      ],
+      "answer": "c",
+      "explanation": "Drift tracking helps identify when a model's performance may degrade, ensuring it remains reliable over time.",
+      "tags": ["drift tracking", "mlflow"]
+    }
+  ]
+}

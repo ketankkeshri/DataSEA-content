@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "09-terraform-basics",
+  "type": "module",
+  "questions": [
+    {
+      "id": "09-terraform-basics-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the primary purpose of Terraform?",
+      "options": [
+        { "id": "a", "text": "To create cloud-based applications" },
+        { "id": "b", "text": "To manage infrastructure as code" },
+        { "id": "c", "text": "To deploy machine learning models" },
+        { "id": "d", "text": "To monitor application performance" }
+      ],
+      "answer": "b",
+      "explanation": "Terraform allows you to manage your infrastructure through code, enabling automation and consistency.",
+      "tags": ["intro"]
+    },
+    {
+      "id": "09-terraform-basics-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is a provider in Terraform?",
+      "options": [
+        { "id": "a", "text": "A tool for monitoring resources" },
+        { "id": "b", "text": "A plugin that allows interaction with APIs" },
+        { "id": "c", "text": "A repository for Terraform configurations" },
+        { "id": "d", "text": "A component that stores state files" }
+      ],
+      "answer": "b",
+      "explanation": "Providers are plugins that allow Terraform to interact with various APIs to manage resources.",
+      "tags": ["providers"]
+    },
+    {
+      "id": "09-terraform-basics-q3",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Terraform uses YAML for configuration files.",
+      "answer": false,
+      "explanation": "Terraform uses HashiCorp Configuration Language (HCL) for its configuration files, not YAML.",
+      "tags": ["intro"]
+    },
+    {
+      "id": "09-terraform-basics-q4",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the Terraform resource block:",
+      "language": "hcl",
+      "code_template": "resource \"aws_instance\" \"example\" {  ____ \"t2.micro\"  ____ = \"ami-12345678\" }",
+      "blanks": [
+        { "id": "b1", "options": ["type", "instance_type", "resource_type", "size"], "answer": "instance_type" },
+        { "id": "b2", "options": ["ami", "image_id", "image", "instance_id"], "answer": "ami" }
+      ],
+      "explanation": "The 'instance_type' specifies the type of instance, and 'ami' is used to define the Amazon Machine Image ID.",
+      "tags": ["providers"]
+    },
+    {
+      "id": "09-terraform-basics-q5",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this Terraform command output?",
+      "language": "shell",
+      "code": "terraform apply -auto-approve",
+      "options": [
+        { "id": "a", "text": "Applies changes without confirmation" },
+        { "id": "b", "text": "Shows a plan without applying" },
+        { "id": "c", "text": "Destroys all resources" },
+        { "id": "d", "text": "Initializes the working directory" }
+      ],
+      "answer": "a",
+      "explanation": "The '-auto-approve' flag allows Terraform to apply changes without prompting for confirmation.",
+      "tags": ["state"]
+    },
+    {
+      "id": "09-terraform-basics-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What command do you use to check the current state of your Terraform-managed infrastructure?",
+      "options": [
+        { "id": "a", "text": "terraform plan" },
+        { "id": "b", "text": "terraform status" },
+        { "id": "c", "text": "terraform show" },
+        { "id": "d", "text": "terraform inspect" }
+      ],
+      "answer": "c",
+      "explanation": "The 'terraform show' command displays the current state of your infrastructure managed by Terraform.",
+      "tags": ["state"]
+    },
+    {
+      "id": "09-terraform-basics-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to create a new Terraform module:",
+      "steps": [
+        { "id": "s1", "text": "Define input variables" },
+        { "id": "s2", "text": "Create a directory for the module" },
+        { "id": "s3", "text": "Write the necessary resource definitions" },
+        { "id": "s4", "text": "Call the module in your main configuration" }
+      ],
+      "correctOrder": ["s2", "s3", "s1", "s4"],
+      "explanation": "First, create the module directory, then define resources, specify input variables, and finally call the module.",
+      "tags": ["modules"]
+    },
+    {
+      "id": "09-terraform-basics-q8",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What happens if you manually change a resource created by Terraform?",
+      "options": [
+        { "id": "a", "text": "Terraform will automatically correct it" },
+        { "id": "b", "text": "Terraform will detect drift" },
+        { "id": "c", "text": "Terraform will ignore the changes" },
+        { "id": "d", "text": "Terraform will destroy the resource" }
+      ],
+      "answer": "b",
+      "explanation": "Terraform detects drift in the infrastructure state during the plan phase, indicating discrepancies between the actual state and the expected state.",
+      "tags": ["drift-detection"]
+    },
+    {
+      "id": "09-terraform-basics-q9",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Terraform state files can be stored in Git repositories.",
+      "answer": true,
+      "explanation": "It is possible to store Terraform state files in Git repositories, but it is not recommended due to security concerns.",
+      "tags": ["state"]
+    },
+    {
+      "id": "09-terraform-basics-q10",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the following Terraform command to initialize a backend:",
+      "language": "hcl",
+      "code_template": "terraform ____ -backend-config='key=terraform.tfstate'",
+      "blanks": [
+        { "id": "b1", "options": ["init", "apply", "plan", "refresh"], "answer": "init" }
+      ],
+      "explanation": "The 'init' command initializes the backend configuration and prepares the working directory for other commands.",
+      "tags": ["state"]
+    },
+    {
+      "id": "09-terraform-basics-q11",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does the 'terraform fmt' command do?",
+      "options": [
+        { "id": "a", "text": "Formats configuration files" },
+        { "id": "b", "text": "Creates a new Terraform module" },
+        { "id": "c", "text": "Displays the current state" },
+        { "id": "d", "text": "Applies changes to the infrastructure" }
+      ],
+      "answer": "a",
+      "explanation": "'terraform fmt' formats the Terraform configuration files to a canonical format and style.",
+      "tags": ["intro"]
+    },
+    {
+      "id": "09-terraform-basics-q12",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this command output?",
+      "language": "shell",
+      "code": "terraform plan -out=plan.out",
+      "options": [
+        { "id": "a", "text": "Outputs the execution plan to the console" },
+        { "id": "b", "text": "Creates a plan file called 'plan.out'" },
+        { "id": "c", "text": "Applies the changes to the infrastructure" },
+        { "id": "d", "text": "Initializes the Terraform environment" }
+      ],
+      "answer": "b",
+      "explanation": "The command generates and saves the execution plan to a file named 'plan.out'.",
+      "tags": ["state"]
+    },
+    {
+      "id": "09-terraform-basics-q13",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to fix drift in Terraform:",
+      "steps": [
+        { "id": "s1", "text": "Run 'terraform apply' to reconcile the state" },
+        { "id": "s2", "text": "Run 'terraform plan' to detect drift" },
+        { "id": "s3", "text": "Review the changes Terraform will make" },
+        { "id": "s4", "text": "Adjust the configuration files if necessary" }
+      ],
+      "correctOrder": ["s2", "s3", "s4", "s1"],
+      "explanation": "To fix drift, first detect it, review the changes, adjust configurations if needed, and then apply the changes.",
+      "tags": ["drift-detection"]
+    },
+    {
+      "id": "09-terraform-basics-q14",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which command is used to destroy all resources created by Terraform?",
+      "options": [
+        { "id": "a", "text": "terraform delete" },
+        { "id": "b", "text": "terraform remove" },
+        { "id": "c", "text": "terraform destroy" },
+        { "id": "d", "text": "terraform drop" }
+      ],
+      "answer": "c",
+      "explanation": "'terraform destroy' is the command used to remove all resources managed by Terraform.",
+      "tags": ["state"]
+    },
+    {
+      "id": "09-terraform-basics-q15",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Terraform automatically reconciles the state upon resource modification.",
+      "answer": false,
+      "explanation": "Terraform does not automatically reconcile the state; you must run 'terraform apply' to apply the changes.",
+      "tags": ["drift-detection"]
+    }
+  ]
+}

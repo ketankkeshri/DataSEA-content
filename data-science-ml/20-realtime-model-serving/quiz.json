@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "20-realtime-model-serving",
+  "type": "module",
+  "questions": [
+    {
+      "id": "20-realtime-model-serving-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the primary purpose of real-time model serving?",
+      "options": [
+        { "id": "a", "text": "Batch processing of data" },
+        { "id": "b", "text": "Serving predictions instantly" },
+        { "id": "c", "text": "Storing large datasets" },
+        { "id": "d", "text": "Model training" }
+      ],
+      "answer": "b",
+      "explanation": "Real-time model serving focuses on providing immediate predictions from trained models."
+    },
+    {
+      "id": "20-realtime-model-serving-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which of the following is a common tool for real-time model serving?",
+      "options": [
+        { "id": "a", "text": "TensorFlow Serving" },
+        { "id": "b", "text": "Pandas" },
+        { "id": "c", "text": "Scikit-learn" },
+        { "id": "d", "text": "Matplotlib" }
+      ],
+      "answer": "a",
+      "explanation": "TensorFlow Serving is specifically designed for serving machine learning models in production."
+    },
+    {
+      "id": "20-realtime-model-serving-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to serve a model:",
+      "language": "python",
+      "code_template": "model = ____('model_path')\nmodel.____(input_data)",
+      "blanks": [
+        { "id": "b1", "options": ["load_model", "load", "import_model", "get_model"], "answer": "load_model" },
+        { "id": "b2", "options": ["predict", "serve", "execute", "run"], "answer": "predict" }
+      ],
+      "explanation": "The 'load_model' function loads the model, and 'predict' is used to get predictions."
+    },
+    {
+      "id": "20-realtime-model-serving-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print({x: x**2 for x in range(3)})",
+      "options": [
+        { "id": "a", "text": "{0: 0, 1: 1, 2: 4}" },
+        { "id": "b", "text": "{0: 0, 1: 2, 2: 4}" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "[0, 1, 4]" }
+      ],
+      "answer": "a",
+      "explanation": "The code creates a dictionary mapping each number to its square."
+    },
+    {
+      "id": "20-realtime-model-serving-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Batching can improve the performance of real-time model serving.",
+      "answer": true,
+      "explanation": "Batching allows multiple requests to be processed together, reducing overhead and improving throughput."
+    },
+    {
+      "id": "20-realtime-model-serving-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which framework is best suited for GPU optimization in model serving?",
+      "options": [
+        { "id": "a", "text": "TensorFlow" },
+        { "id": "b", "text": "Flask" },
+        { "id": "c", "text": "FastAPI" },
+        { "id": "d", "text": "PyTorch" }
+      ],
+      "answer": "d",
+      "explanation": "PyTorch is optimized for GPU usage and is commonly used for deep learning model serving."
+    },
+    {
+      "id": "20-realtime-model-serving-q7",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Fill in the missing method to optimize GPU usage:",
+      "language": "python",
+      "code_template": "device = ____\nmodel.to(device)",
+      "blanks": [
+        { "id": "b1", "options": ["'cpu'", "'cuda'", "'gpu'", "'tensorflow'"], "answer": "'cuda'" }
+      ],
+      "explanation": "Using 'cuda' moves the model to the GPU for faster computations."
+    },
+    {
+      "id": "20-realtime-model-serving-q8",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print([x for x in range(5) if x % 2 == 0])",
+      "options": [
+        { "id": "a", "text": "[0, 1, 2, 3, 4]" },
+        { "id": "b", "text": "[0, 2, 4]" },
+        { "id": "c", "text": "[1, 3]" },
+        { "id": "d", "text": "[2, 4]" }
+      ],
+      "answer": "b",
+      "explanation": "The list comprehension filters even numbers from the range."
+    },
+    {
+      "id": "20-realtime-model-serving-q9",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps for optimizing a real-time model serving pipeline:",
+      "steps": [
+        { "id": "s1", "text": "Deploy the model to a serving framework." },
+        { "id": "s2", "text": "Profile the model's performance." },
+        { "id": "s3", "text": "Identify bottlenecks in the pipeline." },
+        { "id": "s4", "text": "Implement optimizations based on profiling." }
+      ],
+      "correctOrder": ["s2", "s3", "s4", "s1"],
+      "explanation": "Profiling helps identify issues before deployment to improve performance."
+    },
+    {
+      "id": "20-realtime-model-serving-q10",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Real-time model serving must always use cloud infrastructure.",
+      "answer": false,
+      "explanation": "Real-time model serving can be done on-premise or via edge devices as well."
+    },
+    {
+      "id": "20-realtime-model-serving-q11",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following is NOT a benefit of GPU optimization?",
+      "options": [
+        { "id": "a", "text": "Faster training times" },
+        { "id": "b", "text": "Lower latency in predictions" },
+        { "id": "c", "text": "Ability to handle larger models" },
+        { "id": "d", "text": "Increased memory consumption" }
+      ],
+      "answer": "d",
+      "explanation": "GPU optimization aims to improve performance, typically not increasing memory consumption."
+    },
+    {
+      "id": "20-realtime-model-serving-q12",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the snippet for batching predictions:",
+      "language": "python",
+      "code_template": "predictions = model.____(batch_data)\nreturn predictions",
+      "blanks": [
+        { "id": "b1", "options": ["predict", "batch_predict", "serve", "forward"], "answer": "predict" }
+      ],
+      "explanation": "The 'predict' method is used for obtaining predictions on batched data."
+    },
+    {
+      "id": "20-realtime-model-serving-q13",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What will this code output?",
+      "language": "python",
+      "code": "print(sum([1 for x in range(5) if x % 2 == 1]))",
+      "options": [
+        { "id": "a", "text": "0" },
+        { "id": "b", "text": "2" },
+        { "id": "c", "text": "3" },
+        { "id": "d", "text": "5" }
+      ],
+      "answer": "b",
+      "explanation": "The code counts the number of odd numbers in the range, which are 1, 3."
+    },
+    {
+      "id": "20-realtime-model-serving-q14",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps for deploying a real-time model serving solution:",
+      "steps": [
+        { "id": "s1", "text": "Train and validate the model." },
+        { "id": "s2", "text": "Set up the serving infrastructure." },
+        { "id": "s3", "text": "Monitor the performance post-deployment." },
+        { "id": "s4", "text": "Deploy the model in the serving framework." }
+      ],
+      "correctOrder": ["s1", "s2", "s4", "s3"],
+      "explanation": "The model must be trained and the infrastructure set up before deployment and monitoring."
+    },
+    {
+      "id": "20-realtime-model-serving-q15",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Model serving frameworks always provide built-in support for A/B testing.",
+      "answer": false,
+      "explanation": "Not all model serving frameworks include native A/B testing capabilities; additional tools may be needed."
+    }
+  ]
+}

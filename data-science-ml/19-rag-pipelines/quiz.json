@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "19-rag-pipelines",
+  "type": "module",
+  "questions": [
+    {
+      "id": "19-rag-pipelines-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the purpose of chunking in RAG pipelines?",
+      "options": [
+        { "id": "a", "text": "To aggregate data into a single point" },
+        { "id": "b", "text": "To split data into smaller segments for processing" },
+        { "id": "c", "text": "To enhance data privacy" },
+        { "id": "d", "text": "To visualize data trends" }
+      ],
+      "answer": "b",
+      "explanation": "Chunking helps manage large datasets by breaking them down into smaller, manageable pieces for processing."
+    },
+    {
+      "id": "19-rag-pipelines-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which of the following is a choice for embedding methods?",
+      "options": [
+        { "id": "a", "text": "TF-IDF" },
+        { "id": "b", "text": "Data Cleansing" },
+        { "id": "c", "text": "Data Normalization" },
+        { "id": "d", "text": "Data Visualization" }
+      ],
+      "answer": "a",
+      "explanation": "TF-IDF (Term Frequency-Inverse Document Frequency) is a common method for creating embeddings from text data."
+    },
+    {
+      "id": "19-rag-pipelines-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to create an embedding:",
+      "language": "python",
+      "code_template": "embedding = model.____('text_data')",
+      "blanks": [
+        { "id": "b1", "options": ["embed", "transform", "fit", "predict"], "answer": "embed" }
+      ],
+      "explanation": "The 'embed' function in models is used to convert text data into embeddings."
+    },
+    {
+      "id": "19-rag-pipelines-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print([x**2 for x in range(4)])",
+      "options": [
+        { "id": "a", "text": "[0, 1, 4, 9]" },
+        { "id": "b", "text": "[0, 1, 4, 16]" },
+        { "id": "c", "text": "[1, 4, 9, 16]" },
+        { "id": "d", "text": "[0, 1, 2, 3]" }
+      ],
+      "answer": "b",
+      "explanation": "The list comprehension computes the square of each number in the range, resulting in [0, 1, 4, 9]."
+    },
+    {
+      "id": "19-rag-pipelines-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Hybrid search combines traditional search with machine learning techniques.",
+      "answer": true,
+      "explanation": "Hybrid search integrates both keyword-based and ML-based approaches to enhance search results."
+    },
+    {
+      "id": "19-rag-pipelines-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the main goal of reranking in RAG pipelines?",
+      "options": [
+        { "id": "a", "text": "To eliminate duplicates in results" },
+        { "id": "b", "text": "To optimize the order of results based on relevance" },
+        { "id": "c", "text": "To validate input data" },
+        { "id": "d", "text": "To generate new embeddings" }
+      ],
+      "answer": "b",
+      "explanation": "Reranking aims to improve the relevance of search results by adjusting their order based on various metrics."
+    },
+    {
+      "id": "19-rag-pipelines-q7",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the following code for reranking:",
+      "language": "python",
+      "code_template": "results = rerank(____, metric='relevance')",
+      "blanks": [
+        { "id": "b1", "options": ["embeddings", "candidates", "queries", "data"], "answer": "candidates" }
+      ],
+      "explanation": "In reranking, the 'candidates' are the results that need to be optimized for relevance."
+    },
+    {
+      "id": "19-rag-pipelines-q8",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps for a typical RAG pipeline:",
+      "steps": [
+        { "id": "s1", "text": "Chunk the data" },
+        { "id": "s2", "text": "Generate embeddings" },
+        { "id": "s3", "text": "Perform hybrid search" },
+        { "id": "s4", "text": "Rerank the results" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "The correct order ensures that data is first processed, embeddings generated, searched, and finally reranked."
+    },
+    {
+      "id": "19-rag-pipelines-q9",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Embedding choices do not affect the performance of a machine learning model.",
+      "answer": false,
+      "explanation": "The choice of embeddings significantly impacts the model's performance and its ability to capture semantic meaning."
+    },
+    {
+      "id": "19-rag-pipelines-q10",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following is the best method for evaluating a RAG pipeline's performance?",
+      "options": [
+        { "id": "a", "text": "Count the number of results" },
+        { "id": "b", "text": "Use F1 score for relevance" },
+        { "id": "c", "text": "Check for data accuracy" },
+        { "id": "d", "text": "Measure execution time" }
+      ],
+      "answer": "b",
+      "explanation": "The F1 score is a standard metric for evaluating the balance between precision and recall in relevance tasks."
+    },
+    {
+      "id": "19-rag-pipelines-q11",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Fill in the blanks to evaluate a model's performance:",
+      "language": "python",
+      "code_template": "accuracy = calculate_____(predictions, ground_truth)",
+      "blanks": [
+        { "id": "b1", "options": ["score", "accuracy", "precision", "recall"], "answer": "accuracy" }
+      ],
+      "explanation": "The 'calculate_accuracy' function is commonly used to assess how well the predictions align with the ground truth."
+    },
+    {
+      "id": "19-rag-pipelines-q12",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which embedding choice is most suitable for text classification tasks?",
+      "options": [
+        { "id": "a", "text": "Count Vectorizer" },
+        { "id": "b", "text": "Word2Vec" },
+        { "id": "c", "text": "One-Hot Encoding" },
+        { "id": "d", "text": "Bag of Words" }
+      ],
+      "answer": "b",
+      "explanation": "Word2Vec captures contextual relationships between words, making it ideal for text classification."
+    },
+    {
+      "id": "19-rag-pipelines-q13",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "results = sorted([3, 1, 2], reverse=True); print(results)",
+      "options": [
+        { "id": "a", "text": "[3, 2, 1]" },
+        { "id": "b", "text": "[1, 2, 3]" },
+        { "id": "c", "text": "[2, 1, 3]" },
+        { "id": "d", "text": "[3, 1, 2]" }
+      ],
+      "answer": "a",
+      "explanation": "The sorted function arranges the list in descending order, resulting in [3, 2, 1]."
+    },
+    {
+      "id": "19-rag-pipelines-q14",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these evaluation steps correctly:",
+      "steps": [
+        { "id": "s1", "text": "Collect predictions" },
+        { "id": "s2", "text": "Compare with ground truth" },
+        { "id": "s3", "text": "Calculate evaluation metrics" },
+        { "id": "s4", "text": "Report results" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "The evaluation process begins with collecting predictions, followed by comparison and metric calculation, and ends with reporting."
+    },
+    {
+      "id": "19-rag-pipelines-q15",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which metric is commonly used to evaluate the performance of a search algorithm?",
+      "options": [
+        { "id": "a", "text": "Precision" },
+        { "id": "b", "text": "Recall" },
+        { "id": "c", "text": "Both Precision and Recall" },
+        { "id": "d", "text": "Execution Time" }
+      ],
+      "answer": "c",
+      "explanation": "Both precision and recall are crucial for assessing the effectiveness of search algorithms in retrieving relevant results."
+    }
+  ]
+}

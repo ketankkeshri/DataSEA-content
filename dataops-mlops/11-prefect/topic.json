@@ -1,0 +1,38 @@
+{
+  "id": "11-prefect",
+  "section": "dataops-mlops",
+  "tier": "intermediate",
+  "moduleOrder": 11,
+  "version": 1,
+  "title": "Prefect Cloud",
+  "shortDescription": "Prefect Cloud \u2014 beginner to advanced concepts and code.",
+  "icon": "11-prefect",
+  "estimatedMinutes": 32,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-flows-tasks",
+      "title": "Flows Tasks",
+      "minutes": 8
+    },
+    {
+      "id": "03-deployments",
+      "title": "Deployments",
+      "minutes": 8
+    },
+    {
+      "id": "04-work-pools",
+      "title": "Work Pools",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "10-argo-workflows",
+  "type": "module",
+  "questions": [
+    {
+      "id": "10-argo-workflows-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the purpose of Argo Workflows?",
+      "options": [
+        { "id": "a", "text": "Data visualization" },
+        { "id": "b", "text": "Running data pipelines on Kubernetes" },
+        { "id": "c", "text": "Database management" },
+        { "id": "d", "text": "Machine learning model training" }
+      ],
+      "answer": "b",
+      "explanation": "Argo Workflows is designed to run complex data pipelines on Kubernetes efficiently.",
+      "tags": ["argo", "workflows"]
+    },
+    {
+      "id": "10-argo-workflows-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which component allows for defining a workflow template in Argo?",
+      "options": [
+        { "id": "a", "text": "DAG" },
+        { "id": "b", "text": "Task" },
+        { "id": "c", "text": "Template" },
+        { "id": "d", "text": "Job" }
+      ],
+      "answer": "c",
+      "explanation": "Templates are used in Argo Workflows to define reusable workflow components.",
+      "tags": ["argo", "templates"]
+    },
+    {
+      "id": "10-argo-workflows-q3",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Argo Workflows can only be used with Kubernetes.",
+      "answer": true,
+      "explanation": "Argo Workflows is specifically built to run on Kubernetes, leveraging its orchestration capabilities.",
+      "tags": ["argo", "kubernetes"]
+    },
+    {
+      "id": "10-argo-workflows-q4",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to define an Argo template:",
+      "language": "yaml",
+      "code_template": "templates:\n  - name: my-template\n    container:\n      image: my-image:latest\n      command: [\"____\"]",
+      "blanks": [
+        { "id": "b1", "options": ["echo", "run", "execute", "start"], "answer": "echo" }
+      ],
+      "explanation": "The command specifies what the container should execute when it runs.",
+      "tags": ["argo", "templates"]
+    },
+    {
+      "id": "10-argo-workflows-q5",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this Argo Workflow print?",
+      "language": "yaml",
+      "code": "steps:\n  - name: step1\n    template: my-template\n    arguments:\n      parameters:\n        - name: message\n          value: \"Hello, World!\"",
+      "options": [
+        { "id": "a", "text": "Hello, World!" },
+        { "id": "b", "text": "Error" },
+        { "id": "c", "text": "step1 completed" },
+        { "id": "d", "text": "No output" }
+      ],
+      "answer": "a",
+      "explanation": "The output depends on what the template prints, which is defined by the command in the container.",
+      "tags": ["argo", "steps"]
+    },
+    {
+      "id": "10-argo-workflows-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is a DAG in the context of Argo Workflows?",
+      "options": [
+        { "id": "a", "text": "Directed Acyclic Graph" },
+        { "id": "b", "text": "Data Analysis Graph" },
+        { "id": "c", "text": "Dynamic Allocation Group" },
+        { "id": "d", "text": "Data Aggregation Graph" }
+      ],
+      "answer": "a",
+      "explanation": "A Directed Acyclic Graph (DAG) is used to represent the workflow structure in Argo.",
+      "tags": ["argo", "DAG"]
+    },
+    {
+      "id": "10-argo-workflows-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to create a simple Argo workflow:",
+      "steps": [
+        { "id": "s1", "text": "Define a workflow template." },
+        { "id": "s2", "text": "Create a DAG structure." },
+        { "id": "s3", "text": "Deploy the workflow." },
+        { "id": "s4", "text": "Specify task parameters." }
+      ],
+      "correctOrder": ["s1", "s2", "s4", "s3"],
+      "explanation": "First, define the template, then structure the DAG, set parameters, and finally deploy.",
+      "tags": ["argo", "workflow"]
+    },
+    {
+      "id": "10-argo-workflows-q8",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Fill in the blank to handle retries in Argo Workflows:",
+      "language": "yaml",
+      "code_template": "retryStrategy:\n  limit: ____",
+      "blanks": [
+        { "id": "b1", "options": ["3", "5", "10", "1"], "answer": "3" }
+      ],
+      "explanation": "The limit defines how many times to retry the task upon failure.",
+      "tags": ["argo", "retries"]
+    },
+    {
+      "id": "10-argo-workflows-q9",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What happens if a task in an Argo workflow fails?",
+      "options": [
+        { "id": "a", "text": "The workflow continues executing the next tasks." },
+        { "id": "b", "text": "The workflow stops immediately." },
+        { "id": "c", "text": "Only the failed task retries automatically." },
+        { "id": "d", "text": "The entire workflow is marked as successful." }
+      ],
+      "answer": "b",
+      "explanation": "By default, if a task fails, the workflow stops unless configured otherwise.",
+      "tags": ["argo", "failure"]
+    },
+    {
+      "id": "10-argo-workflows-q10",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Argo Workflows supports both sequential and parallel execution of tasks.",
+      "answer": true,
+      "explanation": "Argo allows tasks to be executed sequentially or in parallel based on the DAG configuration.",
+      "tags": ["argo", "execution"]
+    },
+    {
+      "id": "10-argo-workflows-q11",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following is NOT a valid retry strategy in Argo?",
+      "options": [
+        { "id": "a", "text": "Always" },
+        { "id": "b", "text": "Limit" },
+        { "id": "c", "text": "Never" },
+        { "id": "d", "text": "OnError" }
+      ],
+      "answer": "a",
+      "explanation": "The 'Always' retry strategy is not a recognized option in Argo Workflows.",
+      "tags": ["argo", "retry"]
+    },
+    {
+      "id": "10-argo-workflows-q12",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the retry configuration snippet:",
+      "language": "yaml",
+      "code_template": "retryStrategy:\n  ____: 'OnFailure'",
+      "blanks": [
+        { "id": "b1", "options": ["limit", "when", "strategy", "type"], "answer": "when" }
+      ],
+      "explanation": "The 'when' field specifies the condition under which the retry should occur.",
+      "tags": ["argo", "retries"]
+    },
+    {
+      "id": "10-argo-workflows-q13",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this workflow return?",
+      "language": "yaml",
+      "code": "steps:\n  - name: step1\n    template: my-template\n  - name: step2\n    dependencies: [step1]\n    template: my-template-2",
+      "options": [
+        { "id": "a", "text": "step1 then step2" },
+        { "id": "b", "text": "step2 without step1" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "No output" }
+      ],
+      "answer": "a",
+      "explanation": "Step2 depends on step1, so it will only run after step1 completes successfully.",
+      "tags": ["argo", "steps"]
+    },
+    {
+      "id": "10-argo-workflows-q14",
+      "type": "order_the_steps",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Order these steps for creating an Argo Workflow with parameters:",
+      "steps": [
+        { "id": "s1", "text": "Define the parameters in the template." },
+        { "id": "s2", "text": "Call the template in the workflow." },
+        { "id": "s3", "text": "Set the parameter values." },
+        { "id": "s4", "text": "Run the workflow." }
+      ],
+      "correctOrder": ["s1", "s3", "s2", "s4"],
+      "explanation": "First, define the parameters, set their values, call the template, and then run the workflow.",
+      "tags": ["argo", "parameters"]
+    },
+    {
+      "id": "10-argo-workflows-q15",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What role do artifacts play in Argo Workflows?",
+      "options": [
+        { "id": "a", "text": "They define workflow steps." },
+        { "id": "b", "text": "They store output data." },
+        { "id": "c", "text": "They handle retries." },
+        { "id": "d", "text": "They manage workflow execution." }
+      ],
+      "answer": "b",
+      "explanation": "Artifacts are used to store and pass data between different steps in a workflow.",
+      "tags": ["argo", "artifacts"]
+    }
+  ]
+}

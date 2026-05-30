@@ -1,0 +1,232 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "03-container-init",
+  "type": "module",
+  "questions": [
+    {
+      "id": "03-container-init-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the primary purpose of Docker?",
+      "options": [
+        { "id": "a", "text": "To manage databases" },
+        { "id": "b", "text": "To create isolated environments" },
+        { "id": "c", "text": "To compile code" },
+        { "id": "d", "text": "To deploy websites" }
+      ],
+      "answer": "b",
+      "explanation": "Docker is primarily used to create isolated environments called containers for applications."
+    },
+    {
+      "id": "03-container-init-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which command is used to build a Docker image?",
+      "options": [
+        { "id": "a", "text": "docker run" },
+        { "id": "b", "text": "docker build" },
+        { "id": "c", "text": "docker create" },
+        { "id": "d", "text": "docker start" }
+      ],
+      "answer": "b",
+      "explanation": "The 'docker build' command is used to create a Docker image from a Dockerfile."
+    },
+    {
+      "id": "03-container-init-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to create a multi-stage Docker build:",
+      "language": "dockerfile",
+      "code_template": "FROM python:3.9 AS builder\nRUN pip install -r requirements.txt\nFROM python:3.9\nCOPY --from=builder /app /app\nCMD [\"python\", \"app.py\"]",
+      "blanks": [],
+      "explanation": "This snippet defines a multi-stage build to optimize the final image size by separating build dependencies."
+    },
+    {
+      "id": "03-container-init-q4",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Docker containers share the same kernel as the host OS.",
+      "answer": true,
+      "explanation": "True. Docker containers run on the same kernel as the host operating system, making them lightweight."
+    },
+    {
+      "id": "03-container-init-q5",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this command output?",
+      "language": "bash",
+      "code": "echo 'Hello, World!' | awk '{print $2}'",
+      "options": [
+        { "id": "a", "text": "Hello" },
+        { "id": "b", "text": "World!" },
+        { "id": "c", "text": "Hello, World!" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "b",
+      "explanation": "The command uses awk to print the second word, which is 'World!'."
+    },
+    {
+      "id": "03-container-init-q6",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the Dockerfile to set the entrypoint:",
+      "language": "dockerfile",
+      "code_template": "FROM ubuntu\n____ [\"/bin/bash\"]",
+      "blanks": [
+        { "id": "b1", "options": ["ENTRYPOINT", "CMD", "RUN", "COPY"], "answer": "ENTRYPOINT" }
+      ],
+      "explanation": "The ENTRYPOINT instruction sets the command that will run when the container starts."
+    },
+    {
+      "id": "03-container-init-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these commands to create a Docker image:",
+      "steps": [
+        { "id": "s1", "text": "Run 'docker build -t my-image .'" },
+        { "id": "s2", "text": "Create a Dockerfile" },
+        { "id": "s3", "text": "Run 'docker images' to verify the image" },
+        { "id": "s4", "text": "Define image instructions in the Dockerfile" }
+      ],
+      "correctOrder": ["s2", "s4", "s1", "s3"],
+      "explanation": "The correct order starts with creating the Dockerfile, defining instructions, building the image, and finally verifying it."
+    },
+    {
+      "id": "03-container-init-q8",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the main benefit of using multi-stage builds?",
+      "options": [
+        { "id": "a", "text": "Faster builds" },
+        { "id": "b", "text": "Smaller final image size" },
+        { "id": "c", "text": "Easier debugging" },
+        { "id": "d", "text": "More layers" }
+      ],
+      "answer": "b",
+      "explanation": "Multi-stage builds allow you to reduce the final image size by only including necessary files."
+    },
+    {
+      "id": "03-container-init-q9",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which command would you use to list all running containers?",
+      "options": [
+        { "id": "a", "text": "docker ps" },
+        { "id": "b", "text": "docker ls" },
+        { "id": "c", "text": "docker images" },
+        { "id": "d", "text": "docker inspect" }
+      ],
+      "answer": "a",
+      "explanation": "The 'docker ps' command lists all currently running containers."
+    },
+    {
+      "id": "03-container-init-q10",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this command output?",
+      "language": "bash",
+      "code": "docker run --rm hello-world",
+      "options": [
+        { "id": "a", "text": "Hello World!" },
+        { "id": "b", "text": "Container started" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "Image not found" }
+      ],
+      "answer": "a",
+      "explanation": "The 'hello-world' image outputs a friendly message confirming the installation of Docker."
+    },
+    {
+      "id": "03-container-init-q11",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does the CMD instruction do in a Dockerfile?",
+      "options": [
+        { "id": "a", "text": "Sets the default command to run" },
+        { "id": "b", "text": "Specifies the base image" },
+        { "id": "c", "text": "Creates a new image" },
+        { "id": "d", "text": "Defines environment variables" }
+      ],
+      "answer": "a",
+      "explanation": "The CMD instruction defines the default command that will run when a container is started."
+    },
+    {
+      "id": "03-container-init-q12",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to optimize a Docker image:",
+      "steps": [
+        { "id": "s1", "text": "Minimize the number of layers" },
+        { "id": "s2", "text": "Use .dockerignore file" },
+        { "id": "s3", "text": "Combine RUN statements" },
+        { "id": "s4", "text": "Remove unnecessary files" }
+      ],
+      "correctOrder": ["s2", "s1", "s3", "s4"],
+      "explanation": "Using a .dockerignore file prevents unnecessary files from being included, then minimize layers, combine RUN statements, and finally remove files."
+    },
+    {
+      "id": "03-container-init-q13",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Layer caching in Docker allows layers to be reused in future builds.",
+      "answer": true,
+      "explanation": "True. Layer caching speeds up builds by reusing unchanged layers."
+    },
+    {
+      "id": "03-container-init-q14",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following is NOT a benefit of using Docker?",
+      "options": [
+        { "id": "a", "text": "Isolation of environments" },
+        { "id": "b", "text": "Improved security" },
+        { "id": "c", "text": "Increased resource usage" },
+        { "id": "d", "text": "Portability" }
+      ],
+      "answer": "c",
+      "explanation": "Increased resource usage is not a benefit; Docker is designed to optimize resource usage."
+    },
+    {
+      "id": "03-container-init-q15",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Fill in the blank to define an ENTRYPOINT in a Dockerfile:",
+      "language": "dockerfile",
+      "code_template": "ENTRYPOINT ____ [\"/app/start.sh\"]",
+      "blanks": [
+        { "id": "b1", "options": ["CMD", "RUN", "ENTRYPOINT", "COPY"], "answer": "ENTRYPOINT" }
+      ],
+      "explanation": "The ENTRYPOINT instruction allows you to configure a container to run as an executable."
+    }
+  ]
+}

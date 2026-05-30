@@ -1,0 +1,38 @@
+{
+  "id": "06-github-actions-dbt",
+  "section": "dataops-mlops",
+  "tier": "intermediate",
+  "moduleOrder": 6,
+  "version": 1,
+  "title": "GitHub Actions for dbt/Python",
+  "shortDescription": "GitHub Actions for dbt/Python \u2014 beginner to advanced concepts and code.",
+  "icon": "06-github-actions-dbt",
+  "estimatedMinutes": 32,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-test-matrix",
+      "title": "Test Matrix",
+      "minutes": 8
+    },
+    {
+      "id": "02-dbt-ci",
+      "title": "Dbt Ci",
+      "minutes": 8
+    },
+    {
+      "id": "03-slim-ci",
+      "title": "Slim Ci",
+      "minutes": 8
+    },
+    {
+      "id": "04-secrets-mgmt",
+      "title": "Secrets Mgmt",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

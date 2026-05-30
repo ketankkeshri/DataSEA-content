@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "14-great-expectations",
+  "type": "module",
+  "questions": [
+    {
+      "id": "14-great-expectations-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the primary purpose of Great Expectations?",
+      "options": [
+        { "id": "a", "text": "To visualize data" },
+        { "id": "b", "text": "To validate data" },
+        { "id": "c", "text": "To store data" },
+        { "id": "d", "text": "To analyze data" }
+      ],
+      "answer": "b",
+      "explanation": "Great Expectations is designed primarily for data validation, ensuring data quality.",
+      "tags": ["great_expectations", "validation"]
+    },
+    {
+      "id": "14-great-expectations-q2",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to create an expectation suite:",
+      "language": "python",
+      "code_template": "suite = context.____(name='suite_name')",
+      "blanks": [
+        { "id": "b1", "options": ["create_expectation_suite", "add_expectation_suite", "initialize_suite", "define_suite"], "answer": "create_expectation_suite" }
+      ],
+      "explanation": "The method 'create_expectation_suite' is used to create a new expectation suite in Great Expectations.",
+      "tags": ["expectation_suites"]
+    },
+    {
+      "id": "14-great-expectations-q3",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print([x for x in range(5) if x % 2 == 0])",
+      "options": [
+        { "id": "a", "text": "[0, 1, 2, 3, 4]" },
+        { "id": "b", "text": "[0, 2, 4]" },
+        { "id": "c", "text": "[1, 3]" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "b",
+      "explanation": "The list comprehension filters for even numbers in the range of 0 to 4, resulting in [0, 2, 4].",
+      "tags": ["python", "list_comprehension"]
+    },
+    {
+      "id": "14-great-expectations-q4",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Great Expectations can automatically generate documentation for data expectations.",
+      "answer": true,
+      "explanation": "True. Great Expectations provides functionality to automatically generate documentation for your data expectations.",
+      "tags": ["docs_site"]
+    },
+    {
+      "id": "14-great-expectations-q5",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to validate data using Great Expectations:",
+      "steps": [
+        { "id": "s1", "text": "Create an expectation suite" },
+        { "id": "s2", "text": "Run validation against the data" },
+        { "id": "s3", "text": "Define expectations" },
+        { "id": "s4", "text": "Load data to validate" }
+      ],
+      "correctOrder": ["s4", "s1", "s3", "s2"],
+      "explanation": "You must first load the data, create the expectation suite, define expectations, and then run validation.",
+      "tags": ["validation"]
+    },
+    {
+      "id": "14-great-expectations-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which command is used to validate a batch of data in Great Expectations?",
+      "options": [
+        { "id": "a", "text": "context.run_validation_operator()" },
+        { "id": "b", "text": "context.validate_batch()" },
+        { "id": "c", "text": "context.check_data()" },
+        { "id": "d", "text": "context.execute_validation()" }
+      ],
+      "answer": "a",
+      "explanation": "The 'run_validation_operator()' method is used to validate a specified batch against the defined expectations.",
+      "tags": ["validation"]
+    },
+    {
+      "id": "14-great-expectations-q7",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Expectation suites can contain multiple expectations for the same column.",
+      "answer": true,
+      "explanation": "True. An expectation suite can have multiple expectations defined for a single column.",
+      "tags": ["expectation_suites"]
+    },
+    {
+      "id": "14-great-expectations-q8",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Fill in the blanks to define an expectation for a column to be unique:",
+      "language": "python",
+      "code_template": "df.expect_____('column_name')",
+      "blanks": [
+        { "id": "b1", "options": ["unique_values", "to_be_unique", "have_unique_values", "value_is_unique"], "answer": "to_be_unique" }
+      ],
+      "explanation": "The method 'expect_column_values_to_be_unique' is used to assert that all values in a column are unique.",
+      "tags": ["expectation_suites"]
+    },
+    {
+      "id": "14-great-expectations-q9",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(set([1, 2, 2, 3, 4]))",
+      "options": [
+        { "id": "a", "text": "{1, 2, 3, 4}" },
+        { "id": "b", "text": "[1, 2, 3, 4]" },
+        { "id": "c", "text": "{1, 2, 2, 3, 4}" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "Sets in Python automatically remove duplicates, so the output will be {1, 2, 3, 4}.",
+      "tags": ["python", "sets"]
+    },
+    {
+      "id": "14-great-expectations-q10",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following is NOT a type of expectation in Great Expectations?",
+      "options": [
+        { "id": "a", "text": "expect_column_values_to_be_in_set" },
+        { "id": "b", "text": "expect_column_mean_to_be_between" },
+        { "id": "c", "text": "expect_row_count_to_equal" },
+        { "id": "d", "text": "expect_column_to_match_regex" }
+      ],
+      "answer": "c",
+      "explanation": "While 'expect_row_count_to_equal' might sound plausible, it is not a defined expectation type in Great Expectations.",
+      "tags": ["expectation_suites"]
+    },
+    {
+      "id": "14-great-expectations-q11",
+      "type": "order_the_steps",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Order these steps to create a new documentation site:",
+      "steps": [
+        { "id": "s1", "text": "Install Great Expectations" },
+        { "id": "s2", "text": "Initialize a new project" },
+        { "id": "s3", "text": "Generate documentation" },
+        { "id": "s4", "text": "Serve the documentation" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "You first need to install Great Expectations, then initialize a project, generate the documentation, and finally serve it.",
+      "tags": ["docs_site"]
+    },
+    {
+      "id": "14-great-expectations-q12",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Great Expectations can integrate with data pipelines like Airflow.",
+      "answer": true,
+      "explanation": "True. Great Expectations is designed to integrate with various data pipelines, including Airflow.",
+      "tags": ["data_integration"]
+    },
+    {
+      "id": "14-great-expectations-q13",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "If a validation fails in Great Expectations, what is the default behavior?",
+      "options": [
+        { "id": "a", "text": "Ignore the failure" },
+        { "id": "b", "text": "Log the failure" },
+        { "id": "c", "text": "Raise an exception" },
+        { "id": "d", "text": "Auto-correct the data" }
+      ],
+      "answer": "c",
+      "explanation": "By default, if a validation fails, Great Expectations raises an exception to alert the user.",
+      "tags": ["validation"]
+    },
+    {
+      "id": "14-great-expectations-q14",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the code to load a data asset:",
+      "language": "python",
+      "code_template": "data = context.____('my_data_asset')",
+      "blanks": [
+        { "id": "b1", "options": ["load_data", "get_batch", "fetch_data", "retrieve_batch"], "answer": "get_batch" }
+      ],
+      "explanation": "The 'get_batch' method is used to load a data asset for validation and testing.",
+      "tags": ["data_loading"]
+    },
+    {
+      "id": "14-great-expectations-q15",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this code print?",
+      "language": "python",
+      "code": "print('Hello World'.split())",
+      "options": [
+        { "id": "a", "text": "Hello World" },
+        { "id": "b", "text": "['Hello', 'World']" },
+        { "id": "c", "text": "['Hello World']" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "b",
+      "explanation": "The 'split()' method breaks the string into a list of words, resulting in ['Hello', 'World'].",
+      "tags": ["python", "string_methods"]
+    }
+  ]
+}

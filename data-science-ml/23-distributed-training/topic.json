@@ -1,0 +1,38 @@
+{
+  "id": "23-distributed-training",
+  "section": "data-science-ml",
+  "tier": "advanced",
+  "moduleOrder": 23,
+  "version": 1,
+  "title": "Distributed Training",
+  "shortDescription": "Distributed Training \u2014 beginner to advanced concepts and code.",
+  "icon": "23-distributed-training",
+  "estimatedMinutes": 32,
+  "isPro": true,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-data-parallel",
+      "title": "Data Parallel",
+      "minutes": 8
+    },
+    {
+      "id": "02-model-parallel",
+      "title": "Model Parallel",
+      "minutes": 8
+    },
+    {
+      "id": "03-deepspeed",
+      "title": "Deepspeed",
+      "minutes": 8
+    },
+    {
+      "id": "04-fsdp",
+      "title": "Fsdp",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

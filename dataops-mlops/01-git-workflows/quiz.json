@@ -1,0 +1,235 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "01-git-workflows",
+  "type": "module",
+  "questions": [
+    {
+      "id": "01-git-workflows-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the main purpose of a pull request?",
+      "options": [
+        { "id": "a", "text": "To delete code" },
+        { "id": "b", "text": "To propose changes and request code review" },
+        { "id": "c", "text": "To merge branches automatically" },
+        { "id": "d", "text": "To create a new branch" }
+      ],
+      "answer": "b",
+      "explanation": "A pull request is created to propose changes and request feedback from other developers."
+    },
+    {
+      "id": "01-git-workflows-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which of the following is a characteristic of the GitFlow workflow?",
+      "options": [
+        { "id": "a", "text": "Continuous integration" },
+        { "id": "b", "text": "Feature branches for new features" },
+        { "id": "c", "text": "Single main branch" },
+        { "id": "d", "text": "Immediate deployment" }
+      ],
+      "answer": "b",
+      "explanation": "GitFlow uses feature branches to develop new features before merging them back into the main branch."
+    },
+    {
+      "id": "01-git-workflows-q3",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Rebasing preserves the commit history.",
+      "answer": false,
+      "explanation": "Rebasing rewrites commit history, which can lead to a cleaner project history but loses original context."
+    },
+    {
+      "id": "01-git-workflows-q4",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to merge changes from the main branch:",
+      "language": "bash",
+      "code_template": "git checkout feature-branch && git ____ main",
+      "blanks": [
+        { "id": "b1", "options": ["push", "merge", "pull", "fetch"], "answer": "merge" }
+      ],
+      "explanation": "You need to use 'merge' to combine changes from the main branch into your feature branch."
+    },
+    {
+      "id": "01-git-workflows-q5",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this command do?",
+      "language": "bash",
+      "code": "git rebase feature-branch",
+      "options": [
+        { "id": "a", "text": "Merges feature-branch into the current branch" },
+        { "id": "b", "text": "Applies commits from feature-branch onto the current branch" },
+        { "id": "c", "text": "Creates a new branch from feature-branch" },
+        { "id": "d", "text": "Deletes feature-branch" }
+      ],
+      "answer": "b",
+      "explanation": "The 'rebase' command applies the commits from the specified branch onto the current branch."
+    },
+    {
+      "id": "01-git-workflows-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What happens when a merge conflict occurs?",
+      "options": [
+        { "id": "a", "text": "Git automatically resolves it" },
+        { "id": "b", "text": "You must manually resolve the conflict" },
+        { "id": "c", "text": "The merge fails silently" },
+        { "id": "d", "text": "A new branch is created" }
+      ],
+      "answer": "b",
+      "explanation": "When a merge conflict occurs, you need to manually resolve the conflicting changes in the files."
+    },
+    {
+      "id": "01-git-workflows-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to resolve a merge conflict:",
+      "steps": [
+        { "id": "s1", "text": "Identify conflicting files" },
+        { "id": "s2", "text": "Open the files and resolve conflicts" },
+        { "id": "s3", "text": "Stage the resolved files" },
+        { "id": "s4", "text": "Complete the merge" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "First, identify the conflicting files, then resolve the conflicts, stage the changes, and complete the merge."
+    },
+    {
+      "id": "01-git-workflows-q8",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which workflow is best for managing multiple releases?",
+      "options": [
+        { "id": "a", "text": "Feature Branch Workflow" },
+        { "id": "b", "text": "GitFlow" },
+        { "id": "c", "text": "Forking Workflow" },
+        { "id": "d", "text": "Trunk-Based Development" }
+      ],
+      "answer": "b",
+      "explanation": "GitFlow is designed for managing multiple releases and incorporates both stable and development branches."
+    },
+    {
+      "id": "01-git-workflows-q9",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the command to check the status of your Git repository:",
+      "language": "bash",
+      "code_template": "git ____",
+      "blanks": [
+        { "id": "b1", "options": ["status", "log", "branch", "commit"], "answer": "status" }
+      ],
+      "explanation": "The 'status' command shows the current state of the repository, including staged, unstaged, and untracked files."
+    },
+    {
+      "id": "01-git-workflows-q10",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Git stores changes as snapshots of the file system.",
+      "answer": true,
+      "explanation": "Git captures snapshots of the entire file system at each commit, allowing for easy tracking of changes."
+    },
+    {
+      "id": "01-git-workflows-q11",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this command output?",
+      "language": "bash",
+      "code": "git log --oneline",
+      "options": [
+        { "id": "a", "text": "Shows a detailed commit history" },
+        { "id": "b", "text": "Shows a summary of commits in one line" },
+        { "id": "c", "text": "Shows only the last commit" },
+        { "id": "d", "text": "Displays the current branch name" }
+      ],
+      "answer": "b",
+      "explanation": "'git log --oneline' summarizes the commit history in a compact format, showing each commit on one line."
+    },
+    {
+      "id": "01-git-workflows-q12",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "When should you use 'git rebase'?",
+      "options": [
+        { "id": "a", "text": "To combine multiple commits into one" },
+        { "id": "b", "text": "To create a new branch" },
+        { "id": "c", "text": "To clean up commit history before merging" },
+        { "id": "d", "text": "To undo changes" }
+      ],
+      "answer": "c",
+      "explanation": "Rebasing is often used to clean up commit history, making it linear and easier to understand before merging."
+    },
+    {
+      "id": "01-git-workflows-q13",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to create a new branch and switch to it:",
+      "steps": [
+        { "id": "s1", "text": "Run 'git branch new-branch'" },
+        { "id": "s2", "text": "Run 'git checkout new-branch'" },
+        { "id": "s3", "text": "Run 'git checkout -b new-branch'" }
+      ],
+      "correctOrder": ["s3", "s1", "s2"],
+      "explanation": "Using 'git checkout -b new-branch' creates and switches to the new branch in one command."
+    },
+    {
+      "id": "01-git-workflows-q14",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this command output?",
+      "language": "bash",
+      "code": "git status",
+      "options": [
+        { "id": "a", "text": "Shows the changes staged for commit" },
+        { "id": "b", "text": "Shows the current branch and untracked files" },
+        { "id": "c", "text": "Shows the commit history" },
+        { "id": "d", "text": "Shows the list of remote branches" }
+      ],
+      "answer": "b",
+      "explanation": "'git status' displays the current branch, staged changes, unstaged changes, and untracked files."
+    },
+    {
+      "id": "01-git-workflows-q15",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the command to push your changes to the remote repository:",
+      "language": "bash",
+      "code_template": "git push ____",
+      "blanks": [
+        { "id": "b1", "options": ["origin", "upstream", "remote", "main"], "answer": "origin" }
+      ],
+      "explanation": "You typically push changes to 'origin', which is the default name for the remote repository."
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "16-monte-carlo",
+  "type": "module",
+  "questions": [
+    {
+      "id": "16-monte-carlo-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the main purpose of Monte Carlo simulations in data observability?",
+      "options": [
+        { "id": "a", "text": "To predict future trends" },
+        { "id": "b", "text": "To assess data quality and reliability" },
+        { "id": "c", "text": "To visualize data distributions" },
+        { "id": "d", "text": "To optimize database queries" }
+      ],
+      "answer": "b",
+      "explanation": "Monte Carlo simulations help assess data quality and reliability by running multiple iterations to see how data behaves under various conditions.",
+      "tags": ["monte-carlo", "data-observability"]
+    },
+    {
+      "id": "16-monte-carlo-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which term describes the freshness of data in a data pipeline?",
+      "options": [
+        { "id": "a", "text": "Data Volume" },
+        { "id": "b", "text": "Data Latency" },
+        { "id": "c", "text": "Data Lineage" },
+        { "id": "d", "text": "Data Schema" }
+      ],
+      "answer": "b",
+      "explanation": "Data latency refers to the freshness of data, indicating how up-to-date the data in the pipeline is.",
+      "tags": ["data-freshness"]
+    },
+    {
+      "id": "16-monte-carlo-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to check data lineage:",
+      "language": "python",
+      "code_template": "lineage = df.____().____('column_name')",
+      "blanks": [
+        { "id": "b1", "options": ["check_lineage", "trace", "map", "track"], "answer": "trace" },
+        { "id": "b2", "options": ["get", "set", "find", "filter"], "answer": "get" }
+      ],
+      "explanation": "The 'trace' method is used to check the lineage of a DataFrame, and 'get' retrieves the specific lineage for a column.",
+      "tags": ["data-lineage"]
+    },
+    {
+      "id": "16-monte-carlo-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print('Hello, World!'.split())",
+      "options": [
+        { "id": "a", "text": "['Hello,', 'World!']" },
+        { "id": "b", "text": "['Hello World!']" },
+        { "id": "c", "text": "['Hello', 'World!']" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "c",
+      "explanation": "The 'split()' method splits the string at spaces, resulting in a list of words.",
+      "tags": ["string-manipulation"]
+    },
+    {
+      "id": "16-monte-carlo-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Monte Carlo simulations can only be applied to numerical data.",
+      "answer": false,
+      "explanation": "Monte Carlo simulations can be applied to both numerical and categorical data, depending on the context of the analysis.",
+      "tags": ["monte-carlo"]
+    },
+    {
+      "id": "16-monte-carlo-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is a key benefit of data lineage tracking?",
+      "options": [
+        { "id": "a", "text": "Improved data visualization" },
+        { "id": "b", "text": "Easier debugging and impact analysis" },
+        { "id": "c", "text": "Enhanced data storage" },
+        { "id": "d", "text": "Faster data processing" }
+      ],
+      "answer": "b",
+      "explanation": "Data lineage tracking helps in debugging and understanding the impact of changes made to the data pipeline.",
+      "tags": ["data-lineage"]
+    },
+    {
+      "id": "16-monte-carlo-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps for implementing Monte Carlo simulations:",
+      "steps": [
+        { "id": "s1", "text": "Define the problem and inputs" },
+        { "id": "s2", "text": "Run simulations multiple times" },
+        { "id": "s3", "text": "Analyze the results" },
+        { "id": "s4", "text": "Collect data for each simulation" }
+      ],
+      "correctOrder": ["s1", "s4", "s2", "s3"],
+      "explanation": "First, you define the problem and inputs, then collect data, run simulations, and finally analyze the results.",
+      "tags": ["monte-carlo"]
+    },
+    {
+      "id": "16-monte-carlo-q8",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following is NOT a component of data observability?",
+      "options": [
+        { "id": "a", "text": "Data Freshness" },
+        { "id": "b", "text": "Data Lineage" },
+        { "id": "c", "text": "Data Compression" },
+        { "id": "d", "text": "Data Quality" }
+      ],
+      "answer": "c",
+      "explanation": "Data compression is related to storage optimization, not directly a component of data observability.",
+      "tags": ["data-observability"]
+    },
+    {
+      "id": "16-monte-carlo-q9",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the code to detect ML model drift:",
+      "language": "python",
+      "code_template": "def detect_drift(current_data, baseline_data):\n    return ____.____(current_data, baseline_data)",
+      "blanks": [
+        { "id": "b1", "options": ["compare", "evaluate", "analyze", "assess"], "answer": "compare" },
+        { "id": "b2", "options": ["variance", "distance", "difference", "discrepancy"], "answer": "distance" }
+      ],
+      "explanation": "The 'compare' method analyzes differences between two datasets to detect model drift.",
+      "tags": ["ml-detection"]
+    },
+    {
+      "id": "16-monte-carlo-q10",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Data freshness is measured solely by time intervals.",
+      "answer": false,
+      "explanation": "Data freshness can also be affected by data quality and the frequency of updates, not just time intervals.",
+      "tags": ["data-freshness"]
+    },
+    {
+      "id": "16-monte-carlo-q11",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following techniques is best for reducing the variance in Monte Carlo simulations?",
+      "options": [
+        { "id": "a", "text": "Stratified sampling" },
+        { "id": "b", "text": "Systematic sampling" },
+        { "id": "c", "text": "Random sampling" },
+        { "id": "d", "text": "Cluster sampling" }
+      ],
+      "answer": "a",
+      "explanation": "Stratified sampling is effective in reducing variance by ensuring all parts of the population are represented.",
+      "tags": ["monte-carlo"]
+    },
+    {
+      "id": "16-monte-carlo-q12",
+      "type": "order_the_steps",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Order these steps for setting up a data pipeline:",
+      "steps": [
+        { "id": "s1", "text": "Data ingestion" },
+        { "id": "s2", "text": "Data transformation" },
+        { "id": "s3", "text": "Data storage" },
+        { "id": "s4", "text": "Data analysis" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "The correct order is to first ingest data, then transform it, store it, and finally analyze it.",
+      "tags": ["data-pipeline"]
+    },
+    {
+      "id": "16-monte-carlo-q13",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(sum([1 for _ in range(5)]))",
+      "options": [
+        { "id": "a", "text": "5" },
+        { "id": "b", "text": "0" },
+        { "id": "c", "text": "10" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The 'sum' function sums the list comprehension, which generates 1 for each iteration, resulting in 5.",
+      "tags": ["list-comprehension"]
+    },
+    {
+      "id": "16-monte-carlo-q14",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the primary goal of monitoring data freshness?",
+      "options": [
+        { "id": "a", "text": "To reduce storage costs" },
+        { "id": "b", "text": "To ensure timely decision making" },
+        { "id": "c", "text": "To improve data visualization" },
+        { "id": "d", "text": "To optimize query performance" }
+      ],
+      "answer": "b",
+      "explanation": "Monitoring data freshness ensures that decisions are based on the most up-to-date information.",
+      "tags": ["data-freshness"]
+    },
+    {
+      "id": "16-monte-carlo-q15",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Monte Carlo methods can only be used for quantitative analysis.",
+      "answer": false,
+      "explanation": "Monte Carlo methods can be applied to both quantitative and qualitative analyses, providing flexibility in various scenarios.",
+      "tags": ["monte-carlo"]
+    }
+  ]
+}

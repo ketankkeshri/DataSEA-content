@@ -1,0 +1,38 @@
+{
+  "id": "10-argo-workflows",
+  "section": "dataops-mlops",
+  "tier": "intermediate",
+  "moduleOrder": 10,
+  "version": 1,
+  "title": "Argo Workflows",
+  "shortDescription": "Argo Workflows \u2014 beginner to advanced concepts and code.",
+  "icon": "10-argo-workflows",
+  "estimatedMinutes": 32,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-dag-templates",
+      "title": "Dag Templates",
+      "minutes": 8
+    },
+    {
+      "id": "03-parameters-artifacts",
+      "title": "Parameters Artifacts",
+      "minutes": 8
+    },
+    {
+      "id": "04-retries",
+      "title": "Retries",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "07-kubernetes-minikube",
+  "type": "module",
+  "questions": [
+    {
+      "id": "07-kubernetes-minikube-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the purpose of a Pod in Kubernetes?",
+      "options": [
+        { "id": "a", "text": "To manage container images" },
+        { "id": "b", "text": "To run one or more containers" },
+        { "id": "c", "text": "To define a network policy" },
+        { "id": "d", "text": "To store application data" }
+      ],
+      "answer": "b",
+      "explanation": "A Pod is the basic execution unit in Kubernetes that encapsulates one or more containers."
+    },
+    {
+      "id": "07-kubernetes-minikube-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which command is used to create a Deployment?",
+      "options": [
+        { "id": "a", "text": "kubectl create deployment" },
+        { "id": "b", "text": "kubectl run deployment" },
+        { "id": "c", "text": "kubectl apply deployment" },
+        { "id": "d", "text": "kubectl start deployment" }
+      ],
+      "answer": "a",
+      "explanation": "The command 'kubectl create deployment' is used to create a new Deployment in Kubernetes."
+    },
+    {
+      "id": "07-kubernetes-minikube-q3",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Kubernetes services are used to expose Pods to the outside world.",
+      "answer": true,
+      "explanation": "Services in Kubernetes provide a stable endpoint to access Pods, making them accessible from outside the cluster."
+    },
+    {
+      "id": "07-kubernetes-minikube-q4",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the function of a ConfigMap?",
+      "options": [
+        { "id": "a", "text": "To store sensitive information" },
+        { "id": "b", "text": "To manage container images" },
+        { "id": "c", "text": "To provide configuration data to Pods" },
+        { "id": "d", "text": "To define network policies" }
+      ],
+      "answer": "c",
+      "explanation": "ConfigMaps are used in Kubernetes to pass configuration data to applications running in Pods."
+    },
+    {
+      "id": "07-kubernetes-minikube-q5",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to deploy an Nginx Pod:",
+      "language": "yaml",
+      "code_template": "apiVersion: v1\nkind: Pod\nmetadata:\n  name: nginx\nspec:\n  containers:\n    - name: nginx\n      image: ____",
+      "blanks": [
+        { "id": "b1", "options": ["nginx:latest", "nginx:1.19", "nginx:alpine", "nginx:stable"], "answer": "nginx:latest" }
+      ],
+      "explanation": "The 'image' field specifies which container image to use for the Nginx Pod."
+    },
+    {
+      "id": "07-kubernetes-minikube-q6",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print('Hello, Kubernetes!'.split(','))",
+      "options": [
+        { "id": "a", "text": "['Hello', ' Kubernetes!']" },
+        { "id": "b", "text": "['Hello', 'Kubernetes!']" },
+        { "id": "c", "text": "['Hello', Kubernetes!']" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The split() method divides the string by commas, resulting in a list with two elements."
+    },
+    {
+      "id": "07-kubernetes-minikube-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to deploy a service in Kubernetes:",
+      "steps": [
+        { "id": "s1", "text": "Define a Service YAML file" },
+        { "id": "s2", "text": "Run 'kubectl apply -f <filename>'" },
+        { "id": "s3", "text": "Specify the selector for the Service" },
+        { "id": "s4", "text": "Verify the Service with 'kubectl get services'" }
+      ],
+      "correctOrder": ["s1", "s3", "s2", "s4"],
+      "explanation": "First, define the YAML file, specify the selector, apply the configuration, and verify the deployment."
+    },
+    {
+      "id": "07-kubernetes-minikube-q8",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which command is used to view the logs of a Pod?",
+      "options": [
+        { "id": "a", "text": "kubectl get logs" },
+        { "id": "b", "text": "kubectl logs" },
+        { "id": "c", "text": "kubectl view logs" },
+        { "id": "d", "text": "kubectl pod logs" }
+      ],
+      "answer": "b",
+      "explanation": "The command 'kubectl logs' is used to fetch logs from a specific Pod."
+    },
+    {
+      "id": "07-kubernetes-minikube-q9",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "ConfigMaps can store sensitive information.",
+      "answer": false,
+      "explanation": "ConfigMaps are not meant for sensitive data; use Secrets for sensitive information in Kubernetes."
+    },
+    {
+      "id": "07-kubernetes-minikube-q10",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is a common way to expose a Deployment to external traffic?",
+      "options": [
+        { "id": "a", "text": "Using a Pod" },
+        { "id": "b", "text": "Using a ConfigMap" },
+        { "id": "c", "text": "Using a Service" },
+        { "id": "d", "text": "Using a Volume" }
+      ],
+      "answer": "c",
+      "explanation": "A Service is typically used to expose a Deployment to external traffic in Kubernetes."
+    },
+    {
+      "id": "07-kubernetes-minikube-q11",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to create a Secret:",
+      "language": "yaml",
+      "code_template": "apiVersion: v1\nkind: Secret\nmetadata:\n  name: my-secret\ntype: Opaque\ndata:\n  password: ____",
+      "blanks": [
+        { "id": "b1", "options": ["dGVzdF9wYXNzd29yZA==", "cGFzc3dvcmQ=", "c2VjcmV0", "YWRtaW5wYXNz"], "answer": "cGFzc3dvcmQ=" }
+      ],
+      "explanation": "The 'data' field should contain base64-encoded sensitive data for the Secret."
+    },
+    {
+      "id": "07-kubernetes-minikube-q12",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(sum([1, 2, 3]))",
+      "options": [
+        { "id": "a", "text": "6" },
+        { "id": "b", "text": "5" },
+        { "id": "c", "text": "4" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The sum() function returns the total of the list elements, which is 6."
+    },
+    {
+      "id": "07-kubernetes-minikube-q13",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to scale a Deployment:",
+      "steps": [
+        { "id": "s1", "text": "Run 'kubectl scale deployment <name> --replicas=<number>'" },
+        { "id": "s2", "text": "Check the current number of replicas" },
+        { "id": "s3", "text": "Verify the scaling with 'kubectl get deployments'" }
+      ],
+      "correctOrder": ["s2", "s1", "s3"],
+      "explanation": "First, check the current replicas, then scale the deployment, and finally verify the changes."
+    },
+    {
+      "id": "07-kubernetes-minikube-q14",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What command would you use to delete a Deployment?",
+      "options": [
+        { "id": "a", "text": "kubectl remove deployment" },
+        { "id": "b", "text": "kubectl delete deployment" },
+        { "id": "c", "text": "kubectl terminate deployment" },
+        { "id": "d", "text": "kubectl destroy deployment" }
+      ],
+      "answer": "b",
+      "explanation": "The command 'kubectl delete deployment' is used to remove a Deployment from Kubernetes."
+    },
+    {
+      "id": "07-kubernetes-minikube-q15",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Minikube is a tool for running Kubernetes locally.",
+      "answer": true,
+      "explanation": "Minikube allows you to run a single-node Kubernetes cluster locally for development and testing."
+    }
+  ]
+}
