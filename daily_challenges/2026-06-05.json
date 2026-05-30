@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-05",
+  "type": "find_the_bug",
+  "theme": "kafka",
+  "incidentId": 4527,
+  "title": "Incident #4527 — Morning Event Stream Fails to Process",
+  "scenario": "The operations team reports that the morning event stream is missing several critical events. Find the bug.",
+  "language": "python",
+  "code": "from kafka import KafkaConsumer\n\nconsumer = KafkaConsumer(\n    'events',\n    bootstrap_servers='localhost:9092',\n    auto_offset_reset='latest',\n    enable_auto_commit=True,\n    group_id='event_processor'\n)\n\nfor message in consumer:\n    process_event(message.value)\n",
+  "options": [
+    { "id": "a", "text": "The `auto_offset_reset` should be set to 'earliest'." },
+    { "id": "b", "text": "The consumer group ID is incorrectly set, causing missed messages." },
+    { "id": "c", "text": "The Kafka broker is down, preventing any messages from being received." },
+    { "id": "d", "text": "The `process_event` function is not handling exceptions properly." }
+  ],
+  "answer": "b",
+  "explanation": "The consumer's group ID needs to be consistent across restarts to ensure it processes all messages. If the ID changes, the consumer will treat it as a new group and may miss messages produced before it started. Fix this by maintaining the same `group_id` for the consumer.",
+  "xp": 150,
+  "coins": 30
+}

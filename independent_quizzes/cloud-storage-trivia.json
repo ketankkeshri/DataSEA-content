@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "packId": "cloud-storage-trivia",
+  "type": "independent",
+  "title": "Cloud Storage Trivia",
+  "questions": [
+    {
+      "id": "cloud-storage-trivia-q1",
+      "question": "Which of the following is a storage service provided by Amazon Web Services?",
+      "options": [
+        "Google Cloud Storage",
+        "Azure Data Lake Storage",
+        "Amazon S3",
+        "IBM Cloud Object Storage"
+      ],
+      "answer": "Amazon S3",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "cloud-storage-trivia-q2",
+      "question": "True or False: Google Cloud Storage supports unlimited storage capacity.",
+      "answer": "True",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "cloud-storage-trivia-q3",
+      "question": "What is the primary purpose of Azure Data Lake Storage?",
+      "options": [
+        "Data warehousing",
+        "Data archiving",
+        "Big data analytics",
+        "File sharing"
+      ],
+      "answer": "Big data analytics",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "cloud-storage-trivia-q4",
+      "question": "Which of the following is a key feature of Amazon S3?",
+      "options": [
+        "Automatic backup",
+        "Versioning",
+        "Data encryption",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "cloud-storage-trivia-q5",
+      "question": "True or False: In Google Cloud Storage, buckets can only be created in specific regions.",
+      "answer": "True",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "cloud-storage-trivia-q6",
+      "question": "What is the maximum object size that can be uploaded to Amazon S3 in a single PUT operation?",
+      "options": [
+        "5 GB",
+        "10 GB",
+        "100 GB",
+        "Unlimited"
+      ],
+      "answer": "5 GB",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "cloud-storage-trivia-q7",
+      "question": "Order the following steps to create a bucket in Google Cloud Storage.",
+      "options": [
+        "Choose a globally unique name for the bucket.",
+        "Select the storage class.",
+        "Click on 'Create'.",
+        "Choose a location."
+      ],
+      "answer": [
+        "Choose a globally unique name for the bucket.",
+        "Choose a location.",
+        "Select the storage class.",
+        "Click on 'Create'."
+      ],
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "cloud-storage-trivia-q8",
+      "question": "What feature of Azure Data Lake Storage allows for fine-grained access control?",
+      "options": [
+        "Role-Based Access Control (RBAC)",
+        "Shared Access Signatures (SAS)",
+        "Access Control Lists (ACLs)",
+        "Data encryption"
+      ],
+      "answer": "Access Control Lists (ACLs)",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "cloud-storage-trivia-q9",
+      "question": "In Amazon S3, what is the purpose of a 'bucket policy'?",
+      "options": [
+        "To define permissions for users",
+        "To manage object versions",
+        "To set lifecycle policies",
+        "To enable cross-region replication"
+      ],
+      "answer": "To define permissions for users",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "cloud-storage-trivia-q10",
+      "question": "What is the maximum retention period for objects in Google Cloud Storage?",
+      "options": [
+        "1 year",
+        "5 years",
+        "10 years",
+        "Unlimited"
+      ],
+      "answer": "Unlimited",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "cloud-storage-trivia-q11",
+      "question": "Which of the following is NOT a storage class in Google Cloud Storage?",
+      "options": [
+        "Standard",
+        "Nearline",
+        "Coldline",
+        "Hotline"
+      ],
+      "answer": "Hotline",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "cloud-storage-trivia-q12",
+      "question": "True or False: Azure Data Lake Storage Gen2 is built on top of Azure Blob Storage.",
+      "answer": "True",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "cloud-storage-trivia-q13",
+      "question": "What command is used in the AWS CLI to list all S3 buckets?",
+      "options": [
+        "aws s3 ls",
+        "aws s3api list-buckets",
+        "aws s3 list",
+        "aws s3api ls"
+      ],
+      "answer": "aws s3api list-buckets",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "cloud-storage-trivia-q14",
+      "question": "Which storage service allows you to store structured and unstructured data in one place?",
+      "options": [
+        "Amazon S3",
+        "Google Cloud Storage",
+        "Azure Data Lake Storage",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "cloud-storage-trivia-q15",
+      "question": "What is the term for the URL used to access an object stored in Amazon S3?",
+      "options": [
+        "Endpoint",
+        "Object URL",
+        "S3 URI",
+        "Bucket URL"
+      ],
+      "answer": "S3 URI",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    }
+  ]
+}

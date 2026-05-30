@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "20-feast",
+  "type": "module",
+  "questions": [
+    {
+      "id": "20-feast-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the primary purpose of a feature store?",
+      "options": [
+        { "id": "a", "text": "To store raw data" },
+        { "id": "b", "text": "To manage and serve features for ML models" },
+        { "id": "c", "text": "To monitor model performance" },
+        { "id": "d", "text": "To validate data integrity" }
+      ],
+      "answer": "b",
+      "explanation": "A feature store specifically focuses on managing and serving features used in machine learning models."
+    },
+    {
+      "id": "20-feast-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Feast supports which of the following storage backends?",
+      "options": [
+        { "id": "a", "text": "MySQL" },
+        { "id": "b", "text": "MongoDB" },
+        { "id": "c", "text": "BigQuery" },
+        { "id": "d", "text": "SQLite" }
+      ],
+      "answer": "c",
+      "explanation": "Feast supports several storage backends, including BigQuery for serving features."
+    },
+    {
+      "id": "20-feast-q3",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Feast is only used for real-time feature retrieval.",
+      "answer": false,
+      "explanation": "Feast can handle both batch and real-time feature retrieval."
+    },
+    {
+      "id": "20-feast-q4",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to define a feature set in Feast:",
+      "language": "python",
+      "code_template": "feature_set = FeatureSet(name='my_feature_set', ____=____)",
+      "blanks": [
+        { "id": "b1", "options": ["features", "entities", "metadata", "tags"], "answer": "features" },
+        { "id": "b2", "options": ["[]", "[Entity(name='user_id')]", "[Feature(name='age', dtype='int')]", "[Feature(name='age')]", "[Feature(name='age', dtype='float')]"], "answer": "[Feature(name='age', dtype='int')]"}
+      ],
+      "explanation": "You need to specify the features in the feature set definition, usually as a list."
+    },
+    {
+      "id": "20-feast-q5",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print('Hello' + ' ' + 'World')",
+      "options": [
+        { "id": "a", "text": "Hello World" },
+        { "id": "b", "text": "HelloWorld" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "Hello World!" }
+      ],
+      "answer": "a",
+      "explanation": "The code concatenates strings with a space in between, resulting in 'Hello World'."
+    },
+    {
+      "id": "20-feast-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following best describes a registry in Feast?",
+      "options": [
+        { "id": "a", "text": "A database for storing raw data" },
+        { "id": "b", "text": "A central place for managing feature sets" },
+        { "id": "c", "text": "A mechanism for scheduling batch jobs" },
+        { "id": "d", "text": "A monitoring tool for feature usage" }
+      ],
+      "answer": "b",
+      "explanation": "The registry in Feast is used to manage feature sets, providing a central place for their metadata."
+    },
+    {
+      "id": "20-feast-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps for deploying a feature set:",
+      "steps": [
+        { "id": "s1", "text": "Define your feature set" },
+        { "id": "s2", "text": "Create a registry entry" },
+        { "id": "s3", "text": "Load features into the online store" },
+        { "id": "s4", "text": "Query features via the API" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "You need to first define the feature set, register it, load features, and then query them."
+    },
+    {
+      "id": "20-feast-q8",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Batch feature retrieval is typically faster than real-time retrieval.",
+      "answer": true,
+      "explanation": "Batch retrieval can optimize data access patterns, making it faster than real-time queries."
+    },
+    {
+      "id": "20-feast-q9",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What is a common anti-pattern when using feature stores?",
+      "options": [
+        { "id": "a", "text": "Serving features directly from the data lake" },
+        { "id": "b", "text": "Normalizing features across datasets" },
+        { "id": "c", "text": "Storing features in an online store" },
+        { "id": "d", "text": "Using static feature sets" }
+      ],
+      "answer": "a",
+      "explanation": "Serving features directly from the data lake can lead to performance issues and latency."
+    },
+    {
+      "id": "20-feast-q10",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the code to fetch features from Feast:",
+      "language": "python",
+      "code_template": "client.get_online_features(____).to_dict()",
+      "blanks": [
+        { "id": "b1", "options": ["entity_rows", "feature_rows", "feature_set", "user_ids"], "answer": "entity_rows" }
+      ],
+      "explanation": "You need to provide the entity rows to fetch the corresponding features from the online store."
+    },
+    {
+      "id": "20-feast-q11",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this code print?",
+      "language": "python",
+      "code": "print({1, 2, 3} | {3, 4, 5})",
+      "options": [
+        { "id": "a", "text": "{1, 2, 3, 4, 5}" },
+        { "id": "b", "text": "{1, 2, 3}" },
+        { "id": "c", "text": "[1, 2, 3, 4, 5]" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The code uses set union, resulting in a set containing all unique elements: {1, 2, 3, 4, 5}."
+    },
+    {
+      "id": "20-feast-q12",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the function of the online store in Feast?",
+      "options": [
+        { "id": "a", "text": "To store raw feature data" },
+        { "id": "b", "text": "To serve features in real-time" },
+        { "id": "c", "text": "To process batch jobs" },
+        { "id": "d", "text": "To validate feature integrity" }
+      ],
+      "answer": "b",
+      "explanation": "The online store is designed for real-time feature retrieval, serving features to models during inference."
+    },
+    {
+      "id": "20-feast-q13",
+      "type": "order_the_steps",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Order the steps to create a feature set in Feast:",
+      "steps": [
+        { "id": "s1", "text": "Define features" },
+        { "id": "s2", "text": "Register the feature set" },
+        { "id": "s3", "text": "Load features" }
+      ],
+      "correctOrder": ["s1", "s2", "s3"],
+      "explanation": "You must first define the features, then register the feature set before loading the features."
+    },
+    {
+      "id": "20-feast-q14",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Feature engineering is unnecessary when using a feature store.",
+      "answer": false,
+      "explanation": "Feature engineering is still necessary to create meaningful features, even when using a feature store."
+    },
+    {
+      "id": "20-feast-q15",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which deployment pattern is best for continuous integration in Feast?",
+      "options": [
+        { "id": "a", "text": "Batch processing" },
+        { "id": "b", "text": "Real-time serving" },
+        { "id": "c", "text": "Hybrid approach" },
+        { "id": "d", "text": "Feature caching" }
+      ],
+      "answer": "c",
+      "explanation": "A hybrid approach allows for both batch and real-time serving, making it ideal for continuous integration."
+    }
+  ]
+}

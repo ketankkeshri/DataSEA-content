@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-23",
+  "type": "find_the_bug",
+  "theme": "spark",
+  "incidentId": 4545,
+  "title": "Incident #4545 — Morning Report Miscalculation",
+  "scenario": "The data team received an urgent alert from the product manager: the daily user engagement report shows an abnormally high number of active users. Find the bug.",
+  "language": "sql",
+  "code": "SELECT COUNT(DISTINCT user_id) AS active_users\nFROM events\nWHERE event_date = '2026-06-23'\nAND event_type = 'login';",
+  "options": [
+    { "id": "a", "text": "The query is counting users correctly but should use `event_type = 'signup'`." },
+    { "id": "b", "text": "The query is using the wrong date filter; it should be `event_date = CURRENT_DATE()`." },
+    { "id": "c", "text": "The query should not use `COUNT(DISTINCT ...)` for this report." },
+    { "id": "d", "text": "The query is missing a JOIN to filter out inactive users." }
+  ],
+  "answer": "b",
+  "explanation": "The bug is in the date filter; hardcoding the event date can lead to errors if run on a different date. Using `CURRENT_DATE()` ensures the query always counts active users for the current day. This is crucial for accurate reporting.",
+  "xp": 150,
+  "coins": 30
+}

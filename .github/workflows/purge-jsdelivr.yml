@@ -1,0 +1,106 @@
+name: Purge jsDelivr cache
+
+# Runs on every push to main + can be triggered manually from the Actions tab.
+# Diffs the latest commit vs its parent, then purges every changed file from
+# jsDelivr's CDN so the Android app sees fresh content within seconds (instead
+# of hours-to-days for the default edge cache).
+#
+# Always also purges content_version.json — the master index that gates all
+# sync logic in the app.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  purge:
+    name: Purge changed files from CDN
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout (with history)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: List changed files
+        id: list
+        run: |
+          set -euo pipefail
+
+          # If we have a parent commit, diff against it. Otherwise (initial
+          # commit) purge everything in the tree.
+          if git rev-parse HEAD^ >/dev/null 2>&1; then
+            git diff --name-only HEAD^ HEAD > changed.txt
+          else
+            echo "Initial commit — purging everything in tree"
+            git ls-tree -r --name-only HEAD > changed.txt
+          fi
+
+          # Always purge the master index — even if it was already in the diff
+          # this is idempotent.
+          echo "content_version.json" >> changed.txt
+          sort -u changed.txt -o changed.txt
+
+          count=$(wc -l < changed.txt | tr -d ' ')
+          echo "Changed / queued for purge: $count files"
+          echo "----- preview -----"
+          head -20 changed.txt
+          [ "$count" -gt 20 ] && echo "... ($((count - 20)) more)"
+          echo "-------------------"
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+
+      - name: Purge jsDelivr cache (chunked)
+        if: steps.list.outputs.count != '0'
+        run: |
+          set -euo pipefail
+
+          PREFIX="/gh/${{ github.repository }}@main"
+          echo "Repo prefix: $PREFIX"
+
+          # Prepend the jsDelivr path prefix to each file, then split into chunks
+          # of 100 (the bulk-purge endpoint's per-request limit).
+          sed "s|^|$PREFIX/|" changed.txt | split -l 100 - chunk_
+
+          total=0
+          failed=0
+          for chunk in chunk_*; do
+            count=$(wc -l < "$chunk" | tr -d ' ')
+            # jq builds a clean JSON {"path": [...]} payload from the chunk
+            payload=$(jq -Rsc 'split("\n") | map(select(length > 0)) | {path: .}' < "$chunk")
+
+            http_code=$(curl -sS -o response.json -w "%{http_code}" \
+              -X POST "https://purge.jsdelivr.net/" \
+              -H "Content-Type: application/json" \
+              -d "$payload")
+
+            if [ "$http_code" = "200" ]; then
+              id=$(jq -r '.id // "unknown"' response.json)
+              status=$(jq -r '.status // "unknown"' response.json)
+              echo "✓ Chunk ($count files) → $status (id: $id)"
+              total=$((total + count))
+            else
+              echo "✗ Chunk ($count files) failed: HTTP $http_code"
+              cat response.json
+              failed=$((failed + count))
+            fi
+          done
+
+          echo ""
+          echo "════════════════════════════════════════"
+          echo "Purged: $total files"
+          [ "$failed" -gt 0 ] && echo "Failed:  $failed files" && exit 1
+          echo "════════════════════════════════════════"
+
+      - name: Verify content_version.json freshness
+        if: steps.list.outputs.count != '0'
+        run: |
+          set -euo pipefail
+          # Small post-purge sanity check — fetch the version file via jsDelivr
+          # and dump its lastUpdated + module count.
+          sleep 3
+          url="https://cdn.jsdelivr.net/gh/${{ github.repository }}@main/content_version.json"
+          curl -sS "$url" | jq '{lastUpdated, module_count: (.modules | length), feed_version: .feed.version}'

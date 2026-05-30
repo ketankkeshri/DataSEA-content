@@ -1,0 +1,221 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "packId": "airflow-operator",
+  "type": "independent",
+  "title": "Airflow Operator",
+  "questions": [
+    {
+      "id": "airflow-operator-q1",
+      "type": "mcq",
+      "question": "What does DAG stand for in Apache Airflow?",
+      "options": ["Directed Acyclic Graph", "Dynamic Allocation Graph", "Data Analysis Group", "Distributed Application Graph"],
+      "answer": "Directed Acyclic Graph",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "airflow-operator-q2",
+      "type": "true_false",
+      "question": "In Airflow, a task can have multiple parents.",
+      "answer": "True",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "airflow-operator-q3",
+      "type": "mcq",
+      "question": "Which of the following is an example of an operator in Airflow?",
+      "options": ["BashOperator", "PythonOperator", "DummyOperator", "All of the above"],
+      "answer": "All of the above",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "airflow-operator-q4",
+      "type": "code_completion",
+      "question": "Fill in the blank: To create a task in Airflow, you need to define a ______.",
+      "answer": "operator",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "airflow-operator-q5",
+      "type": "mcq",
+      "question": "What is the default scheduler interval for Airflow tasks?",
+      "options": ["1 minute", "5 minutes", "10 minutes", "None"],
+      "answer": "None",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "airflow-operator-q6",
+      "type": "order_the_steps",
+      "question": "Order the steps to create a task in Airflow.",
+      "options": [
+        "Define an operator",
+        "Instantiate a task",
+        "Add the task to the DAG",
+        "Define dependencies"
+      ],
+      "answer": [
+        "Define an operator",
+        "Instantiate a task",
+        "Add the task to the DAG",
+        "Define dependencies"
+      ],
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "airflow-operator-q7",
+      "type": "mcq",
+      "question": "What does XCom stand for in Airflow?",
+      "options": ["Cross-Communication", "Cross-Component", "External Communication", "Execution Communication"],
+      "answer": "Cross-Communication",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "airflow-operator-q8",
+      "type": "true_false",
+      "question": "Airflow allows for dynamic generation of DAGs based on external parameters.",
+      "answer": "True",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "airflow-operator-q9",
+      "type": "mcq",
+      "question": "What is the purpose of the `trigger_rule` parameter in an Airflow task?",
+      "options": ["To specify when to execute a task", "To define task retries", "To set task timeouts", "To define task dependencies"],
+      "answer": "To specify when to execute a task",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "airflow-operator-q10",
+      "type": "code_completion",
+      "question": "Complete the code: `@dag(schedule_interval='@daily')\ndef my_dag():\n    task1 = ______(task_id='task1')`",
+      "answer": "BashOperator",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "airflow-operator-q11",
+      "type": "mcq",
+      "question": "Which of the following is NOT a built-in operator in Airflow?",
+      "options": ["PostgresOperator", "HttpOperator", "S3UploadOperator", "EmailOperator"],
+      "answer": "S3UploadOperator",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "airflow-operator-q12",
+      "type": "tap_the_output",
+      "question": "Tap the output of the following code:\n```python\nfrom airflow import DAG\nfrom airflow.operators.dummy import DummyOperator\n\ndag = DAG('example_dag', schedule_interval='@daily')\ntask = DummyOperator(task_id='dummy_task', dag=dag)\n```",
+      "answer": "dummy_task",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "airflow-operator-q13",
+      "type": "true_false",
+      "question": "DAGs in Airflow can run concurrently.",
+      "answer": "True",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "airflow-operator-q14",
+      "type": "mcq",
+      "question": "How does Airflow handle task failures?",
+      "options": ["Retries based on a defined policy", "Automatically stops the DAG", "Sends an email notification", "None of the above"],
+      "answer": "Retries based on a defined policy",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "airflow-operator-q15",
+      "type": "code_completion",
+      "question": "Fill in the blank: The ______ parameter in an operator defines the command to be executed.",
+      "answer": "bash_command",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "airflow-operator-q16",
+      "type": "mcq",
+      "question": "Which database does Airflow use by default for metadata?",
+      "options": ["MongoDB", "PostgreSQL", "SQLite", "MySQL"],
+      "answer": "SQLite",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "airflow-operator-q17",
+      "type": "true_false",
+      "question": "Airflow supports scheduling tasks based on events.",
+      "answer": "False",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "airflow-operator-q18",
+      "type": "mcq",
+      "question": "What is the purpose of the `depends_on_past` parameter in Airflow?",
+      "options": ["To control task execution based on previous runs", "To set task execution time limits", "To define task priorities", "None of the above"],
+      "answer": "To control task execution based on previous runs",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "airflow-operator-q19",
+      "type": "order_the_steps",
+      "question": "Order these steps to define a DAG in Airflow.",
+      "options": [
+        "Create an instance of DAG",
+        "Define tasks",
+        "Set task dependencies",
+        "Instantiate the DAG"
+      ],
+      "answer": [
+        "Create an instance of DAG",
+        "Instantiate the DAG",
+        "Define tasks",
+        "Set task dependencies"
+      ],
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "airflow-operator-q20",
+      "type": "mcq",
+      "question": "What is the `@daily` schedule interval in Airflow?",
+      "options": ["Runs once a day", "Runs every hour", "Runs every minute", "Runs every week"],
+      "answer": "Runs once a day",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    }
+  ]
+}

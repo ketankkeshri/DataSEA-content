@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-24",
+  "type": "find_the_bug",
+  "theme": "airflow",
+  "incidentId": 4546,
+  "title": "Incident #4546 — Midnight Data Pipeline Meltdown",
+  "scenario": "The data engineering team is alerted that the nightly user activity report shows zero activity for all users. Find the bug.",
+  "language": "sql",
+  "code": "SELECT user_id, COUNT(*) AS activity_count\nFROM user_activity\nWHERE activity_date = CURRENT_DATE\nGROUP BY user_id;",
+  "options": [
+    { "id": "a", "text": "The WHERE clause should filter by yesterday's date instead of today's." },
+    { "id": "b", "text": "The CURRENT_DATE function does not consider timezone differences." },
+    { "id": "c", "text": "The GROUP BY clause is missing the activity_date column." },
+    { "id": "d", "text": "The table user_activity is not being updated correctly." }
+  ],
+  "answer": "b",
+  "explanation": "The bug lies in the use of CURRENT_DATE, which defaults to UTC. If the data is being logged in a different timezone, it may lead to incorrect filtering. To fix this, explicitly handle timezone conversions to ensure the correct date is used for filtering.",
+  "xp": 150,
+  "coins": 30
+}

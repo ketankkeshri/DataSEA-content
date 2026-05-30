@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-03",
+  "type": "find_the_bug",
+  "theme": "airflow",
+  "incidentId": 4525,
+  "title": "Incident #4525 — Daily Sales Report Fails to Reflect Actual Orders",
+  "scenario": "The sales team is confused as the daily sales report shows an unexpected drop in orders. Investigate the bug in the data pipeline.",
+  "language": "python",
+  "code": "from airflow import DAG\nfrom airflow.operators.python import PythonOperator\nfrom datetime import datetime\n\ndef calculate_daily_sales():\n    sales_data = get_sales_data()  # Fetch sales data\n    total_sales = sum(sale['amount'] for sale in sales_data)\n    return total_sales\n\nwith DAG('daily_sales_report', start_date=datetime(2022, 1, 1)) as dag:\n    sales_task = PythonOperator(\n        task_id='calculate_sales',\n        python_callable=calculate_daily_sales\n    )",
+  "options": [
+    { "id": "a", "text": "The function get_sales_data() is returning an empty list." },
+    { "id": "b", "text": "The sales data is not filtered for the correct date." },
+    { "id": "c", "text": "The total_sales variable is incorrectly initialized." },
+    { "id": "d", "text": "The DAG is not running on schedule due to a misconfiguration." }
+  ],
+  "answer": "b",
+  "explanation": "The bug is that the function does not filter the sales data for the current date, resulting in an inaccurate total. To fix this, ensure that the sales data is filtered based on the execution date of the DAG.",
+  "xp": 150,
+  "coins": 30
+}

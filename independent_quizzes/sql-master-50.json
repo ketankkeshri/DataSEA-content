@@ -1,0 +1,429 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "packId": "sql-master-50",
+  "type": "independent",
+  "title": "SQL Master 50",
+  "questions": [
+    {
+      "id": "sql-master-50-q1",
+      "question": "What does the SQL command 'SELECT * FROM users;' do?",
+      "options": ["Selects all columns from the 'users' table.", "Deletes all users.", "Updates all records in the 'users' table.", "Creates a new 'users' table."],
+      "answer": "Selects all columns from the 'users' table.",
+      "format": "mcq",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "sql-master-50-q2",
+      "question": "True or False: A SQL JOIN can combine data from multiple tables.",
+      "answer": "True",
+      "format": "true_false",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "sql-master-50-q3",
+      "question": "Fill in the blank: The SQL command to remove a table is _____",
+      "answer": "DROP TABLE",
+      "format": "code_completion",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "sql-master-50-q4",
+      "question": "What is the purpose of the WHERE clause in SQL?",
+      "options": ["To filter records.", "To sort records.", "To group records.", "To limit the number of returned records."],
+      "answer": "To filter records.",
+      "format": "mcq",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "sql-master-50-q5",
+      "question": "In SQL, what does 'GROUP BY' do?",
+      "options": ["Groups rows that have the same values.", "Orders the results.", "Filters records.", "Limits the number of results."],
+      "answer": "Groups rows that have the same values.",
+      "format": "mcq",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "sql-master-50-q6",
+      "question": "What will the following SQL query return? 'SELECT COUNT(*) FROM orders;'",
+      "options": ["The number of orders.", "The total value of orders.", "The first order.", "All orders."],
+      "answer": "The number of orders.",
+      "format": "mcq",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "sql-master-50-q7",
+      "question": "True or False: A primary key can have duplicate values in a table.",
+      "answer": "False",
+      "format": "true_false",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "sql-master-50-q8",
+      "question": "What is the output of the following query? 'SELECT name FROM users WHERE age > 30;'",
+      "answer": "Names of users older than 30.",
+      "format": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "sql-master-50-q9",
+      "question": "Fill in the blank: To update a record in SQL, you use the _____ command.",
+      "answer": "UPDATE",
+      "format": "code_completion",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "sql-master-50-q10",
+      "question": "What does the 'HAVING' clause do in SQL?",
+      "options": ["Filters results after groupings have been made.", "Sorts data.", "Updates records.", "Deletes records."],
+      "answer": "Filters results after groupings have been made.",
+      "format": "mcq",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "sql-master-50-q11",
+      "question": "What is a CTE (Common Table Expression)?",
+      "options": ["A temporary result set that you can reference within a SELECT, INSERT, UPDATE, or DELETE statement.", "A permanent table in the database.", "A type of function.", "An index."],
+      "answer": "A temporary result set that you can reference within a SELECT, INSERT, UPDATE, or DELETE statement.",
+      "format": "mcq",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "sql-master-50-q12",
+      "question": "True or False: Window functions operate on a specific range of rows related to the current row.",
+      "answer": "True",
+      "format": "true_false",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "sql-master-50-q13",
+      "question": "What does the SQL command 'SELECT ROW_NUMBER() OVER (ORDER BY age) FROM users;' do?",
+      "answer": "Assigns a unique sequential integer to rows within a partition of a result set.",
+      "format": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "sql-master-50-q14",
+      "question": "What is the main advantage of using indexes in SQL?",
+      "options": ["Speeds up query performance.", "Reduces data redundancy.", "Ensures data integrity.", "Simplifies complex queries."],
+      "answer": "Speeds up query performance.",
+      "format": "mcq",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "sql-master-50-q15",
+      "question": "Fill in the blank: The _____ function returns the highest value in a set.",
+      "answer": "MAX",
+      "format": "code_completion",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "sql-master-50-q16",
+      "question": "What does the SQL command 'SELECT name, RANK() OVER (ORDER BY score) FROM players;' do?",
+      "answer": "Ranks players based on their score.",
+      "format": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q17",
+      "question": "True or False: You can use multiple JOINs in a single SQL query.",
+      "answer": "True",
+      "format": "true_false",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q18",
+      "question": "What is schema evolution in SQL?",
+      "options": ["The process of changing the structure of a database schema over time.", "The creation of a new schema.", "The process of backing up a schema.", "The optimization of queries."],
+      "answer": "The process of changing the structure of a database schema over time.",
+      "format": "mcq",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q19",
+      "question": "Fill in the blank: An _____ JOIN returns all records from the left table and the matched records from the right table.",
+      "answer": "LEFT",
+      "format": "code_completion",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q20",
+      "question": "What is the result of the following query? 'SELECT * FROM orders WHERE order_date > NOW() - INTERVAL '30 days';'",
+      "answer": "Records of orders placed in the last 30 days.",
+      "format": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q21",
+      "question": "What does the 'PARTITION BY' clause do in a window function?",
+      "options": ["Divides the result set into partitions to which the window function is applied.", "Filters the result set.", "Sorts the result set.", "Changes the data type."],
+      "answer": "Divides the result set into partitions to which the window function is applied.",
+      "format": "mcq",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q22",
+      "question": "True or False: Late-arriving data can affect the results of aggregate functions.",
+      "answer": "True",
+      "format": "true_false",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q23",
+      "question": "What will the following SQL query return? 'SELECT DISTINCT country FROM users;'",
+      "answer": "Unique countries from the users table.",
+      "format": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q24",
+      "question": "Fill in the blank: The _____ clause is used to specify the conditions for the records to be selected.",
+      "answer": "WHERE",
+      "format": "code_completion",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q25",
+      "question": "What does the 'EXPLAIN' command do in SQL?",
+      "options": ["Describes how SQL executes a query.", "Executes a query.", "Creates an index.", "Deletes a table."],
+      "answer": "Describes how SQL executes a query.",
+      "format": "mcq",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q26",
+      "question": "How can you improve the performance of a SQL query?",
+      "options": ["Use indexes.", "Avoid using SELECT *.", "Limit the number of rows returned.", "All of the above."],
+      "answer": "All of the above.",
+      "format": "mcq",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q27",
+      "question": "What does the 'UNION' operation do?",
+      "answer": "Combines the result sets of two or more SELECT statements.",
+      "format": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q28",
+      "question": "Fill in the blank: The _____ function calculates the total sum of a numeric column.",
+      "answer": "SUM",
+      "format": "code_completion",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q29",
+      "question": "What is the purpose of the 'LIMIT' clause?",
+      "options": ["To restrict the number of rows returned by the query.", "To sort rows.", "To filter rows.", "To group rows."],
+      "answer": "To restrict the number of rows returned by the query.",
+      "format": "mcq",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q30",
+      "question": "True or False: You can use aggregate functions with GROUP BY.",
+      "answer": "True",
+      "format": "true_false",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q31",
+      "question": "What does the following query return? 'SELECT user_id, SUM(amount) FROM transactions GROUP BY user_id;'",
+      "answer": "The total transaction amount for each user.",
+      "format": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q32",
+      "question": "Fill in the blank: A _____ is a collection of data stored in a structured format in a database.",
+      "answer": "table",
+      "format": "code_completion",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q33",
+      "question": "What is the purpose of a foreign key?",
+      "options": ["To create a relationship between two tables.", "To ensure data integrity.", "To enforce referential integrity.", "All of the above."],
+      "answer": "All of the above.",
+      "format": "mcq",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q34",
+      "question": "True or False: A SQL transaction is a sequence of operations performed as a single logical unit of work.",
+      "answer": "True",
+      "format": "true_false",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q35",
+      "question": "What does 'SELECT * FROM table_name WHERE column_name IS NULL;' do?",
+      "answer": "Retrieves all records where column_name is NULL.",
+      "format": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q36",
+      "question": "Fill in the blank: The _____ function is used to return the current date and time.",
+      "answer": "NOW",
+      "format": "code_completion",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q37",
+      "question": "What is a stored procedure?",
+      "options": ["A precompiled SQL statement that can be executed multiple times.", "A type of function.", "A temporary table.", "A database backup."],
+      "answer": "A precompiled SQL statement that can be executed multiple times.",
+      "format": "mcq",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q38",
+      "question": "True or False: SQL is a case-sensitive language.",
+      "answer": "False",
+      "format": "true_false",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q39",
+      "question": "What does 'SELECT * FROM sales ORDER BY amount DESC;' do?",
+      "answer": "Retrieves all records from sales ordered by amount in descending order.",
+      "format": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q40",
+      "question": "Fill in the blank: The _____ function returns the number of rows that match a specified criteria.",
+      "answer": "COUNT",
+      "format": "code_completion",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q41",
+      "question": "What is an index in SQL?",
+      "options": ["A data structure that improves the speed of data retrieval.", "A type of query.", "A temporary table.", "A backup method."],
+      "answer": "A data structure that improves the speed of data retrieval.",
+      "format": "mcq",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q42",
+      "question": "True or False: You can create multiple indexes on a single table.",
+      "answer": "True",
+      "format": "true_false",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q43",
+      "question": "What does the 'DELETE' command do?",
+      "options": ["Removes records from a table.", "Updates records in a table.", "Creates a new table.", "Retrieves records from a table."],
+      "answer": "Removes records from a table.",
+      "format": "mcq",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q44",
+      "question": "Fill in the blank: The _____ command is used to add a new column to an existing table.",
+      "answer": "ALTER TABLE",
+      "format": "code_completion",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "sql-master-50-q45",
+      "question": "What does the 'JOIN' operation do?",
+      "options": ["Combines rows from two or more tables based on a related column.", "Deletes rows from a table.", "Updates rows in a table.", "Retrieves rows from a table."],
+      "answer": "Combines rows from two or more tables based on a related column.",
+      "format": "mcq",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },

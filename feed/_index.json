@@ -1,0 +1,352 @@
+{
+  "schemaVersion": 1,
+  "posts": [
+    {
+      "id": "welcome-to-datasea",
+      "type": "article",
+      "title": "Welcome to DataSEA",
+      "summary": "Welcome message. What's the app, why use it, where to start.",
+      "publishedAt": "2026-05-30T08:18:25.865815Z",
+      "author": "DataSEA Editorial",
+      "readMinutes": 3,
+      "tags": [
+        "meta",
+        "intro"
+      ],
+      "coverImage": null,
+      "contentPath": "feed/posts/welcome-to-datasea.md",
+      "externalUrl": null,
+      "isPro": false
+    },
+    {
+      "id": "dbt-mesh-explained",
+      "type": "article",
+      "title": "dbt Mesh, Explained Without the Jargon",
+      "summary": "What dbt Mesh is, the team size where it pays off, when it's overkill.",
+      "publishedAt": "2026-05-30T08:18:35.395992Z",
+      "author": "DataSEA Editorial",
+      "readMinutes": 6,
+      "tags": [
+        "dbt",
+        "architecture"
+      ],
+      "coverImage": null,
+      "contentPath": "feed/posts/dbt-mesh-explained.md",
+      "externalUrl": null,
+      "isPro": false
+    },
+    {
+      "id": "iceberg-vs-hudi-vs-delta",
+      "type": "article",
+      "title": "Iceberg vs Hudi vs Delta: Pick One in 2026",
+      "summary": "Honest comparison. Pros, cons, when each wins. No hype.",
+      "publishedAt": "2026-05-30T08:18:46.164152Z",
+      "author": "DataSEA Editorial",
+      "readMinutes": 8,
+      "tags": [
+        "iceberg",
+        "hudi",
+        "delta-lake",
+        "decision"
+      ],
+      "coverImage": null,
+      "contentPath": "feed/posts/iceberg-vs-hudi-vs-delta.md",
+      "externalUrl": null,
+      "isPro": false
+    },
+    {
+      "id": "spark-shuffle-survival-guide",
+      "type": "article",
+      "title": "Spark Shuffle Survival Guide",
+      "summary": "What shuffles cost, how to diagnose, top 5 mitigations.",
+      "publishedAt": "2026-05-30T08:18:57.529009Z",
+      "author": "DataSEA Editorial",
+      "readMinutes": 7,
+      "tags": [
+        "spark",
+        "performance"
+      ],
+      "coverImage": null,
+      "contentPath": "feed/posts/spark-shuffle-survival-guide.md",
+      "externalUrl": null,
+      "isPro": true
+    },
+    {
+      "id": "airflow-2-vs-prefect-2",
+      "type": "article",
+      "title": "Airflow 2 vs Prefect 2: 6 Real-World Differences",
+      "summary": "Beyond marketing. What changes for DEs day-to-day.",
+      "publishedAt": "2026-05-30T08:19:15.388987Z",
+      "author": "DataSEA Editorial",
+      "readMinutes": 6,
+      "tags": [
+        "airflow",
+        "prefect",
+        "orchestration"
+      ],
+      "coverImage": null,
+      "contentPath": "feed/posts/airflow-2-vs-prefect-2.md",
+      "externalUrl": null,
+      "isPro": false
+    },
+    {
+      "id": "window-functions-cheatsheet",
+      "type": "article",
+      "title": "Window Functions Cheatsheet: From ROW_NUMBER to LAG",
+      "summary": "Every window function, what it does, common pitfall.",
+      "publishedAt": "2026-05-30T08:19:26.283745Z",
+      "author": "DataSEA Editorial",
+      "readMinutes": 5,
+      "tags": [
+        "sql",
+        "window-functions"
+      ],
+      "coverImage": null,
+      "contentPath": "feed/posts/window-functions-cheatsheet.md",
+      "externalUrl": null,
+      "isPro": false
+    },
+    {
+      "id": "rag-evaluation-isnt-vibes",
+      "type": "article",
+      "title": "RAG Evaluation Isn't Vibes: Frameworks That Work",
+      "summary": "How to actually measure RAG quality. Ragas, TruLens, custom.",
+      "publishedAt": "2026-05-30T08:19:36.470689Z",
+      "author": "DataSEA Editorial",
+      "readMinutes": 8,
+      "tags": [
+        "rag",
+        "llm",
+        "evaluation"
+      ],
+      "coverImage": null,
+      "contentPath": "feed/posts/rag-evaluation-isnt-vibes.md",
+      "externalUrl": null,
+      "isPro": true
+    },
+    {
+      "id": "snowflake-cost-traps",
+      "type": "article",
+      "title": "5 Snowflake Cost Traps and How to Avoid Them",
+      "summary": "Real patterns that quietly burn credits.",
+      "publishedAt": "2026-05-30T08:19:46.107148Z",
+      "author": "DataSEA Editorial",
+      "readMinutes": 6,
+      "tags": [
+        "snowflake",
+        "cost"
+      ],
+      "coverImage": null,
+      "contentPath": "feed/posts/snowflake-cost-traps.md",
+      "externalUrl": null,
+      "isPro": false
+    },
+    {
+      "id": "pandas-vs-polars-2026",
+      "type": "article",
+      "title": "Pandas vs Polars in 2026",
+      "summary": "When to switch, when not to. Benchmarks with caveats.",
+      "publishedAt": "2026-05-30T08:19:53.907140Z",
+      "author": "DataSEA Editorial",
+      "readMinutes": 5,
+      "tags": [
+        "pandas",
+        "polars",
+        "python"
+      ],
+      "coverImage": null,
+      "contentPath": "feed/posts/pandas-vs-polars-2026.md",
+      "externalUrl": null,
+      "isPro": false
+    },
+    {
+      "id": "feature-stores-when-worth-it",
+      "type": "article",
+      "title": "Feature Stores: When Are They Actually Worth It?",
+      "summary": "Team size, model count, latency requirements that justify adoption.",
+      "publishedAt": "2026-05-30T08:20:02.630580Z",
+      "author": "DataSEA Editorial",
+      "readMinutes": 7,
+      "tags": [
+        "feature-store",
+        "mlops"
+      ],
+      "coverImage": null,
+      "contentPath": "feed/posts/feature-stores-when-worth-it.md",
+      "externalUrl": null,
+      "isPro": true
+    },
+    {
+      "id": "data-quality-without-platform-team",
+      "type": "article",
+      "title": "Data Quality Without a Platform Team",
+      "summary": "Practical checks for solo / small data teams.",
+      "publishedAt": "2026-05-30T08:20:12.114084Z",
+      "author": "DataSEA Editorial",
+      "readMinutes": 6,
+      "tags": [
+        "data-quality",
+        "dbt-tests",
+        "great-expectations"
+      ],
+      "coverImage": null,
+      "contentPath": "feed/posts/data-quality-without-platform-team.md",
+      "externalUrl": null,
+      "isPro": false
+    },
+    {
+      "id": "career-junior-to-senior-de",
+      "type": "article",
+      "title": "Junior to Senior DE: The Real Roadmap",
+      "summary": "What skills compound. What doesn't. Honest timeline.",
+      "publishedAt": "2026-05-30T08:20:21.374577Z",
+      "author": "DataSEA Editorial",
+      "readMinutes": 9,
+      "tags": [
+        "career"
+      ],
+      "coverImage": null,
+      "contentPath": "feed/posts/career-junior-to-senior-de.md",
+      "externalUrl": null,
+      "isPro": false
+    },
+    {
+      "id": "kafka-consumer-group-deep-dive",
+      "type": "article",
+      "title": "Kafka Consumer Groups, Demystified",
+      "summary": "Rebalance, partitions, lag. With diagrams.",
+      "publishedAt": "2026-05-30T08:20:28.779517Z",
+      "author": "DataSEA Editorial",
+      "readMinutes": 7,
+      "tags": [
+        "kafka",
+        "streaming"
+      ],
+      "coverImage": null,
+      "contentPath": "feed/posts/kafka-consumer-group-deep-dive.md",
+      "externalUrl": null,
+      "isPro": true
+    },
+    {
+      "id": "minio-on-laptop",
+      "type": "article",
+      "title": "Run S3 on Your Laptop in 5 Minutes with MinIO",
+      "summary": "Practical setup, common gotchas.",
+      "publishedAt": "2026-05-30T08:20:38.625757Z",
+      "author": "DataSEA Editorial",
+      "readMinutes": 4,
+      "tags": [
+        "minio",
+        "s3",
+        "local-dev"
+      ],
+      "coverImage": null,
+      "contentPath": "feed/posts/minio-on-laptop.md",
+      "externalUrl": null,
+      "isPro": false
+    },
+    {
+      "id": "trino-vs-spark-when-which",
+      "type": "article",
+      "title": "Trino vs Spark: Which One When",
+      "summary": "Latency, cost, workload type. Decision matrix.",
+      "publishedAt": "2026-05-30T08:20:47.914514Z",
+      "author": "DataSEA Editorial",
+      "readMinutes": 6,
+      "tags": [
+        "trino",
+        "spark",
+        "decision"
+      ],
+      "coverImage": null,
+      "contentPath": "feed/posts/trino-vs-spark-when-which.md",
+      "externalUrl": null,
+      "isPro": false
+    },
+    {
+      "id": "yaml-pitfalls-de-must-know",
+      "type": "article",
+      "title": "5 YAML Pitfalls Every DE Should Know",
+      "summary": "The Norway problem, octal numbers, anchors going wrong.",
+      "publishedAt": "2026-05-30T08:20:57.535321Z",
+      "author": "DataSEA Editorial",
+      "readMinutes": 4,
+      "tags": [
+        "yaml",
+        "configuration"
+      ],
+      "coverImage": null,
+      "contentPath": "feed/posts/yaml-pitfalls-de-must-know.md",
+      "externalUrl": null,
+      "isPro": false
+    },
+    {
+      "id": "vector-db-benchmarks-truth",
+      "type": "article",
+      "title": "Vector DB Benchmarks: What They Don't Tell You",
+      "summary": "Recall@k vs latency vs cost. The tradeoffs nobody publishes.",
+      "publishedAt": "2026-05-30T08:21:14.781657Z",
+      "author": "DataSEA Editorial",
+      "readMinutes": 7,
+      "tags": [
+        "vector-db",
+        "llm"
+      ],
+      "coverImage": null,
+      "contentPath": "feed/posts/vector-db-benchmarks-truth.md",
+      "externalUrl": null,
+      "isPro": true
+    },
+    {
+      "id": "kubernetes-for-data-teams",
+      "type": "article",
+      "title": "Kubernetes for Data Teams: The Minimal Mental Model",
+      "summary": "What a DE actually needs to know. Skip the rest.",
+      "publishedAt": "2026-05-30T08:21:24.453689Z",
+      "author": "DataSEA Editorial",
+      "readMinutes": 8,
+      "tags": [
+        "kubernetes",
+        "infra"
+      ],
+      "coverImage": null,
+      "contentPath": "feed/posts/kubernetes-for-data-teams.md",
+      "externalUrl": null,
+      "isPro": false
+    },
+    {
+      "id": "postgres-as-data-warehouse",
+      "type": "article",
+      "title": "Postgres as a Data Warehouse: Where It Breaks",
+      "summary": "How far you can go, where you must move on.",
+      "publishedAt": "2026-05-30T08:21:35.302187Z",
+      "author": "DataSEA Editorial",
+      "readMinutes": 6,
+      "tags": [
+        "postgres",
+        "data-warehouse"
+      ],
+      "coverImage": null,
+      "contentPath": "feed/posts/postgres-as-data-warehouse.md",
+      "externalUrl": null,
+      "isPro": false
+    },
+    {
+      "id": "dbt-tests-you-actually-need",
+      "type": "article",
+      "title": "The Only 7 dbt Tests You Actually Need",
+      "summary": "Prune the test bloat. Keep what matters.",
+      "publishedAt": "2026-05-30T08:21:46.132460Z",
+      "author": "DataSEA Editorial",
+      "readMinutes": 5,
+      "tags": [
+        "dbt",
+        "testing"
+      ],
+      "coverImage": null,
+      "contentPath": "feed/posts/dbt-tests-you-actually-need.md",
+      "externalUrl": null,
+      "isPro": false
+    }
+  ]
+}

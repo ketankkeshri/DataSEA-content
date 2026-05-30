@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "packId": "python-de-essentials",
+  "type": "independent",
+  "title": "Python for DE Essentials",
+  "questions": [
+    {
+      "id": "python-de-essentials-q1",
+      "type": "mcq",
+      "question": "What is the output of the following code?\n```python\nprint(type([1, 2, 3]))\n```",
+      "options": [
+        "A) <class 'list'>",
+        "B) <class 'tuple'>",
+        "C) <class 'dict'>",
+        "D) <class 'set'>"
+      ],
+      "answer": "A) <class 'list'>",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "python-de-essentials-q2",
+      "type": "true_false",
+      "question": "Python supports multiple inheritance.",
+      "answer": "True",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "python-de-essentials-q3",
+      "type": "mcq",
+      "question": "Which of the following is a valid way to create a DataFrame in pandas?",
+      "options": [
+        "A) pd.DataFrame(data=[1, 2, 3])",
+        "B) pd.DataFrame(data='my_data')",
+        "C) pd.DataFrame(data=(1, 2, 3))",
+        "D) pd.DataFrame(data={1: 'A', 2: 'B'})"
+      ],
+      "answer": "A) pd.DataFrame(data=[1, 2, 3])",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "python-de-essentials-q4",
+      "type": "code_completion",
+      "question": "Fill in the blanks to create a DataFrame from a dictionary:\n```python\nimport pandas as pd\n\ndata = {\n    'Column1': [1, 2],\n    'Column2': [3, 4]\n}\n\ndf = ________(data)\n```",
+      "answer": "pd.DataFrame",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "python-de-essentials-q5",
+      "type": "tap_the_output",
+      "question": "What will be the output of the following code?\n```python\nimport asyncio\n\nasync def main():\n    return 'Hello, World!'\n\nresult = asyncio.run(main())\nprint(result)\n```",
+      "output": "Hello, World!",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "python-de-essentials-q6",
+      "type": "mcq",
+      "question": "Which method is used to add a new row in a pandas DataFrame?",
+      "options": [
+        "A) append()",
+        "B) add()",
+        "C) insert()",
+        "D) extend()"
+      ],
+      "answer": "A) append()",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "python-de-essentials-q7",
+      "type": "order_the_steps",
+      "question": "Order the steps to read a CSV file using pandas.",
+      "options": [
+        "A) Import pandas as pd",
+        "B) Use pd.read_csv()",
+        "C) Assign to a variable",
+        "D) Provide file path"
+      ],
+      "correctOrder": ["A", "B", "D", "C"],
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "python-de-essentials-q8",
+      "type": "mcq",
+      "question": "What will the following code print?\n```python\nprint([x * 2 for x in range(5)])\n```",
+      "options": [
+        "A) [0, 1, 2, 3, 4]",
+        "B) [0, 2, 4, 6, 8]",
+        "C) [1, 2, 3, 4, 5]",
+        "D) [2, 4, 6, 8, 10]"
+      ],
+      "answer": "B) [0, 2, 4, 6, 8]",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "python-de-essentials-q9",
+      "type": "mcq",
+      "question": "Which of the following is NOT a built-in data type in Python?",
+      "options": [
+        "A) List",
+        "B) Dictionary",
+        "C) Array",
+        "D) Tuple"
+      ],
+      "answer": "C) Array",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "python-de-essentials-q10",
+      "type": "mcq",
+      "question": "What does the `async` keyword do in Python?",
+      "options": [
+        "A) Declares a function that runs synchronously",
+        "B) Declares a function that runs asynchronously",
+        "C) Declares a variable",
+        "D) Declares a class"
+      ],
+      "answer": "B) Declares a function that runs asynchronously",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "python-de-essentials-q11",
+      "type": "code_completion",
+      "question": "Complete the code to use async/await pattern:\n```python\nimport asyncio\n\nasync def fetch_data():\n    await _________\n\nasyncio.run(fetch_data())\n```",
+      "answer": "asyncio.sleep(1)",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "python-de-essentials-q12",
+      "type": "tap_the_output",
+      "question": "What will be the output of the following code?\n```python\nimport pandas as pd\n\ndf = pd.DataFrame({'A': [1, 2], 'B': [3, 4]})\nprint(df['A'].sum())\n```",
+      "output": "3",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "python-de-essentials-q13",
+      "type": "mcq",
+      "question": "In pandas, what does the `groupby()` function do?",
+      "options": [
+        "A) Groups data based on a column",
+        "B) Merges two DataFrames",
+        "C) Filters rows",
+        "D) Sorts data"
+      ],
+      "answer": "A) Groups data based on a column",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "python-de-essentials-q14",
+      "type": "mcq",
+      "question": "Which of the following is the correct way to import the typing module?",
+      "options": [
+        "A) import typing",
+        "B) from typing import List",
+        "C) from typing import Dict",
+        "D) All of the above"
+      ],
+      "answer": "D) All of the above",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "python-de-essentials-q15",
+      "type": "code_completion",
+      "question": "Fill in the blank to create a type hint for a list of strings:\n```python\ndef process_items(items: ________):\n    pass\n```",
+      "answer": "List[str]",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "python-de-essentials-q16",
+      "type": "true_false",
+      "question": "The `pandas` library can handle missing data.",
+      "answer": "True",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "python-de-essentials-q17",
+      "type": "mcq",
+      "question": "What does the `await` keyword do?",
+      "options": [
+        "A) Pauses execution until a future is done",
+        "B) Starts a new thread",
+        "C) Terminates a function",
+        "D) None of the above"
+      ],
+      "answer": "A) Pauses execution until a future is done",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "python-de-essentials-q18",
+      "type": "mcq",
+      "question": "Which method is used to convert a column in a DataFrame to a different data type?",
+      "options": [
+        "A) convert_dtypes()",
+        "B) astype()",
+        "C) change_type()",
+        "D) cast()"
+      ],
+      "answer": "B) astype()",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "python-de-essentials-q19",
+      "type": "mcq",
+      "question": "What will be the output of the following code?\n```python\nprint('Hello' + ' World')\n```",
+      "options": [
+        "A) Hello World",
+        "B) HelloWorld",
+        "C) Hello World!",
+        "D) None of the above"
+      ],
+      "answer": "A) Hello World",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "python-de-essentials-q20",
+      "type": "true_false",
+      "question": "A generator function in Python uses the `return` statement.",
+      "answer": "False",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    }
+  ]
+}

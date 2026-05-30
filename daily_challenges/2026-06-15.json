@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-15",
+  "type": "find_the_bug",
+  "theme": "sql",
+  "incidentId": 4537,
+  "title": "Incident #4537 — Revenue Report Miscalculation",
+  "scenario": "The finance team reports that the monthly revenue report is showing inflated numbers. Investigate the SQL query to find the bug.",
+  "language": "sql",
+  "code": "SELECT SUM(amount) AS total_revenue\nFROM orders\nWHERE order_date >= '2026-06-01'\n  AND order_date < '2026-07-01'\n  AND status = 'completed'\n  AND discount_code IS NULL;",
+  "options": [
+    { "id": "a", "text": "The date range is incorrect, it should include July." },
+    { "id": "b", "text": "The query incorrectly excludes orders with a discount code." },
+    { "id": "c", "text": "The status filter is too restrictive and should include 'pending'." },
+    { "id": "d", "text": "The SUM function should use COUNT instead." }
+  ],
+  "answer": "b",
+  "explanation": "The query mistakenly excludes orders that have a discount code, which can lead to missing revenue from completed orders. To fix this, you should remove the condition `AND discount_code IS NULL` to ensure all completed orders are included in the revenue calculation.",
+  "xp": 150,
+  "coins": 30
+}

@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-06",
+  "type": "find_the_bug",
+  "theme": "python",
+  "incidentId": 4528,
+  "title": "Incident #4528 — Sales Data Discrepancy",
+  "scenario": "The sales dashboard is reporting unusually low figures, and the product manager is frantic. Find the bug.",
+  "language": "python",
+  "code": "def calculate_total_sales(sales_data):\n    total = 0\n    for sale in sales_data:\n        total += sale['amount']\n    return total\n\nsales_data = [{'amount': 100}, {'amount': None}, {'amount': 200}]\nprint(calculate_total_sales(sales_data))",
+  "options": [
+    { "id": "a", "text": "The function should handle empty sales data." },
+    { "id": "b", "text": "The function does not account for None values in the sales data." },
+    { "id": "c", "text": "The total should be calculated using a different aggregation method." },
+    { "id": "d", "text": "The sales_data list is missing critical sales records." }
+  ],
+  "answer": "b",
+  "explanation": "The bug occurs because the function does not handle None values in the 'amount' field, which causes the total to be incorrect. To fix this, you should add a check to ensure 'amount' is not None before adding it to the total.",
+  "xp": 150,
+  "coins": 30
+}

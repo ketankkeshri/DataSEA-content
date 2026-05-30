@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-21",
+  "type": "find_the_bug",
+  "theme": "open",
+  "incidentId": 4543,
+  "title": "Incident #4543 — Revenue Report Discrepancy",
+  "scenario": "The finance team is puzzled by an unusually high revenue figure in yesterday's report. Investigate the SQL query generating this report.",
+  "language": "sql",
+  "code": "SELECT SUM(amount) as total_revenue\nFROM orders\nWHERE order_date = '2026-06-20'\nAND status = 'completed'\nAND user_id IS NOT NULL\nGROUP BY user_id;",
+  "options": [
+    { "id": "a", "text": "The query is summing revenue for 'pending' orders instead of 'completed'." },
+    { "id": "b", "text": "The query is grouping by 'user_id', causing double counting of revenue." },
+    { "id": "c", "text": "The 'order_date' filter should use a different date format." },
+    { "id": "d", "text": "The query is missing a filter for 'region' which skews results." }
+  ],
+  "answer": "b",
+  "explanation": "Grouping by 'user_id' leads to double counting of revenue when multiple orders exist for the same user. Instead, remove the 'GROUP BY' clause to get a correct total revenue. The fixed query should simply sum the amounts without grouping.",
+  "xp": 150,
+  "coins": 30
+}

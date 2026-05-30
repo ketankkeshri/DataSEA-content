@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-17",
+  "type": "find_the_bug",
+  "theme": "airflow",
+  "incidentId": 4539,
+  "title": "Incident #4539 — The Mysterious Missing Orders",
+  "scenario": "The data team is in a panic as the daily order count job has reported zero new orders. Investigate the bug.",
+  "language": "sql",
+  "code": "SELECT COUNT(*) AS order_count \nFROM orders \nWHERE order_date = CURRENT_DATE \n  AND order_status = 'completed';",
+  "options": [
+    { "id": "a", "text": "The `order_date` filter should use a different timezone." },
+    { "id": "b", "text": "The `order_status` filter is incorrectly excluding valid orders." },
+    { "id": "c", "text": "The query is missing a `GROUP BY` clause." },
+    { "id": "d", "text": "The `CURRENT_DATE` function is returning a future date." }
+  ],
+  "answer": "b",
+  "explanation": "The bug lies in the `order_status` filter. It only includes orders marked as 'completed', but if there are orders with a different status that are still valid, they won't be counted. To fix this, ensure that all necessary order statuses are included in the filter.",
+  "xp": 150,
+  "coins": 30
+}

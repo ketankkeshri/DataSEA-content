@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-02",
+  "type": "find_the_bug",
+  "theme": "spark",
+  "incidentId": 4524,
+  "title": "Incident #4524 — Morning Report Discrepancy",
+  "scenario": "The Sales Manager reports that the total sales for today appear to be twice what they should be. Find the bug.",
+  "language": "sql",
+  "code": "SELECT\n  SUM(amount) AS total_sales\nFROM\n  orders\nWHERE\n  order_date = CURRENT_DATE\n  AND status = 'completed'\n  GROUP BY\n  user_id;",
+  "options": [
+    { "id": "a", "text": "The query should filter by order_date using a specific string format." },
+    { "id": "b", "text": "The GROUP BY clause is causing double counting for users with multiple orders." },
+    { "id": "c", "text": "The status filter is excluding some completed orders due to a typo." },
+    { "id": "d", "text": "The SUM function is incorrectly applied to a non-numeric column." }
+  ],
+  "answer": "b",
+  "explanation": "The GROUP BY clause is aggregating sales by user_id, which leads to double counting if a user has multiple completed orders on the same day. To fix this, you can use SUM(DISTINCT amount) or adjust the GROUP BY clause based on your reporting needs.",
+  "xp": 150,
+  "coins": 30
+}
