@@ -1,0 +1,296 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "packId": "weekly-tournament",
+  "type": "independent",
+  "title": "Weekly Tournament",
+  "questions": [
+    {
+      "id": "weekly-tournament-q1",
+      "question": "What does SQL stand for?",
+      "options": ["Structured Query Language", "Simple Query Language", "Sequential Query Language", "Standard Query Language"],
+      "answer": "Structured Query Language",
+      "difficulty": "easy",
+      "type": "mcq",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "weekly-tournament-q2",
+      "question": "True or False: A primary key can contain NULL values.",
+      "answer": "False",
+      "difficulty": "easy",
+      "type": "true_false",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "weekly-tournament-q3",
+      "question": "Which SQL clause is used to filter records?",
+      "options": ["SELECT", "WHERE", "ORDER BY", "GROUP BY"],
+      "answer": "WHERE",
+      "difficulty": "easy",
+      "type": "mcq",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "weekly-tournament-q4",
+      "question": "Fill in the blank: In Python, the 'print' function outputs data to ______.",
+      "answer": "the console",
+      "difficulty": "easy",
+      "type": "code_completion",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "weekly-tournament-q5",
+      "question": "Order the steps to create a DataFrame in Pandas: 1) Import Pandas, 2) Create DataFrame, 3) Define data.",
+      "answer": ["1", "3", "2"],
+      "difficulty": "medium",
+      "type": "order_the_steps",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "weekly-tournament-q6",
+      "question": "What is the correct way to declare a function in Python?",
+      "options": ["function myFunction() {}", "def myFunction():", "declare myFunction() {}", "function: myFunction()"],
+      "answer": "def myFunction():",
+      "difficulty": "easy",
+      "type": "mcq",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "weekly-tournament-q7",
+      "question": "True or False: In SQL, you can use 'JOIN' to combine rows from two or more tables.",
+      "answer": "True",
+      "difficulty": "easy",
+      "type": "true_false",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "weekly-tournament-q8",
+      "question": "Which of the following is a NoSQL database?",
+      "options": ["MySQL", "PostgreSQL", "MongoDB", "SQLite"],
+      "answer": "MongoDB",
+      "difficulty": "medium",
+      "type": "mcq",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "weekly-tournament-q9",
+      "question": "Fill in the blank: In machine learning, 'overfitting' occurs when a model learns ______ from the training data.",
+      "answer": "noise",
+      "difficulty": "medium",
+      "type": "code_completion",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "weekly-tournament-q10",
+      "question": "What does the 'GROUP BY' clause do in SQL?",
+      "options": ["Groups rows sharing a property", "Sorts rows in a table", "Filters records", "Aggregates data"],
+      "answer": "Groups rows sharing a property",
+      "difficulty": "medium",
+      "type": "mcq",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "weekly-tournament-q11",
+      "question": "Which command is used to install a Python package?",
+      "options": ["pip install package-name", "install package-name", "python -m install package-name", "get package-name"],
+      "answer": "pip install package-name",
+      "difficulty": "medium",
+      "type": "mcq",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "weekly-tournament-q12",
+      "question": "True or False: JSON stands for JavaScript Object Notation.",
+      "answer": "True",
+      "difficulty": "easy",
+      "type": "true_false",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "weekly-tournament-q13",
+      "question": "What is idempotency in the context of web services?",
+      "options": ["Multiple identical requests have the same effect as one", "Requests can be processed in any order", "No state is saved between requests", "Responses can be cached"],
+      "answer": "Multiple identical requests have the same effect as one",
+      "difficulty": "hard",
+      "type": "mcq",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "weekly-tournament-q14",
+      "question": "Fill in the blank: A 'SELECT' statement can return ______ from multiple tables.",
+      "answer": "data",
+      "difficulty": "easy",
+      "type": "code_completion",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "weekly-tournament-q15",
+      "question": "What is the purpose of a 'WHERE' clause in SQL?",
+      "options": ["To filter records", "To sort results", "To group data", "To create new tables"],
+      "answer": "To filter records",
+      "difficulty": "easy",
+      "type": "mcq",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "weekly-tournament-q16",
+      "question": "What does the term 'late-arriving data' refer to?",
+      "options": ["Data that arrives after the deadline", "Data that is processed too late", "Data that is not relevant", "Data that arrives in the future"],
+      "answer": "Data that arrives after the deadline",
+      "difficulty": "hard",
+      "type": "mcq",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "weekly-tournament-q17",
+      "question": "True or False: In Python, lists are mutable.",
+      "answer": "True",
+      "difficulty": "easy",
+      "type": "true_false",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "weekly-tournament-q18",
+      "question": "What is schema evolution?",
+      "options": ["The process of changing schema over time", "The way databases handle changes", "Modifying data types in a database", "All of the above"],
+      "answer": "All of the above",
+      "difficulty": "hard",
+      "type": "mcq",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "weekly-tournament-q19",
+      "question": "Fill in the blank: In machine learning, the ______ is the output of the model's prediction.",
+      "answer": "target variable",
+      "difficulty": "medium",
+      "type": "code_completion",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "weekly-tournament-q20",
+      "question": "How can you remove duplicates from a DataFrame in Pandas?",
+      "options": ["df.drop_duplicates()", "df.remove_duplicates()", "df.unique()", "df.clear_duplicates()"],
+      "answer": "df.drop_duplicates()",
+      "difficulty": "medium",
+      "type": "mcq",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "weekly-tournament-q21",
+      "question": "What is the output of the following code: print(2**3)?",
+      "answer": "8",
+      "difficulty": "easy",
+      "type": "tap_the_output",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "weekly-tournament-q22",
+      "question": "What is a Data Lake?",
+      "options": ["A storage repository for large amounts of raw data", "A type of database", "A collection of data warehouses", "None of the above"],
+      "answer": "A storage repository for large amounts of raw data",
+      "difficulty": "medium",
+      "type": "mcq",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "weekly-tournament-q23",
+      "question": "True or False: In SQL, an 'INNER JOIN' returns rows when there is at least one match in both tables.",
+      "answer": "True",
+      "difficulty": "easy",
+      "type": "true_false",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "weekly-tournament-q24",
+      "question": "What is the purpose of the 'HAVING' clause in SQL?",
+      "options": ["To filter aggregated data", "To sort results", "To create new tables", "To define relationships"],
+      "answer": "To filter aggregated data",
+      "difficulty": "hard",
+      "type": "mcq",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "weekly-tournament-q25",
+      "question": "What does a 'LEFT JOIN' do?",
+      "options": ["Returns all records from the left table and matched records from the right table", "Returns matched records from both tables", "Returns all records from the right table", "None of the above"],
+      "answer": "Returns all records from the left table and matched records from the right table",
+      "difficulty": "hard",
+      "type": "mcq",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "weekly-tournament-q26",
+      "question": "Fill in the blank: In data engineering, ETL stands for ______, Transform, Load.",
+      "answer": "Extract",
+      "difficulty": "medium",
+      "type": "code_completion",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "weekly-tournament-q27",
+      "question": "What is the difference between supervised and unsupervised learning?",
+      "options": ["Supervised uses labeled data; unsupervised does not", "Unsupervised uses labeled data; supervised does not", "They are the same", "None of the above"],
+      "answer": "Supervised uses labeled data; unsupervised does not",
+      "difficulty": "hard",
+      "type": "mcq",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "weekly-tournament-q28",
+      "question": "True or False: In a relational database, the schema defines the structure of the data.",
+      "answer": "True",
+      "difficulty": "easy",
+      "type": "true_false",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "weekly-tournament-q29",
+      "question": "How would you handle missing data in a DataFrame?",
+      "options": ["df.fillna()", "df.dropna()", "df.replace()", "All of the above"],
+      "answer": "All of the above",
+      "difficulty": "medium",
+      "type": "mcq",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "weekly-tournament-q30",
+      "question": "What is the primary purpose of data normalization?",
+      "options": ["To reduce redundancy", "To increase redundancy", "To create backups", "To improve performance"],
+      "answer": "To reduce redundancy",
+      "difficulty": "hard",
+      "type": "mcq",
+      "xp": 60,
+      "coins": 25
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "date": "2026-05-30",
+  "type": "find_the_bug",
+  "theme": "python",
+  "incidentId": 4521,
+  "title": "Incident #4521 — Sales Data Discrepancy Alert!",
+  "scenario": "The analytics team is confused about why the total sales reported is lower than expected. Find the bug.",
+  "language": "python",
+  "code": "def calculate_total_sales(sales_data):\n    total = 0\n    for sale in sales_data:\n        total += sale['amount']\n    return total\n\nsales = [{'amount': 100}, {'amount': 200}, {'amount': None}, {'amount': 150}]\nprint(calculate_total_sales(sales))",
+  "options": [
+    { "id": "a", "text": "The `None` values should be filtered out before summing." },
+    { "id": "b", "text": "The `None` value is causing the total to return None instead of a number." },
+    { "id": "c", "text": "The sales data is not being passed correctly to the function." },
+    { "id": "d", "text": "The amounts should be converted to floats before summing." }
+  ],
+  "answer": "b",
+  "explanation": "The issue arises because adding a `None` value to an integer results in `None`, which causes the total to be invalid. To fix it, ensure that `None` values are either filtered out or handled appropriately before the summation.",
+  "xp": 150,
+  "coins": 30
+}

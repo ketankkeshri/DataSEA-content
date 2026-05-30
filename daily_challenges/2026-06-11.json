@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-11",
+  "type": "find_the_bug",
+  "theme": "dbt",
+  "incidentId": 4533,
+  "title": "Incident #4533 — Revenue Report Discrepancy",
+  "scenario": "The marketing team reports that the latest revenue report shows figures much lower than expected. Find the bug.",
+  "language": "sql",
+  "code": "SELECT\n  SUM(amount) AS total_revenue\nFROM\n  orders\nWHERE\n  order_date >= '2026-01-01'\n  AND order_date < '2026-06-01'\n  AND status = 'completed';",
+  "options": [
+    { "id": "a", "text": "The date range should include June." },
+    { "id": "b", "text": "The status filter should include 'pending' orders." },
+    { "id": "c", "text": "The `amount` column is incorrectly summed." },
+    { "id": "d", "text": "The query should join with the users table for correct revenue attribution." }
+  ],
+  "answer": "a",
+  "explanation": "The bug is in the date range filter. The query excludes orders from June, which should be included to give an accurate total revenue. Adjusting the end date to '2026-06-01' will fix the issue.",
+  "xp": 150,
+  "coins": 30
+}

@@ -1,0 +1,235 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "packId": "mlops-rapid-fire",
+  "type": "independent",
+  "title": "MLOps Rapid Fire",
+  "questions": [
+    {
+      "id": "mlops-rapid-fire-q1",
+      "question": "What is MLflow primarily used for?",
+      "options": [
+        "A) Data cleaning",
+        "B) Model training",
+        "C) Experiment tracking",
+        "D) Data visualization"
+      ],
+      "answer": "C",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "mlops-rapid-fire-q2",
+      "question": "True or False: MLflow can only be used with Python-based machine learning libraries.",
+      "answer": "False",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "mlops-rapid-fire-q3",
+      "question": "Fill in the blank: MLflow's component for managing the model lifecycle is called _____",
+      "answer": "Model Registry",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "mlops-rapid-fire-q4",
+      "question": "Which of the following is NOT a feature of MLflow?",
+      "options": [
+        "A) Model versioning",
+        "B) Automated hyperparameter tuning",
+        "C) Experiment tracking",
+        "D) Model deployment"
+      ],
+      "answer": "B",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "mlops-rapid-fire-q5",
+      "question": "What command do you use to log parameters in MLflow?",
+      "answer": "mlflow.log_param()",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "mlops-rapid-fire-q6",
+      "question": "Order the following steps for deploying a model with MLflow:",
+      "options": [
+        "A) Register the model",
+        "B) Log the model",
+        "C) Serve the model",
+        "D) Create a new experiment"
+      ],
+      "answer": "B, D, A, C",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "mlops-rapid-fire-q7",
+      "question": "True or False: Monitoring model performance is essential for detecting data drift.",
+      "answer": "True",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "mlops-rapid-fire-q8",
+      "question": "What is data drift?",
+      "options": [
+        "A) When data processing takes too long",
+        "B) When the statistical properties of the input data change",
+        "C) When model predictions are consistently wrong",
+        "D) When model training fails"
+      ],
+      "answer": "B",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "mlops-rapid-fire-q9",
+      "question": "Which tool can be used for monitoring ML models in production?",
+      "options": [
+        "A) Jupyter Notebook",
+        "B) Prometheus",
+        "C) Pandas",
+        "D) NumPy"
+      ],
+      "answer": "B",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "mlops-rapid-fire-q10",
+      "question": "True or False: Late-arriving data can cause issues in real-time ML model predictions.",
+      "answer": "True",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "mlops-rapid-fire-q11",
+      "question": "What does the term 'model versioning' refer to?",
+      "options": [
+        "A) Keeping track of model performance over time",
+        "B) Storing different versions of the same model",
+        "C) Updating the model with new data",
+        "D) Deploying models on different platforms"
+      ],
+      "answer": "B",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "mlops-rapid-fire-q12",
+      "question": "Which of the following is a best practice for model deployment?",
+      "options": [
+        "A) Deploying without testing",
+        "B) Using A/B testing",
+        "C) Ignoring user feedback",
+        "D) Keeping the model static"
+      ],
+      "answer": "B",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "mlops-rapid-fire-q13",
+      "question": "What is the purpose of a deployment pipeline?",
+      "options": [
+        "A) To automate data collection",
+        "B) To streamline the deployment process",
+        "C) To visualize model performance",
+        "D) To manage database connections"
+      ],
+      "answer": "B",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "mlops-rapid-fire-q14",
+      "question": "Complete the code to log a metric in MLflow:\n```python\nmlflow.log_metric('accuracy', _____)\n```",
+      "answer": "accuracy_value",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "mlops-rapid-fire-q15",
+      "question": "What is schema evolution?",
+      "options": [
+        "A) Changing the structure of data stored",
+        "B) Updating model parameters",
+        "C) Modifying the deployment environment",
+        "D) All of the above"
+      ],
+      "answer": "A",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "mlops-rapid-fire-q16",
+      "question": "True or False: MLflow allows you to track multiple experiments under one project.",
+      "answer": "True",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "mlops-rapid-fire-q17",
+      "question": "Which of the following can be a source of data drift?",
+      "options": [
+        "A) Changes in user behavior",
+        "B) Data encoding changes",
+        "C) Seasonal effects",
+        "D) All of the above"
+      ],
+      "answer": "D",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "mlops-rapid-fire-q18",
+      "question": "Order the steps to monitor a model after deployment:",
+      "options": [
+        "A) Identify metrics to track",
+        "B) Set up monitoring tools",
+        "C) Analyze performance",
+        "D) Implement alerts"
+      ],
+      "answer": "A, B, D, C",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "mlops-rapid-fire-q19",
+      "question": "Complete the code to create an MLflow experiment:\n```python\nmlflow.create_experiment('_____')\n```",
+      "answer": "my_experiment",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "mlops-rapid-fire-q20",
+      "question": "True or False: Once a model is deployed, it requires no further maintenance.",
+      "answer": "False",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    }
+  ]
+}

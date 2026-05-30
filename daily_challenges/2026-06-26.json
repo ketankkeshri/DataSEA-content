@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-26",
+  "type": "find_the_bug",
+  "theme": "kafka",
+  "incidentId": 4548,
+  "title": "Incident #4548 — Mysterious Missing User Events",
+  "scenario": "The marketing team reports that user engagement data is missing for the last week. Investigate the Kafka consumer setup. Find the bug.",
+  "language": "python",
+  "code": "def consume_user_events():\n    consumer = KafkaConsumer('user_events',\n                             group_id='analytics',\n                             auto_offset_reset='latest')\n    for message in consumer:\n        process_event(message.value)\n\nconsume_user_events()",
+  "options": [
+    { "id": "a", "text": "The consumer group ID is incorrect." },
+    { "id": "b", "text": "The auto_offset_reset parameter is set to 'latest'." },
+    { "id": "c", "text": "The topic name 'user_events' is misspelled." },
+    { "id": "d", "text": "The Kafka broker is down." }
+  ],
+  "answer": "b",
+  "explanation": "Setting the `auto_offset_reset` parameter to 'latest' means that the consumer will only read new messages published after it starts, skipping any past messages. This is why the user engagement data from the last week is missing. Change it to 'earliest' to read all available messages from the beginning.",
+  "xp": 150,
+  "coins": 30
+}

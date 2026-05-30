@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-18",
+  "type": "find_the_bug",
+  "theme": "dbt",
+  "incidentId": 4540,
+  "title": "Incident #4540 — Revenue Report Anomaly",
+  "scenario": "The marketing team noticed that the monthly revenue report is showing a drastic increase in sales figures. Investigate the issue.",
+  "language": "sql",
+  "code": "SELECT\n    DATE_TRUNC('month', order_date) AS month,\n    SUM(amount) AS total_revenue\nFROM\n    orders\nWHERE\n    order_status = 'completed'\nGROUP BY\n    month\nORDER BY\n    month;",
+  "options": [
+    { "id": "a", "text": "The order_status filter is incorrect; it should include 'pending'." },
+    { "id": "b", "text": "The DATE_TRUNC function is incorrectly used, causing double counting." },
+    { "id": "c", "text": "The SUM function is aggregating NULL values incorrectly." },
+    { "id": "d", "text": "The GROUP BY clause is missing a secondary grouping by user." }
+  ],
+  "answer": "b",
+  "explanation": "The DATE_TRUNC function is causing issues if there are multiple entries for the same day. This can lead to incorrect aggregation and double counting of sales. Ensuring the aggregation logic correctly handles unique orders per day will resolve the issue.",
+  "xp": 150,
+  "coins": 30
+}

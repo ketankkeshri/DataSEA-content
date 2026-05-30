@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-13",
+  "type": "find_the_bug",
+  "theme": "python",
+  "incidentId": 4535,
+  "title": "Incident #4535 — Daily Sales Report Malfunction",
+  "scenario": "The sales team reports that the total revenue calculated for the day is significantly lower than expected. Find the bug.",
+  "language": "python",
+  "code": "def calculate_daily_revenue(sales_data):\n    total_revenue = 0\n    for sale in sales_data:\n        total_revenue += sale['amount']\n    return total_revenue\n\nsales_data = [{'amount': 100}, {'amount': 200}, {'amount': None}, {'amount': 150}]\nprint(calculate_daily_revenue(sales_data))",
+  "options": [
+    { "id": "a", "text": "The function does not handle sales with negative amounts." },
+    { "id": "b", "text": "The function does not account for None values in the sales data." },
+    { "id": "c", "text": "The sales_data list is missing some entries." },
+    { "id": "d", "text": "The total_revenue variable is not initialized correctly." }
+  ],
+  "answer": "b",
+  "explanation": "The bug lies in the handling of None values in the sales data. When a None value is encountered, it causes a TypeError during the addition operation. To fix this, you should check for None values before adding to total_revenue, like this: `if sale['amount'] is not None:`.",
+  "xp": 150,
+  "coins": 30
+}

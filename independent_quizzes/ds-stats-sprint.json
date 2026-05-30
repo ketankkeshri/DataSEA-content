@@ -1,0 +1,260 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "packId": "ds-stats-sprint",
+  "type": "independent",
+  "title": "DS Statistics Sprint",
+  "questions": [
+    {
+      "id": "ds-stats-sprint-q1",
+      "type": "mcq",
+      "question": "What is the mean of the following data set: [4, 8, 6, 5, 3, 7]?",
+      "options": [ "5", "5.5", "6", "6.5" ],
+      "answer": "5.5",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "ds-stats-sprint-q2",
+      "type": "true_false",
+      "question": "The median is always greater than the mean in a skewed distribution.",
+      "answer": "False",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "ds-stats-sprint-q3",
+      "type": "mcq",
+      "question": "Which of the following measures the spread of a data set?",
+      "options": [ "Mean", "Median", "Variance", "Mode" ],
+      "answer": "Variance",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "ds-stats-sprint-q4",
+      "type": "code_completion",
+      "question": "Fill in the blank: In Python, the function to calculate variance is ___ .",
+      "answer": "numpy.var",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "ds-stats-sprint-q5",
+      "type": "order_the_steps",
+      "question": "Order the steps in hypothesis testing.",
+      "options": [
+        "State the null and alternative hypotheses",
+        "Calculate the test statistic",
+        "Determine the p-value",
+        "Make a decision based on the p-value"
+      ],
+      "correct_order": [
+        "State the null and alternative hypotheses",
+        "Calculate the test statistic",
+        "Determine the p-value",
+        "Make a decision based on the p-value"
+      ],
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "ds-stats-sprint-q6",
+      "type": "mcq",
+      "question": "What is the probability of rolling a sum of 7 with two dice?",
+      "options": [ "1/6", "1/12", "1/36", "5/36" ],
+      "answer": "1/6",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "ds-stats-sprint-q7",
+      "type": "tap_the_output",
+      "question": "What will be the output of the following code?\n```python\nimport numpy as np\nnp.random.binomial(10, 0.5)\n```",
+      "options": [ "An integer between 0 and 10", "A float", "An array", "None of the above" ],
+      "answer": "An integer between 0 and 10",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "ds-stats-sprint-q8",
+      "type": "mcq",
+      "question": "Which test is used to compare two means?",
+      "options": [ "Chi-squared test", "T-test", "Z-test", "ANOVA" ],
+      "answer": "T-test",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "ds-stats-sprint-q9",
+      "type": "true_false",
+      "question": "A p-value less than 0.05 indicates statistical significance.",
+      "answer": "True",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "ds-stats-sprint-q10",
+      "type": "mcq",
+      "question": "What distribution is used to model the number of successes in a fixed number of trials?",
+      "options": [ "Normal distribution", "Binomial distribution", "Poisson distribution", "Exponential distribution" ],
+      "answer": "Binomial distribution",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "ds-stats-sprint-q11",
+      "type": "mcq",
+      "question": "What is the standard deviation of the data set: [2, 4, 4, 4, 5, 5, 7, 9]?",
+      "options": [ "1.5", "2", "2.5", "3" ],
+      "answer": "2",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "ds-stats-sprint-q12",
+      "type": "true_false",
+      "question": "The Central Limit Theorem states that the distribution of the sample mean approaches a normal distribution as the sample size increases.",
+      "answer": "True",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "ds-stats-sprint-q13",
+      "type": "mcq",
+      "question": "In hypothesis testing, what does a Type I error refer to?",
+      "options": [ "Failing to reject a true null hypothesis", "Rejecting a true null hypothesis", "Failing to reject a false null hypothesis", "Rejecting a false null hypothesis" ],
+      "answer": "Rejecting a true null hypothesis",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "ds-stats-sprint-q14",
+      "type": "mcq",
+      "question": "Which of the following is not a property of a normal distribution?",
+      "options": [ "Symmetry", "Mean = Median = Mode", "Bimodal", "Asymptotic" ],
+      "answer": "Bimodal",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "ds-stats-sprint-q15",
+      "type": "code_completion",
+      "question": "Fill in the blank: In Python, to perform a T-test, you use the function ___ from the `scipy.stats` module.",
+      "answer": "ttest_ind",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "ds-stats-sprint-q16",
+      "type": "mcq",
+      "question": "What is the purpose of a confidence interval?",
+      "options": [ "To estimate a population parameter", "To provide a range of values", "To indicate statistical significance", "All of the above" ],
+      "answer": "All of the above",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "ds-stats-sprint-q17",
+      "type": "true_false",
+      "question": "The Chi-squared test is used for testing relationships between categorical variables.",
+      "answer": "True",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "ds-stats-sprint-q18",
+      "type": "mcq",
+      "question": "Which of the following is a non-parametric test?",
+      "options": [ "Z-test", "T-test", "Mann-Whitney U test", "ANOVA" ],
+      "answer": "Mann-Whitney U test",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "ds-stats-sprint-q19",
+      "type": "mcq",
+      "question": "What is the variance of a standard normal distribution?",
+      "options": [ "0", "1", "2", "None of the above" ],
+      "answer": "1",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "ds-stats-sprint-q20",
+      "type": "code_completion",
+      "question": "Fill in the blank: To calculate the p-value in Python for a T-test, you would use `___(t_stat, df)`.",
+      "answer": "scipy.stats.t.sf",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "ds-stats-sprint-q21",
+      "type": "mcq",
+      "question": "What is the range of a data set?",
+      "options": [ "Maximum - Minimum", "Average", "Total Count", "None of the above" ],
+      "answer": "Maximum - Minimum",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "ds-stats-sprint-q22",
+      "type": "true_false",
+      "question": "A larger sample size generally increases the power of a statistical test.",
+      "answer": "True",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "ds-stats-sprint-q23",
+      "type": "mcq",
+      "question": "What is the null hypothesis in a two-tailed test?",
+      "options": [ "There is no effect", "There is an effect", "The means are equal", "Both A and C" ],
+      "answer": "Both A and C",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "ds-stats-sprint-q24",
+      "type": "mcq",
+      "question": "Which of the following is a common assumption of linear regression?",
+      "options": [ "Linearity", "Homoscedasticity", "Independence of errors", "All of the above" ],
+      "answer": "All of the above",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "ds-stats-sprint-q25",
+      "type": "true_false",
+      "question": "In a probability distribution, the total area under the curve equals 1.",
+      "answer": "True",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    }
+  ]
+}

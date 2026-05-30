@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-28",
+  "type": "find_the_bug",
+  "theme": "open",
+  "incidentId": 4550,
+  "title": "Incident #4550 — Revenue Report Discrepancy",
+  "scenario": "The finance team has reported that the daily revenue report is showing an unusually high figure. Find the bug.",
+  "language": "sql",
+  "code": "SELECT\n    SUM(amount) AS total_revenue\nFROM\n    orders\nWHERE\n    order_date = CURRENT_DATE\n    AND status = 'completed'\n    AND amount > 0;",
+  "options": [
+    { "id": "a", "text": "The query is summing amounts for all orders regardless of the date." },
+    { "id": "b", "text": "Orders with a NULL `amount` are included in the sum." },
+    { "id": "c", "text": "The status filter is incorrectly set to 'pending'." },
+    { "id": "d", "text": "The query is missing a filter for only completed orders." }
+  ],
+  "answer": "b",
+  "explanation": "The bug is that the query does not handle NULL values for the `amount` column, which can lead to incorrect totals. To fix it, add an explicit check to exclude NULL amounts: `AND amount IS NOT NULL`.",
+  "xp": 150,
+  "coins": 30
+}

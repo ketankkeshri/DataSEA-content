@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-10",
+  "type": "find_the_bug",
+  "theme": "airflow",
+  "incidentId": 4532,
+  "title": "Incident #4532 — Revenue Report Anomaly",
+  "scenario": "The data team receives a frantic message: the weekly revenue report is showing an unexpected drop in sales. Find the bug.",
+  "language": "sql",
+  "code": "SELECT\n    DATE(order_date) AS order_day,\n    SUM(amount) AS total_sales\nFROM\n    orders\nWHERE\n    order_status = 'completed'\nGROUP BY order_day\nORDER BY order_day DESC;",
+  "options": [
+    { "id": "a", "text": "The filtering condition for order_status is incorrect." },
+    { "id": "b", "text": "Missing a partition filter for the current week." },
+    { "id": "c", "text": "The aggregation function is incorrectly applied." },
+    { "id": "d", "text": "The date format for order_date is mismatched." }
+  ],
+  "answer": "b",
+  "explanation": "The bug is that the query does not filter for the current week, leading to an aggregation over a larger date range than intended. This causes the results to reflect outdated data, hence the drop in reported sales. Adding a filter for the current week would fix this issue.",
+  "xp": 150,
+  "coins": 30
+}

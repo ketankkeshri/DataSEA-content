@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-27",
+  "type": "find_the_bug",
+  "theme": "python",
+  "incidentId": 4549,
+  "title": "Incident #4549 — Daily Sales Report Shows Negative Revenue!",
+  "scenario": "The sales team is in a panic because the daily revenue report is showing negative sales figures. Find the bug.",
+  "language": "python",
+  "code": "def calculate_daily_revenue(sales):\n    total_revenue = 0\n    for sale in sales:\n        total_revenue += sale['amount']\n    return total_revenue\n\nsales_data = [{'amount': 100}, {'amount': -50}, {'amount': 200}]\nprint(calculate_daily_revenue(sales_data))",
+  "options": [
+    { "id": "a", "text": "The function should filter out negative sales before summing." },
+    { "id": "b", "text": "The sales data contains negative values that should be handled." },
+    { "id": "c", "text": "The total_revenue variable should start at 100." },
+    { "id": "d", "text": "The function should return the absolute value of total_revenue." }
+  ],
+  "answer": "b",
+  "explanation": "The bug is in the sales data itself, which includes a negative amount. This leads to incorrect total revenue calculations. To fix it, ensure that the sales data is validated to exclude negative amounts before processing.",
+  "xp": 150,
+  "coins": 30
+}

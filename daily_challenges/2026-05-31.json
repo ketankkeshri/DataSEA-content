@@ -1,0 +1,20 @@
+{
+  "date": "2026-05-31",
+  "type": "find_the_bug",
+  "theme": "open",
+  "incidentId": 4522,
+  "title": "Incident #4522 — The Mysteriously Missing Orders",
+  "scenario": "The operations team reports that the daily orders report is showing a total of 1000 orders, but the actual numbers seem off. Find the bug.",
+  "language": "sql",
+  "code": "SELECT COUNT(*) AS total_orders\nFROM orders\nWHERE order_date = CURRENT_DATE\nAND status = 'completed';",
+  "options": [
+    { "id": "a", "text": "The query is missing a filter for the correct timezone." },
+    { "id": "b", "text": "The query does not account for orders completed today but created yesterday." },
+    { "id": "c", "text": "The status filter should include 'shipped' as well." },
+    { "id": "d", "text": "The query is counting all orders instead of only unique ones." }
+  ],
+  "answer": "b",
+  "explanation": "The bug here is that the query only counts orders completed on the current date, missing orders created the previous day that were completed today. To fix this, we need to adjust the filter to include orders created yesterday but completed today.",
+  "xp": 150,
+  "coins": 30
+}

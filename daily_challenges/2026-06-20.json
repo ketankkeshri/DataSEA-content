@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-20",
+  "type": "find_the_bug",
+  "theme": "python",
+  "incidentId": 4542,
+  "title": "Incident #4542 — Sales Data Anomaly Detected!",
+  "scenario": "The analytics team has flagged an issue where the total sales reported for yesterday are significantly lower than expected. Find the bug.",
+  "language": "python",
+  "code": "def calculate_total_sales(sales_data):\n    total = 0\n    for sale in sales_data:\n        if sale['date'] == '2026-06-19':\n            total += sale['amount']\n    return total\n\nsales_data = [{'date': '2026-06-19', 'amount': 100}, {'date': '2026-06-20', 'amount': 200}]\nprint(calculate_total_sales(sales_data))",
+  "options": [
+    { "id": "a", "text": "The function is incorrectly checking for sales on the current date." },
+    { "id": "b", "text": "The function only sums sales for the hardcoded date '2026-06-19'." },
+    { "id": "c", "text": "The sales data is missing some entries for the previous day." },
+    { "id": "d", "text": "The sale amounts are being stored as strings instead of numbers." }
+  ],
+  "answer": "b",
+  "explanation": "The bug lies in the fact that the function is hardcoded to only sum sales for the specific date '2026-06-19'. This means any sales data from other dates, including the current date, is ignored, leading to underreporting. The fix involves modifying the function to dynamically check for and sum sales for the intended date range.",
+  "xp": 150,
+  "coins": 30
+}

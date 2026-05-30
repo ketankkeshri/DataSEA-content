@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-12",
+  "type": "find_the_bug",
+  "theme": "kafka",
+  "incidentId": 4534,
+  "title": "Incident #4534 — Kafka Stream Processing Nightmare",
+  "scenario": "The data team is in a panic as the daily sales report shows a massive drop in revenue. Investigate the Kafka consumer configuration to find the bug.",
+  "language": "yaml",
+  "code": "consumer:\n  bootstrap.servers: 'kafka-broker:9092'\n  group.id: 'sales_reports'\n  auto.offset.reset: 'latest'\n  enable.auto.commit: true\n  key.deserializer: 'org.apache.kafka.common.serialization.StringDeserializer'\n  value.deserializer: 'org.apache.kafka.common.serialization.StringDeserializer'",
+  "options": [
+    { "id": "a", "text": "The 'auto.offset.reset' should be 'earliest' to capture all messages." },
+    { "id": "b", "text": "The 'enable.auto.commit' should be false to ensure offsets are managed manually." },
+    { "id": "c", "text": "The 'group.id' is incorrectly set, causing multiple consumers to process the same messages." },
+    { "id": "d", "text": "The 'key.deserializer' is using the wrong class name." }
+  ],
+  "answer": "b",
+  "explanation": "The bug lies in the 'enable.auto.commit' setting being true. This can lead to missed messages if the consumer crashes after processing but before committing. Setting it to false allows for manual offset management and ensures no messages are lost during processing.",
+  "xp": 150,
+  "coins": 30
+}

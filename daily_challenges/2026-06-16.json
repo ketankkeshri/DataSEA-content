@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-16",
+  "type": "find_the_bug",
+  "theme": "spark",
+  "incidentId": 4538,
+  "title": "Incident #4538 — Sales Data Discrepancy Detected!",
+  "scenario": "The operations team reports that the weekly sales summary shows an unusually high number of returns. Find the bug.",
+  "language": "sql",
+  "code": "SELECT\n    product_id,\n    SUM(CASE WHEN status = 'returned' THEN amount ELSE 0 END) AS total_returns,\n    SUM(amount) AS total_sales\nFROM\n    orders\nWHERE\n    order_date >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY)\nGROUP BY\n    product_id",
+  "options": [
+    { "id": "a", "text": "The calculation for total_sales is incorrect." },
+    { "id": "b", "text": "The status check does not account for 'completed' orders." },
+    { "id": "c", "text": "The date filter is excluding some necessary records." },
+    { "id": "d", "text": "The GROUP BY clause is missing product_id." }
+  ],
+  "answer": "b",
+  "explanation": "The bug lies in the logic for calculating total_returns. It only counts amounts when the status is 'returned', but it fails to ensure that only completed orders are included in total_sales. This could lead to discrepancies when calculating the returns against total sales. Fix it by adding a condition for completed orders in the total_sales calculation.",
+  "xp": 150,
+  "coins": 30
+}

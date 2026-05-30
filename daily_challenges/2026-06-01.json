@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-01",
+  "type": "find_the_bug",
+  "theme": "sql",
+  "incidentId": 4523,
+  "title": "Incident #4523 — Morning Revenue Report Shows Inaccurate Sales",
+  "scenario": "The CFO is questioning why the morning revenue report shows 2x the actual sales. Find the bug.",
+  "language": "sql",
+  "code": "SELECT\n    SUM(amount) AS total_sales,\n    DATE(order_date) AS sales_date\nFROM\n    orders\nWHERE\n    order_status = 'completed'\n    AND order_date >= NOW() - INTERVAL '1 day'\nGROUP BY\n    sales_date;",
+  "options": [
+    { "id": "a", "text": "The date filter should be for the current month instead of the last day." },
+    { "id": "b", "text": "The GROUP BY clause is aggregating on the wrong date granularity." },
+    { "id": "c", "text": "The order_status filter is excluding some completed orders." },
+    { "id": "d", "text": "The SUM function is incorrectly calculating the total sales." }
+  ],
+  "answer": "b",
+  "explanation": "The bug lies in the GROUP BY clause, which is aggregating on the date without considering the time. This causes multiple sales on the same day to be counted separately if they occur at different times, effectively doubling the total sales. Changing the GROUP BY to aggregate by DATE_TRUNC('day', order_date) will fix the issue.",
+  "xp": 150,
+  "coins": 30
+}

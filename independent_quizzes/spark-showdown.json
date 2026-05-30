@@ -1,0 +1,315 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "packId": "spark-showdown",
+  "type": "independent",
+  "title": "Spark Showdown",
+  "questions": [
+    {
+      "id": "spark-showdown-q1",
+      "questionType": "mcq",
+      "question": "What does RDD stand for in Apache Spark?",
+      "options": ["Resilient Distributed Dataset", "Random Data Distribution", "Real-time Data Delivery", "Regular Data Definition"],
+      "answer": "Resilient Distributed Dataset",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "spark-showdown-q2",
+      "questionType": "true_false",
+      "question": "Spark can run on top of Hadoop's HDFS.",
+      "answer": "True",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "spark-showdown-q3",
+      "questionType": "mcq",
+      "question": "Which of the following is a transformation in Spark?",
+      "options": ["map", "count", "collect", "show"],
+      "answer": "map",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "spark-showdown-q4",
+      "questionType": "code_completion",
+      "question": "Complete the code to create an RDD from a list in Spark:\n```python\nrdd = spark.parallelize([...])\n```",
+      "answer": "[1, 2, 3, 4, 5]",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "spark-showdown-q5",
+      "questionType": "mcq",
+      "question": "What is the default data serialization format in Spark?",
+      "options": ["JSON", "Avro", "Protocol Buffers", "Java Serialization"],
+      "answer": "Java Serialization",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "spark-showdown-q6",
+      "questionType": "mcq",
+      "question": "What is a Spark DataFrame?",
+      "options": ["A distributed collection of data organized into named columns", "An immutable distributed data structure", "A SQL query interface", "A visualization tool"],
+      "answer": "A distributed collection of data organized into named columns",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "spark-showdown-q7",
+      "questionType": "tap_the_output",
+      "question": "What will be the output of the following code?\n```python\nrdd = spark.parallelize([1, 2, 3])\nprint(rdd.map(lambda x: x * 2).collect())\n```",
+      "options": ["[1, 2, 3]", "[2, 4, 6]", "[1, 4, 9]", "[1, 2, 3, 4, 5, 6]"],
+      "answer": "[2, 4, 6]",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "spark-showdown-q8",
+      "questionType": "order_the_steps",
+      "question": "Order the steps for creating a Spark session.",
+      "options": [
+        "1. Create a SparkConf object",
+        "2. Initialize SparkSession",
+        "3. Set application name",
+        "4. Build the Spark session"
+      ],
+      "answer": ["1", "3", "2", "4"],
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "spark-showdown-q9",
+      "questionType": "mcq",
+      "question": "Which Spark operation is used to group data?",
+      "options": ["groupByKey", "reduceByKey", "aggregateByKey", "all of the above"],
+      "answer": "all of the above",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "spark-showdown-q10",
+      "questionType": "true_false",
+      "question": "Spark can perform computations on data in memory.",
+      "answer": "True",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "spark-showdown-q11",
+      "questionType": "mcq",
+      "question": "What is the main advantage of using DataFrames over RDDs?",
+      "options": ["Optimized execution", "Type safety", "Better performance in aggregations", "All of the above"],
+      "answer": "All of the above",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "spark-showdown-q12",
+      "questionType": "mcq",
+      "question": "What does the `persist()` method do?",
+      "options": ["Caches the data", "Recomputes the data", "Writes data to disk", "Clears the cache"],
+      "answer": "Caches the data",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "spark-showdown-q13",
+      "questionType": "code_completion",
+      "question": "Fill in the blanks to read a CSV file into a DataFrame:\n```python\ndf = spark.read.___('path/to/file.csv')\n```",
+      "answer": "csv",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "spark-showdown-q14",
+      "questionType": "mcq",
+      "question": "What is the purpose of the `join()` operation in Spark?",
+      "options": ["To combine two RDDs or DataFrames", "To filter data", "To sort data", "To aggregate data"],
+      "answer": "To combine two RDDs or DataFrames",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "spark-showdown-q15",
+      "questionType": "true_false",
+      "question": "Broadcast variables are used to efficiently send large read-only data to all worker nodes.",
+      "answer": "True",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "spark-showdown-q16",
+      "questionType": "mcq",
+      "question": "What does Spark Streaming allow you to do?",
+      "options": ["Process data in real-time", "Run batch jobs", "Perform SQL queries", "All of the above"],
+      "answer": "Process data in real-time",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "spark-showdown-q17",
+      "questionType": "order_the_steps",
+      "question": "Order the steps for configuring Spark for a cluster.",
+      "options": [
+        "1. Download Spark",
+        "2. Configure environment variables",
+        "3. Set up the cluster manager",
+        "4. Start the Spark services"
+      ],
+      "answer": ["1", "2", "3", "4"],
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "spark-showdown-q18",
+      "questionType": "mcq",
+      "question": "Which of the following is a common use case for Spark?",
+      "options": ["ETL processes", "Machine learning", "Stream processing", "All of the above"],
+      "answer": "All of the above",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "spark-showdown-q19",
+      "questionType": "tap_the_output",
+      "question": "What will be the output of the following code?\n```python\nrdd = spark.parallelize([1, 2, 3])\nprint(rdd.reduce(lambda x, y: x + y))\n```",
+      "options": ["6", "3", "1", "2"],
+      "answer": "6",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "spark-showdown-q20",
+      "questionType": "mcq",
+      "question": "What is schema evolution in Spark?",
+      "options": ["The ability to change the schema of a DataFrame after creation", "The process of validating data against a schema", "The ability to merge different DataFrames", "The dynamic generation of schemas"],
+      "answer": "The ability to change the schema of a DataFrame after creation",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "spark-showdown-q21",
+      "questionType": "true_false",
+      "question": "Spark supports both batch and streaming data processing.",
+      "answer": "True",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "spark-showdown-q22",
+      "questionType": "mcq",
+      "question": "Which operation is used to filter data in a DataFrame?",
+      "options": ["select", "filter", "groupBy", "join"],
+      "answer": "filter",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "spark-showdown-q23",
+      "questionType": "code_completion",
+      "question": "Complete the code to write a DataFrame to Parquet:\n```python\ndf.write.___('path/to/output')\n```",
+      "answer": "parquet",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "spark-showdown-q24",
+      "questionType": "mcq",
+      "question": "What is idempotency in Spark?",
+      "options": ["The ability to handle duplicate data", "The ability to ensure data integrity", "The ability to achieve the same result regardless of how many times an operation is applied", "The ability to optimize queries"],
+      "answer": "The ability to achieve the same result regardless of how many times an operation is applied",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "spark-showdown-q25",
+      "questionType": "mcq",
+      "question": "Which function is used to concatenate two DataFrames?",
+      "options": ["union", "concat", "merge", "join"],
+      "answer": "union",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "spark-showdown-q26",
+      "questionType": "true_false",
+      "question": "Spark SQL allows you to run SQL queries directly on DataFrames.",
+      "answer": "True",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "spark-showdown-q27",
+      "questionType": "mcq",
+      "question": "What is the purpose of the `checkpoint()` method?",
+      "options": ["To save the state of an RDD", "To clear the cache", "To optimize query plans", "To enable fault tolerance"],
+      "answer": "To enable fault tolerance",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "spark-showdown-q28",
+      "questionType": "mcq",
+      "question": "Which of the following is NOT a component of Spark?",
+      "options": ["Spark SQL", "Spark Streaming", "Spark MLlib", "Spark OS"],
+      "answer": "Spark OS",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "spark-showdown-q29",
+      "questionType": "order_the_steps",
+      "question": "Order the steps for working with Spark SQL.",
+      "options": [
+        "1. Create a Spark session",
+        "2. Load data into a DataFrame",
+        "3. Register the DataFrame as a temporary view",
+        "4. Execute SQL queries"
+      ],
+      "answer": ["1", "2", "3", "4"],
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "spark-showdown-q30",
+      "questionType": "true_false",
+      "question": "Late-arriving data can be handled in Spark Streaming.",
+      "answer": "True",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-19",
+  "type": "find_the_bug",
+  "theme": "kafka",
+  "incidentId": 4541,
+  "title": "Incident #4541 — Morning Data Pipeline Failure",
+  "scenario": "The analytics team reports that the daily sales summary is missing data from the last hour. Find the bug.",
+  "language": "sql",
+  "code": "SELECT\n    product_id,\n    SUM(quantity) AS total_quantity\nFROM\n    orders\nWHERE\n    order_time >= CURRENT_DATE\nGROUP BY\n    product_id;",
+  "options": [
+    { "id": "a", "text": "The query should filter by order_time using a specific time zone." },
+    { "id": "b", "text": "The query is missing a condition to include orders from the last hour." },
+    { "id": "c", "text": "The GROUP BY clause should also include order_time." },
+    { "id": "d", "text": "The SUM function is incorrectly aggregating data." }
+  ],
+  "answer": "b",
+  "explanation": "The bug is that the query only filters for today's orders, but it doesn't account for the last hour of sales data. Adding a condition to include orders from the last hour will resolve the issue. Use 'order_time >= NOW() - INTERVAL '1 hour'' to fix it.",
+  "xp": 150,
+  "coins": 30
+}

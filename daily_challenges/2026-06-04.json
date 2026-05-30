@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-04",
+  "type": "find_the_bug",
+  "theme": "dbt",
+  "incidentId": 4526,
+  "title": "Incident #4526 — Revenue Report Overcount",
+  "scenario": "The finance team is alarmed by a revenue report that shows sales inflated by 50%. Investigate the dbt model.",
+  "language": "sql",
+  "code": "SELECT\n    user_id,\n    SUM(amount) AS total_revenue\nFROM\n    orders\nWHERE\n    order_date >= '2026-01-01'\nGROUP BY\n    user_id\nHAVING\n    total_revenue > 1000;",
+  "options": [
+    { "id": "a", "text": "The HAVING clause is filtering out too many users." },
+    { "id": "b", "text": "The SUM function is aggregating over incorrect order amounts." },
+    { "id": "c", "text": "The date filter is including future dates." },
+    { "id": "d", "text": "The GROUP BY clause is missing a necessary column." }
+  ],
+  "answer": "b",
+  "explanation": "The bug lies in how `SUM(amount)` aggregates revenue — it might include refunds or adjustments, leading to inflated totals. To fix this, ensure the query filters out negative amounts before aggregation by adjusting the WHERE clause to `WHERE amount > 0 AND order_date >= '2026-01-01'`.",
+  "xp": 150,
+  "coins": 30
+}

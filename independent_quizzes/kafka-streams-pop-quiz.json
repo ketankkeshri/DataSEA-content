@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "packId": "kafka-streams-pop-quiz",
+  "type": "independent",
+  "title": "Kafka & Streams Pop Quiz",
+  "questions": [
+    {
+      "id": "kafka-streams-pop-quiz-q1",
+      "type": "multiple_choice",
+      "question": "What is Kafka primarily used for?",
+      "options": [
+        "Data storage",
+        "Data processing",
+        "Streaming data",
+        "Batch processing"
+      ],
+      "correctAnswer": 2,
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "kafka-streams-pop-quiz-q2",
+      "type": "true_false",
+      "question": "Kafka guarantees message ordering within a partition.",
+      "correctAnswer": true,
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "kafka-streams-pop-quiz-q3",
+      "type": "multiple_choice",
+      "question": "Which of the following is a component of Kafka?",
+      "options": [
+        "Kafka Client",
+        "Kafka Broker",
+        "Kafka Producer",
+        "All of the above"
+      ],
+      "correctAnswer": 3,
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    },
+    {
+      "id": "kafka-streams-pop-quiz-q4",
+      "type": "multiple_choice",
+      "question": "What is the purpose of a Kafka topic?",
+      "options": [
+        "To store messages",
+        "To group messages",
+        "To manage consumers",
+        "To partition data"
+      ],
+      "correctAnswer": 0,
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "kafka-streams-pop-quiz-q5",
+      "type": "code_completion",
+      "question": "Fill in the missing code to create a Kafka producer:\n\n```python\nfrom kafka import KafkaProducer\nproducer = KafkaProducer(____)\n```",
+      "correctAnswer": "bootstrap_servers='localhost:9092'",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "kafka-streams-pop-quiz-q6",
+      "type": "multiple_choice",
+      "question": "What is a partition in Kafka?",
+      "options": [
+        "A data structure that contains messages",
+        "A way to scale Kafka horizontally",
+        "A method to guarantee message delivery",
+        "A mechanism for data compression"
+      ],
+      "correctAnswer": 1,
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "kafka-streams-pop-quiz-q7",
+      "type": "multiple_choice",
+      "question": "What happens when a consumer group reads from a topic?",
+      "options": [
+        "Messages are deleted from the topic",
+        "Messages are marked as read",
+        "Messages are replicated across partitions",
+        "All consumers in the group read the same messages"
+      ],
+      "correctAnswer": 1,
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "kafka-streams-pop-quiz-q8",
+      "type": "true_false",
+      "question": "Kafka Streams is a part of the Apache Kafka project.",
+      "correctAnswer": true,
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "kafka-streams-pop-quiz-q9",
+      "type": "tap_the_output",
+      "question": "What will be the output of the following code?\n\n```java\nKStream<String, String> stream = builder.stream(\"input-topic\");\nstream.filter((key, value) -> value.contains(\"error\"));\nstream.to(\"error-topic\");\n```",
+      "correctOutput": "Messages containing 'error' are sent to 'error-topic'.",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "kafka-streams-pop-quiz-q10",
+      "type": "multiple_choice",
+      "question": "What is idempotency in Kafka?",
+      "options": [
+        "Ensuring messages are processed only once",
+        "Ensuring message order is maintained",
+        "Ensuring messages are not lost",
+        "Ensuring messages are compressed"
+      ],
+      "correctAnswer": 0,
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "kafka-streams-pop-quiz-q11",
+      "type": "order_the_steps",
+      "question": "Order the steps to produce a message in Kafka.",
+      "options": [
+        "1. Create a producer instance",
+        "2. Send a message",
+        "3. Specify the topic",
+        "4. Close the producer"
+      ],
+      "correctOrder": [0, 2, 1, 3],
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "kafka-streams-pop-quiz-q12",
+      "type": "multiple_choice",
+      "question": "What is late-arriving data in event streaming?",
+      "options": [
+        "Data that arrives after processing is complete",
+        "Data that is delayed due to network latency",
+        "Data that is processed out of order",
+        "Data that is aggregated incorrectly"
+      ],
+      "correctAnswer": 0,
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "kafka-streams-pop-quiz-q13",
+      "type": "multiple_choice",
+      "question": "What is schema evolution in Kafka?",
+      "options": [
+        "Changing the structure of a message",
+        "Updating the Kafka broker version",
+        "Modifying the retention policy",
+        "Scaling partitions"
+      ],
+      "correctAnswer": 0,
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "kafka-streams-pop-quiz-q14",
+      "type": "multiple_choice",
+      "question": "Which of the following is a benefit of using Kafka Streams?",
+      "options": [
+        "Built-in state management",
+        "Low latency processing",
+        "Scalability",
+        "All of the above"
+      ],
+      "correctAnswer": 3,
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "kafka-streams-pop-quiz-q15",
+      "type": "multiple_choice",
+      "question": "How is data partitioned in Kafka?",
+      "options": [
+        "By message size",
+        "By message key",
+        "By timestamp",
+        "Randomly"
+      ],
+      "correctAnswer": 1,
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "kafka-streams-pop-quiz-q16",
+      "type": "code_completion",
+      "question": "Complete the following Kafka Streams code to group by user ID:\n\n```java\nKStream<String, String> stream = builder.stream(\"user-topic\");\nKTable<String, Long> counts = stream.groupByKey().count();\n```",
+      "correctAnswer": "groupBy(______)",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "kafka-streams-pop-quiz-q17",
+      "type": "multiple_choice",
+      "question": "What does the 'commit.interval.ms' configuration in Kafka control?",
+      "options": [
+        "The time interval between consumer offsets commits",
+        "The time to wait before sending messages",
+        "The duration of retention policy",
+        "The time to wait for a message to be processed"
+      ],
+      "correctAnswer": 0,
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25
+    },
+    {
+      "id": "kafka-streams-pop-quiz-q18",
+      "type": "multiple_choice",
+      "question": "What kind of data can be sent to Kafka topics?",
+      "options": [
+        "Only text data",
+        "Only binary data",
+        "Any serializable data",
+        "Only JSON data"
+      ],
+      "correctAnswer": 2,
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "kafka-streams-pop-quiz-q19",
+      "type": "multiple_choice",
+      "question": "Which of the following is true about Kafka consumers?",
+      "options": [
+        "They can belong to multiple consumer groups.",
+        "They can only read from one topic.",
+        "They do not need to commit offsets.",
+        "They cannot read messages in order."
+      ],
+      "correctAnswer": 0,
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15
+    },
+    {
+      "id": "kafka-streams-pop-quiz-q20",
+      "type": "true_false",
+      "question": "Kafka can handle real-time data processing.",
+      "correctAnswer": true,
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8
+    }
+  ]
+}

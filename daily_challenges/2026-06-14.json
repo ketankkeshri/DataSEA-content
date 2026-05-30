@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-14",
+  "type": "find_the_bug",
+  "theme": "open",
+  "incidentId": 4536,
+  "title": "Incident #4536 — Missing User Orders in Analytics",
+  "scenario": "The data team received reports that the user orders analytics dashboard is showing fewer orders than expected. Find the bug.",
+  "language": "sql",
+  "code": "SELECT u.user_id, COUNT(o.order_id) AS order_count\nFROM users u\nJOIN orders o ON u.user_id = o.user_id\nWHERE o.order_date >= '2026-01-01'\nGROUP BY u.user_id;",
+  "options": [
+    { "id": "a", "text": "The date filter should include orders from last year." },
+    { "id": "b", "text": "The join type should be a LEFT JOIN instead of INNER JOIN." },
+    { "id": "c", "text": "The COUNT function should use DISTINCT order_id." },
+    { "id": "d", "text": "The user_id should be filtered to exclude inactive users." }
+  ],
+  "answer": "b",
+  "explanation": "The code uses an INNER JOIN, which excludes users without any orders, leading to missing data in the report. Switching to a LEFT JOIN ensures all users are included, regardless of whether they have placed orders.",
+  "xp": 150,
+  "coins": 30
+}

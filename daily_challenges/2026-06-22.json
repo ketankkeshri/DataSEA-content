@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-22",
+  "type": "find_the_bug",
+  "theme": "sql",
+  "incidentId": 4544,
+  "title": "Incident #4544 — The Mysterious Missing Orders",
+  "scenario": "The operations team is puzzled as the daily sales report shows a significant drop in orders. Investigate the query responsible for the report to find the bug.",
+  "language": "sql",
+  "code": "SELECT\n    DATE(order_date) AS order_day,\n    COUNT(*) AS total_orders\nFROM\n    orders\nWHERE\n    order_status = 'completed'\n    AND order_date >= CURDATE() - INTERVAL 1 DAY\nGROUP BY\n    order_day;",
+  "options": [
+    { "id": "a", "text": "The date filter is excluding the current day's orders." },
+    { "id": "b", "text": "The date comparison should use NOW() instead of CURDATE() for accurate time." },
+    { "id": "c", "text": "The query should include orders with statuses other than 'completed'." },
+    { "id": "d", "text": "The GROUP BY clause is incorrectly aggregating by the wrong date format." }
+  ],
+  "answer": "b",
+  "explanation": "The bug lies in the use of CURDATE(), which only considers the date, excluding any orders placed later in the day. Switching to NOW() ensures all orders placed up to the current time are included in the report, addressing the drop in sales numbers.",
+  "xp": 150,
+  "coins": 30
+}

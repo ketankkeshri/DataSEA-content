@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-08",
+  "type": "find_the_bug",
+  "theme": "sql",
+  "incidentId": 4530,
+  "title": "Incident #4530 — Revenue Report Mishap!",
+  "scenario": "The finance team reports that the weekly revenue totals appear inflated. Investigate the SQL query causing the discrepancy.",
+  "language": "sql",
+  "code": "SELECT\n    SUM(order_amount) AS total_revenue,\n    DATE(order_date) AS revenue_date\nFROM\n    orders\nWHERE\n    order_status = 'completed'\nGROUP BY\n    revenue_date\nHAVING\n    revenue_date >= '2026-06-01' AND revenue_date <= '2026-06-07';",
+  "options": [
+    { "id": "a", "text": "The order_status filter is incorrect; it should include 'pending' orders." },
+    { "id": "b", "text": "The date filtering in the HAVING clause is incorrectly placed; it should be in the WHERE clause." },
+    { "id": "c", "text": "The SUM function is aggregating on the wrong column." },
+    { "id": "d", "text": "The GROUP BY clause should include order_status." }
+  ],
+  "answer": "b",
+  "explanation": "The date filtering in the HAVING clause is applied after aggregation, which can lead to incorrect results. It should be moved to the WHERE clause to filter rows before aggregation, ensuring accurate total revenue calculation.",
+  "xp": 150,
+  "coins": 30
+}

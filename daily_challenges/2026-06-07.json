@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-07",
+  "type": "find_the_bug",
+  "theme": "open",
+  "incidentId": 4529,
+  "title": "Incident #4529 — Overnight Sales Report Shows Missing Data",
+  "scenario": "The sales team noticed that the overnight sales report is missing entries for the last hour before the cutoff. Find the bug.",
+  "language": "sql",
+  "code": "SELECT order_id, order_amount, order_time\nFROM orders\nWHERE order_time >= '2026-06-07 00:00:00' AND order_time < '2026-06-07 08:00:00';",
+  "options": [
+    { "id": "a", "text": "The time range is correct, but the query needs to include a filter for order_status." },
+    { "id": "b", "text": "The time range is excluding the last hour due to using a strict less-than operator." },
+    { "id": "c", "text": "The query should be using a LEFT JOIN to include all orders." },
+    { "id": "d", "text": "The order_time column is not indexed, causing performance issues." }
+  ],
+  "answer": "b",
+  "explanation": "The issue lies in the query's time range; it uses a strict less-than operator, which excludes orders made exactly at '2026-06-07 08:00:00'. Changing the condition to '<= '2026-06-07 08:00:00'' will include those orders in the results.",
+  "xp": 150,
+  "coins": 30
+}

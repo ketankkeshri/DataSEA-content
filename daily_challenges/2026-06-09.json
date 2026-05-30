@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-09",
+  "type": "find_the_bug",
+  "theme": "spark",
+  "incidentId": 4531,
+  "title": "Incident #4531 — Revenue Report Anomaly",
+  "scenario": "The data engineering team received alerts about discrepancies in the daily revenue report. The report shows sales that are significantly higher than expected. Find the bug.",
+  "language": "sql",
+  "code": "SELECT\n    date,\n    SUM(amount) AS total_revenue\nFROM\n    orders\nGROUP BY\n    date\nHAVING\n    date >= '2026-06-01' AND date <= '2026-06-09';",
+  "options": [
+    { "id": "a", "text": "The date filter in the HAVING clause is incorrect." },
+    { "id": "b", "text": "The GROUP BY clause should include the time component of the date." },
+    { "id": "c", "text": "The SUM function is counting NULL values instead of filtering them." },
+    { "id": "d", "text": "The total_revenue should be calculated with a JOIN to the users table." }
+  ],
+  "answer": "b",
+  "explanation": "The bug is that the GROUP BY clause only groups by date, ignoring the time component. This can lead to inflated totals if multiple entries exist within a single day. To fix it, include the time in the GROUP BY clause, such as using 'GROUP BY date_trunc('day', date)'.",
+  "xp": 150,
+  "coins": 30
+}
