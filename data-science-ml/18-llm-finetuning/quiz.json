@@ -1,0 +1,233 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "18-llm-finetuning",
+  "type": "module",
+  "questions": [
+    {
+      "id": "18-llm-finetuning-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the primary purpose of fine-tuning a language model?",
+      "options": [
+        { "id": "a", "text": "To train a model from scratch" },
+        { "id": "b", "text": "To adapt a pre-trained model to a specific task" },
+        { "id": "c", "text": "To increase model size" },
+        { "id": "d", "text": "To reduce training time" }
+      ],
+      "answer": "b",
+      "explanation": "Fine-tuning adjusts a pre-trained model to better perform on a specific task by training it further on a smaller, task-specific dataset.",
+      "tags": ["fine-tuning"]
+    },
+    {
+      "id": "18-llm-finetuning-q2",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to load a dataset:",
+      "language": "python",
+      "code_template": "dataset = load_dataset('____', split='train')",
+      "blanks": [
+        { "id": "b1", "options": ["imdb", "text_data", "custom_data", "coco"], "answer": "imdb" }
+      ],
+      "explanation": "Using the 'load_dataset' function with 'imdb' loads the IMDb movie review dataset for analysis.",
+    },
+    {
+      "id": "18-llm-finetuning-q3",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(len([x for x in range(5) if x % 2 == 0]))",
+      "options": [
+        { "id": "a", "text": "2" },
+        { "id": "b", "text": "3" },
+        { "id": "c", "text": "5" },
+        { "id": "d", "text": "4" }
+      ],
+      "answer": "a",
+      "explanation": "The list comprehension creates a list of even numbers from 0 to 4, which are [0, 2, 4], resulting in a length of 3.",
+    },
+    {
+      "id": "18-llm-finetuning-q4",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Fine-tuning requires a large amount of labeled data.",
+      "answer": false,
+      "explanation": "Fine-tuning can be effective with smaller amounts of labeled data, leveraging the knowledge from a pre-trained model.",
+    },
+    {
+      "id": "18-llm-finetuning-q5",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps for fine-tuning a language model:",
+      "steps": [
+        { "id": "s1", "text": "Load the pre-trained model" },
+        { "id": "s2", "text": "Prepare the dataset" },
+        { "id": "s3", "text": "Train the model on the dataset" },
+        { "id": "s4", "text": "Evaluate the model performance" }
+      ],
+      "correctOrder": ["s2", "s1", "s3", "s4"],
+      "explanation": "First, you prepare the dataset, then load the pre-trained model, train it, and finally evaluate its performance.",
+    },
+    {
+      "id": "18-llm-finetuning-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does LoRA stand for in the context of fine-tuning?",
+      "options": [
+        { "id": "a", "text": "Low-Rank Adaptation" },
+        { "id": "b", "text": "Layered Random Architecture" },
+        { "id": "c", "text": "Linear Optimization for Robust Applications" },
+        { "id": "d", "text": "Large Output Rescaling Algorithm" }
+      ],
+      "answer": "a",
+      "explanation": "LoRA stands for Low-Rank Adaptation, a technique used to fine-tune models efficiently by adding a small number of trainable parameters.",
+      "tags": ["lora"]
+    },
+    {
+      "id": "18-llm-finetuning-q7",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to evaluate a model:",
+      "language": "python",
+      "code_template": "metrics = evaluate('____', model, dataset)",
+      "blanks": [
+        { "id": "b1", "options": ["accuracy", "loss", "f1_score", "precision"], "answer": "accuracy" }
+      ],
+      "explanation": "Using 'evaluate' with 'accuracy' computes the accuracy metric for the model on the provided dataset.",
+    },
+    {
+      "id": "18-llm-finetuning-q8",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "x = 5; print(x if x > 3 else x + 2)",
+      "options": [
+        { "id": "a", "text": "5" },
+        { "id": "b", "text": "3" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "7" }
+      ],
+      "answer": "a",
+      "explanation": "The condition checks if x is greater than 3, which it is, so it prints x, which is 5.",
+    },
+    {
+      "id": "18-llm-finetuning-q9",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "LoRA can be applied to any type of neural network architecture.",
+      "answer": true,
+      "explanation": "LoRA can be applied across various architectures, making it versatile for fine-tuning tasks.",
+    },
+    {
+      "id": "18-llm-finetuning-q10",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following is NOT a common metric for evaluating language models?",
+      "options": [
+        { "id": "a", "text": "Perplexity" },
+        { "id": "b", "text": "F1 Score" },
+        { "id": "c", "text": "Confusion Matrix" },
+        { "id": "d", "text": "Precision" }
+      ],
+      "answer": "c",
+      "explanation": "Although confusion matrices are useful in classification problems, they are not typically used for language model evaluation.",
+    },
+    {
+      "id": "18-llm-finetuning-q11",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to save a fine-tuned model:",
+      "language": "python",
+      "code_template": "model.save_pretrained('____')",
+      "blanks": [
+        { "id": "b1", "options": ["fine_tuned_model", "trained_model", "model_v1", "checkpoint"], "answer": "fine_tuned_model" }
+      ],
+      "explanation": "The 'save_pretrained' function saves the model to the specified directory, enabling reloading later.",
+    },
+    {
+      "id": "18-llm-finetuning-q12",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(sum([1, 2, 3]) + 1)",
+      "options": [
+        { "id": "a", "text": "6" },
+        { "id": "b", "text": "5" },
+        { "id": "c", "text": "4" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "b",
+      "explanation": "The sum of [1, 2, 3] is 6, and adding 1 results in 7, which is printed.",
+    },
+    {
+      "id": "18-llm-finetuning-q13",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to implement LoRA in a model:",
+      "steps": [
+        { "id": "s1", "text": "Define the LoRA configuration" },
+        { "id": "s2", "text": "Integrate LoRA into the model architecture" },
+        { "id": "s3", "text": "Train the model with LoRA" },
+        { "id": "s4", "text": "Load the pre-trained model" }
+      ],
+      "correctOrder": ["s4", "s1", "s2", "s3"],
+      "explanation": "You first load the model, define the LoRA configuration, integrate it, and then train the model.",
+    },
+    {
+      "id": "18-llm-finetuning-q14",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Fine-tuning can help reduce overfitting.",
+      "answer": true,
+      "explanation": "Fine-tuning allows the model to adapt to specific data, which can mitigate overfitting by utilizing domain-specific knowledge.",
+    },
+    {
+      "id": "18-llm-finetuning-q15",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which library is commonly used for fine-tuning language models?",
+      "options": [
+        { "id": "a", "text": "Pandas" },
+        { "id": "b", "text": "Hugging Face Transformers" },
+        { "id": "c", "text": "Scikit-Learn" },
+        { "id": "d", "text": "NumPy" }
+      ],
+      "answer": "b",
+      "explanation": "Hugging Face Transformers is a popular library that provides tools and pre-trained models for fine-tuning language models.",
+      "tags": ["libraries"]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "18-llm-finetuning",
+  "section": "data-science-ml",
+  "tier": "advanced",
+  "moduleOrder": 18,
+  "version": 1,
+  "title": "LLM Fine-tuning",
+  "shortDescription": "LLM Fine-tuning \u2014 beginner to advanced concepts and code.",
+  "icon": "18-llm-finetuning",
+  "estimatedMinutes": 32,
+  "isPro": true,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-lora-qlora",
+      "title": "Lora Qlora",
+      "minutes": 8
+    },
+    {
+      "id": "03-datasets",
+      "title": "Datasets",
+      "minutes": 8
+    },
+    {
+      "id": "04-eval",
+      "title": "Eval",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}
