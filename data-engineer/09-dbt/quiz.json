@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "09-dbt",
+  "type": "module",
+  "questions": [
+    {
+      "id": "09-dbt-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does a dbt model do?",
+      "options": [
+        { "id": "a", "text": "Creates a database" },
+        { "id": "b", "text": "Transforms data" },
+        { "id": "c", "text": "Stores data" },
+        { "id": "d", "text": "Fetches data" }
+      ],
+      "answer": "b",
+      "explanation": "A dbt model is primarily responsible for transforming raw data into a format suitable for analysis.",
+      "tags": ["models"]
+    },
+    {
+      "id": "09-dbt-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which command is used to run dbt tests?",
+      "options": [
+        { "id": "a", "text": "dbt run" },
+        { "id": "b", "text": "dbt test" },
+        { "id": "c", "text": "dbt validate" },
+        { "id": "d", "text": "dbt compile" }
+      ],
+      "answer": "b",
+      "explanation": "The command 'dbt test' is used to execute tests defined in the dbt project.",
+      "tags": ["tests"]
+    },
+    {
+      "id": "09-dbt-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to reference a source in dbt:",
+      "language": "sql",
+      "code_template": "SELECT * FROM ____.my_table",
+      "blanks": [
+        { "id": "b1", "options": ["source", "ref", "model", "table"], "answer": "source" }
+      ],
+      "explanation": "In dbt, to reference a source, you use the 'source' function.",
+      "tags": ["sources-refs"]
+    },
+    {
+      "id": "09-dbt-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(sum([1, 2, 3, 4]))",
+      "options": [
+        { "id": "a", "text": "10" },
+        { "id": "b", "text": "6" },
+        { "id": "c", "text": "12" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "b",
+      "explanation": "The sum of the list [1, 2, 3, 4] is 10.",
+      "tags": ["macros"]
+    },
+    {
+      "id": "09-dbt-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "dbt snapshots allow you to capture historical changes in your data.",
+      "answer": true,
+      "explanation": "Snapshots in dbt allow you to capture and store the historical state of your data, enabling you to track changes over time.",
+      "tags": ["snapshots"]
+    },
+    {
+      "id": "09-dbt-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the purpose of a dbt macro?",
+      "options": [
+        { "id": "a", "text": "To create a new table" },
+        { "id": "b", "text": "To define reusable SQL code" },
+        { "id": "c", "text": "To run tests" },
+        { "id": "d", "text": "To schedule jobs" }
+      ],
+      "answer": "b",
+      "explanation": "Macros in dbt allow you to define reusable SQL snippets that can be called throughout your project.",
+      "tags": ["macros"]
+    },
+    {
+      "id": "09-dbt-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to create a dbt model:",
+      "steps": [
+        { "id": "s1", "text": "Write SQL for your model" },
+        { "id": "s2", "text": "Run dbt run" },
+        { "id": "s3", "text": "Define your model in dbt_project.yml" },
+        { "id": "s4", "text": "Test your model" }
+      ],
+      "correctOrder": ["s3", "s1", "s2", "s4"],
+      "explanation": "First, you define the model, then write the SQL, run it, and finally test it.",
+      "tags": ["models"]
+    },
+    {
+      "id": "09-dbt-q8",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the dbt command to build your models:",
+      "language": "bash",
+      "code_template": "dbt ____",
+      "blanks": [
+        { "id": "b1", "options": ["run", "build", "compile", "test"], "answer": "run" }
+      ],
+      "explanation": "The command 'dbt run' executes the models in your dbt project.",
+      "tags": ["models"]
+    },
+    {
+      "id": "09-dbt-q9",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following is NOT a valid dbt model materialization strategy?",
+      "options": [
+        { "id": "a", "text": "table" },
+        { "id": "b", "text": "view" },
+        { "id": "c", "text": "incremental" },
+        { "id": "d", "text": "column" }
+      ],
+      "answer": "d",
+      "explanation": "Column is not a valid materialization strategy in dbt. Valid strategies include table, view, and incremental.",
+      "tags": ["models"]
+    },
+    {
+      "id": "09-dbt-q10",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "dbt allows you to schedule your models to run automatically.",
+      "answer": false,
+      "explanation": "While dbt can run models, it does not have built-in scheduling; this is typically managed by external tools like Airflow.",
+      "tags": ["models"]
+    },
+    {
+      "id": "09-dbt-q11",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print({x: x**2 for x in range(3)})",
+      "options": [
+        { "id": "a", "text": "{0: 0, 1: 1, 2: 4}" },
+        { "id": "b", "text": "{0: 0, 1: 1, 2: 2}" },
+        { "id": "c", "text": "{0: 0, 1: 1, 2: 3}" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The code creates a dictionary where keys are numbers and values are their squares.",
+      "tags": ["macros"]
+    },
+    {
+      "id": "09-dbt-q12",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the primary purpose of dbt snapshots?",
+      "options": [
+        { "id": "a", "text": "To create new data sources" },
+        { "id": "b", "text": "To track changes in data over time" },
+        { "id": "c", "text": "To aggregate data" },
+        { "id": "d", "text": "To validate data" }
+      ],
+      "answer": "b",
+      "explanation": "Snapshots are used to capture and track historical changes in data, enabling time travel in your data.",
+      "tags": ["snapshots"]
+    },
+    {
+      "id": "09-dbt-q13",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to define a macro in dbt:",
+      "steps": [
+        { "id": "s1", "text": "Write the macro in a .sql file" },
+        { "id": "s2", "text": "Use the macro in your model" },
+        { "id": "s3", "text": "Define the macro with the {% macro %} syntax" },
+        { "id": "s4", "text": "Run dbt run" }
+      ],
+      "correctOrder": ["s1", "s3", "s2", "s4"],
+      "explanation": "You first write the macro, define it, then use it in a model and run dbt.",
+      "tags": ["macros"]
+    }
+  ]
+}

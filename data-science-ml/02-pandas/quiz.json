@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "02-pandas",
+  "type": "module",
+  "questions": [
+    {
+      "id": "02-pandas-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does the Pandas function `read_csv()` do?",
+      "options": [
+        { "id": "a", "text": "Writes data to a CSV file." },
+        { "id": "b", "text": "Reads a CSV file into a DataFrame." },
+        { "id": "c", "text": "Converts a DataFrame to a CSV format." },
+        { "id": "d", "text": "Deletes a CSV file." }
+      ],
+      "answer": "b",
+      "explanation": "`read_csv()` is used to load data from a CSV file into a Pandas DataFrame for analysis.",
+      "tags": ["intro"]
+    },
+    {
+      "id": "02-pandas-q2",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to calculate the mean of a DataFrame column:",
+      "language": "python",
+      "code_template": "df['column_name'].____()",
+      "blanks": [
+        { "id": "b1", "options": ["mean", "avg", "sum", "count"], "answer": "mean" }
+      ],
+      "explanation": "The `mean()` function computes the average of the values in the specified column.",
+      "tags": ["series-dataframe"]
+    },
+    {
+      "id": "02-pandas-q3",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(pd.Series([1, 2, 3]).sum())",
+      "options": [
+        { "id": "a", "text": "3" },
+        { "id": "b", "text": "6" },
+        { "id": "c", "text": "1" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "b",
+      "explanation": "The `sum()` function adds all the values in the Series, which equals 6.",
+      "tags": ["series-dataframe"]
+    },
+    {
+      "id": "02-pandas-q4",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Pandas DataFrames can contain different data types in different columns.",
+      "answer": true,
+      "explanation": "DataFrames are designed to hold heterogeneous data, allowing different types per column.",
+      "tags": ["series-dataframe"]
+    },
+    {
+      "id": "02-pandas-q5",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to group data and find the average:",
+      "steps": [
+        { "id": "s1", "text": "Use `groupby()` on the DataFrame." },
+        { "id": "s2", "text": "Select the column to average." },
+        { "id": "s3", "text": "Call `mean()` on the grouped object." },
+        { "id": "s4", "text": "Store the result in a new variable." }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "The correct order is to first group the data, then select the necessary column, compute the mean, and finally store the result.",
+      "tags": ["groupby"]
+    },
+    {
+      "id": "02-pandas-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the purpose of the `merge()` function in Pandas?",
+      "options": [
+        { "id": "a", "text": "To combine two DataFrames based on a common column." },
+        { "id": "b", "text": "To split a DataFrame into multiple DataFrames." },
+        { "id": "c", "text": "To sort a DataFrame." },
+        { "id": "d", "text": "To filter a DataFrame." }
+      ],
+      "answer": "a",
+      "explanation": "`merge()` is used to join two DataFrames on a common key, similar to SQL joins.",
+      "tags": ["merge-join"]
+    },
+    {
+      "id": "02-pandas-q7",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Fill in the blanks to merge two DataFrames:",
+      "language": "python",
+      "code_template": "pd.____(df1, df2, on='key')",
+      "blanks": [
+        { "id": "b1", "options": ["join", "merge", "concatenate", "combine"], "answer": "merge" }
+      ],
+      "explanation": "The `merge()` function combines DataFrames based on a specified key.",
+      "tags": ["merge-join"]
+    },
+    {
+      "id": "02-pandas-q8",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this code output?",
+      "language": "python",
+      "code": "print(df[['A', 'B']].shape)",
+      "options": [
+        { "id": "a", "text": "(2, 2)" },
+        { "id": "b", "text": "(2, 3)" },
+        { "id": "c", "text": "(3, 2)" },
+        { "id": "d", "text": "(3, 3)" }
+      ],
+      "answer": "c",
+      "explanation": "The `shape` attribute returns the dimensions of the DataFrame, which is (3 rows, 2 columns) for columns A and B.",
+      "tags": ["indexing"]
+    },
+    {
+      "id": "02-pandas-q9",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "The `iloc` method is used for label-based indexing.",
+      "answer": false,
+      "explanation": "`iloc` is used for positional indexing, not label-based indexing.",
+      "tags": ["indexing"]
+    },
+    {
+      "id": "02-pandas-q10",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to reshape a DataFrame:",
+      "steps": [
+        { "id": "s1", "text": "Use `pd.melt()`." },
+        { "id": "s2", "text": "Specify the id_vars." },
+        { "id": "s3", "text": "Provide value_vars to melt." },
+        { "id": "s4", "text": "Store the reshaped DataFrame." }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "First, you call `pd.melt()` to start the reshaping, then specify the id and value variables, and finally store the result.",
+      "tags": ["reshaping"]
+    },
+    {
+      "id": "02-pandas-q11",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which function is used to get the unique values of a Series?",
+      "options": [
+        { "id": "a", "text": "unique()" },
+        { "id": "b", "text": "distinct()" },
+        { "id": "c", "text": "drop_duplicates()" },
+        { "id": "d", "text": "get_values()" }
+      ],
+      "answer": "a",
+      "explanation": "The `unique()` function returns an array of unique values from a Series.",
+      "tags": ["series-dataframe"]
+    },
+    {
+      "id": "02-pandas-q12",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the code to filter rows where column 'A' is greater than 1:",
+      "language": "python",
+      "code_template": "df[df['A'] > ____]",
+      "blanks": [
+        { "id": "b1", "options": ["0", "1", "2", "3"], "answer": "1" }
+      ],
+      "explanation": "This statement filters the DataFrame to include only rows where the value in column 'A' exceeds 1.",
+      "tags": ["indexing"]
+    },
+    {
+      "id": "02-pandas-q13",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this code return?",
+      "language": "python",
+      "code": "print(df.groupby('key').size())",
+      "options": [
+        { "id": "a", "text": "Counts the number of unique keys." },
+        { "id": "b", "text": "Returns a DataFrame." },
+        { "id": "c", "text": "Counts the number of occurrences of each key." },
+        { "id": "d", "text": "Error if 'key' doesn't exist." }
+      ],
+      "answer": "c",
+      "explanation": "The `size()` function counts the number of occurrences of each group formed by 'key'.",
+      "tags": ["groupby"]
+    },
+    {
+      "id": "02-pandas-q14",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "The `concat()` function can only combine DataFrames with matching columns.",
+      "answer": false,
+      "explanation": "`concat()` can combine DataFrames with different columns, filling missing values with NaN.",
+      "tags": ["merge-join"]
+    },
+    {
+      "id": "02-pandas-q15",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What happens if you try to merge two DataFrames without specifying the 'on' parameter?",
+      "options": [
+        { "id": "a", "text": "It raises an error." },
+        { "id": "b", "text": "It merges on all columns." },
+        { "id": "c", "text": "It concatenates the DataFrames." },
+        { "id": "d", "text": "It returns an empty DataFrame." }
+      ],
+      "answer": "b",
+      "explanation": "If 'on' is not specified, `merge()` attempts to merge on all columns with matching names.",
+      "tags": ["merge-join"]
+    }
+  ]
+}

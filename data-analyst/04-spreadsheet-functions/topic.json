@@ -1,0 +1,38 @@
+{
+  "id": "04-spreadsheet-functions",
+  "section": "data-analyst",
+  "tier": "beginner",
+  "moduleOrder": 4,
+  "version": 1,
+  "title": "Spreadsheet Functions Deep Dive",
+  "shortDescription": "Spreadsheet Functions Deep Dive \u2014 beginner to advanced concepts and code.",
+  "icon": "04-spreadsheet-functions",
+  "estimatedMinutes": 32,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-text-functions",
+      "title": "Text Functions",
+      "minutes": 8
+    },
+    {
+      "id": "02-date-functions",
+      "title": "Date Functions",
+      "minutes": 8
+    },
+    {
+      "id": "03-lookup-functions",
+      "title": "Lookup Functions",
+      "minutes": 8
+    },
+    {
+      "id": "04-array-formulas",
+      "title": "Array Formulas",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

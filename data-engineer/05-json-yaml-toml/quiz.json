@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "05-json-yaml-toml",
+  "type": "module",
+  "questions": [
+    {
+      "id": "05-json-yaml-toml-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does JSON stand for?",
+      "options": [
+        { "id": "a", "text": "JavaScript Object Notation" },
+        { "id": "b", "text": "Java Standard Object Notation" },
+        { "id": "c", "text": "JavaScript Open Notation" },
+        { "id": "d", "text": "Java Object Notation" }
+      ],
+      "answer": "a",
+      "explanation": "JSON stands for JavaScript Object Notation, which is a lightweight data interchange format."
+    },
+    {
+      "id": "05-json-yaml-toml-q2",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to parse a JSON string:",
+      "language": "python",
+      "code_template": "import json\njson_string = '...'\nresult = json.____(json_string)",
+      "blanks": [
+        { "id": "b1", "options": ["load", "loads", "parse", "dumps"], "answer": "loads" }
+      ],
+      "explanation": "The 'loads' function is used to parse a JSON string into a Python object."
+    },
+    {
+      "id": "05-json-yaml-toml-q3",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print({'a': 1, 'b': 2, 'c': 3}.get('d', 0))",
+      "options": [
+        { "id": "a", "text": "0" },
+        { "id": "b", "text": "None" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "KeyError" }
+      ],
+      "answer": "a",
+      "explanation": "The get method returns the second argument (0) when the key 'd' is not found."
+    },
+    {
+      "id": "05-json-yaml-toml-q4",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "YAML is a superset of JSON.",
+      "answer": true,
+      "explanation": "YAML can represent all JSON data structures and adds additional features."
+    },
+    {
+      "id": "05-json-yaml-toml-q5",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which of the following is a common file extension for YAML files?",
+      "options": [
+        { "id": "a", "text": ".json" },
+        { "id": "b", "text": ".yaml" },
+        { "id": "c", "text": ".xml" },
+        { "id": "d", "text": ".txt" }
+      ],
+      "answer": "b",
+      "explanation": "The common file extensions for YAML files are .yaml and .yml."
+    },
+    {
+      "id": "05-json-yaml-toml-q6",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to load a YAML file:",
+      "language": "python",
+      "code_template": "import yaml\nwith open('file.yaml', 'r') as file:\n    data = yaml.____(file)",
+      "blanks": [
+        { "id": "b1", "options": ["load", "loads", "parse", "dump"], "answer": "load" }
+      ],
+      "explanation": "The 'load' function reads a YAML file and converts it into a Python object."
+    },
+    {
+      "id": "05-json-yaml-toml-q7",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print([x for x in range(4) if x % 2 == 0])",
+      "options": [
+        { "id": "a", "text": "[0, 1, 2, 3]" },
+        { "id": "b", "text": "[0, 2]" },
+        { "id": "c", "text": "[1, 3]" },
+        { "id": "d", "text": "[0, 1, 2]" }
+      ],
+      "answer": "b",
+      "explanation": "The list comprehension filters even numbers from the range, resulting in [0, 2]."
+    },
+    {
+      "id": "05-json-yaml-toml-q8",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following is a common pitfall when using YAML?",
+      "options": [
+        { "id": "a", "text": "Incorrect indentation" },
+        { "id": "b", "text": "Using single quotes" },
+        { "id": "c", "text": "Lack of comments" },
+        { "id": "d", "text": "Using tabs" }
+      ],
+      "answer": "a",
+      "explanation": "Incorrect indentation is a common issue in YAML, as it relies on spaces for structure."
+    },
+    {
+      "id": "05-json-yaml-toml-q9",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to validate a JSON schema:",
+      "steps": [
+        { "id": "s1", "text": "Define the schema." },
+        { "id": "s2", "text": "Load the JSON data." },
+        { "id": "s3", "text": "Use a validation library." },
+        { "id": "s4", "text": "Check for validation errors." }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "First, define the schema, load your JSON, validate it using a library, and finally check for errors."
+    },
+    {
+      "id": "05-json-yaml-toml-q10",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "TOML supports comments using the # symbol.",
+      "answer": true,
+      "explanation": "In TOML, the # symbol is used to indicate comments."
+    },
+    {
+      "id": "05-json-yaml-toml-q11",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following is NOT a valid TOML key?",
+      "options": [
+        { "id": "a", "text": "key_name" },
+        { "id": "b", "text": "KeyName" },
+        { "id": "c", "text": "key-name" },
+        { "id": "d", "text": "keyName" }
+      ],
+      "answer": "c",
+      "explanation": "TOML keys cannot contain hyphens; they must be either underscores or camel case."
+    },
+    {
+      "id": "05-json-yaml-toml-q12",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the TOML snippet to define a table:",
+      "language": "toml",
+      "code_template": "[____]\nkey = 'value'",
+      "blanks": [
+        { "id": "b1", "options": ["table_name", "tableName", "table-name", "tableName_"], "answer": "table_name" }
+      ],
+      "explanation": "TOML tables must be defined using underscores or camel case, not hyphens."
+    },
+    {
+      "id": "05-json-yaml-toml-q13",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What will this TOML parse into?",
+      "language": "toml",
+      "code": "[owner]\nname = 'Tom'\nage = 30",
+      "options": [
+        { "id": "a", "text": "{'owner': {'name': 'Tom', 'age': 30}}" },
+        { "id": "b", "text": "{'owner': ['Tom', 30]}" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "{'owner': {'name': 'Tom'}}" }
+      ],
+      "answer": "a",
+      "explanation": "This TOML will correctly parse into a dictionary with nested structure for owner details."
+    },
+    {
+      "id": "05-json-yaml-toml-q14",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to convert JSON to YAML:",
+      "steps": [
+        { "id": "s1", "text": "Parse the JSON string." },
+        { "id": "s2", "text": "Convert to a Python object." },
+        { "id": "s3", "text": "Dump the Python object as YAML." },
+        { "id": "s4", "text": "Output the YAML string." }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "First, you parse the JSON, convert it to a Python object, then dump it as YAML and output the string."
+    },
+    {
+      "id": "05-json-yaml-toml-q15",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "JSON allows trailing commas.",
+      "answer": false,
+      "explanation": "JSON does not support trailing commas; they will cause a parsing error."
+    }
+  ]
+}

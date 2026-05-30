@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "15-recommender-systems",
+  "type": "module",
+  "questions": [
+    {
+      "id": "15-recommender-systems-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is collaborative filtering?",
+      "options": [
+        { "id": "a", "text": "A method that uses item features for recommendations." },
+        { "id": "b", "text": "A technique that predicts user preferences based on past behavior." },
+        { "id": "c", "text": "A way to filter out noise from data." },
+        { "id": "d", "text": "A strategy that combines multiple recommendation methods." }
+      ],
+      "answer": "b",
+      "explanation": "Collaborative filtering predicts user preferences based on the behavior of similar users.",
+      "tags": ["collab-filtering"]
+    },
+    {
+      "id": "15-recommender-systems-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does content-based filtering rely on?",
+      "options": [
+        { "id": "a", "text": "User preferences." },
+        { "id": "b", "text": "Item features." },
+        { "id": "c", "text": "User demographics." },
+        { "id": "d", "text": "Social media activity." }
+      ],
+      "answer": "b",
+      "explanation": "Content-based filtering recommends items based on their features and the user's preferences.",
+      "tags": ["content-based"]
+    },
+    {
+      "id": "15-recommender-systems-q3",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Hybrid recommender systems combine multiple recommendation techniques.",
+      "answer": true,
+      "explanation": "Hybrid systems leverage both collaborative and content-based filtering to improve recommendations.",
+      "tags": ["hybrid"]
+    },
+    {
+      "id": "15-recommender-systems-q4",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following is a limitation of collaborative filtering?",
+      "options": [
+        { "id": "a", "text": "It requires a large amount of data." },
+        { "id": "b", "text": "It cannot use item features." },
+        { "id": "c", "text": "It is always more accurate than content-based filtering." },
+        { "id": "d", "text": "It does not consider user preferences." }
+      ],
+      "answer": "a",
+      "explanation": "Collaborative filtering relies on user data, so it struggles with sparse datasets.",
+      "tags": ["collab-filtering"]
+    },
+    {
+      "id": "15-recommender-systems-q5",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to create a user-item matrix:",
+      "language": "python",
+      "code_template": "import pandas as pd\n\nmatrix = pd.____(data)\n",
+      "blanks": [
+        { "id": "b1", "options": ["pivot", "merge", "concat", "groupby"], "answer": "pivot" }
+      ],
+      "explanation": "The `pivot` function is used to reshape data frames to create user-item matrices.",
+      "tags": ["collab-filtering"]
+    },
+    {
+      "id": "15-recommender-systems-q6",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this code print?",
+      "language": "python",
+      "code": "print(sorted([5, 2, 9, 1]))",
+      "options": [
+        { "id": "a", "text": "[1, 2, 5, 9]" },
+        { "id": "b", "text": "[5, 2, 9, 1]" },
+        { "id": "c", "text": "[9, 5, 2, 1]" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The `sorted` function returns the list sorted in ascending order.",
+      "tags": ["general"]
+    },
+    {
+      "id": "15-recommender-systems-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to implement a collaborative filtering system:",
+      "steps": [
+        { "id": "s1", "text": "Calculate similarity scores between users/items." },
+        { "id": "s2", "text": "Collect user-item interaction data." },
+        { "id": "s3", "text": "Generate recommendations based on similarity." },
+        { "id": "s4", "text": "Evaluate the performance of recommendations." }
+      ],
+      "correctOrder": ["s2", "s1", "s3", "s4"],
+      "explanation": "Start with collecting data, then calculate similarity, generate recommendations, and evaluate.",
+      "tags": ["collab-filtering"]
+    },
+    {
+      "id": "15-recommender-systems-q8",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which algorithm is commonly used for content-based filtering?",
+      "options": [
+        { "id": "a", "text": "K-Means Clustering" },
+        { "id": "b", "text": "TF-IDF" },
+        { "id": "c", "text": "Decision Trees" },
+        { "id": "d", "text": "Random Forest" }
+      ],
+      "answer": "b",
+      "explanation": "TF-IDF is used to evaluate how important a word is to a document in a collection.",
+      "tags": ["content-based"]
+    },
+    {
+      "id": "15-recommender-systems-q9",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Neural recommender systems are always better than traditional methods.",
+      "answer": false,
+      "explanation": "Neural networks can be powerful, but they may not always outperform traditional methods, especially in low-data scenarios.",
+      "tags": ["neural-recs"]
+    },
+    {
+      "id": "15-recommender-systems-q10",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the code to compute cosine similarity:",
+      "language": "python",
+      "code_template": "from sklearn.metrics.pairwise import ____\n\nsimilarity = cosine_similarity(user_a, user_b)",
+      "blanks": [
+        { "id": "b1", "options": ["cosine_similarity", "euclidean_distance", "manhattan_distance", "jaccard_similarity"], "answer": "cosine_similarity" }
+      ],
+      "explanation": "The `cosine_similarity` function computes the similarity between two vectors.",
+      "tags": ["collab-filtering"]
+    },
+    {
+      "id": "15-recommender-systems-q11",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this code print?",
+      "language": "python",
+      "code": "user_ratings = {'item1': 5, 'item2': 3}\nprint(user_ratings.get('item3', 0))",
+      "options": [
+        { "id": "a", "text": "0" },
+        { "id": "b", "text": "3" },
+        { "id": "c", "text": "5" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The `get` method returns the default value (0) for a key that doesn't exist.",
+      "tags": ["general"]
+    },
+    {
+      "id": "15-recommender-systems-q12",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps in developing a neural recommender system:",
+      "steps": [
+        { "id": "s1", "text": "Design the neural architecture." },
+        { "id": "s2", "text": "Train the model on user-item interactions." },
+        { "id": "s3", "text": "Prepare the training data." },
+        { "id": "s4", "text": "Evaluate the model's performance." }
+      ],
+      "correctOrder": ["s3", "s1", "s2", "s4"],
+      "explanation": "Start with data preparation, then design the model, train it, and finally evaluate its performance.",
+      "tags": ["neural-recs"]
+    },
+    {
+      "id": "15-recommender-systems-q13",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is a common approach to handle cold start problems in recommender systems?",
+      "options": [
+        { "id": "a", "text": "Ignore new users." },
+        { "id": "b", "text": "Use demographic data." },
+        { "id": "c", "text": "Utilize collaborative filtering only." },
+        { "id": "d", "text": "Rely solely on content-based methods." }
+      ],
+      "answer": "b",
+      "explanation": "Using demographic data can help to infer preferences for new users in cold start situations.",
+      "tags": ["hybrid"]
+    },
+    {
+      "id": "15-recommender-systems-q14",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Content-based methods require no user data.",
+      "answer": true,
+      "explanation": "Content-based filtering relies on item features, not user data.",
+      "tags": ["content-based"]
+    },
+    {
+      "id": "15-recommender-systems-q15",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which library is commonly used for machine learning in Python?",
+      "options": [
+        { "id": "a", "text": "NumPy" },
+        { "id": "b", "text": "Pandas" },
+        { "id": "c", "text": "Scikit-Learn" },
+        { "id": "d", "text": "Matplotlib" }
+      ],
+      "answer": "c",
+      "explanation": "Scikit-Learn is widely used for implementing machine learning algorithms in Python.",
+      "tags": ["general"]
+    }
+  ]
+}

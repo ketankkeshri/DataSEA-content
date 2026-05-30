@@ -1,0 +1,43 @@
+{
+  "id": "09-tableau-basics",
+  "section": "data-analyst",
+  "tier": "intermediate",
+  "moduleOrder": 9,
+  "version": 1,
+  "title": "Tableau Basics",
+  "shortDescription": "Tableau Basics \u2014 beginner to advanced concepts and code.",
+  "icon": "09-tableau-basics",
+  "estimatedMinutes": 40,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-data-connections",
+      "title": "Data Connections",
+      "minutes": 8
+    },
+    {
+      "id": "03-marks-shelves",
+      "title": "Marks Shelves",
+      "minutes": 8
+    },
+    {
+      "id": "04-calculated-fields",
+      "title": "Calculated Fields",
+      "minutes": 8
+    },
+    {
+      "id": "05-dashboards",
+      "title": "Dashboards",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "packs": [
+    {
+      "id": "interview-sprint",
+      "title": "Interview Sprint",
+      "description": "25 mixed questions. Can you crack a DE interview?",
+      "icon": "target",
+      "questionCount": 25,
+      "isPro": false,
+      "rotates": "none"
+    },
+    {
+      "id": "sql-master-50",
+      "title": "SQL Master 50",
+      "description": "Half a hundred SQL challenges. All levels.",
+      "icon": "database",
+      "questionCount": 50,
+      "isPro": false,
+      "rotates": "none"
+    },
+    {
+      "id": "spark-showdown",
+      "title": "Spark Showdown",
+      "description": "30 Spark-only questions. From RDDs to structured streaming.",
+      "icon": "zap",
+      "questionCount": 30,
+      "isPro": true,
+      "rotates": "none"
+    },
+    {
+      "id": "airflow-operator",
+      "title": "Airflow Operator",
+      "description": "20 questions on DAGs, operators, scheduling, XComs.",
+      "icon": "timer",
+      "questionCount": 20,
+      "isPro": true,
+      "rotates": "none"
+    },
+    {
+      "id": "ds-stats-sprint",
+      "title": "DS Statistics Sprint",
+      "description": "25 stats and probability fundamentals.",
+      "icon": "bar-chart",
+      "questionCount": 25,
+      "isPro": true,
+      "rotates": "none"
+    },
+    {
+      "id": "python-de-essentials",
+      "title": "Python for DE Essentials",
+      "description": "20 Python questions tailored for data engineers.",
+      "icon": "snake",
+      "questionCount": 20,
+      "isPro": false,
+      "rotates": "none"
+    },
+    {
+      "id": "cloud-storage-trivia",
+      "title": "Cloud Storage Trivia",
+      "description": "15 questions across S3, GCS, ADLS.",
+      "icon": "cloud",
+      "questionCount": 15,
+      "isPro": true,
+      "rotates": "none"
+    },
+    {
+      "id": "kafka-streams-pop-quiz",
+      "title": "Kafka & Streams Pop Quiz",
+      "description": "20 questions on Kafka, Streams, and event-driven patterns.",
+      "icon": "radio",
+      "questionCount": 20,
+      "isPro": true,
+      "rotates": "none"
+    },
+    {
+      "id": "mlops-rapid-fire",
+      "title": "MLOps Rapid Fire",
+      "description": "20 quick questions on MLflow, monitoring, drift, deployment.",
+      "icon": "rocket",
+      "questionCount": 20,
+      "isPro": true,
+      "rotates": "none"
+    },
+    {
+      "id": "weekly-tournament",
+      "title": "Weekly Tournament",
+      "description": "30 fresh questions. Rotates every Monday. Compete for the top spot.",
+      "icon": "trophy",
+      "questionCount": 30,
+      "isPro": false,
+      "rotates": "weekly"
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "06-advanced-sql",
+  "type": "module",
+  "questions": [
+    {
+      "id": "06-advanced-sql-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does the `ROW_NUMBER()` function do?",
+      "options": [
+        { "id": "a", "text": "Counts the total number of rows" },
+        { "id": "b", "text": "Assigns a unique sequential integer to rows" },
+        { "id": "c", "text": "Calculates the sum of a column" },
+        { "id": "d", "text": "Retrieves distinct rows from a table" }
+      ],
+      "answer": "b",
+      "explanation": "The `ROW_NUMBER()` function assigns a unique sequential integer to rows within a partition, which is useful for ranking."
+    },
+    {
+      "id": "06-advanced-sql-q2",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet:",
+      "language": "sql",
+      "code_template": "SELECT * FROM table_name WHERE column_name = ____;",
+      "blanks": [
+        { "id": "b1", "options": ["(SELECT value FROM other_table)", "value", "EXISTS (SELECT * FROM other_table)", "COUNT(*)"], "answer": "(SELECT value FROM other_table)" }
+      ],
+      "explanation": "Using a subquery is a common way to filter results based on values from another table."
+    },
+    {
+      "id": "06-advanced-sql-q3",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this query return?",
+      "language": "sql",
+      "code": "SELECT COUNT(*) FROM (SELECT DISTINCT column_name FROM table_name);",
+      "options": [
+        { "id": "a", "text": "The total number of columns" },
+        { "id": "b", "text": "The number of unique values in column_name" },
+        { "id": "c", "text": "An error" },
+        { "id": "d", "text": "The total number of rows in table_name" }
+      ],
+      "answer": "b",
+      "explanation": "This query counts the number of unique values in the specified column."
+    },
+    {
+      "id": "06-advanced-sql-q4",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "A Common Table Expression (CTE) can only be used in the SELECT statement.",
+      "answer": false,
+      "explanation": "CTEs can be used in various SQL statements, including SELECT, INSERT, UPDATE, and DELETE."
+    },
+    {
+      "id": "06-advanced-sql-q5",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to create a window function correctly:",
+      "steps": [
+        { "id": "s1", "text": "Define the window using the OVER clause" },
+        { "id": "s2", "text": "Choose an aggregate function" },
+        { "id": "s3", "text": "Write the SELECT statement" },
+        { "id": "s4", "text": "Specify the PARTITION BY or ORDER BY clause" }
+      ],
+      "correctOrder": ["s3", "s2", "s1", "s4"],
+      "explanation": "You first write the SELECT statement, choose the aggregate function, define the window, and specify any partitioning."
+    },
+    {
+      "id": "06-advanced-sql-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which SQL command is used to remove duplicate rows?",
+      "options": [
+        { "id": "a", "text": "DELETE" },
+        { "id": "b", "text": "DISTINCT" },
+        { "id": "c", "text": "GROUP BY" },
+        { "id": "d", "text": "UNIQUE" }
+      ],
+      "answer": "b",
+      "explanation": "The `DISTINCT` keyword is used to return only unique rows in a result set."
+    },
+    {
+      "id": "06-advanced-sql-q7",
+      "type": "code_completion",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Complete the SQL code to pivot the data:",
+      "language": "sql",
+      "code_template": "SELECT * FROM (SELECT year, category, value FROM sales) PIVOT (SUM(value) FOR category IN (____));",
+      "blanks": [
+        { "id": "b1", "options": ["('Electronics', 'Furniture')", "('Electronics', 'Clothing', 'Furniture')", "('Clothing', 'Furniture')", "('Sales')"], "answer": "('Electronics', 'Furniture')" }
+      ],
+      "explanation": "You specify the categories you want to pivot on in the IN clause."
+    },
+    {
+      "id": "06-advanced-sql-q8",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Using a recursive CTE can lead to infinite loops if not properly limited.",
+      "answer": true,
+      "explanation": "If a recursive CTE does not have a clear termination condition, it may result in an infinite loop."
+    },
+    {
+      "id": "06-advanced-sql-q9",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the purpose of a CTE?",
+      "options": [
+        { "id": "a", "text": "To create a temporary table" },
+        { "id": "b", "text": "To simplify complex queries" },
+        { "id": "c", "text": "To store data permanently" },
+        { "id": "d", "text": "To optimize query performance" }
+      ],
+      "answer": "b",
+      "explanation": "CTEs make complex queries easier to read and maintain by allowing you to break them into simpler parts."
+    },
+    {
+      "id": "06-advanced-sql-q10",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the SQL code to perform a set operation:",
+      "language": "sql",
+      "code_template": "SELECT column_name FROM table_a ____ SELECT column_name FROM table_b;",
+      "blanks": [
+        { "id": "b1", "options": ["UNION", "JOIN", "INTERSECT", "CROSS JOIN"], "answer": "UNION" }
+      ],
+      "explanation": "The `UNION` operator is used to combine the results of two or more SELECT statements."
+    },
+    {
+      "id": "06-advanced-sql-q11",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this SQL query return?",
+      "language": "sql",
+      "code": "WITH RECURSIVE numbers AS (SELECT 1 AS num UNION ALL SELECT num + 1 FROM numbers WHERE num < 5) SELECT * FROM numbers;",
+      "options": [
+        { "id": "a", "text": "1, 2, 3, 4" },
+        { "id": "b", "text": "1, 2, 3, 4, 5" },
+        { "id": "c", "text": "1, 2, 3, 4, 6" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "b",
+      "explanation": "The recursive CTE generates numbers from 1 to 5."
+    },
+    {
+      "id": "06-advanced-sql-q12",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does the `PIVOT` function do in SQL?",
+      "options": [
+        { "id": "a", "text": "Transforms rows into columns" },
+        { "id": "b", "text": "Aggregates values" },
+        { "id": "c", "text": "Filters data" },
+        { "id": "d", "text": "Joins tables" }
+      ],
+      "answer": "a",
+      "explanation": "The `PIVOT` function is used to rotate data from rows to columns for better analysis."
+    },
+    {
+      "id": "06-advanced-sql-q13",
+      "type": "order_the_steps",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Order these steps to create a subquery correctly:",
+      "steps": [
+        { "id": "s1", "text": "Write the main query" },
+        { "id": "s2", "text": "Determine what data to retrieve" },
+        { "id": "s3", "text": "Create the subquery" },
+        { "id": "s4", "text": "Place the subquery within the main query" }
+      ],
+      "correctOrder": ["s2", "s3", "s4", "s1"],
+      "explanation": "First, determine the data needed, then create the subquery, place it in the main query, and finally write the main query."
+    },
+    {
+      "id": "06-advanced-sql-q14",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "A CTE can only be used once in a SQL query.",
+      "answer": false,
+      "explanation": "CTEs can be referenced multiple times within a single SQL statement."
+    },
+    {
+      "id": "06-advanced-sql-q15",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following is NOT a valid set operation?",
+      "options": [
+        { "id": "a", "text": "UNION" },
+        { "id": "b", "text": "EXCEPT" },
+        { "id": "c", "text": "INTERSECT" },
+        { "id": "d", "text": "JOIN" }
+      ],
+      "answer": "d",
+      "explanation": "JOIN is used to combine rows from two or more tables based on a related column, not a set operation."
+    }
+  ]
+}

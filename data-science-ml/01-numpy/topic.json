@@ -1,0 +1,43 @@
+{
+  "id": "01-numpy",
+  "section": "data-science-ml",
+  "tier": "beginner",
+  "moduleOrder": 1,
+  "version": 1,
+  "title": "NumPy Foundations",
+  "shortDescription": "NumPy Foundations \u2014 beginner to advanced concepts and code.",
+  "icon": "01-numpy",
+  "estimatedMinutes": 40,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-arrays",
+      "title": "Arrays",
+      "minutes": 8
+    },
+    {
+      "id": "03-indexing-slicing",
+      "title": "Indexing Slicing",
+      "minutes": 8
+    },
+    {
+      "id": "04-broadcasting",
+      "title": "Broadcasting",
+      "minutes": 8
+    },
+    {
+      "id": "05-vectorization",
+      "title": "Vectorization",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

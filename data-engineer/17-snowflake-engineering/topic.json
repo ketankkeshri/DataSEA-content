@@ -1,0 +1,38 @@
+{
+  "id": "17-snowflake-engineering",
+  "section": "data-engineer",
+  "tier": "intermediate",
+  "moduleOrder": 17,
+  "version": 1,
+  "title": "Snowflake Engineering",
+  "shortDescription": "Snowflake Engineering \u2014 beginner to advanced concepts and code.",
+  "icon": "17-snowflake-engineering",
+  "estimatedMinutes": 32,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-warehouses-deep",
+      "title": "Warehouses Deep",
+      "minutes": 8
+    },
+    {
+      "id": "02-snowpipe",
+      "title": "Snowpipe",
+      "minutes": 8
+    },
+    {
+      "id": "03-streams-tasks",
+      "title": "Streams Tasks",
+      "minutes": 8
+    },
+    {
+      "id": "04-cost-optimization",
+      "title": "Cost Optimization",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

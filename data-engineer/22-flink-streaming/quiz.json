@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "22-flink-streaming",
+  "type": "module",
+  "questions": [
+    {
+      "id": "22-flink-streaming-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does Apache Flink primarily focus on?",
+      "options": [
+        { "id": "a", "text": "Batch processing" },
+        { "id": "b", "text": "Stream processing" },
+        { "id": "c", "text": "Data warehousing" },
+        { "id": "d", "text": "Static data analysis" }
+      ],
+      "answer": "b",
+      "explanation": "Apache Flink is designed for stream processing, allowing real-time data processing and analysis.",
+      "tags": ["intro"]
+    },
+    {
+      "id": "22-flink-streaming-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the purpose of watermarks in Flink?",
+      "options": [
+        { "id": "a", "text": "To manage state" },
+        { "id": "b", "text": "To track event time" },
+        { "id": "c", "text": "To optimize memory usage" },
+        { "id": "d", "text": "To enable batch processing" }
+      ],
+      "answer": "b",
+      "explanation": "Watermarks are used in Flink to track the progress of event time and handle late events.",
+      "tags": ["watermarks"]
+    },
+    {
+      "id": "22-flink-streaming-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to define a watermark strategy:",
+      "language": "java",
+      "code_template": "WatermarkStrategy.____(Duration.ofSeconds(5))",
+      "blanks": [
+        { "id": "b1", "options": ["forBoundedOutOfOrderness", "forMonotonousTimestamps", "forLowLatency", "forEventTime"], "answer": "forBoundedOutOfOrderness" }
+      ],
+      "explanation": "The method 'forBoundedOutOfOrderness' creates a watermark strategy allowing for bounded out-of-order events.",
+      "tags": ["watermarks"]
+    },
+    {
+      "id": "22-flink-streaming-q4",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Flink guarantees exactly-once processing semantics.",
+      "answer": true,
+      "explanation": "Flink provides exactly-once processing semantics, ensuring that each event is processed exactly one time.",
+      "tags": ["exactly-once"]
+    },
+    {
+      "id": "22-flink-streaming-q5",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which state management option is best for keeping track of user sessions?",
+      "options": [
+        { "id": "a", "text": "Keyed State" },
+        { "id": "b", "text": "Operator State" },
+        { "id": "c", "text": "Broadcast State" },
+        { "id": "d", "text": "Value State" }
+      ],
+      "answer": "a",
+      "explanation": "Keyed State allows you to maintain state that is scoped to a specific key, ideal for user sessions.",
+      "tags": ["state-management"]
+    },
+    {
+      "id": "22-flink-streaming-q6",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "java",
+      "code": "System.out.println(5 / 2);",
+      "options": [
+        { "id": "a", "text": "2" },
+        { "id": "b", "text": "2.5" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "5" }
+      ],
+      "answer": "a",
+      "explanation": "In Java, dividing two integers results in an integer, hence 5 / 2 prints 2.",
+      "tags": ["basic"]
+    },
+    {
+      "id": "22-flink-streaming-q7",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Fill in the blanks to implement a simple map function:",
+      "language": "java",
+      "code_template": "dataStream.____(x -> x + 1)",
+      "blanks": [
+        { "id": "b1", "options": ["map", "flatMap", "filter", "reduce"], "answer": "map" }
+      ],
+      "explanation": "The 'map' function transforms each element of the data stream by applying the provided function.",
+      "tags": ["stream-processing"]
+    },
+    {
+      "id": "22-flink-streaming-q8",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these Flink job deployment steps correctly:",
+      "steps": [
+        { "id": "s1", "text": "Write your Flink job code." },
+        { "id": "s2", "text": "Package your application." },
+        { "id": "s3", "text": "Submit to the Flink cluster." },
+        { "id": "s4", "text": "Run and monitor your job." }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "You first write the job, package it, submit it to the cluster, and finally run and monitor it.",
+      "tags": ["intro"]
+    },
+    {
+      "id": "22-flink-streaming-q9",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is a common strategy to handle data skew in Flink?",
+      "options": [
+        { "id": "a", "text": "Hash partitioning" },
+        { "id": "b", "text": "Random sampling" },
+        { "id": "c", "text": "Broadcasting" },
+        { "id": "d", "text": "Repartitioning" }
+      ],
+      "answer": "d",
+      "explanation": "Repartitioning can help balance the load across parallel tasks by redistributing data.",
+      "tags": ["state-management"]
+    },
+    {
+      "id": "22-flink-streaming-q10",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Flink's checkpointing mechanism can be disabled for performance reasons.",
+      "answer": true,
+      "explanation": "Checkpointing can be disabled, but it compromises fault tolerance and exactly-once processing guarantees.",
+      "tags": ["exactly-once"]
+    },
+    {
+      "id": "22-flink-streaming-q11",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following is NOT a requirement for exactly-once semantics?",
+      "options": [
+        { "id": "a", "text": "State snapshots" },
+        { "id": "b", "text": "Atomic writes" },
+        { "id": "c", "text": "Idempotent operations" },
+        { "id": "d", "text": "Batch processing" }
+      ],
+      "answer": "d",
+      "explanation": "Exactly-once semantics can be achieved in stream processing without requiring batch processing.",
+      "tags": ["exactly-once"]
+    },
+    {
+      "id": "22-flink-streaming-q12",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this Flink code print?",
+      "language": "java",
+      "code": "DataStream<Integer> stream = env.fromElements(1, 2, 3); stream.filter(x -> x > 2).print();",
+      "options": [
+        { "id": "a", "text": "1" },
+        { "id": "b", "text": "2" },
+        { "id": "c", "text": "3" },
+        { "id": "d", "text": "1, 2" }
+      ],
+      "answer": "c",
+      "explanation": "The filter operation only allows elements greater than 2, so it prints 3.",
+      "tags": ["stream-processing"]
+    },
+    {
+      "id": "22-flink-streaming-q13",
+      "type": "order_the_steps",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Order these steps to implement event-time processing:",
+      "steps": [
+        { "id": "s1", "text": "Define the event time timestamp extractor." },
+        { "id": "s2", "text": "Set up watermarks." },
+        { "id": "s3", "text": "Use event time in your transformations." },
+        { "id": "s4", "text": "Submit your Flink job." }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "You define the timestamp extractor, set up watermarks, use event time, and then submit the job.",
+      "tags": ["event-time"]
+    },
+    {
+      "id": "22-flink-streaming-q14",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does the 'keyBy' operation do in Flink?",
+      "options": [
+        { "id": "a", "text": "Groups the stream by keys" },
+        { "id": "b", "text": "Sorts the stream" },
+        { "id": "c", "text": "Partitions the stream" },
+        { "id": "d", "text": "Buffers the stream" }
+      ],
+      "answer": "a",
+      "explanation": "'keyBy' groups the stream elements by key, enabling stateful processing per key.",
+      "tags": ["state-management"]
+    },
+    {
+      "id": "22-flink-streaming-q15",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the snippet for a keyed state:",
+      "language": "java",
+      "code_template": "ValueState<Integer> state = getRuntimeContext().getState(new ValueStateDescriptor<>(\"count\", Integer.class));",
+      "blanks": [],
+      "explanation": "This initializes a keyed state to keep track of counts for each key in stateful operations.",
+      "tags": ["state-management"]
+    }
+  ]
+}

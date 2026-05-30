@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "10-vector-dbs",
+  "type": "module",
+  "questions": [
+    {
+      "id": "10-vector-dbs-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is a vector database primarily used for?",
+      "options": [
+        { "id": "a", "text": "Storing tabular data" },
+        { "id": "b", "text": "Handling unstructured data" },
+        { "id": "c", "text": "Storing and querying high-dimensional vectors" },
+        { "id": "d", "text": "Managing user sessions" }
+      ],
+      "answer": "c",
+      "explanation": "Vector databases are designed to store and efficiently query high-dimensional vectors, which are essential in machine learning and AI applications.",
+      "tags": ["vector-database", "basics"]
+    },
+    {
+      "id": "10-vector-dbs-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is an embedding?",
+      "options": [
+        { "id": "a", "text": "A method to visualize data" },
+        { "id": "b", "text": "A vector representation of data in a lower-dimensional space" },
+        { "id": "c", "text": "An algorithm for clustering" },
+        { "id": "d", "text": "A type of database" }
+      ],
+      "answer": "b",
+      "explanation": "Embeddings convert complex data into lower-dimensional vector representations while preserving relationships.",
+      "tags": ["embeddings", "basics"]
+    },
+    {
+      "id": "10-vector-dbs-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to create an embedding:",
+      "language": "python",
+      "code_template": "from sentence_transformers import SentenceTransformer\nmodel = SentenceTransformer('____')\nembeddings = model.encode(['Hello world'])",
+      "blanks": [
+        { "id": "b1", "options": ["all-MiniLM-L6-v2", "distilbert-base-uncased", "bert-base-uncased", "gpt-3"], "answer": "all-MiniLM-L6-v2" }
+      ],
+      "explanation": "The 'all-MiniLM-L6-v2' model is a lightweight model suitable for generating embeddings efficiently.",
+      "tags": ["embeddings", "code"]
+    },
+    {
+      "id": "10-vector-dbs-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this code print?",
+      "language": "python",
+      "code": "print([x**2 for x in range(3)])",
+      "options": [
+        { "id": "a", "text": "[0, 1, 4]" },
+        { "id": "b", "text": "[0, 1, 2]" },
+        { "id": "c", "text": "[1, 2, 3]" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The list comprehension squares each number in the range, resulting in [0, 1, 4].",
+      "tags": ["python", "output"]
+    },
+    {
+      "id": "10-vector-dbs-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "A vector database can store both structured and unstructured data.",
+      "answer": false,
+      "explanation": "Vector databases are optimized for unstructured data, particularly in the form of vector embeddings.",
+      "tags": ["vector-database", "true-false"]
+    },
+    {
+      "id": "10-vector-dbs-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which metric is commonly used to measure similarity between vectors?",
+      "options": [
+        { "id": "a", "text": "Euclidean distance" },
+        { "id": "b", "text": "Mean absolute error" },
+        { "id": "c", "text": "Root mean square error" },
+        { "id": "d", "text": "Confusion matrix" }
+      ],
+      "answer": "a",
+      "explanation": "Euclidean distance is widely used to measure the similarity between high-dimensional vectors.",
+      "tags": ["similarity-metrics", "basics"]
+    },
+    {
+      "id": "10-vector-dbs-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to query a vector database:",
+      "steps": [
+        { "id": "s1", "text": "Compute embeddings for the query data" },
+        { "id": "s2", "text": "Index the embeddings in the database" },
+        { "id": "s3", "text": "Perform a similarity search" },
+        { "id": "s4", "text": "Retrieve the results" }
+      ],
+      "correctOrder": ["s2", "s1", "s3", "s4"],
+      "explanation": "First, you index embeddings in the database, then compute embeddings for the query, perform a similarity search, and finally retrieve the results.",
+      "tags": ["vector-database", "pipeline"]
+    },
+    {
+      "id": "10-vector-dbs-q8",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is ChromaDB primarily designed for?",
+      "options": [
+        { "id": "a", "text": "Time-series data" },
+        { "id": "b", "text": "Vector embeddings" },
+        { "id": "c", "text": "Structured query languages" },
+        { "id": "d", "text": "Relational databases" }
+      ],
+      "answer": "b",
+      "explanation": "ChromaDB is specifically designed for managing and querying vector embeddings efficiently.",
+      "tags": ["chromadb", "basics"]
+    },
+    {
+      "id": "10-vector-dbs-q9",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the code to perform a KNN search using Faiss:",
+      "language": "python",
+      "code_template": "import faiss\nindex = faiss.IndexFlatL2(____)\nindex.add(____)\nD, I = index.search(____, ____)",
+      "blanks": [
+        { "id": "b1", "options": ["d", "2", "3", "4"], "answer": "d" },
+        { "id": "b2", "options": ["vectors", "data", "embeddings", "samples"], "answer": "embeddings" },
+        { "id": "b3", "options": ["query", "search", "input", "data"], "answer": "query" },
+        { "id": "b4", "options": ["5", "10", "1", "2"], "answer": "2" }
+      ],
+      "explanation": "The code initializes a Faiss index for 4-dimensional vectors, adds embeddings, and searches for the nearest 2 neighbors of the query.",
+      "tags": ["faiss", "code"]
+    },
+    {
+      "id": "10-vector-dbs-q10",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following is NOT a similarity metric?",
+      "options": [
+        { "id": "a", "text": "Cosine similarity" },
+        { "id": "b", "text": "Jaccard index" },
+        { "id": "c", "text": "Manhattan distance" },
+        { "id": "d", "text": "Linear regression" }
+      ],
+      "answer": "d",
+      "explanation": "Linear regression is a statistical method for modeling the relationship between variables, not a similarity metric.",
+      "tags": ["similarity-metrics", "advanced"]
+    },
+    {
+      "id": "10-vector-dbs-q11",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Pinecone is optimized for real-time vector search and retrieval.",
+      "answer": true,
+      "explanation": "Pinecone is designed to provide fast, real-time search capabilities for vector data.",
+      "tags": ["pinecone", "true-false"]
+    },
+    {
+      "id": "10-vector-dbs-q12",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this code return?",
+      "language": "python",
+      "code": "import numpy as np\narr = np.array([1, 2, 3])\nprint(arr.sum())",
+      "options": [
+        { "id": "a", "text": "3" },
+        { "id": "b", "text": "6" },
+        { "id": "c", "text": "1" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "b",
+      "explanation": "The code computes the sum of the elements in the array, which is 6.",
+      "tags": ["numpy", "output"]
+    },
+    {
+      "id": "10-vector-dbs-q13",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the main advantage of using vector embeddings?",
+      "options": [
+        { "id": "a", "text": "Reduced memory usage" },
+        { "id": "b", "text": "Preserving semantic meaning" },
+        { "id": "c", "text": "Faster query times" },
+        { "id": "d", "text": "Easier to visualize" }
+      ],
+      "answer": "b",
+      "explanation": "Vector embeddings preserve semantic meaning, allowing for more meaningful comparisons and searches.",
+      "tags": ["embeddings", "advantages"]
+    },
+    {
+      "id": "10-vector-dbs-q14",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to optimize a vector search:",
+      "steps": [
+        { "id": "s1", "text": "Select appropriate similarity metric" },
+        { "id": "s2", "text": "Index the data" },
+        { "id": "s3", "text": "Preprocess the data" },
+        { "id": "s4", "text": "Scale the data" }
+      ],
+      "correctOrder": ["s3", "s4", "s1", "s2"],
+      "explanation": "Data should be preprocessed and scaled before selecting a similarity metric and indexing to ensure optimal search performance.",
+      "tags": ["optimization", "pipeline"]
+    },
+    {
+      "id": "10-vector-dbs-q15",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Vector databases can only handle numerical data.",
+      "answer": false,
+      "explanation": "Vector databases can handle various forms of data that can be represented as vectors, including text and images.",
+      "tags": ["vector-database", "true-false"]
+    }
+  ]
+}

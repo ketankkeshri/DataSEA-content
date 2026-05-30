@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "07-apache-superset",
+  "type": "module",
+  "questions": [
+    {
+      "id": "07-apache-superset-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is Apache Superset primarily used for?",
+      "options": [
+        { "id": "a", "text": "Data streaming" },
+        { "id": "b", "text": "Data visualization" },
+        { "id": "c", "text": "Data storage" },
+        { "id": "d", "text": "Data cleaning" }
+      ],
+      "answer": "b",
+      "explanation": "Apache Superset is primarily a data visualization tool that enables users to create interactive dashboards and explore data."
+    },
+    {
+      "id": "07-apache-superset-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which SQL dialect does Apache Superset primarily support?",
+      "options": [
+        { "id": "a", "text": "MySQL" },
+        { "id": "b", "text": "PostgreSQL" },
+        { "id": "c", "text": "SQLite" },
+        { "id": "d", "text": "All of the above" }
+      ],
+      "answer": "d",
+      "explanation": "Apache Superset supports multiple SQL dialects, including MySQL, PostgreSQL, and SQLite."
+    },
+    {
+      "id": "07-apache-superset-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to create a new dataset in Superset:",
+      "language": "python",
+      "code_template": "dataset = superset.create_dataset(____, ____)",
+      "blanks": [
+        { "id": "b1", "options": ["table_name", "database_id", "schema_name", "data_source"], "answer": "table_name" },
+        { "id": "b2", "options": ["database_id", "table_name", "schema_name", "data_source"], "answer": "database_id" }
+      ],
+      "explanation": "To create a new dataset, you need to specify both the table name and the associated database ID."
+    },
+    {
+      "id": "07-apache-superset-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(sum([1, 2, 3, 4]))",
+      "options": [
+        { "id": "a", "text": "10" },
+        { "id": "b", "text": "9" },
+        { "id": "c", "text": "6" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "c",
+      "explanation": "The sum function adds up all the numbers in the list, giving a total of 10."
+    },
+    {
+      "id": "07-apache-superset-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Apache Superset can connect to multiple data sources simultaneously.",
+      "answer": true,
+      "explanation": "Yes, Apache Superset supports connections to various data sources at the same time, allowing for versatile data analysis."
+    },
+    {
+      "id": "07-apache-superset-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the purpose of SQL Lab in Apache Superset?",
+      "options": [
+        { "id": "a", "text": "To visualize data" },
+        { "id": "b", "text": "To write and execute SQL queries" },
+        { "id": "c", "text": "To create dashboards" },
+        { "id": "d", "text": "To manage users" }
+      ],
+      "answer": "b",
+      "explanation": "SQL Lab allows users to write and execute SQL queries to explore and analyze their data."
+    },
+    {
+      "id": "07-apache-superset-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to create a new dashboard in Superset:",
+      "steps": [
+        { "id": "s1", "text": "Add charts to the dashboard" },
+        { "id": "s2", "text": "Save the dashboard" },
+        { "id": "s3", "text": "Create a new dashboard" },
+        { "id": "s4", "text": "Name the dashboard" }
+      ],
+      "correctOrder": ["s3", "s4", "s1", "s2"],
+      "explanation": "First, you create a new dashboard, name it, add charts, and finally save it."
+    },
+    {
+      "id": "07-apache-superset-q8",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Fill in the blanks to filter a dataset:",
+      "language": "python",
+      "code_template": "df[____] = df[____].____(____)",
+      "blanks": [
+        { "id": "b1", "options": ["filtered_data", "filtered_df", "result_df", "final_data"], "answer": "filtered_data" },
+        { "id": "b2", "options": ["data", "filtered_data", "df", "result_df"], "answer": "df" },
+        { "id": "b3", "options": ["filter", "where", "select", "map"], "answer": "filter" },
+        { "id": "b4", "options": ["condition", "value", "criteria", "threshold"], "answer": "condition" }
+      ],
+      "explanation": "You can filter a DataFrame by assigning the result of a filter operation to a new variable."
+    },
+    {
+      "id": "07-apache-superset-q9",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which visualization type is NOT supported by Apache Superset?",
+      "options": [
+        { "id": "a", "text": "Line chart" },
+        { "id": "b", "text": "Bar chart" },
+        { "id": "c", "text": "3D scatter plot" },
+        { "id": "d", "text": "Pie chart" }
+      ],
+      "answer": "c",
+      "explanation": "As of now, Apache Superset does not support 3D scatter plots."
+    },
+    {
+      "id": "07-apache-superset-q10",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Superset allows for custom visualizations through plugins.",
+      "answer": true,
+      "explanation": "You can extend Superset's functionality with custom visualizations via plugins."
+    },
+    {
+      "id": "07-apache-superset-q11",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(sorted([3, 1, 2]))",
+      "options": [
+        { "id": "a", "text": "[1, 2, 3]" },
+        { "id": "b", "text": "[2, 3, 1]" },
+        { "id": "c", "text": "[3, 1, 2]" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The sorted function returns a new list that contains all items from the original list in ascending order."
+    },
+    {
+      "id": "07-apache-superset-q12",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What is the default database for Apache Superset?",
+      "options": [
+        { "id": "a", "text": "SQLite" },
+        { "id": "b", "text": "PostgreSQL" },
+        { "id": "c", "text": "MySQL" },
+        { "id": "d", "text": "MongoDB" }
+      ],
+      "answer": "a",
+      "explanation": "Apache Superset uses SQLite as its default database for storing metadata."
+    },
+    {
+      "id": "07-apache-superset-q13",
+      "type": "order_the_steps",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Order the steps to create a new chart in Superset:",
+      "steps": [
+        { "id": "s1", "text": "Select a dataset" },
+        { "id": "s2", "text": "Choose a visualization type" },
+        { "id": "s3", "text": "Configure chart options" },
+        { "id": "s4", "text": "Save the chart" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "First, select the dataset, then choose the visualization type, configure options, and finally save."
+    },
+    {
+      "id": "07-apache-superset-q14",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "You can schedule reports in Apache Superset.",
+      "answer": true,
+      "explanation": "Yes, Apache Superset supports report scheduling, allowing users to automate report generation."
+    },
+    {
+      "id": "07-apache-superset-q15",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the code to connect to a PostgreSQL database:",
+      "language": "python",
+      "code_template": "engine = create_engine('postgresql://____:____@localhost:5432/____')",
+      "blanks": [
+        { "id": "b1", "options": ["username", "user", "admin", "db_user"], "answer": "username" },
+        { "id": "b2", "options": ["password", "pass", "secret", "db_pass"], "answer": "password" },
+        { "id": "b3", "options": ["dbname", "database", "db_name", "data_source"], "answer": "dbname" }
+      ],
+      "explanation": "You need to provide the username, password, and database name to establish a connection."
+    }
+  ]
+}

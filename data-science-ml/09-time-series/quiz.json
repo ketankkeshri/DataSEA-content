@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "09-time-series",
+  "type": "module",
+  "questions": [
+    {
+      "id": "09-time-series-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is a key characteristic of stationary time series?",
+      "options": [
+        { "id": "a", "text": "Mean and variance change over time" },
+        { "id": "b", "text": "Mean and variance remain constant over time" },
+        { "id": "c", "text": "Only variance remains constant" },
+        { "id": "d", "text": "Only mean remains constant" }
+      ],
+      "answer": "b",
+      "explanation": "A stationary time series has constant mean and variance. This is crucial for many forecasting models.",
+      "tags": ["stationarity"]
+    },
+    {
+      "id": "09-time-series-q2",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to check for stationarity:",
+      "language": "python",
+      "code_template": "from statsmodels.tsa.stattools import adfuller\nresult = adfuller(df['value'].____)\nprint(result)",
+      "blanks": [
+        { "id": "b1", "options": ["mean", "values", "dropna", "std"], "answer": "dropna" }
+      ],
+      "explanation": "Using 'dropna' ensures that missing values do not affect the stationarity test.",
+      "tags": ["stationarity"]
+    },
+    {
+      "id": "09-time-series-q3",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print([x + 1 for x in range(5)])",
+      "options": [
+        { "id": "a", "text": "[1, 2, 3, 4, 5]" },
+        { "id": "b", "text": "[0, 1, 2, 3, 4]" },
+        { "id": "c", "text": "[1, 2, 3, 4]" },
+        { "id": "d", "text": "[1, 2, 3, 4, 5]" }
+      ],
+      "answer": "a",
+      "explanation": "The code increments each value from 0 to 4 by 1, resulting in a list from 1 to 5.",
+      "tags": ["list comprehension"]
+    },
+    {
+      "id": "09-time-series-q4",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "ARIMA stands for AutoRegressive Integrated Moving Average.",
+      "answer": true,
+      "explanation": "ARIMA is indeed an acronym that describes its components: AutoRegressive, Integrated, and Moving Average.",
+      "tags": ["arima"]
+    },
+    {
+      "id": "09-time-series-q5",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to build an ARIMA model:",
+      "steps": [
+        { "id": "s1", "text": "Determine the order of differencing" },
+        { "id": "s2", "text": "Identify the parameters p, d, q" },
+        { "id": "s3", "text": "Fit the ARIMA model" },
+        { "id": "s4", "text": "Check the residuals for stationarity" }
+      ],
+      "correctOrder": ["s2", "s1", "s4", "s3"],
+      "explanation": "First, identify the parameters, then determine differencing, check residuals, and finally fit the model.",
+      "tags": ["arima"]
+    },
+    {
+      "id": "09-time-series-q6",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which method is used for seasonal time series forecasting?",
+      "options": [
+        { "id": "a", "text": "ARIMA" },
+        { "id": "b", "text": "Prophet" },
+        { "id": "c", "text": "Linear Regression" },
+        { "id": "d", "text": "SVM" }
+      ],
+      "answer": "b",
+      "explanation": "Prophet is specifically designed for forecasting time series data that displays seasonality.",
+      "tags": ["prophet"]
+    },
+    {
+      "id": "09-time-series-q7",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the Prophet model fitting code:",
+      "language": "python",
+      "code_template": "from fbprophet import Prophet\nmodel = Prophet()\nmodel.____(df)\nmodel.____()",
+      "blanks": [
+        { "id": "b1", "options": ["fit", "add_seasonality", "train", "predict"], "answer": "fit" },
+        { "id": "b2", "options": ["fit", "add_seasonality", "train", "predict"], "answer": "predict" }
+      ],
+      "explanation": "You first fit the model with the data and then use it to make predictions.",
+      "tags": ["prophet"]
+    },
+    {
+      "id": "09-time-series-q8",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print('Time' in ['Time', 'Series'])",
+      "options": [
+        { "id": "a", "text": "True" },
+        { "id": "b", "text": "False" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "None of the above" }
+      ],
+      "answer": "b",
+      "explanation": "'Time' is not equal to 'Time' because list comparison is case-sensitive.",
+      "tags": ["list"]
+    },
+    {
+      "id": "09-time-series-q9",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Deep learning models can be used for time series forecasting.",
+      "answer": true,
+      "explanation": "Deep learning models, such as LSTM, are effective for capturing complex patterns in time series data.",
+      "tags": ["deep-learning-ts"]
+    },
+    {
+      "id": "09-time-series-q10",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What is the main advantage of using LSTM over traditional methods?",
+      "options": [
+        { "id": "a", "text": "Requires less data" },
+        { "id": "b", "text": "Handles long-term dependencies" },
+        { "id": "c", "text": "Simpler to implement" },
+        { "id": "d", "text": "Better for linear data" }
+      ],
+      "answer": "b",
+      "explanation": "LSTM networks are designed to learn from sequences of data, capturing long-term dependencies effectively.",
+      "tags": ["deep-learning-ts"]
+    },
+    {
+      "id": "09-time-series-q11",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Fill in the missing part of the LSTM model code:",
+      "language": "python",
+      "code_template": "from keras.models import Sequential\nfrom keras.layers import LSTM, Dense\nmodel = Sequential()\nmodel.add(LSTM(____, input_shape=(timesteps, features)))",
+      "blanks": [
+        { "id": "b1", "options": ["32", "64", "128", "256"], "answer": "64" }
+      ],
+      "explanation": "Choosing 64 units is common, but the best choice depends on the specific problem and dataset.",
+      "tags": ["deep-learning-ts"]
+    },
+    {
+      "id": "09-time-series-q12",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps for creating a deep learning model for time series forecasting:",
+      "steps": [
+        { "id": "s1", "text": "Prepare the dataset" },
+        { "id": "s2", "text": "Define the model architecture" },
+        { "id": "s3", "text": "Train the model" },
+        { "id": "s4", "text": "Evaluate the model" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "First, prepare the data, then define the model, train it, and finally evaluate its performance.",
+      "tags": ["deep-learning-ts"]
+    }
+  ]
+}

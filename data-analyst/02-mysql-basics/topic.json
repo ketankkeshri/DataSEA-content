@@ -1,0 +1,43 @@
+{
+  "id": "02-mysql-basics",
+  "section": "data-analyst",
+  "tier": "beginner",
+  "moduleOrder": 2,
+  "version": 1,
+  "title": "MySQL Basics",
+  "shortDescription": "MySQL Basics \u2014 beginner to advanced concepts and code.",
+  "icon": "02-mysql-basics",
+  "estimatedMinutes": 40,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-installation",
+      "title": "Installation",
+      "minutes": 8
+    },
+    {
+      "id": "03-data-types",
+      "title": "Data Types",
+      "minutes": 8
+    },
+    {
+      "id": "04-tables-and-keys",
+      "title": "Tables And Keys",
+      "minutes": 8
+    },
+    {
+      "id": "05-indexes-basics",
+      "title": "Indexes Basics",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

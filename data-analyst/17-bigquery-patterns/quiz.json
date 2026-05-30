@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "17-bigquery-patterns",
+  "type": "module",
+  "questions": [
+    {
+      "id": "17-bigquery-patterns-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the purpose of partitioning in BigQuery?",
+      "options": [
+        { "id": "a", "text": "To organize data for faster querying." },
+        { "id": "b", "text": "To aggregate data automatically." },
+        { "id": "c", "text": "To sort data chronologically." },
+        { "id": "d", "text": "To secure data access." }
+      ],
+      "answer": "a",
+      "explanation": "Partitioning improves query performance by reducing the amount of data scanned."
+    },
+    {
+      "id": "17-bigquery-patterns-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which of the following is a feature of clustering in BigQuery?",
+      "options": [
+        { "id": "a", "text": "It reduces storage costs." },
+        { "id": "b", "text": "It organizes data based on column values." },
+        { "id": "c", "text": "It automatically creates indexes." },
+        { "id": "d", "text": "It increases data redundancy." }
+      ],
+      "answer": "b",
+      "explanation": "Clustering sorts data based on specific column values for faster query performance."
+    },
+    {
+      "id": "17-bigquery-patterns-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to create a partitioned table in BigQuery:",
+      "language": "sql",
+      "code_template": "CREATE TABLE dataset.table_name (\n  id INT64,\n  name STRING\n) PARTITION BY ____;",
+      "blanks": [
+        { "id": "b1", "options": ["_PARTITIONTIME", "date_column", "RANGE", "HASH"], "answer": "date_column" }
+      ],
+      "explanation": "You can partition a table by a date column to optimize query performance."
+    },
+    {
+      "id": "17-bigquery-patterns-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does the following query return?",
+      "language": "sql",
+      "code": "SELECT COUNT(*) FROM dataset.table WHERE _PARTITIONTIME = '2023-01-01';",
+      "options": [
+        { "id": "a", "text": "Number of rows for the specific partition." },
+        { "id": "b", "text": "Total number of rows in the table." },
+        { "id": "c", "text": "Error due to syntax." },
+        { "id": "d", "text": "Count of rows from all partitions." }
+      ],
+      "answer": "a",
+      "explanation": "This query counts rows only for the specified partition date."
+    },
+    {
+      "id": "17-bigquery-patterns-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "BigQuery automatically manages slots for query processing.",
+      "answer": true,
+      "explanation": "BigQuery dynamically allocates slots based on demand."
+    },
+    {
+      "id": "17-bigquery-patterns-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is a slot in BigQuery?",
+      "options": [
+        { "id": "a", "text": "A unit of computation for executing queries." },
+        { "id": "b", "text": "An index for data retrieval." },
+        { "id": "c", "text": "A storage allocation unit." },
+        { "id": "d", "text": "A type of data partition." }
+      ],
+      "answer": "a",
+      "explanation": "A slot represents a unit of computational capacity in BigQuery."
+    },
+    {
+      "id": "17-bigquery-patterns-q7",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Fill in the blanks to adjust slot allocation:",
+      "language": "sql",
+      "code_template": "SET @@bigquery.slot_count = ____;",
+      "blanks": [
+        { "id": "b1", "options": ["100", "200", "500", "1000"], "answer": "200" }
+      ],
+      "explanation": "This command sets the number of slots allocated for query execution."
+    },
+    {
+      "id": "17-bigquery-patterns-q8",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order the steps to optimize a BigQuery query:",
+      "steps": [
+        { "id": "s1", "text": "Analyze the query execution plan." },
+        { "id": "s2", "text": "Identify potential partitions." },
+        { "id": "s3", "text": "Rewrite the query for efficiency." },
+        { "id": "s4", "text": "Test the optimized query." }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "Analyzing the execution plan helps identify optimization opportunities."
+    },
+    {
+      "id": "17-bigquery-patterns-q9",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which statement about cost control in BigQuery is true?",
+      "options": [
+        { "id": "a", "text": "Cost is solely based on data storage." },
+        { "id": "b", "text": "You pay for the number of slots used." },
+        { "id": "c", "text": "You can control costs by optimizing queries." },
+        { "id": "d", "text": "All queries are free if data is partitioned." }
+      ],
+      "answer": "c",
+      "explanation": "Optimizing queries reduces the amount of data processed, thus lowering costs."
+    },
+    {
+      "id": "17-bigquery-patterns-q10",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Clustering can only be applied to partitioned tables.",
+      "answer": false,
+      "explanation": "Clustering can be applied to both partitioned and non-partitioned tables."
+    },
+    {
+      "id": "17-bigquery-patterns-q11",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which approach is best for reducing BigQuery costs?",
+      "options": [
+        { "id": "a", "text": "Using wildcard tables." },
+        { "id": "b", "text": "Using partitioned tables." },
+        { "id": "c", "text": "Running queries during off-peak hours." },
+        { "id": "d", "text": "Using streaming inserts instead of batch loads." }
+      ],
+      "answer": "b",
+      "explanation": "Partitioned tables minimize the amount of data scanned during queries, reducing costs."
+    },
+    {
+      "id": "17-bigquery-patterns-q12",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order the steps for effective slot management:",
+      "steps": [
+        { "id": "s1", "text": "Assess workload requirements." },
+        { "id": "s2", "text": "Allocate slots based on demand." },
+        { "id": "s3", "text": "Monitor slot usage." },
+        { "id": "s4", "text": "Adjust allocations as necessary." }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "Effective slot management involves constant assessment and adjustment based on workload."
+    },
+    {
+      "id": "17-bigquery-patterns-q13",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What will this query output?",
+      "language": "sql",
+      "code": "SELECT SUM(amount) FROM dataset.sales WHERE date BETWEEN '2023-01-01' AND '2023-01-31';",
+      "options": [
+        { "id": "a", "text": "Total sales for January 2023." },
+        { "id": "b", "text": "Number of sales transactions." },
+        { "id": "c", "text": "Error due to date format." },
+        { "id": "d", "text": "Total sales for the entire year." }
+      ],
+      "answer": "a",
+      "explanation": "This query sums up the sales amount from January 2023."
+    },
+    {
+      "id": "17-bigquery-patterns-q14",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Fill in the blank to set a budget in BigQuery:",
+      "language": "sql",
+      "code_template": "SET @@bigquery.budget = ____;",
+      "blanks": [
+        { "id": "b1", "options": ["1000", "5000", "10000", "20000"], "answer": "5000" }
+      ],
+      "explanation": "This command sets the budget for query costs, helping manage expenses."
+    },
+    {
+      "id": "17-bigquery-patterns-q15",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "BigQuery supports real-time data analysis.",
+      "answer": true,
+      "explanation": "BigQuery allows for real-time analysis with streaming data capabilities."
+    }
+  ]
+}

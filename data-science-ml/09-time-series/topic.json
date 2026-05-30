@@ -1,0 +1,43 @@
+{
+  "id": "09-time-series",
+  "section": "data-science-ml",
+  "tier": "intermediate",
+  "moduleOrder": 9,
+  "version": 1,
+  "title": "Time Series Forecasting",
+  "shortDescription": "Time Series Forecasting \u2014 beginner to advanced concepts and code.",
+  "icon": "09-time-series",
+  "estimatedMinutes": 40,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-stationarity",
+      "title": "Stationarity",
+      "minutes": 8
+    },
+    {
+      "id": "03-arima",
+      "title": "Arima",
+      "minutes": 8
+    },
+    {
+      "id": "04-prophet",
+      "title": "Prophet",
+      "minutes": 8
+    },
+    {
+      "id": "05-deep-learning-ts",
+      "title": "Deep Learning Ts",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

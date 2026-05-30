@@ -1,0 +1,38 @@
+{
+  "id": "04-statistics-refresher",
+  "section": "data-science-ml",
+  "tier": "beginner",
+  "moduleOrder": 4,
+  "version": 1,
+  "title": "Statistics Refresher",
+  "shortDescription": "Statistics Refresher \u2014 beginner to advanced concepts and code.",
+  "icon": "04-statistics-refresher",
+  "estimatedMinutes": 32,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-mean-median-mode",
+      "title": "Mean Median Mode",
+      "minutes": 8
+    },
+    {
+      "id": "02-variance-std",
+      "title": "Variance Std",
+      "minutes": 8
+    },
+    {
+      "id": "03-distributions",
+      "title": "Distributions",
+      "minutes": 8
+    },
+    {
+      "id": "04-clt",
+      "title": "Clt",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

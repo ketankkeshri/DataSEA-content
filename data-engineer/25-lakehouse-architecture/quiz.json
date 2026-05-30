@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "25-lakehouse-architecture",
+  "type": "module",
+  "questions": [
+    {
+      "id": "25-lakehouse-architecture-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the primary purpose of a lakehouse architecture?",
+      "options": [
+        { "id": "a", "text": "Data warehousing" },
+        { "id": "b", "text": "Unified data management" },
+        { "id": "c", "text": "Data visualization" },
+        { "id": "d", "text": "Real-time processing" }
+      ],
+      "answer": "b",
+      "explanation": "Lakehouse architecture combines the flexibility of data lakes with the performance of data warehouses, enabling unified data management.",
+      "tags": ["lakehouse", "architecture"]
+    },
+    {
+      "id": "25-lakehouse-architecture-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which of the following is a component of the bronze layer in a lakehouse?",
+      "options": [
+        { "id": "a", "text": "Cleaned data" },
+        { "id": "b", "text": "Raw data" },
+        { "id": "c", "text": "Aggregated data" },
+        { "id": "d", "text": "Transformed data" }
+      ],
+      "answer": "b",
+      "explanation": "The bronze layer stores raw data in its original format, serving as the foundation for further processing.",
+      "tags": ["lakehouse", "bronze"]
+    },
+    {
+      "id": "25-lakehouse-architecture-q3",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "The silver layer in a lakehouse architecture is responsible for storing raw data.",
+      "answer": false,
+      "explanation": "The silver layer stores cleaned and transformed data, not raw data, which is stored in the bronze layer.",
+      "tags": ["lakehouse", "silver"]
+    },
+    {
+      "id": "25-lakehouse-architecture-q4",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which compute engine can be used with lakehouse architectures?",
+      "options": [
+        { "id": "a", "text": "Apache Spark" },
+        { "id": "b", "text": "Hadoop MapReduce" },
+        { "id": "c", "text": "Apache Flink" },
+        { "id": "d", "text": "All of the above" }
+      ],
+      "answer": "d",
+      "explanation": "Lakehouse architectures are flexible and can leverage multiple compute engines for processing data.",
+      "tags": ["lakehouse", "compute-engine"]
+    },
+    {
+      "id": "25-lakehouse-architecture-q5",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to read data from a lakehouse:",
+      "language": "python",
+      "code_template": "df = spark.read.____('path/to/data').____()",
+      "blanks": [
+        { "id": "b1", "options": ["format", "load", "option", "schema"], "answer": "format" },
+        { "id": "b2", "options": ["csv", "json", "parquet", "all"], "answer": "parquet" }
+      ],
+      "explanation": "To read data from a lakehouse, specify the format (like parquet) to handle the data efficiently.",
+      "tags": ["lakehouse", "data-reading"]
+    },
+    {
+      "id": "25-lakehouse-architecture-q6",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print([x + 1 for x in range(5)])",
+      "options": [
+        { "id": "a", "text": "[0, 1, 2, 3, 4]" },
+        { "id": "b", "text": "[1, 2, 3, 4, 5]" },
+        { "id": "c", "text": "[1, 3, 5, 7, 9]" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "b",
+      "explanation": "The list comprehension adds 1 to each number from 0 to 4, resulting in [1, 2, 3, 4, 5].",
+      "tags": ["python", "output"]
+    },
+    {
+      "id": "25-lakehouse-architecture-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps for processing data in a lakehouse:",
+      "steps": [
+        { "id": "s1", "text": "Transform the data" },
+        { "id": "s2", "text": "Load the data into the lakehouse" },
+        { "id": "s3", "text": "Extract data from source" },
+        { "id": "s4", "text": "Analyze the data" }
+      ],
+      "correctOrder": ["s3", "s2", "s1", "s4"],
+      "explanation": "Data processing generally follows the steps: Extract, Load, Transform, and then Analyze (ELT).",
+      "tags": ["lakehouse", "data-pipeline"]
+    },
+    {
+      "id": "25-lakehouse-architecture-q8",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following best describes the gold layer in a lakehouse?",
+      "options": [
+        { "id": "a", "text": "Raw data" },
+        { "id": "b", "text": "Analytical data" },
+        { "id": "c", "text": "Transformed data" },
+        { "id": "d", "text": "Archived data" }
+      ],
+      "answer": "b",
+      "explanation": "The gold layer is where data is refined for analytical purposes, providing insights and reports.",
+      "tags": ["lakehouse", "gold"]
+    },
+    {
+      "id": "25-lakehouse-architecture-q9",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Lakehouse architecture allows for both batch and stream processing.",
+      "answer": true,
+      "explanation": "Lakehouse architectures support both batch and stream processing, enabling flexibility in data handling.",
+      "tags": ["lakehouse", "processing"]
+    },
+    {
+      "id": "25-lakehouse-architecture-q10",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is a common format for storing data in a lakehouse?",
+      "options": [
+        { "id": "a", "text": "TXT" },
+        { "id": "b", "text": "CSV" },
+        { "id": "c", "text": "Parquet" },
+        { "id": "d", "text": "XML" }
+      ],
+      "answer": "c",
+      "explanation": "Parquet is commonly used in lakehouse architectures due to its efficient columnar storage.",
+      "tags": ["lakehouse", "data-format"]
+    },
+    {
+      "id": "25-lakehouse-architecture-q11",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the following code to optimize a Spark DataFrame:",
+      "language": "python",
+      "code_template": "df = spark.read.parquet('...').____()",
+      "blanks": [
+        { "id": "b1", "options": ["cache", "collect", "show", "count"], "answer": "cache" }
+      ],
+      "explanation": "Caching a DataFrame helps to optimize performance for future actions by storing it in memory.",
+      "tags": ["spark", "optimization"]
+    },
+    {
+      "id": "25-lakehouse-architecture-q12",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(2 ** 3 + 2 * 3)",
+      "options": [
+        { "id": "a", "text": "8" },
+        { "id": "b", "text": "12" },
+        { "id": "c", "text": "10" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "c",
+      "explanation": "The expression evaluates to 8 (2^3) + 6 (2*3) = 14.",
+      "tags": ["python", "output"]
+    },
+    {
+      "id": "25-lakehouse-architecture-q13",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these actions for data ingestion into a lakehouse:",
+      "steps": [
+        { "id": "s1", "text": "Validate data" },
+        { "id": "s2", "text": "Transform data" },
+        { "id": "s3", "text": "Ingest data" },
+        { "id": "s4", "text": "Store data" }
+      ],
+      "correctOrder": ["s1", "s3", "s4", "s2"],
+      "explanation": "Data ingestion typically involves validating the data first, followed by ingestion, storage, and then transformation.",
+      "tags": ["lakehouse", "data-ingestion"]
+    },
+    {
+      "id": "25-lakehouse-architecture-q14",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does ACID compliance in a lakehouse ensure?",
+      "options": [
+        { "id": "a", "text": "Data redundancy" },
+        { "id": "b", "text": "Data integrity" },
+        { "id": "c", "text": "Data compression" },
+        { "id": "d", "text": "Data availability" }
+      ],
+      "answer": "b",
+      "explanation": "ACID compliance ensures that database transactions are processed reliably, maintaining data integrity.",
+      "tags": ["lakehouse", "ACID"]
+    },
+    {
+      "id": "25-lakehouse-architecture-q15",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Lakehouse architecture is only suitable for big data use cases.",
+      "answer": false,
+      "explanation": "Lakehouse architecture is versatile and can be used for both big data and smaller datasets.",
+      "tags": ["lakehouse", "use-cases"]
+    }
+  ]
+}

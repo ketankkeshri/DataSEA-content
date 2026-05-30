@@ -1,0 +1,48 @@
+{
+  "id": "10-file-formats",
+  "section": "data-engineer",
+  "tier": "intermediate",
+  "moduleOrder": 10,
+  "version": 1,
+  "title": "Big Data File Formats",
+  "shortDescription": "Big Data File Formats \u2014 beginner to advanced concepts and code.",
+  "icon": "10-file-formats",
+  "estimatedMinutes": 48,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-parquet",
+      "title": "Parquet",
+      "minutes": 8
+    },
+    {
+      "id": "03-avro",
+      "title": "Avro",
+      "minutes": 8
+    },
+    {
+      "id": "04-orc",
+      "title": "Orc",
+      "minutes": 8
+    },
+    {
+      "id": "05-json-vs-binary",
+      "title": "Json Vs Binary",
+      "minutes": 8
+    },
+    {
+      "id": "06-compression-codecs",
+      "title": "Compression Codecs",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

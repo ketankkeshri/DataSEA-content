@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "07-linux-fundamentals",
+  "type": "module",
+  "questions": [
+    {
+      "id": "07-linux-fundamentals-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does the `ls` command do?",
+      "options": [
+        { "id": "a", "text": "List the contents of a directory" },
+        { "id": "b", "text": "Change the current directory" },
+        { "id": "c", "text": "Display file content" },
+        { "id": "d", "text": "Copy files" }
+      ],
+      "answer": "a",
+      "explanation": "The `ls` command lists all files and directories in the current directory.",
+      "tags": ["fs-basics"]
+    },
+    {
+      "id": "07-linux-fundamentals-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does the `chmod` command do?",
+      "options": [
+        { "id": "a", "text": "Change file ownership" },
+        { "id": "b", "text": "Change file permissions" },
+        { "id": "c", "text": "Move files" },
+        { "id": "d", "text": "Delete files" }
+      ],
+      "answer": "b",
+      "explanation": "`chmod` changes the permissions of a file or directory.",
+      "tags": ["permissions"]
+    },
+    {
+      "id": "07-linux-fundamentals-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the command to list processes:",
+      "language": "bash",
+      "code_template": "ps ____",
+      "blanks": [
+        { "id": "b1", "options": ["-e", "-f", "-a", "-u"], "answer": "-e" }
+      ],
+      "explanation": "Using `ps -e` lists all running processes.",
+      "tags": ["processes"]
+    },
+    {
+      "id": "07-linux-fundamentals-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "bash",
+      "code": "echo $((3 + 4))",
+      "options": [
+        { "id": "a", "text": "3 + 4" },
+        { "id": "b", "text": "7" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "3" }
+      ],
+      "answer": "b",
+      "explanation": "The command performs arithmetic and outputs the result, which is 7.",
+      "tags": ["processes"]
+    },
+    {
+      "id": "07-linux-fundamentals-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "The command `ping` is used to check network connectivity.",
+      "answer": true,
+      "explanation": "The `ping` command sends packets to a host to check if it's reachable.",
+      "tags": ["networking"]
+    },
+    {
+      "id": "07-linux-fundamentals-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What command is used to display the current directory?",
+      "options": [
+        { "id": "a", "text": "pwd" },
+        { "id": "b", "text": "cd" },
+        { "id": "c", "text": "ls" },
+        { "id": "d", "text": "dir" }
+      ],
+      "answer": "a",
+      "explanation": "`pwd` stands for 'print working directory' and shows the current directory path.",
+      "tags": ["fs-basics"]
+    },
+    {
+      "id": "07-linux-fundamentals-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these commands to create a new directory and navigate into it:",
+      "steps": [
+        { "id": "s1", "text": "cd myDirectory" },
+        { "id": "s2", "text": "mkdir myDirectory" },
+        { "id": "s3", "text": "ls" },
+        { "id": "s4", "text": "pwd" }
+      ],
+      "correctOrder": ["s2", "s1", "s4", "s3"],
+      "explanation": "First, create the directory with `mkdir`, then navigate into it with `cd`, check the path with `pwd`, and finally list its contents with `ls`.",
+      "tags": ["fs-basics"]
+    },
+    {
+      "id": "07-linux-fundamentals-q8",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which command is used to stop a running service in systemd?",
+      "options": [
+        { "id": "a", "text": "service stop" },
+        { "id": "b", "text": "systemctl stop" },
+        { "id": "c", "text": "stop service" },
+        { "id": "d", "text": "kill service" }
+      ],
+      "answer": "b",
+      "explanation": "The `systemctl stop` command is used to stop services managed by systemd.",
+      "tags": ["systemd"]
+    },
+    {
+      "id": "07-linux-fundamentals-q9",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "The `curl` command is used to create HTTP requests.",
+      "answer": true,
+      "explanation": "`curl` is a tool to transfer data from or to a server using various protocols, including HTTP.",
+      "tags": ["networking"]
+    },
+    {
+      "id": "07-linux-fundamentals-q10",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the command to change directory permissions:",
+      "language": "bash",
+      "code_template": "chmod ____ myDirectory",
+      "blanks": [
+        { "id": "b1", "options": ["777", "755", "644", "600"], "answer": "755" }
+      ],
+      "explanation": "Using `chmod 755` allows the owner to read, write, and execute, while others can read and execute.",
+      "tags": ["permissions"]
+    },
+    {
+      "id": "07-linux-fundamentals-q11",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this command print?",
+      "language": "bash",
+      "code": "echo $(date +%Y)",
+      "options": [
+        { "id": "a", "text": "Current Year" },
+        { "id": "b", "text": "Error" },
+        { "id": "c", "text": "Date" },
+        { "id": "d", "text": "Time" }
+      ],
+      "answer": "a",
+      "explanation": "The command uses `date` to print the current year in YYYY format.",
+      "tags": ["systemd"]
+    },
+    {
+      "id": "07-linux-fundamentals-q12",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does the command `top` do?",
+      "options": [
+        { "id": "a", "text": "Displays CPU usage" },
+        { "id": "b", "text": "Shows running processes" },
+        { "id": "c", "text": "Lists files" },
+        { "id": "d", "text": "Checks network status" }
+      ],
+      "answer": "b",
+      "explanation": "`top` provides a dynamic view of running processes and their resource usage.",
+      "tags": ["processes"]
+    },
+    {
+      "id": "07-linux-fundamentals-q13",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to check your network configuration:",
+      "steps": [
+        { "id": "s1", "text": "Run 'ip a'" },
+        { "id": "s2", "text": "Open terminal" },
+        { "id": "s3", "text": "Check output for IPs" },
+        { "id": "s4", "text": "Identify active interfaces" }
+      ],
+      "correctOrder": ["s2", "s1", "s4", "s3"],
+      "explanation": "First, open the terminal, then run `ip a` to check network interfaces, identify active ones, and finally review the output for IPs.",
+      "tags": ["networking"]
+    },
+    {
+      "id": "07-linux-fundamentals-q14",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "The command `rm` is used to remove files.",
+      "answer": true,
+      "explanation": "`rm` is the command used to delete files and directories.",
+      "tags": ["fs-basics"]
+    },
+    {
+      "id": "07-linux-fundamentals-q15",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which command is used to restart a service in systemd?",
+      "options": [
+        { "id": "a", "text": "service restart" },
+        { "id": "b", "text": "systemctl restart" },
+        { "id": "c", "text": "restart service" },
+        { "id": "d", "text": "systemctl start" }
+      ],
+      "answer": "b",
+      "explanation": "The `systemctl restart` command stops and then starts a service.",
+      "tags": ["systemd"]
+    }
+  ]
+}

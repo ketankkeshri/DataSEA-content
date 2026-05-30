@@ -1,0 +1,58 @@
+{
+  "id": "08-apache-airflow",
+  "section": "data-engineer",
+  "tier": "intermediate",
+  "moduleOrder": 8,
+  "version": 1,
+  "title": "Apache Airflow",
+  "shortDescription": "Apache Airflow \u2014 beginner to advanced concepts and code.",
+  "icon": "08-apache-airflow",
+  "estimatedMinutes": 64,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-dags",
+      "title": "Dags",
+      "minutes": 8
+    },
+    {
+      "id": "03-operators",
+      "title": "Operators",
+      "minutes": 8
+    },
+    {
+      "id": "04-xcoms",
+      "title": "Xcoms",
+      "minutes": 8
+    },
+    {
+      "id": "05-scheduling-backfill",
+      "title": "Scheduling Backfill",
+      "minutes": 8
+    },
+    {
+      "id": "06-sensors",
+      "title": "Sensors",
+      "minutes": 8
+    },
+    {
+      "id": "07-taskflow-api",
+      "title": "Taskflow Api",
+      "minutes": 8
+    },
+    {
+      "id": "08-best-practices",
+      "title": "Best Practices",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

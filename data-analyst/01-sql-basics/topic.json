@@ -1,0 +1,48 @@
+{
+  "id": "01-sql-basics",
+  "section": "data-analyst",
+  "tier": "beginner",
+  "moduleOrder": 1,
+  "version": 1,
+  "title": "SQL Foundations",
+  "shortDescription": "SQL Foundations \u2014 beginner to advanced concepts and code.",
+  "icon": "01-sql-basics",
+  "estimatedMinutes": 48,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-select-where",
+      "title": "Select Where",
+      "minutes": 8
+    },
+    {
+      "id": "03-joins",
+      "title": "Joins",
+      "minutes": 8
+    },
+    {
+      "id": "04-aggregations",
+      "title": "Aggregations",
+      "minutes": 8
+    },
+    {
+      "id": "05-ordering-limit",
+      "title": "Ordering Limit",
+      "minutes": 8
+    },
+    {
+      "id": "06-distinct-null",
+      "title": "Distinct Null",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

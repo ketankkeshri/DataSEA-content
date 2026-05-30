@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "12-model-evaluation",
+  "type": "module",
+  "questions": [
+    {
+      "id": "12-model-evaluation-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does accuracy measure in a classification model?",
+      "options": [
+        { "id": "a", "text": "The percentage of true positive predictions." },
+        { "id": "b", "text": "The ratio of correctly predicted instances to total instances." },
+        { "id": "c", "text": "The balance between precision and recall." },
+        { "id": "d", "text": "The rate of false positives." }
+      ],
+      "answer": "b",
+      "explanation": "Accuracy measures how often the model is correct overall, calculated as the number of correct predictions divided by the total predictions.",
+      "tags": ["classification-metrics"]
+    },
+    {
+      "id": "12-model-evaluation-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which metric is best for imbalanced classification problems?",
+      "options": [
+        { "id": "a", "text": "Accuracy" },
+        { "id": "b", "text": "F1 Score" },
+        { "id": "c", "text": "Mean Squared Error" },
+        { "id": "d", "text": "Root Mean Squared Error" }
+      ],
+      "answer": "b",
+      "explanation": "F1 Score balances precision and recall, making it more suitable for imbalanced datasets than accuracy.",
+      "tags": ["classification-metrics"]
+    },
+    {
+      "id": "12-model-evaluation-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to calculate precision:",
+      "language": "python",
+      "code_template": "precision = ____ / (____ + ____)",
+      "blanks": [
+        { "id": "b1", "options": ["TP", "TN", "FP", "FN"], "answer": "TP" },
+        { "id": "b2", "options": ["TP", "TN", "FP", "FN"], "answer": "FP" },
+        { "id": "b3", "options": ["TP", "TN", "FP", "FN"], "answer": "FN" }
+      ],
+      "explanation": "Precision is defined as the number of true positives divided by the sum of true positives and false positives.",
+      "tags": ["classification-metrics"]
+    },
+    {
+      "id": "12-model-evaluation-q4",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Mean Absolute Error (MAE) is more sensitive to outliers than Mean Squared Error (MSE).",
+      "answer": false,
+      "explanation": "MSE is more sensitive to outliers because it squares the errors, leading to larger penalties for larger errors.",
+      "tags": ["regression-metrics"]
+    },
+    {
+      "id": "12-model-evaluation-q5",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print([x**2 for x in range(4)])",
+      "options": [
+        { "id": "a", "text": "[0, 1, 4, 9]" },
+        { "id": "b", "text": "[0, 1, 4, 16]" },
+        { "id": "c", "text": "[0, 2, 4, 6]" },
+        { "id": "d", "text": "[1, 4, 9, 16]" }
+      ],
+      "answer": "b",
+      "explanation": "The list comprehension squares each number from 0 to 3, resulting in [0, 1, 4, 9].",
+      "tags": ["ranking-metrics"]
+    },
+    {
+      "id": "12-model-evaluation-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the purpose of the ROC curve?",
+      "options": [
+        { "id": "a", "text": "To visualize the trade-off between sensitivity and specificity." },
+        { "id": "b", "text": "To calculate the accuracy of a model." },
+        { "id": "c", "text": "To compare different regression models." },
+        { "id": "d", "text": "To assess the calibration of probability outputs." }
+      ],
+      "answer": "a",
+      "explanation": "The ROC curve displays the trade-off between true positive rate (sensitivity) and false positive rate across different thresholds.",
+      "tags": ["classification-metrics"]
+    },
+    {
+      "id": "12-model-evaluation-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these regression evaluation steps correctly:",
+      "steps": [
+        { "id": "s1", "text": "Calculate predictions from the model." },
+        { "id": "s2", "text": "Split data into training and testing sets." },
+        { "id": "s3", "text": "Compute evaluation metrics." },
+        { "id": "s4", "text": "Train the model on training data." }
+      ],
+      "correctOrder": ["s2", "s4", "s1", "s3"],
+      "explanation": "First, split the data, then train the model, generate predictions, and finally compute metrics.",
+      "tags": ["regression-metrics"]
+    },
+    {
+      "id": "12-model-evaluation-q8",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Fill in the blanks to calculate R² score:",
+      "language": "python",
+      "code_template": "from sklearn.metrics import r2_score\nscore = r2_score(y_true, y_pred) # where y_pred is ____",
+      "blanks": [
+        { "id": "b1", "options": ["predicted values", "true values", "average value"], "answer": "predicted values" }
+      ],
+      "explanation": "R² score measures how well the predicted values approximate the actual values.",
+      "tags": ["regression-metrics"]
+    },
+    {
+      "id": "12-model-evaluation-q9",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "The F1 score is the harmonic mean of precision and recall.",
+      "answer": true,
+      "explanation": "The F1 score combines precision and recall into a single metric by calculating their harmonic mean.",
+      "tags": ["classification-metrics"]
+    },
+    {
+      "id": "12-model-evaluation-q10",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following is NOT a ranking metric?",
+      "options": [
+        { "id": "a", "text": "Mean Reciprocal Rank" },
+        { "id": "b", "text": "Normalized Discounted Cumulative Gain" },
+        { "id": "c", "text": "Precision" },
+        { "id": "d", "text": "Average Precision" }
+      ],
+      "answer": "c",
+      "explanation": "Precision is primarily a classification metric, while the others are ranking metrics that evaluate the order of results.",
+      "tags": ["ranking-metrics"]
+    },
+    {
+      "id": "12-model-evaluation-q11",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the code to implement a calibration curve:",
+      "language": "python",
+      "code_template": "from sklearn.calibration import calibration_curve\nprob_true, prob_pred = calibration_curve(y_true, y_pred, n_bins=____)",
+      "blanks": [
+        { "id": "b1", "options": ["10", "5", "20"], "answer": "10" }
+      ],
+      "explanation": "The calibration curve can be binned into 10 intervals to evaluate the model's probability estimates.",
+      "tags": ["calibration"]
+    },
+    {
+      "id": "12-model-evaluation-q12",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this output?",
+      "language": "python",
+      "code": "import numpy as np\nnp.random.seed(0)\nprint(np.mean(np.random.randint(1, 10, 5)))",
+      "options": [
+        { "id": "a", "text": "5.0" },
+        { "id": "b", "text": "4.0" },
+        { "id": "c", "text": "3.5" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "b",
+      "explanation": "The random integers generated will have a mean of 4.0 based on the values produced by the seed.",
+      "tags": ["general"]
+    },
+    {
+      "id": "12-model-evaluation-q13",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "When should you prefer using log loss over accuracy?",
+      "options": [
+        { "id": "a", "text": "When the dataset is small." },
+        { "id": "b", "text": "When you need to evaluate probabilistic predictions." },
+        { "id": "c", "text": "When the classes are perfectly balanced." },
+        { "id": "d", "text": "When dealing with regression tasks." }
+      ],
+      "answer": "b",
+      "explanation": "Log loss is more informative than accuracy when evaluating the quality of probabilistic predictions, especially in binary classification.",
+      "tags": ["classification-metrics"]
+    },
+    {
+      "id": "12-model-evaluation-q14",
+      "type": "order_the_steps",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Order the steps to create a model evaluation report:",
+      "steps": [
+        { "id": "s1", "text": "Select model metrics to evaluate." },
+        { "id": "s2", "text": "Gather predictions and true labels." },
+        { "id": "s3", "text": "Visualize results." },
+        { "id": "s4", "text": "Compile the report." }
+      ],
+      "correctOrder": ["s2", "s1", "s3", "s4"],
+      "explanation": "First, gather the data, then select metrics, visualize the results, and finally compile everything into a report.",
+      "tags": ["general"]
+    },
+    {
+      "id": "12-model-evaluation-q15",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "A higher AUC value indicates a better performing model.",
+      "answer": true,
+      "explanation": "AUC (Area Under the Curve) ranges from 0 to 1, where a higher value indicates better model performance in distinguishing classes.",
+      "tags": ["classification-metrics"]
+    }
+  ]
+}

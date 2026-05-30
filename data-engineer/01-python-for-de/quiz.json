@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "01-python-for-de",
+  "type": "module",
+  "questions": [
+    {
+      "id": "01-python-for-de-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does the 'list' data structure do in Python?",
+      "options": [
+        { "id": "a", "text": "Stores unique elements" },
+        { "id": "b", "text": "Stores ordered elements" },
+        { "id": "c", "text": "Stores key-value pairs" },
+        { "id": "d", "text": "Stores immutable elements" }
+      ],
+      "answer": "b",
+      "explanation": "A list in Python is an ordered collection that can hold items of different types."
+    },
+    {
+      "id": "01-python-for-de-q2",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to read a file:",
+      "language": "python",
+      "code_template": "with open('data.txt', '____') as file:",
+      "blanks": [
+        { "id": "b1", "options": ["r", "w", "a", "x"], "answer": "r" }
+      ],
+      "explanation": "The 'r' mode opens a file for reading."
+    },
+    {
+      "id": "01-python-for-de-q3",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "In Python, a tuple is mutable.",
+      "answer": false,
+      "explanation": "Tuples are immutable, meaning their contents cannot be changed after creation."
+    },
+    {
+      "id": "01-python-for-de-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print({x: x**2 for x in range(3)})",
+      "options": [
+        { "id": "a", "text": "{0: 0, 1: 1, 2: 4}" },
+        { "id": "b", "text": "{0: 0, 1: 1, 2: 2}" },
+        { "id": "c", "text": "{0, 1, 4}" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The code creates a dictionary where keys are numbers and values are their squares."
+    },
+    {
+      "id": "01-python-for-de-q5",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these pipeline steps correctly for data processing:",
+      "steps": [
+        { "id": "s1", "text": "Transform the data" },
+        { "id": "s2", "text": "Load the data into a database" },
+        { "id": "s3", "text": "Extract data from a source" },
+        { "id": "s4", "text": "Clean the data" }
+      ],
+      "correctOrder": ["s3", "s4", "s1", "s2"],
+      "explanation": "Data processing should start with extraction, then cleaning, transforming, and finally loading."
+    },
+    {
+      "id": "01-python-for-de-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which Python statement is used to handle exceptions?",
+      "options": [
+        { "id": "a", "text": "try...except" },
+        { "id": "b", "text": "catch...finally" },
+        { "id": "c", "text": "throw...catch" },
+        { "id": "d", "text": "handle...error" }
+      ],
+      "answer": "a",
+      "explanation": "The 'try...except' block is used to handle exceptions in Python."
+    },
+    {
+      "id": "01-python-for-de-q7",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Fill in the blanks to create a virtual environment:",
+      "language": "python",
+      "code_template": "python -m venv ____",
+      "blanks": [
+        { "id": "b1", "options": ["myenv", "venv", "env", "environment"], "answer": "myenv" }
+      ],
+      "explanation": "You can name your virtual environment anything; 'myenv' is just an example."
+    },
+    {
+      "id": "01-python-for-de-q8",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(sum([i for i in range(5) if i % 2 == 0]))",
+      "options": [
+        { "id": "a", "text": "10" },
+        { "id": "b", "text": "6" },
+        { "id": "c", "text": "4" },
+        { "id": "d", "text": "5" }
+      ],
+      "answer": "a",
+      "explanation": "The sum of even numbers in the range of 0 to 4 (0, 2, 4) is 6."
+    },
+    {
+      "id": "01-python-for-de-q9",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Python lists are static in size.",
+      "answer": false,
+      "explanation": "Lists in Python are dynamic and can grow or shrink in size."
+    },
+    {
+      "id": "01-python-for-de-q10",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the purpose of the 'with' statement in Python?",
+      "options": [
+        { "id": "a", "text": "To define a new function" },
+        { "id": "b", "text": "To manage resources" },
+        { "id": "c", "text": "To create a loop" },
+        { "id": "d", "text": "To import modules" }
+      ],
+      "answer": "b",
+      "explanation": "'With' is used for resource management, ensuring proper acquisition and release."
+    },
+    {
+      "id": "01-python-for-de-q11",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to handle an exception:",
+      "steps": [
+        { "id": "s1", "text": "Log the error" },
+        { "id": "s2", "text": "Try the code" },
+        { "id": "s3", "text": "Handle the error" },
+        { "id": "s4", "text": "Raise the error" }
+      ],
+      "correctOrder": ["s2", "s3", "s1", "s4"],
+      "explanation": "You first try the code, then handle any errors, and can log or raise them as needed."
+    },
+    {
+      "id": "01-python-for-de-q12",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which keyword is used to define a function in Python?",
+      "options": [
+        { "id": "a", "text": "def" },
+        { "id": "b", "text": "function" },
+        { "id": "c", "text": "define" },
+        { "id": "d", "text": "func" }
+      ],
+      "answer": "a",
+      "explanation": "The 'def' keyword is used to define a function in Python."
+    },
+    {
+      "id": "01-python-for-de-q13",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the code to append an item to a list:",
+      "language": "python",
+      "code_template": "my_list = [1, 2, 3] \nmy_list.____(4)",
+      "blanks": [
+        { "id": "b1", "options": ["add", "append", "extend", "insert"], "answer": "append" }
+      ],
+      "explanation": "The 'append' method is used to add an item to the end of a list."
+    },
+    {
+      "id": "01-python-for-de-q14",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print('hello'.upper())",
+      "options": [
+        { "id": "a", "text": "hello" },
+        { "id": "b", "text": "Hello" },
+        { "id": "c", "text": "HELLO" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "c",
+      "explanation": "The upper() method converts all characters to uppercase."
+    },
+    {
+      "id": "01-python-for-de-q15",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "The 'len()' function in Python returns the number of elements in a collection.",
+      "answer": true,
+      "explanation": "The 'len()' function gives the total count of items in a list, tuple, or dictionary."
+    }
+  ]
+}

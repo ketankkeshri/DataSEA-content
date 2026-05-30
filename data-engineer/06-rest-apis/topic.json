@@ -1,0 +1,43 @@
+{
+  "id": "06-rest-apis",
+  "section": "data-engineer",
+  "tier": "beginner",
+  "moduleOrder": 6,
+  "version": 1,
+  "title": "REST APIs for DEs",
+  "shortDescription": "REST APIs for DEs \u2014 beginner to advanced concepts and code.",
+  "icon": "06-rest-apis",
+  "estimatedMinutes": 40,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-http-basics",
+      "title": "Http Basics",
+      "minutes": 8
+    },
+    {
+      "id": "02-requests-library",
+      "title": "Requests Library",
+      "minutes": 8
+    },
+    {
+      "id": "03-pagination-retries",
+      "title": "Pagination Retries",
+      "minutes": 8
+    },
+    {
+      "id": "04-rate-limiting",
+      "title": "Rate Limiting",
+      "minutes": 8
+    },
+    {
+      "id": "05-oauth",
+      "title": "Oauth",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

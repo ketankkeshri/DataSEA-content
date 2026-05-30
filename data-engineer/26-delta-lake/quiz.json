@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "26-delta-lake",
+  "type": "module",
+  "questions": [
+    {
+      "id": "26-delta-lake-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does Delta Lake provide for data reliability?",
+      "options": [
+        { "id": "a", "text": "Increased storage costs" },
+        { "id": "b", "text": "ACID transactions" },
+        { "id": "c", "text": "Reduced data access speed" },
+        { "id": "d", "text": "Data redundancy" }
+      ],
+      "answer": "b",
+      "explanation": "Delta Lake ensures ACID transactions, which guarantee data reliability and consistency.",
+      "tags": ["delta-lake", "acidity"]
+    },
+    {
+      "id": "26-delta-lake-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which command is used to optimize a Delta Lake table?",
+      "options": [
+        { "id": "a", "text": "OPTIMIZE" },
+        { "id": "b", "text": "COMPACT" },
+        { "id": "c", "text": "REFRESH" },
+        { "id": "d", "text": "VACUUM" }
+      ],
+      "answer": "a",
+      "explanation": "The OPTIMIZE command is specifically used to optimize the layout of data in Delta Lake tables.",
+      "tags": ["delta-lake", "optimization"]
+    },
+    {
+      "id": "26-delta-lake-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to read a Delta table:",
+      "language": "python",
+      "code_template": "df = spark.read.____('delta').load('path/to/table')",
+      "blanks": [
+        { "id": "b1", "options": ["format", "table", "option", "read"], "answer": "format" }
+      ],
+      "explanation": "The 'format' method specifies the format of the data source, which is 'delta' in this case.",
+      "tags": ["delta-lake", "reading"]
+    },
+    {
+      "id": "26-delta-lake-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(['a' + str(x) for x in range(3)])",
+      "options": [
+        { "id": "a", "text": "['a0', 'a1', 'a2']" },
+        { "id": "b", "text": "['a', 'a', 'a']" },
+        { "id": "c", "text": "['a0', 'a1', 'a']" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The list comprehension generates strings by concatenating 'a' with the current index.",
+      "tags": ["python", "output"]
+    },
+    {
+      "id": "26-delta-lake-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Delta Lake supports schema evolution.",
+      "answer": true,
+      "explanation": "True. Delta Lake allows for schema evolution, enabling changes in the table schema over time.",
+      "tags": ["delta-lake", "schema"]
+    },
+    {
+      "id": "26-delta-lake-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does the 'time travel' feature in Delta Lake allow you to do?",
+      "options": [
+        { "id": "a", "text": "Access data as of a specific version" },
+        { "id": "b", "text": "Predict future data" },
+        { "id": "c", "text": "Automatically clean up old data" },
+        { "id": "d", "text": "Encrypt data at rest" }
+      ],
+      "answer": "a",
+      "explanation": "Time travel allows users to access historical versions of data in Delta Lake tables.",
+      "tags": ["delta-lake", "time-travel"]
+    },
+    {
+      "id": "26-delta-lake-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to perform a Delta Lake merge:",
+      "steps": [
+        { "id": "s1", "text": "Load the source DataFrame" },
+        { "id": "s2", "text": "Perform the merge operation" },
+        { "id": "s3", "text": "Load the target Delta table" },
+        { "id": "s4", "text": "Write the result back to the Delta table" }
+      ],
+      "correctOrder": ["s3", "s1", "s2", "s4"],
+      "explanation": "You first load the target table, then the source DataFrame, perform the merge, and finally write back the result.",
+      "tags": ["delta-lake", "merge"]
+    },
+    {
+      "id": "26-delta-lake-q8",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following is NOT a feature of Delta Lake?",
+      "options": [
+        { "id": "a", "text": "Schema enforcement" },
+        { "id": "b", "text": "Data versioning" },
+        { "id": "c", "text": "Real-time streaming" },
+        { "id": "d", "text": "Data archiving" }
+      ],
+      "answer": "d",
+      "explanation": "Delta Lake focuses on features like ACID transactions and schema enforcement, but does not specifically provide data archiving.",
+      "tags": ["delta-lake", "features"]
+    },
+    {
+      "id": "26-delta-lake-q9",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the code to perform a vacuum operation:",
+      "language": "python",
+      "code_template": "spark.sql('VACUUM my_table ____')",
+      "blanks": [
+        { "id": "b1", "options": ["RETAIN 7 HOURS", "RETAIN 24 HOURS", "RETAIN 30 HOURS", "RETAIN 1 DAY"], "answer": "RETAIN 7 HOURS" }
+      ],
+      "explanation": "The VACUUM command removes files older than the specified retention period; 'RETAIN 7 HOURS' is a common usage.",
+      "tags": ["delta-lake", "vacuum"]
+    },
+    {
+      "id": "26-delta-lake-q10",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Delta Lake can automatically optimize data layout based on query patterns.",
+      "answer": true,
+      "explanation": "True. Delta Lake can optimize data layout with features like Z-Ordering, improving query performance.",
+      "tags": ["delta-lake", "optimization"]
+    },
+    {
+      "id": "26-delta-lake-q11",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following statements is true about Z-Ordering?",
+      "options": [
+        { "id": "a", "text": "It sorts data based on a single column" },
+        { "id": "b", "text": "It improves read performance for queries filtering on specific columns" },
+        { "id": "c", "text": "It increases write latency" },
+        { "id": "d", "text": "It requires manual intervention for optimization" }
+      ],
+      "answer": "b",
+      "explanation": "Z-Ordering helps to colocate related information in the same set of files, improving query performance for specific filters.",
+      "tags": ["delta-lake", "z-ordering"]
+    },
+    {
+      "id": "26-delta-lake-q12",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Fill in the blanks to create a Delta table:",
+      "language": "python",
+      "code_template": "df.write.format('delta').mode('overwrite').save('path/to/table')",
+      "blanks": [
+        { "id": "b1", "options": ["write", "saveAsTable", "create", "insert"], "answer": "write" }
+      ],
+      "explanation": "The 'write' method is used to save a DataFrame in Delta format to a specified location.",
+      "tags": ["delta-lake", "writing"]
+    },
+    {
+      "id": "26-delta-lake-q13",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does the following code print?",
+      "language": "python",
+      "code": "print(set([1, 2, 2, 3]))",
+      "options": [
+        { "id": "a", "text": "{1, 2, 3}" },
+        { "id": "b", "text": "[1, 2, 3]" },
+        { "id": "c", "text": "[1, 2, 2, 3]" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The set constructor removes duplicates, so it prints {1, 2, 3}.",
+      "tags": ["python", "output"]
+    },
+    {
+      "id": "26-delta-lake-q14",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to perform time travel in Delta Lake:",
+      "steps": [
+        { "id": "s1", "text": "Identify the version you want to query" },
+        { "id": "s2", "text": "Use the version in your read command" },
+        { "id": "s3", "text": "Load the Delta table normally" }
+      ],
+      "correctOrder": ["s3", "s1", "s2"],
+      "explanation": "You first load the table, identify the desired version, and then read using that version.",
+      "tags": ["delta-lake", "time-travel"]
+    },
+    {
+      "id": "26-delta-lake-q15",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Delta Lake supports both batch and streaming data.",
+      "answer": true,
+      "explanation": "True. Delta Lake can handle both batch and streaming data, providing flexibility for various data pipelines.",
+      "tags": ["delta-lake", "streaming"]
+    }
+  ]
+}

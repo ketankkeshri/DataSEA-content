@@ -1,0 +1,38 @@
+{
+  "id": "05-json-yaml-toml",
+  "section": "data-engineer",
+  "tier": "beginner",
+  "moduleOrder": 5,
+  "version": 1,
+  "title": "JSON, YAML, TOML",
+  "shortDescription": "JSON, YAML, TOML \u2014 beginner to advanced concepts and code.",
+  "icon": "05-json-yaml-toml",
+  "estimatedMinutes": 32,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-json-deep-dive",
+      "title": "Json Deep Dive",
+      "minutes": 8
+    },
+    {
+      "id": "02-yaml-pitfalls",
+      "title": "Yaml Pitfalls",
+      "minutes": 8
+    },
+    {
+      "id": "03-toml-basics",
+      "title": "Toml Basics",
+      "minutes": 8
+    },
+    {
+      "id": "04-schema-validation",
+      "title": "Schema Validation",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

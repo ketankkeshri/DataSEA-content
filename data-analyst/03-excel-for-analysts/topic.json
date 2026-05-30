@@ -1,0 +1,43 @@
+{
+  "id": "03-excel-for-analysts",
+  "section": "data-analyst",
+  "tier": "beginner",
+  "moduleOrder": 3,
+  "version": 1,
+  "title": "Excel for Analysts",
+  "shortDescription": "Excel for Analysts \u2014 beginner to advanced concepts and code.",
+  "icon": "03-excel-for-analysts",
+  "estimatedMinutes": 40,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-formulas",
+      "title": "Formulas",
+      "minutes": 8
+    },
+    {
+      "id": "03-vlookup-xlookup",
+      "title": "Vlookup Xlookup",
+      "minutes": 8
+    },
+    {
+      "id": "04-pivot-tables",
+      "title": "Pivot Tables",
+      "minutes": 8
+    },
+    {
+      "id": "05-charts",
+      "title": "Charts",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

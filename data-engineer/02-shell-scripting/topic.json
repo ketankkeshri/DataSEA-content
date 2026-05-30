@@ -1,0 +1,48 @@
+{
+  "id": "02-shell-scripting",
+  "section": "data-engineer",
+  "tier": "beginner",
+  "moduleOrder": 2,
+  "version": 1,
+  "title": "Shell Scripting",
+  "shortDescription": "Shell Scripting \u2014 beginner to advanced concepts and code.",
+  "icon": "02-shell-scripting",
+  "estimatedMinutes": 48,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-variables-flow",
+      "title": "Variables Flow",
+      "minutes": 8
+    },
+    {
+      "id": "03-pipes-redirects",
+      "title": "Pipes Redirects",
+      "minutes": 8
+    },
+    {
+      "id": "04-find-grep-awk",
+      "title": "Find Grep Awk",
+      "minutes": 8
+    },
+    {
+      "id": "05-cron",
+      "title": "Cron",
+      "minutes": 8
+    },
+    {
+      "id": "06-debugging",
+      "title": "Debugging",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

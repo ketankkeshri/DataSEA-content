@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "18-apache-spark",
+  "type": "module",
+  "questions": [
+    {
+      "id": "18-apache-spark-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the primary purpose of Apache Spark?",
+      "options": [
+        { "id": "a", "text": "Web development" },
+        { "id": "b", "text": "Data processing" },
+        { "id": "c", "text": "Game development" },
+        { "id": "d", "text": "Mobile app development" }
+      ],
+      "answer": "b",
+      "explanation": "Apache Spark is designed for large-scale data processing and analytics."
+    },
+    {
+      "id": "18-apache-spark-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which of the following is a core abstraction in Spark?",
+      "options": [
+        { "id": "a", "text": "DataFrame" },
+        { "id": "b", "text": "Thread" },
+        { "id": "c", "text": "Database" },
+        { "id": "d", "text": "Cluster" }
+      ],
+      "answer": "a",
+      "explanation": "DataFrames are a core abstraction used for structured data processing in Spark."
+    },
+    {
+      "id": "18-apache-spark-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet:",
+      "language": "python",
+      "code_template": "df.____('column_name').____()",
+      "blanks": [
+        { "id": "b1", "options": ["filter", "select", "groupBy", "join"], "answer": "select" },
+        { "id": "b2", "options": ["count", "avg", "sum", "max"], "answer": "count" }
+      ],
+      "explanation": "The select method retrieves specific columns, and count aggregates the number of rows."
+    },
+    {
+      "id": "18-apache-spark-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print([x**2 for x in range(4)])",
+      "options": [
+        { "id": "a", "text": "[0, 1, 4, 9]" },
+        { "id": "b", "text": "[0, 1, 4, 16]" },
+        { "id": "c", "text": "[1, 4, 9, 16]" },
+        { "id": "d", "text": "[1, 2, 3, 4]" }
+      ],
+      "answer": "b",
+      "explanation": "The code squares each number from 0 to 3, resulting in [0, 1, 4, 9]."
+    },
+    {
+      "id": "18-apache-spark-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Spark supports both batch and streaming data processing.",
+      "answer": true,
+      "explanation": "Apache Spark is capable of handling both batch and real-time streaming data."
+    },
+    {
+      "id": "18-apache-spark-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following is true about RDDs?",
+      "options": [
+        { "id": "a", "text": "They are immutable." },
+        { "id": "b", "text": "They can be modified after creation." },
+        { "id": "c", "text": "They do not support fault tolerance." },
+        { "id": "d", "text": "They are only used in batch processing." }
+      ],
+      "answer": "a",
+      "explanation": "RDDs (Resilient Distributed Datasets) are immutable and provide fault tolerance."
+    },
+    {
+      "id": "18-apache-spark-q7",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet:",
+      "language": "python",
+      "code_template": "df.____('column_name').____()",
+      "blanks": [
+        { "id": "b1", "options": ["filter", "select", "groupBy", "orderBy"], "answer": "orderBy" },
+        { "id": "b2", "options": ["asc", "desc", "avg", "count"], "answer": "desc" }
+      ],
+      "explanation": "orderBy is used to sort the DataFrame by the specified column in descending order."
+    },
+    {
+      "id": "18-apache-spark-q8",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "When would you choose DataFrames over RDDs?",
+      "options": [
+        { "id": "a", "text": "For unstructured data." },
+        { "id": "b", "text": "For optimized execution." },
+        { "id": "c", "text": "For smaller datasets." },
+        { "id": "d", "text": "For real-time processing only." }
+      ],
+      "answer": "b",
+      "explanation": "DataFrames provide optimizations through Catalyst and Tungsten, making them more efficient."
+    },
+    {
+      "id": "18-apache-spark-q9",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps for using Spark for data processing:",
+      "steps": [
+        { "id": "s1", "text": "Load the data" },
+        { "id": "s2", "text": "Create a Spark session" },
+        { "id": "s3", "text": "Perform transformations" },
+        { "id": "s4", "text": "Action to trigger execution" }
+      ],
+      "correctOrder": ["s2", "s1", "s3", "s4"],
+      "explanation": "You must create a Spark session first, then load data, perform transformations, and finally trigger actions."
+    },
+    {
+      "id": "18-apache-spark-q10",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Shuffles can negatively impact performance due to data movement.",
+      "answer": true,
+      "explanation": "Shuffles require data to be moved across the network, which can slow down processing."
+    },
+    {
+      "id": "18-apache-spark-q11",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What is the main advantage of using broadcast joins?",
+      "options": [
+        { "id": "a", "text": "They are faster for large datasets." },
+        { "id": "b", "text": "They reduce data shuffling." },
+        { "id": "c", "text": "They simplify code." },
+        { "id": "d", "text": "They are easier to debug." }
+      ],
+      "answer": "b",
+      "explanation": "Broadcast joins reduce the amount of data shuffled across the network by broadcasting the smaller dataset to all nodes."
+    },
+    {
+      "id": "18-apache-spark-q12",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the tuning snippet:",
+      "language": "python",
+      "code_template": "spark.conf.set('spark.executor.memory', '____')",
+      "blanks": [
+        { "id": "b1", "options": ["1g", "2g", "512m", "4g"], "answer": "2g" }
+      ],
+      "explanation": "Setting the executor memory to '2g' allocates 2 GB of memory for each executor."
+    },
+    {
+      "id": "18-apache-spark-q13",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does the 'foreach' action do in Spark?",
+      "options": [
+        { "id": "a", "text": "Applies a function to each element" },
+        { "id": "b", "text": "Returns a single result" },
+        { "id": "c", "text": "Creates a new RDD" },
+        { "id": "d", "text": "Joins two RDDs" }
+      ],
+      "answer": "a",
+      "explanation": "'foreach' applies a specified function to each element of the RDD, allowing for side effects."
+    },
+    {
+      "id": "18-apache-spark-q14",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(list(range(5))[-2:])",
+      "options": [
+        { "id": "a", "text": "[3, 4]" },
+        { "id": "b", "text": "[2, 3, 4]" },
+        { "id": "c", "text": "[1, 2]" },
+        { "id": "d", "text": "[2, 3, 4]" }
+      ],
+      "answer": "b",
+      "explanation": "The code accesses the last two elements of the list [0, 1, 2, 3, 4], which are [3, 4]."
+    },
+    {
+      "id": "18-apache-spark-q15",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Spark SQL can be used to run SQL queries on DataFrames.",
+      "answer": true,
+      "explanation": "Spark SQL allows users to execute SQL queries on DataFrames, integrating SQL with Spark's processing."
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "14-looker-lookml",
+  "type": "module",
+  "questions": [
+    {
+      "id": "14-looker-lookml-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is LookML primarily used for?",
+      "options": [
+        { "id": "a", "text": "Data visualization" },
+        { "id": "b", "text": "Data modeling" },
+        { "id": "c", "text": "Data cleaning" },
+        { "id": "d", "text": "Machine learning" }
+      ],
+      "answer": "b",
+      "explanation": "LookML is a modeling language for transforming raw data into a structured format for analysis.",
+      "tags": ["lookml", "data_modeling"]
+    },
+    {
+      "id": "14-looker-lookml-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which of the following is a key component in LookML?",
+      "options": [
+        { "id": "a", "text": "Views" },
+        { "id": "b", "text": "Functions" },
+        { "id": "c", "text": "Tables" },
+        { "id": "d", "text": "Schemas" }
+      ],
+      "answer": "a",
+      "explanation": "Views are essential components in LookML that define the structure of data queries.",
+      "tags": ["lookml", "components"]
+    },
+    {
+      "id": "14-looker-lookml-q3",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the purpose of a derived table in LookML?",
+      "options": [
+        { "id": "a", "text": "To aggregate data" },
+        { "id": "b", "text": "To store raw data" },
+        { "id": "c", "text": "To create a temporary table for queries" },
+        { "id": "d", "text": "To provide user permissions" }
+      ],
+      "answer": "c",
+      "explanation": "Derived tables are used in LookML to create temporary tables based on SQL queries for analysis.",
+      "tags": ["lookml", "derived_tables"]
+    },
+    {
+      "id": "14-looker-lookml-q4",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the LookML snippet:",
+      "language": "lookml",
+      "code_template": "view: orders { dimension: order_id { type: ____ } }",
+      "blanks": [
+        { "id": "b1", "options": ["number", "string", "date", "boolean"], "answer": "number" }
+      ],
+      "explanation": "The order_id dimension should be defined as a number to correctly represent the unique identifier for each order.",
+      "tags": ["lookml", "dimensions"]
+    },
+    {
+      "id": "14-looker-lookml-q5",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this LookML code print?",
+      "language": "lookml",
+      "code": "dimension: total_sales { sql: SUM(${order_amount}) ;; }",
+      "options": [
+        { "id": "a", "text": "The sum of order amounts" },
+        { "id": "b", "text": "The average of order amounts" },
+        { "id": "c", "text": "The count of orders" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "This code defines a dimension that calculates the total sales by summing the order amounts.",
+      "tags": ["lookml", "dimensions"]
+    },
+    {
+      "id": "14-looker-lookml-q6",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "LookML supports reusable components like explores and views. True or False?",
+      "answer": true,
+      "explanation": "True, LookML allows for the reuse of explores and views across different models.",
+      "tags": ["lookml", "reusability"]
+    },
+    {
+      "id": "14-looker-lookml-q7",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does the 'sql_table_name' parameter do?",
+      "options": [
+        { "id": "a", "text": "Defines the SQL database" },
+        { "id": "b", "text": "Maps a LookML view to a SQL table" },
+        { "id": "c", "text": "Specifies the SQL query" },
+        { "id": "d", "text": "Sets user permissions" }
+      ],
+      "answer": "b",
+      "explanation": "'sql_table_name' links a LookML view to a specific SQL table, allowing the view to pull data from it.",
+      "tags": ["lookml", "sql"]
+    },
+    {
+      "id": "14-looker-lookml-q8",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these LookML development steps correctly:",
+      "steps": [
+        { "id": "s1", "text": "Create a new model" },
+        { "id": "s2", "text": "Define views" },
+        { "id": "s3", "text": "Test the model" },
+        { "id": "s4", "text": "Deploy to production" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "First, you create a model, then define the views, test the model, and finally deploy it.",
+      "tags": ["lookml", "development"]
+    },
+    {
+      "id": "14-looker-lookml-q9",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the LookML snippet for a persistent derived table:",
+      "language": "lookml",
+      "code_template": "explore: sales { derived_table: { sql: SELECT * FROM orders; __ } }",
+      "blanks": [
+        { "id": "b1", "options": ["persist_for: 24 hours", "materialized: yes", "persisted: true", "cache: 1 hour"], "answer": "persist_for: 24 hours" }
+      ],
+      "explanation": "The 'persist_for' parameter specifies how long to keep the derived table in the database.",
+      "tags": ["lookml", "derived_tables"]
+    },
+    {
+      "id": "14-looker-lookml-q10",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which is a benefit of using persistent derived tables?",
+      "options": [
+        { "id": "a", "text": "Faster query performance" },
+        { "id": "b", "text": "Reduced data storage" },
+        { "id": "c", "text": "Simpler model design" },
+        { "id": "d", "text": "Increased data duplication" }
+      ],
+      "answer": "a",
+      "explanation": "Persistent derived tables can improve query performance by precomputing and storing results.",
+      "tags": ["lookml", "persistent_tables"]
+    },
+    {
+      "id": "14-looker-lookml-q11",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this LookML code output?",
+      "language": "lookml",
+      "code": "sql: COUNT(${order_id}) AS order_count ;;",
+      "options": [
+        { "id": "a", "text": "Total number of orders" },
+        { "id": "b", "text": "Total count of distinct order IDs" },
+        { "id": "c", "text": "Average order count" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "This code counts all order IDs, representing the total number of orders.",
+      "tags": ["lookml", "sql"]
+    },
+    {
+      "id": "14-looker-lookml-q12",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "You can only create one derived table per view. True or False?",
+      "answer": false,
+      "explanation": "False, a view can have multiple derived tables defined within it.",
+      "tags": ["lookml", "derived_tables"]
+    },
+    {
+      "id": "14-looker-lookml-q13",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the best way to improve the performance of a LookML model?",
+      "options": [
+        { "id": "a", "text": "Use more derived tables" },
+        { "id": "b", "text": "Reduce the number of views" },
+        { "id": "c", "text": "Optimize SQL queries" },
+        { "id": "d", "text": "Increase data duplication" }
+      ],
+      "answer": "c",
+      "explanation": "Optimizing SQL queries directly affects performance and can lead to faster execution times.",
+      "tags": ["lookml", "performance"]
+    },
+    {
+      "id": "14-looker-lookml-q14",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these LookML optimization steps correctly:",
+      "steps": [
+        { "id": "s1", "text": "Analyze query performance" },
+        { "id": "s2", "text": "Identify bottlenecks" },
+        { "id": "s3", "text": "Refactor code" },
+        { "id": "s4", "text": "Test the improvements" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "Analyze query performance first, then identify issues, refactor code, and test changes.",
+      "tags": ["lookml", "optimization"]
+    },
+    {
+      "id": "14-looker-lookml-q15",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the LookML snippet to define a measure:",
+      "language": "lookml",
+      "code_template": "measure: total_revenue { type: ____; sql: SUM(${revenue}); }",
+      "blanks": [
+        { "id": "b1", "options": ["count", "number", "sum", "average"], "answer": "sum" }
+      ],
+      "explanation": "The measure type should be 'sum' to aggregate total revenue correctly.",
+      "tags": ["lookml", "measures"]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "14-gcp-cloud-storage",
+  "section": "data-engineer",
+  "tier": "intermediate",
+  "moduleOrder": 14,
+  "version": 1,
+  "title": "GCP Cloud Storage",
+  "shortDescription": "GCP Cloud Storage \u2014 beginner to advanced concepts and code.",
+  "icon": "14-gcp-cloud-storage",
+  "estimatedMinutes": 40,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-buckets-iam",
+      "title": "Buckets Iam",
+      "minutes": 8
+    },
+    {
+      "id": "03-lifecycle",
+      "title": "Lifecycle",
+      "minutes": 8
+    },
+    {
+      "id": "04-signed-urls",
+      "title": "Signed Urls",
+      "minutes": 8
+    },
+    {
+      "id": "05-integration-bigquery",
+      "title": "Integration Bigquery",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

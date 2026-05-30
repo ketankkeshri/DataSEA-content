@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "02-mysql-basics",
+  "type": "module",
+  "questions": [
+    {
+      "id": "02-mysql-basics-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is MySQL primarily used for?",
+      "options": [
+        { "id": "a", "text": "Web development" },
+        { "id": "b", "text": "Database management" },
+        { "id": "c", "text": "Network security" },
+        { "id": "d", "text": "System programming" }
+      ],
+      "answer": "b",
+      "explanation": "MySQL is a relational database management system used for storing and managing data.",
+      "tags": ["mysql", "database"]
+    },
+    {
+      "id": "02-mysql-basics-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does the 'SELECT' statement do?",
+      "options": [
+        { "id": "a", "text": "Insert data" },
+        { "id": "b", "text": "Update records" },
+        { "id": "c", "text": "Retrieve data" },
+        { "id": "d", "text": "Delete data" }
+      ],
+      "answer": "c",
+      "explanation": "The 'SELECT' statement is used to retrieve data from a database.",
+      "tags": ["sql", "select"]
+    },
+    {
+      "id": "02-mysql-basics-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the SQL snippet to select all columns from a table named 'users':",
+      "language": "sql",
+      "code_template": "SELECT ____ FROM users;",
+      "blanks": [
+        { "id": "b1", "options": ["*", "ALL", "COLUMNS", "EACH"], "answer": "*"}
+      ],
+      "explanation": "Using '*' selects all columns from the specified table.",
+      "tags": ["sql", "select"]
+    },
+    {
+      "id": "02-mysql-basics-q4",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "MySQL is a NoSQL database.",
+      "answer": false,
+      "explanation": "MySQL is a relational database management system, not a NoSQL database.",
+      "tags": ["mysql", "database"]
+    },
+    {
+      "id": "02-mysql-basics-q5",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which statement is used to remove a table from a database?",
+      "options": [
+        { "id": "a", "text": "DELETE" },
+        { "id": "b", "text": "REMOVE" },
+        { "id": "c", "text": "DROP" },
+        { "id": "d", "text": "CLEAR" }
+      ],
+      "answer": "c",
+      "explanation": "The 'DROP' statement is used to remove a table from a database.",
+      "tags": ["sql", "drop"]
+    },
+    {
+      "id": "02-mysql-basics-q6",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does the following SQL query return? `SELECT COUNT(*) FROM users;`",
+      "options": [
+        { "id": "a", "text": "The total number of users." },
+        { "id": "b", "text": "All user details." },
+        { "id": "c", "text": "An error." },
+        { "id": "d", "text": "No results." }
+      ],
+      "answer": "a",
+      "explanation": "This query counts the total number of records in the 'users' table.",
+      "tags": ["sql", "count"]
+    },
+    {
+      "id": "02-mysql-basics-q7",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the purpose of an index in MySQL?",
+      "options": [
+        { "id": "a", "text": "To store data" },
+        { "id": "b", "text": "To optimize query performance" },
+        { "id": "c", "text": "To back up data" },
+        { "id": "d", "text": "To encrypt data" }
+      ],
+      "answer": "b",
+      "explanation": "Indexes are used to optimize the speed of data retrieval operations on a database table.",
+      "tags": ["mysql", "index"]
+    },
+    {
+      "id": "02-mysql-basics-q8",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to create a table in MySQL correctly:",
+      "steps": [
+        { "id": "s1", "text": "Define the table structure." },
+        { "id": "s2", "text": "Use the CREATE TABLE statement." },
+        { "id": "s3", "text": "Specify data types for each column." },
+        { "id": "s4", "text": "Execute the SQL command." }
+      ],
+      "correctOrder": ["s2", "s1", "s3", "s4"],
+      "explanation": "First, you write the CREATE TABLE command, then define the structure, specify data types, and execute the command.",
+      "tags": ["sql", "create"]
+    },
+    {
+      "id": "02-mysql-basics-q9",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the SQL snippet to retrieve unique values from the 'city' column in the 'addresses' table:",
+      "language": "sql",
+      "code_template": "SELECT ____ FROM addresses;",
+      "blanks": [
+        { "id": "b1", "options": ["DISTINCT city", "UNIQUE city", "CITY", "city"], "answer": "DISTINCT city" }
+      ],
+      "explanation": "Using DISTINCT helps to retrieve unique values from the specified column.",
+      "tags": ["sql", "distinct"]
+    },
+    {
+      "id": "02-mysql-basics-q10",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following is a valid way to join two tables in MySQL?",
+      "options": [
+        { "id": "a", "text": "JOIN table1, table2" },
+        { "id": "b", "text": "table1 JOIN table2 ON condition" },
+        { "id": "c", "text": "table1 AND table2" },
+        { "id": "d", "text": "table1 + table2" }
+      ],
+      "answer": "b",
+      "explanation": "The correct syntax to join two tables is 'table1 JOIN table2 ON condition'.",
+      "tags": ["sql", "join"]
+    },
+    {
+      "id": "02-mysql-basics-q11",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "An index can improve query performance but may slow down write operations.",
+      "answer": true,
+      "explanation": "While indexes speed up read operations, they can slow down insert, update, and delete operations due to the overhead of maintaining the index.",
+      "tags": ["mysql", "index"]
+    },
+    {
+      "id": "02-mysql-basics-q12",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What will this SQL command return? `SELECT AVG(salary) FROM employees;`",
+      "options": [
+        { "id": "a", "text": "The average salary of all employees." },
+        { "id": "b", "text": "An error." },
+        { "id": "c", "text": "The total salary of all employees." },
+        { "id": "d", "text": "The highest salary." }
+      ],
+      "answer": "a",
+      "explanation": "The AVG() function calculates the average of the specified column, returning the average salary of all employees.",
+      "tags": ["sql", "avg"]
+    },
+    {
+      "id": "02-mysql-basics-q13",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the SQL code to update the 'status' field in 'orders' table where 'id' is 10:",
+      "language": "sql",
+      "code_template": "UPDATE orders SET status = ____ WHERE id = 10;",
+      "blanks": [
+        { "id": "b1", "options": ["'shipped'", "'pending'", "'cancelled'", "'completed'"], "answer": "'shipped'" }
+      ],
+      "explanation": "The SET clause is used to specify the new value for the column being updated.",
+      "tags": ["sql", "update"]
+    },
+    {
+      "id": "02-mysql-basics-q14",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does the 'LIMIT' clause do in a SQL query?",
+      "options": [
+        { "id": "a", "text": "Limits the number of rows returned" },
+        { "id": "b", "text": "Limits the number of columns returned" },
+        { "id": "c", "text": "Limits the size of the database" },
+        { "id": "d", "text": "Limits the execution time of a query" }
+      ],
+      "answer": "a",
+      "explanation": "'LIMIT' specifies the maximum number of records to return from a query.",
+      "tags": ["sql", "limit"]
+    },
+    {
+      "id": "02-mysql-basics-q15",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "The 'WHERE' clause is used to filter records in a SQL query.",
+      "answer": true,
+      "explanation": "The 'WHERE' clause allows you to specify conditions for filtering records in SQL queries.",
+      "tags": ["sql", "where"]
+    }
+  ]
+}

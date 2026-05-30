@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "16-apache-nifi",
+  "type": "module",
+  "questions": [
+    {
+      "id": "16-apache-nifi-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is Apache NiFi primarily used for?",
+      "options": [
+        { "id": "a", "text": "Data storage" },
+        { "id": "b", "text": "Data ingestion and processing" },
+        { "id": "c", "text": "Data visualization" },
+        { "id": "d", "text": "Machine learning" }
+      ],
+      "answer": "b",
+      "explanation": "Apache NiFi is designed for automating the flow of data between systems."
+    },
+    {
+      "id": "16-apache-nifi-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which component in NiFi is responsible for data transformation?",
+      "options": [
+        { "id": "a", "text": "Processor" },
+        { "id": "b", "text": "Connection" },
+        { "id": "c", "text": "FlowFile" },
+        { "id": "d", "text": "Controller Service" }
+      ],
+      "answer": "a",
+      "explanation": "Processors in NiFi are designed to perform operations on FlowFiles, including data transformation."
+    },
+    {
+      "id": "16-apache-nifi-q3",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following statements about NiFi's flow management is true?",
+      "options": [
+        { "id": "a", "text": "It allows for data to be processed in a batch mode only." },
+        { "id": "b", "text": "It can dynamically adjust the flow of data." },
+        { "id": "c", "text": "FlowFiles are processed only in a sequential manner." },
+        { "id": "d", "text": "NiFi only supports JSON data formats." }
+      ],
+      "answer": "b",
+      "explanation": "NiFi can dynamically adjust data flow based on the system's conditions and requirements."
+    },
+    {
+      "id": "16-apache-nifi-q4",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the NiFi processor configuration:",
+      "language": "json",
+      "code_template": "{ \"name\": \"MyProcessor\", \"type\": \"org.apache.nifi.processors.standard.GetFile\", \"properties\": { \"Input Directory\": \"____\", \"Keep Source File\": \"____\" } }",
+      "blanks": [
+        { "id": "b1", "options": ["/input", "/output", "/tmp", "/data"], "answer": "/input" },
+        { "id": "b2", "options": ["true", "false"], "answer": "false" }
+      ],
+      "explanation": "This configuration sets the input directory for the processor and specifies not to keep the source files."
+    },
+    {
+      "id": "16-apache-nifi-q5",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this NiFi expression yield?",
+      "language": "nifi",
+      "code": "${now():format('yyyy-MM-dd')}",
+      "options": [
+        { "id": "a", "text": "Current date in yyyy-MM-dd format" },
+        { "id": "b", "text": "Current time in hh:mm:ss format" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "Date in a different format" }
+      ],
+      "answer": "a",
+      "explanation": "This expression correctly formats the current date in the specified format."
+    },
+    {
+      "id": "16-apache-nifi-q6",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Apache NiFi supports data provenance tracking.",
+      "answer": true,
+      "explanation": "NiFi provides detailed tracking of data flow to ensure transparency and traceability."
+    },
+    {
+      "id": "16-apache-nifi-q7",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following is NOT a feature of NiFi?",
+      "options": [
+        { "id": "a", "text": "Data flow visualization" },
+        { "id": "b", "text": "Real-time data processing" },
+        { "id": "c", "text": "Data encryption at rest" },
+        { "id": "d", "text": "Data versioning" }
+      ],
+      "answer": "d",
+      "explanation": "While NiFi manages data flows efficiently, it does not inherently support data versioning."
+    },
+    {
+      "id": "16-apache-nifi-q8",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to create a NiFi data pipeline:",
+      "steps": [
+        { "id": "s1", "text": "Connect processors with relationships." },
+        { "id": "s2", "text": "Add processors to the canvas." },
+        { "id": "s3", "text": "Configure processor settings." },
+        { "id": "s4", "text": "Start the data flow." }
+      ],
+      "correctOrder": ["s2", "s3", "s1", "s4"],
+      "explanation": "First, add and configure processors, then connect them, and finally start the flow."
+    },
+    {
+      "id": "16-apache-nifi-q9",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "If a processor fails in NiFi, what is the default behavior?",
+      "options": [
+        { "id": "a", "text": "The flow is paused." },
+        { "id": "b", "text": "The flow continues without the failed processor." },
+        { "id": "c", "text": "The flowFile is sent to the failure relationship." },
+        { "id": "d", "text": "The processor is automatically restarted." }
+      ],
+      "answer": "c",
+      "explanation": "By default, failed flowFiles are routed to the failure relationship for handling."
+    },
+    {
+      "id": "16-apache-nifi-q10",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "NiFi allows for scheduling of processors at specific intervals.",
+      "answer": true,
+      "explanation": "Processors in NiFi can be configured to run at defined intervals or based on triggers."
+    },
+    {
+      "id": "16-apache-nifi-q11",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the primary purpose of NiFi's back pressure feature?",
+      "options": [
+        { "id": "a", "text": "To stop data flow entirely." },
+        { "id": "b", "text": "To prevent data loss by stopping flow when a queue is full." },
+        { "id": "c", "text": "To ensure all processors run at maximum capacity." },
+        { "id": "d", "text": "To log processing errors." }
+      ],
+      "answer": "b",
+      "explanation": "Back pressure in NiFi helps manage flow and prevents data loss when queues are overloaded."
+    },
+    {
+      "id": "16-apache-nifi-q12",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to set up a NiFi processor for incoming HTTP requests:",
+      "steps": [
+        { "id": "s1", "text": "Configure the HTTP processor settings." },
+        { "id": "s2", "text": "Add an HTTP processor to the canvas." },
+        { "id": "s3", "text": "Connect to the next processor." },
+        { "id": "s4", "text": "Start the processor." }
+      ],
+      "correctOrder": ["s2", "s1", "s3", "s4"],
+      "explanation": "You need to add the processor first, then configure its settings before connecting and starting it."
+    },
+    {
+      "id": "16-apache-nifi-q13",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is a FlowFile in Apache NiFi?",
+      "options": [
+        { "id": "a", "text": "A data packet" },
+        { "id": "b", "text": "A type of processor" },
+        { "id": "c", "text": "A connection between processors" },
+        { "id": "d", "text": "A service for data storage" }
+      ],
+      "answer": "a",
+      "explanation": "A FlowFile is a fundamental data structure in NiFi representing a data packet that flows through the system."
+    },
+    {
+      "id": "16-apache-nifi-q14",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "NiFi is a cloud-native application.",
+      "answer": false,
+      "explanation": "While NiFi can be deployed in the cloud, it is not inherently cloud-native as it can also run on-premises."
+    },
+    {
+      "id": "16-apache-nifi-q15",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which NiFi feature allows monitoring of data flow performance?",
+      "options": [
+        { "id": "a", "text": "Provenance" },
+        { "id": "b", "text": "Bulletins" },
+        { "id": "c", "text": "Back Pressure" },
+        { "id": "d", "text": "FlowFile Repository" }
+      ],
+      "answer": "b",
+      "explanation": "Bulletins provide alerts and monitoring information about data flow performance and issues."
+    }
+  ]
+}

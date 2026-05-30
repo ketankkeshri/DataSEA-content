@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "04-spreadsheet-functions",
+  "type": "module",
+  "questions": [
+    {
+      "id": "04-spreadsheet-functions-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does the CONCATENATE function do?",
+      "options": [
+        { "id": "a", "text": "Adds two numbers" },
+        { "id": "b", "text": "Joins multiple text strings" },
+        { "id": "c", "text": "Calculates the average" },
+        { "id": "d", "text": "Counts the number of characters" }
+      ],
+      "answer": "b",
+      "explanation": "CONCATENATE combines multiple text strings into one single string.",
+      "tags": ["text-functions"]
+    },
+    {
+      "id": "04-spreadsheet-functions-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which function would you use to find the current date?",
+      "options": [
+        { "id": "a", "text": "TODAY()" },
+        { "id": "b", "text": "NOW()" },
+        { "id": "c", "text": "DATE()" },
+        { "id": "d", "text": "CURRENT_DATE()" }
+      ],
+      "answer": "a",
+      "explanation": "TODAY() returns the current date without the time.",
+      "tags": ["date-functions"]
+    },
+    {
+      "id": "04-spreadsheet-functions-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to perform a lookup:",
+      "language": "python",
+      "code_template": "VLOOKUP(____, A1:B10, 2, FALSE)",
+      "blanks": [
+        { "id": "b1", "options": ["value", "lookup_value", "search_key", "find_value"], "answer": "lookup_value" }
+      ],
+      "explanation": "VLOOKUP requires the value to search for as the first argument.",
+      "tags": ["lookup-functions"]
+    },
+    {
+      "id": "04-spreadsheet-functions-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(len(['apple', 'banana', 'cherry']))",
+      "options": [
+        { "id": "a", "text": "3" },
+        { "id": "b", "text": "2" },
+        { "id": "c", "text": "4" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "len() returns the number of items in the list, which is 3.",
+      "tags": ["array-formulas"]
+    },
+    {
+      "id": "04-spreadsheet-functions-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "The DATE function can be used to create a date from year, month, and day values.",
+      "answer": true,
+      "explanation": "True, the DATE function constructs a date from specified year, month, and day.",
+      "tags": ["date-functions"]
+    },
+    {
+      "id": "04-spreadsheet-functions-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the purpose of the VALUE function?",
+      "options": [
+        { "id": "a", "text": "Convert text to a number" },
+        { "id": "b", "text": "Change number format" },
+        { "id": "c", "text": "Add two numbers" },
+        { "id": "d", "text": "Generate a random number" }
+      ],
+      "answer": "a",
+      "explanation": "VALUE converts a text representation of a number into a numeric value.",
+      "tags": ["text-functions"]
+    },
+    {
+      "id": "04-spreadsheet-functions-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to apply an array formula:",
+      "steps": [
+        { "id": "s1", "text": "Press Ctrl + Shift + Enter" },
+        { "id": "s2", "text": "Select the range" },
+        { "id": "s3", "text": "Type the formula" },
+        { "id": "s4", "text": "Confirm the formula" }
+      ],
+      "correctOrder": ["s2", "s3", "s4", "s1"],
+      "explanation": "You must select the range, type the formula, confirm it, and then use Ctrl + Shift + Enter.",
+      "tags": ["array-formulas"]
+    },
+    {
+      "id": "04-spreadsheet-functions-q8",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which function is used to extract the month from a date?",
+      "options": [
+        { "id": "a", "text": "MONTH()" },
+        { "id": "b", "text": "EXTRACT()" },
+        { "id": "c", "text": "GETMONTH()" },
+        { "id": "d", "text": "DATEPART()" }
+      ],
+      "answer": "a",
+      "explanation": "MONTH() extracts the month number from a date value.",
+      "tags": ["date-functions"]
+    },
+    {
+      "id": "04-spreadsheet-functions-q9",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the formula to sum values with a condition:",
+      "language": "excel",
+      "code_template": "SUMIF(A1:A10, 'criteria', ____)",
+      "blanks": [
+        { "id": "b1", "options": ["B1:B10", "C1:C10", "D1:D10", "A1:A10"], "answer": "B1:B10" }
+      ],
+      "explanation": "SUMIF sums values in the range specified in the third argument where the criteria match.",
+      "tags": ["lookup-functions"]
+    },
+    {
+      "id": "04-spreadsheet-functions-q10",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "An array formula can return multiple values in a single cell.",
+      "answer": true,
+      "explanation": "True, array formulas can return multiple results in a single cell if entered correctly.",
+      "tags": ["array-formulas"]
+    },
+    {
+      "id": "04-spreadsheet-functions-q11",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print([x for x in range(5) if x % 2 == 0])",
+      "options": [
+        { "id": "a", "text": "[0, 2, 4]" },
+        { "id": "b", "text": "[1, 3]" },
+        { "id": "c", "text": "[0, 1, 2, 3, 4]" },
+        { "id": "d", "text": "[2, 4]" }
+      ],
+      "answer": "a",
+      "explanation": "The list comprehension filters even numbers from the range 0 to 4.",
+      "tags": ["array-formulas"]
+    },
+    {
+      "id": "04-spreadsheet-functions-q12",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does the IF function do?",
+      "options": [
+        { "id": "a", "text": "Checks a condition and returns one value if true" },
+        { "id": "b", "text": "Adds two numbers" },
+        { "id": "c", "text": "Counts cells" },
+        { "id": "d", "text": "Finds the maximum value" }
+      ],
+      "answer": "a",
+      "explanation": "IF evaluates a condition and returns specified values based on the result.",
+      "tags": ["lookup-functions"]
+    },
+    {
+      "id": "04-spreadsheet-functions-q13",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the formula to join text with a separator:",
+      "language": "excel",
+      "code_template": "TEXTJOIN(',', TRUE, ____)",
+      "blanks": [
+        { "id": "b1", "options": ["A1:A10", "B1:B10", "C1:C10", "D1:D10"], "answer": "A1:A10" }
+      ],
+      "explanation": "TEXTJOIN combines text from a specified range with a chosen delimiter.",
+      "tags": ["text-functions"]
+    },
+    {
+      "id": "04-spreadsheet-functions-q14",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to create a dynamic named range:",
+      "steps": [
+        { "id": "s1", "text": "Define the name in the Name Manager" },
+        { "id": "s2", "text": "Use OFFSET and COUNTA functions" },
+        { "id": "s3", "text": "Select the range" },
+        { "id": "s4", "text": "Enter the formula for the name" }
+      ],
+      "correctOrder": ["s1", "s2", "s4", "s3"],
+      "explanation": "You define the name, create the formula using OFFSET and COUNTA, and select the range last.",
+      "tags": ["lookup-functions"]
+    },
+    {
+      "id": "04-spreadsheet-functions-q15",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "The ARRAYFORMULA function can only handle single-column ranges.",
+      "answer": false,
+      "explanation": "False, ARRAYFORMULA can handle multi-column ranges and return multiple values.",
+      "tags": ["array-formulas"]
+    }
+  ]
+}

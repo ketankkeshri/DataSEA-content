@@ -1,0 +1,43 @@
+{
+  "id": "08-sklearn-pipelines",
+  "section": "data-science-ml",
+  "tier": "intermediate",
+  "moduleOrder": 8,
+  "version": 1,
+  "title": "Scikit-Learn Pipelines",
+  "shortDescription": "Scikit-Learn Pipelines \u2014 beginner to advanced concepts and code.",
+  "icon": "08-sklearn-pipelines",
+  "estimatedMinutes": 40,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-estimator-api",
+      "title": "Estimator Api",
+      "minutes": 8
+    },
+    {
+      "id": "03-pipelines",
+      "title": "Pipelines",
+      "minutes": 8
+    },
+    {
+      "id": "04-cross-validation",
+      "title": "Cross Validation",
+      "minutes": 8
+    },
+    {
+      "id": "05-grid-search",
+      "title": "Grid Search",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

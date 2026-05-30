@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "01-numpy",
+  "type": "module",
+  "questions": [
+    {
+      "id": "01-numpy-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is NumPy primarily used for?",
+      "options": [
+        { "id": "a", "text": "Web development" },
+        { "id": "b", "text": "Data manipulation and analysis" },
+        { "id": "c", "text": "Game development" },
+        { "id": "d", "text": "Machine Learning only" }
+      ],
+      "answer": "b",
+      "explanation": "NumPy is a powerful library for data manipulation and analysis, especially for numerical data.",
+      "tags": ["intro"]
+    },
+    {
+      "id": "01-numpy-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which of the following is a valid way to create a NumPy array?",
+      "options": [
+        { "id": "a", "text": "np.array([1, 2, 3])" },
+        { "id": "b", "text": "array([1, 2, 3])" },
+        { "id": "c", "text": "new_array([1, 2, 3])" },
+        { "id": "d", "text": "np.list([1, 2, 3])" }
+      ],
+      "answer": "a",
+      "explanation": "The correct way to create a NumPy array is using np.array().",
+      "tags": ["arrays"]
+    },
+    {
+      "id": "01-numpy-q3",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "import numpy as np; print(np.arange(3))",
+      "options": [
+        { "id": "a", "text": "[0, 1, 2]" },
+        { "id": "b", "text": "[1, 2, 3]" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "[0, 1, 2, 3]" }
+      ],
+      "answer": "a",
+      "explanation": "np.arange(3) generates an array with values from 0 to 2.",
+      "tags": ["arrays"]
+    },
+    {
+      "id": "01-numpy-q4",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "NumPy arrays can only contain elements of the same data type.",
+      "answer": true,
+      "explanation": "NumPy arrays are homogeneous, meaning all elements must be of the same type.",
+      "tags": ["arrays"]
+    },
+    {
+      "id": "01-numpy-q5",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet:",
+      "language": "python",
+      "code_template": "np.____([1, 2, 3])",
+      "blanks": [
+        { "id": "b1", "options": ["array", "list", "create", "tuple"], "answer": "array" }
+      ],
+      "explanation": "The function np.array() creates a NumPy array from a list.",
+      "tags": ["arrays"]
+    },
+    {
+      "id": "01-numpy-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does the following code do? np.array([[1, 2], [3, 4]]).shape",
+      "options": [
+        { "id": "a", "text": "(2,)" },
+        { "id": "b", "text": "(2, 2)" },
+        { "id": "c", "text": "(4,)" },
+        { "id": "d", "text": "(1, 2, 2)" }
+      ],
+      "answer": "b",
+      "explanation": "The shape of the array is (2, 2), indicating 2 rows and 2 columns.",
+      "tags": ["arrays"]
+    },
+    {
+      "id": "01-numpy-q7",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(np.array([1, 2, 3]) + 1)",
+      "options": [
+        { "id": "a", "text": "[2, 3, 4]" },
+        { "id": "b", "text": "[1, 2, 3]" },
+        { "id": "c", "text": "[3, 5, 7]" },
+        { "id": "d", "text": "[0, 1, 2]" }
+      ],
+      "answer": "a",
+      "explanation": "Adding 1 to a NumPy array applies element-wise addition.",
+      "tags": ["broadcasting"]
+    },
+    {
+      "id": "01-numpy-q8",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to perform element-wise addition of two NumPy arrays:",
+      "steps": [
+        { "id": "s1", "text": "Create the second array" },
+        { "id": "s2", "text": "Create the first array" },
+        { "id": "s3", "text": "Add the two arrays" },
+        { "id": "s4", "text": "Import NumPy" }
+      ],
+      "correctOrder": ["s4", "s2", "s1", "s3"],
+      "explanation": "You must import NumPy first, then create the arrays and perform the addition.",
+      "tags": ["broadcasting"]
+    },
+    {
+      "id": "01-numpy-q9",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to reshape an array:",
+      "language": "python",
+      "code_template": "array = np.array([1, 2, 3, 4]); reshaped = array.____((2, 2))",
+      "blanks": [
+        { "id": "b1", "options": ["reshape", "resize", "change_shape", "alter"], "answer": "reshape" }
+      ],
+      "explanation": "The reshape() method changes the shape of the array without changing its data.",
+      "tags": ["arrays"]
+    },
+    {
+      "id": "01-numpy-q10",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which function allows you to perform element-wise operations on arrays?",
+      "options": [
+        { "id": "a", "text": "np.apply()" },
+        { "id": "b", "text": "np.map()" },
+        { "id": "c", "text": "np.vectorize()" },
+        { "id": "d", "text": "np.zip()" }
+      ],
+      "answer": "c",
+      "explanation": "np.vectorize() is used for element-wise operations on arrays.",
+      "tags": ["vectorization"]
+    },
+    {
+      "id": "01-numpy-q11",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Using NumPy's broadcasting, you can add a scalar to an array.",
+      "answer": true,
+      "explanation": "NumPy's broadcasting enables operations between arrays of different shapes, including scalar addition.",
+      "tags": ["broadcasting"]
+    },
+    {
+      "id": "01-numpy-q12",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following is NOT a benefit of vectorization?",
+      "options": [
+        { "id": "a", "text": "Improved performance" },
+        { "id": "b", "text": "Cleaner code" },
+        { "id": "c", "text": "Less memory usage" },
+        { "id": "d", "text": "More complex debugging" }
+      ],
+      "answer": "d",
+      "explanation": "Vectorization generally simplifies operations, but can make debugging more complex if errors occur.",
+      "tags": ["vectorization"]
+    },
+    {
+      "id": "01-numpy-q13",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(np.sum(np.array([[1, 2], [3, 4]]), axis=0))",
+      "options": [
+        { "id": "a", "text": "[4, 6]" },
+        { "id": "b", "text": "[3, 7]" },
+        { "id": "c", "text": "[1, 2]" },
+        { "id": "d", "text": "[1, 2, 3, 4]" }
+      ],
+      "answer": "a",
+      "explanation": "The np.sum() function sums along the specified axis; axis=0 sums columns.",
+      "tags": ["arrays"]
+    },
+    {
+      "id": "01-numpy-q14",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the snippet to find the maximum value in a NumPy array:",
+      "language": "python",
+      "code_template": "array = np.array([1, 2, 3]); max_value = array.____()",
+      "blanks": [
+        { "id": "b1", "options": ["max", "maximum", "argmax", "max_value"], "answer": "max" }
+      ],
+      "explanation": "The max() method returns the maximum value from the array.",
+      "tags": ["arrays"]
+    },
+    {
+      "id": "01-numpy-q15",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "NumPy's broadcasting can automatically expand dimensions to perform operations.",
+      "answer": true,
+      "explanation": "Broadcasting allows NumPy to perform operations on arrays of different shapes by automatically expanding dimensions.",
+      "tags": ["broadcasting"]
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "09-tableau-basics",
+  "type": "module",
+  "questions": [
+    {
+      "id": "09-tableau-basics-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does the Marks shelf in Tableau control?",
+      "options": [
+        { "id": "a", "text": "Data connections" },
+        { "id": "b", "text": "Visual properties of data" },
+        { "id": "c", "text": "Data preparation steps" },
+        { "id": "d", "text": "Filtering data" }
+      ],
+      "answer": "b",
+      "explanation": "The Marks shelf controls the visual properties like color, size, and shape of the data points."
+    },
+    {
+      "id": "09-tableau-basics-q2",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to create a calculated field in Tableau:",
+      "language": "sql",
+      "code_template": "SELECT ____(1) AS NewField FROM Table WHERE ____ (2)",
+      "blanks": [
+        { "id": "b1", "options": ["SUM(Value)", "AVG(Value)", "COUNT(Value)", "MAX(Value)"], "answer": "SUM(Value)" },
+        { "id": "b2", "options": ["Value > 100", "Value < 0", "Value = 50", "Value IS NULL"], "answer": "Value > 100" }
+      ],
+      "explanation": "The snippet calculates the sum of 'Value' for records where 'Value' is greater than 100."
+    },
+    {
+      "id": "09-tableau-basics-q3",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(['Category A' if x > 10 else 'Category B' for x in [5, 15, 10]])",
+      "options": [
+        { "id": "a", "text": "['Category A', 'Category A', 'Category A']" },
+        { "id": "b", "text": "['Category B', 'Category A', 'Category B']" },
+        { "id": "c", "text": "['Category B', 'Category A', 'Category A']" },
+        { "id": "d", "text": "['Category A', 'Category B', 'Category A']" }
+      ],
+      "answer": "c",
+      "explanation": "The list comprehension evaluates each value; 5 is 'Category B', while 15 and 10 are 'Category A'."
+    },
+    {
+      "id": "09-tableau-basics-q4",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Calculated fields can only contain numerical operations.",
+      "answer": false,
+      "explanation": "Calculated fields can also contain string manipulations and logical expressions, not just numerical operations."
+    },
+    {
+      "id": "09-tableau-basics-q5",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to create a dashboard in Tableau correctly:",
+      "steps": [
+        { "id": "s1", "text": "Add sheets to the dashboard" },
+        { "id": "s2", "text": "Select the dashboard option" },
+        { "id": "s3", "text": "Design the layout" },
+        { "id": "s4", "text": "Publish the dashboard" },
+        { "id": "s5", "text": "Save the dashboard" }
+      ],
+      "correctOrder": ["s2", "s1", "s3", "s5", "s4"],
+      "explanation": "First, select the dashboard option, then add sheets, design the layout, save, and finally publish."
+    },
+    {
+      "id": "09-tableau-basics-q6",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which data connection type allows for real-time data updates in Tableau?",
+      "options": [
+        { "id": "a", "text": "Extract" },
+        { "id": "b", "text": "Live" },
+        { "id": "c", "text": "Blend" },
+        { "id": "d", "text": "Join" }
+      ],
+      "answer": "b",
+      "explanation": "Live connections allow Tableau to fetch and display real-time data directly from the source."
+    },
+    {
+      "id": "09-tableau-basics-q7",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the following to create a filter in Tableau:",
+      "language": "sql",
+      "code_template": "SELECT * FROM Sales WHERE ____ (1)",
+      "blanks": [
+        { "id": "b1", "options": ["Category = 'Furniture'", "SUM(Sales) > 1000", "COUNT(Category) = 1", "MAX(Price) < 500"], "answer": "Category = 'Furniture'" }
+      ],
+      "explanation": "This SQL filter will only select records from the 'Sales' table where the category is 'Furniture'."
+    },
+    {
+      "id": "09-tableau-basics-q8",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print([x/2 for x in range(4)])",
+      "options": [
+        { "id": "a", "text": "[0, 1, 2, 3]" },
+        { "id": "b", "text": "[0, 0.5, 1, 1.5]" },
+        { "id": "c", "text": "[0, 2, 4, 6]" },
+        { "id": "d", "text": "[0, 1, 1.5, 2]" }
+      ],
+      "answer": "a",
+      "explanation": "The list comprehension divides each number in the range [0, 3] by 2."
+    },
+    {
+      "id": "09-tableau-basics-q9",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Dashboards can include multiple sheets.",
+      "answer": true,
+      "explanation": "Dashboards are designed to combine multiple sheets into a single view."
+    },
+    {
+      "id": "09-tableau-basics-q10",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to connect to a data source in Tableau correctly:",
+      "steps": [
+        { "id": "s1", "text": "Select the data source" },
+        { "id": "s2", "text": "Drag desired fields onto the canvas" },
+        { "id": "s3", "text": "Connect to the data" },
+        { "id": "s4", "text": "Choose connection type (live/extract)" }
+      ],
+      "correctOrder": ["s3", "s1", "s4", "s2"],
+      "explanation": "First, connect to the data, then select the source, choose the connection type, and finally drag fields."
+    },
+    {
+      "id": "09-tableau-basics-q11",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is a calculated field in Tableau?",
+      "options": [
+        { "id": "a", "text": "A field that changes automatically" },
+        { "id": "b", "text": "A field created using a formula" },
+        { "id": "c", "text": "A standard field from the data source" },
+        { "id": "d", "text": "A field that filters data" }
+      ],
+      "answer": "b",
+      "explanation": "A calculated field is created using a formula to perform calculations on your data."
+    },
+    {
+      "id": "09-tableau-basics-q12",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the snippet to optimize performance in Tableau:",
+      "language": "sql",
+      "code_template": "SELECT * FROM Sales WHERE ____ (1) ORDER BY ____ (2)",
+      "blanks": [
+        { "id": "b1", "options": ["Region = 'North'", "SUM(Revenue) > 1000", "MAX(Profit) < 300"], "answer": "Region = 'North'" },
+        { "id": "b2", "options": ["Date", "Region", "Product", "Customer"], "answer": "Date" }
+      ],
+      "explanation": "Filtering by a specific region and ordering by date can help optimize data retrieval in Tableau."
+    },
+    {
+      "id": "09-tableau-basics-q13",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(list(map(lambda x: x**2, range(3))))",
+      "options": [
+        { "id": "a", "text": "[0, 1, 2]" },
+        { "id": "b", "text": "[0, 1, 4]" },
+        { "id": "c", "text": "[1, 2, 3]" },
+        { "id": "d", "text": "[0, 1, 2, 3]" }
+      ],
+      "answer": "b",
+      "explanation": "The map function applies the lambda to square each number in the range, resulting in [0, 1, 4]."
+    },
+    {
+      "id": "09-tableau-basics-q14",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "You can create multiple dashboards in a single Tableau workbook.",
+      "answer": true,
+      "explanation": "Tableau allows you to create multiple dashboards within a single workbook for better organization."
+    },
+    {
+      "id": "09-tableau-basics-q15",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following is NOT a valid chart type in Tableau?",
+      "options": [
+        { "id": "a", "text": "Bar Chart" },
+        { "id": "b", "text": "Pie Chart" },
+        { "id": "c", "text": "Radar Chart" },
+        { "id": "d", "text": "Box Plot" }
+      ],
+      "answer": "c",
+      "explanation": "Radar Chart is not a standard chart type available in Tableau."
+    }
+  ]
+}

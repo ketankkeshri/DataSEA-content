@@ -1,0 +1,252 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "04-statistics-refresher",
+  "type": "module",
+  "questions": [
+    {
+      "id": "04-statistics-refresher-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the mode in a dataset?",
+      "options": [
+        { "id": "a", "text": "The average value." },
+        { "id": "b", "text": "The middle value." },
+        { "id": "c", "text": "The value that appears most frequently." },
+        { "id": "d", "text": "The range of values." }
+      ],
+      "answer": "c",
+      "explanation": "The mode is defined as the value that occurs most frequently in a dataset.",
+      "tags": ["mean-median-mode"]
+    },
+    {
+      "id": "04-statistics-refresher-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What do you use to calculate variance?",
+      "options": [
+        { "id": "a", "text": "Standard deviation" },
+        { "id": "b", "text": "Mean" },
+        { "id": "c", "text": "Median" },
+        { "id": "d", "text": "Mode" }
+      ],
+      "answer": "b",
+      "explanation": "Variance measures the average squared deviation from the mean.",
+      "tags": ["variance-std"]
+    },
+    {
+      "id": "04-statistics-refresher-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to calculate standard deviation:",
+      "language": "python",
+      "code_template": "import numpy as np\nvalues = [1, 2, 3, 4, 5]\nstd_dev = np.____(values)",
+      "blanks": [
+        { "id": "b1", "options": ["mean", "std", "var", "median"], "answer": "std" }
+      ],
+      "explanation": "The numpy function 'std' calculates the standard deviation of the provided values.",
+      "tags": ["variance-std"]
+    },
+    {
+      "id": "04-statistics-refresher-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(sum([1, 2, 3, 4]))",
+      "options": [
+        { "id": "a", "text": "10" },
+        { "id": "b", "text": "9" },
+        { "id": "c", "text": "6" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The sum function adds all numbers in the list, resulting in 10.",
+      "tags": ["mean-median-mode"]
+    },
+    {
+      "id": "04-statistics-refresher-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "The mean is always greater than the median.",
+      "answer": false,
+      "explanation": "In a skewed distribution, the mean can be less than, equal to, or greater than the median.",
+      "tags": ["mean-median-mode"]
+    },
+    {
+      "id": "04-statistics-refresher-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What type of distribution is characterized by a bell-shaped curve?",
+      "options": [
+        { "id": "a", "text": "Poisson distribution" },
+        { "id": "b", "text": "Normal distribution" },
+        { "id": "c", "text": "Uniform distribution" },
+        { "id": "d", "text": "Exponential distribution" }
+      ],
+      "answer": "b",
+      "explanation": "The normal distribution is often represented by a bell-shaped curve.",
+      "tags": ["distributions"]
+    },
+    {
+      "id": "04-statistics-refresher-q7",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following distributions is used for count data?",
+      "options": [
+        { "id": "a", "text": "Normal distribution" },
+        { "id": "b", "text": "Binomial distribution" },
+        { "id": "c", "text": "Poisson distribution" },
+        { "id": "d", "text": "Uniform distribution" }
+      ],
+      "answer": "c",
+      "explanation": "The Poisson distribution models the number of events occurring in a fixed interval.",
+      "tags": ["distributions"]
+    },
+    {
+      "id": "04-statistics-refresher-q8",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Fill in the blanks to generate a normal distribution:",
+      "language": "python",
+      "code_template": "import numpy as np\nimport matplotlib.pyplot as plt\ndata = np.random.normal(____, ____, 1000)\nplt.hist(data, bins=30)\nplt.show()",
+      "blanks": [
+        { "id": "b1", "options": ["0", "1", "10", "100"], "answer": "0" },
+        { "id": "b2", "options": ["1", "2", "10", "100"], "answer": "1" }
+      ],
+      "explanation": "This code generates a normal distribution centered at 0 with a standard deviation of 1.",
+      "tags": ["distributions"]
+    },
+    {
+      "id": "04-statistics-refresher-q9",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print([x**2 for x in range(4) if x % 2 == 0])",
+      "options": [
+        { "id": "a", "text": "[0, 1, 4, 9]" },
+        { "id": "b", "text": "[0, 4]" },
+        { "id": "c", "text": "[1, 4, 9]" },
+        { "id": "d", "text": "[0, 1, 2, 3]" }
+      ],
+      "answer": "b",
+      "explanation": "The list comprehension calculates the square of even numbers from 0 to 3, resulting in [0, 4].",
+      "tags": ["distributions"]
+    },
+    {
+      "id": "04-statistics-refresher-q10",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to apply the Central Limit Theorem:",
+      "steps": [
+        { "id": "s1", "text": "Take multiple random samples." },
+        { "id": "s2", "text": "Calculate the sample means." },
+        { "id": "s3", "text": "Analyze the distribution of the sample means." },
+        { "id": "s4", "text": "Confirm the distribution approaches normal." }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "The Central Limit Theorem involves sampling, calculating means, and analyzing the distribution.",
+      "tags": ["clt"]
+    },
+    {
+      "id": "04-statistics-refresher-q11",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which statement about the Central Limit Theorem is true?",
+      "options": [
+        { "id": "a", "text": "It applies only to normally distributed data." },
+        { "id": "b", "text": "Sample size must be greater than 30." },
+        { "id": "c", "text": "It states that sample means will always equal the population mean." },
+        { "id": "d", "text": "It requires that the samples be dependent." }
+      ],
+      "answer": "b",
+      "explanation": "The Central Limit Theorem holds that with a sample size greater than 30, the sampling distribution of the mean approaches normality.",
+      "tags": ["clt"]
+    },
+    {
+      "id": "04-statistics-refresher-q12",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "The Central Limit Theorem guarantees that the sample mean will equal the population mean.",
+      "answer": false,
+      "explanation": "The theorem states the distribution of sample means approaches a normal distribution, not that they are equal.",
+      "tags": ["clt"]
+    },
+    {
+      "id": "04-statistics-refresher-q13",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the purpose of calculating variance?",
+      "options": [
+        { "id": "a", "text": "To find the average of the dataset." },
+        { "id": "b", "text": "To measure the spread of the dataset." },
+        { "id": "c", "text": "To determine the most frequent value." },
+        { "id": "d", "text": "To find the midpoint of the dataset." }
+      ],
+      "answer": "b",
+      "explanation": "Variance quantifies how much the values in a dataset deviate from the mean, indicating its spread.",
+      "tags": ["variance-std"]
+    },
+    {
+      "id": "04-statistics-refresher-q14",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the code to compute variance:",
+      "language": "python",
+      "code_template": "import numpy as np\nvalues = [10, 20, 30]\nvariance = np.____(values)",
+      "blanks": [
+        { "id": "b1", "options": ["var", "mean", "std", "median"], "answer": "var" }
+      ],
+      "explanation": "The numpy function 'var' calculates the variance of the provided array.",
+      "tags": ["variance-std"]
+    },
+    {
+      "id": "04-statistics-refresher-q15",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(sorted([3, 1, 2]))",
+      "options": [
+        { "id": "a", "text": "[1, 2, 3]" },
+        { "id": "b", "text": "[3, 2, 1]" },
+        { "id": "c", "text": "[2, 3, 1]" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The sorted function returns a new list containing all items from the original list in ascending order.",
+      "tags": ["mean-median-mode"]
+    }
+  ]
+}

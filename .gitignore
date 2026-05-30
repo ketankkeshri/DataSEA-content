@@ -1,0 +1,12 @@
+# Local OS junk
+.DS_Store
+Thumbs.db
+
+# Editor stuff
+.idea/
+.vscode/
+*.swp
+*~
+
+# Backups (the hand-crafted reference content lives here for comparison)
+_reference_handcrafted/

@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "11-statistical-thinking",
+  "type": "module",
+  "questions": [
+    {
+      "id": "11-statistical-thinking-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the mean of the following numbers: 2, 4, 6, 8?",
+      "options": [
+        { "id": "a", "text": "4" },
+        { "id": "b", "text": "5" },
+        { "id": "c", "text": "6" },
+        { "id": "d", "text": "10" }
+      ],
+      "answer": "b",
+      "explanation": "The mean is calculated by summing all values and dividing by the count. (2 + 4 + 6 + 8) / 4 = 5.",
+      "tags": ["descriptive-stats"]
+    },
+    {
+      "id": "11-statistical-thinking-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which of the following is a measure of dispersion?",
+      "options": [
+        { "id": "a", "text": "Mean" },
+        { "id": "b", "text": "Median" },
+        { "id": "c", "text": "Standard Deviation" },
+        { "id": "d", "text": "Mode" }
+      ],
+      "answer": "c",
+      "explanation": "Standard deviation is a measure of how spread out the numbers in a data set are.",
+      "tags": ["descriptive-stats"]
+    },
+    {
+      "id": "11-statistical-thinking-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to calculate the variance:",
+      "language": "python",
+      "code_template": "import numpy as np\ndata = [1, 2, 3, 4]\nvariance = np.____(data)",
+      "blanks": [
+        { "id": "b1", "options": ["var", "average", "std", "mean"], "answer": "var" }
+      ],
+      "explanation": "The `var` function computes the variance of the input array.",
+      "tags": ["descriptive-stats"]
+    },
+    {
+      "id": "11-statistical-thinking-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(sorted([3, 1, 2]))",
+      "options": [
+        { "id": "a", "text": "[1, 2, 3]" },
+        { "id": "b", "text": "[3, 2, 1]" },
+        { "id": "c", "text": "[2, 3, 1]" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The `sorted` function returns a new sorted list from the elements of any iterable.",
+      "tags": ["data-analytics"]
+    },
+    {
+      "id": "11-statistical-thinking-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "The median is always larger than the mean in a skewed distribution.",
+      "answer": false,
+      "explanation": "In a left-skewed distribution, the mean is typically less than the median.",
+      "tags": ["distributions"]
+    },
+    {
+      "id": "11-statistical-thinking-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does a p-value of 0.05 indicate?",
+      "options": [
+        { "id": "a", "text": "Strong evidence against the null hypothesis" },
+        { "id": "b", "text": "Weak evidence against the null hypothesis" },
+        { "id": "c", "text": "No evidence against the null hypothesis" },
+        { "id": "d", "text": "Reject the alternative hypothesis" }
+      ],
+      "answer": "a",
+      "explanation": "A p-value of 0.05 suggests that there is only a 5% chance that the observed results are due to random variation.",
+      "tags": ["statistical-inference"]
+    },
+    {
+      "id": "11-statistical-thinking-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps for hypothesis testing correctly:",
+      "steps": [
+        { "id": "s1", "text": "Collect data" },
+        { "id": "s2", "text": "State the null and alternative hypothesis" },
+        { "id": "s3", "text": "Determine the significance level" },
+        { "id": "s4", "text": "Make a decision based on the p-value" }
+      ],
+      "correctOrder": ["s2", "s3", "s1", "s4"],
+      "explanation": "You must first state your hypotheses and set the significance level before collecting data.",
+      "tags": ["statistical-inference"]
+    },
+    {
+      "id": "11-statistical-thinking-q8",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following statements about correlation is true?",
+      "options": [
+        { "id": "a", "text": "Correlation implies causation" },
+        { "id": "b", "text": "Correlation measures the strength of a relationship" },
+        { "id": "c", "text": "Correlation is only applicable to linear relationships" },
+        { "id": "d", "text": "Correlation can only be negative" }
+      ],
+      "answer": "b",
+      "explanation": "Correlation describes the strength and direction of a linear relationship between two variables.",
+      "tags": ["correlation-vs-causation"]
+    },
+    {
+      "id": "11-statistical-thinking-q9",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to check correlation:",
+      "language": "python",
+      "code_template": "import pandas as pd\ndata = pd.DataFrame({'x': [1, 2, 3], 'y': [4, 5, 6]})\ncorrelation = data['x'].____(data['y'])",
+      "blanks": [
+        { "id": "b1", "options": ["correlate", "corr", "cov", "mean"], "answer": "corr" }
+      ],
+      "explanation": "The `corr` method computes the correlation between two columns in a DataFrame.",
+      "tags": ["correlation-vs-causation"]
+    },
+    {
+      "id": "11-statistical-thinking-q10",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Sampling can introduce bias if not done randomly.",
+      "answer": true,
+      "explanation": "Non-random sampling can lead to a sample that does not accurately represent the population.",
+      "tags": ["sampling"]
+    },
+    {
+      "id": "11-statistical-thinking-q11",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What kind of distribution is characterized by a bell-shaped curve?",
+      "options": [
+        { "id": "a", "text": "Uniform distribution" },
+        { "id": "b", "text": "Normal distribution" },
+        { "id": "c", "text": "Binomial distribution" },
+        { "id": "d", "text": "Poisson distribution" }
+      ],
+      "answer": "b",
+      "explanation": "A normal distribution is symmetric and characterized by its bell-shaped curve.",
+      "tags": ["distributions"]
+    },
+    {
+      "id": "11-statistical-thinking-q12",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these sampling methods from random to non-random:",
+      "steps": [
+        { "id": "s1", "text": "Systematic Sampling" },
+        { "id": "s2", "text": "Simple Random Sampling" },
+        { "id": "s3", "text": "Stratified Sampling" },
+        { "id": "s4", "text": "Convenience Sampling" }
+      ],
+      "correctOrder": ["s2", "s3", "s1", "s4"],
+      "explanation": "Simple Random Sampling is the most random, followed by Stratified, then Systematic, and lastly Convenience.",
+      "tags": ["sampling"]
+    },
+    {
+      "id": "11-statistical-thinking-q13",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which of the following is a common measure of central tendency?",
+      "options": [
+        { "id": "a", "text": "Range" },
+        { "id": "b", "text": "Variance" },
+        { "id": "c", "text": "Median" },
+        { "id": "d", "text": "Standard deviation" }
+      ],
+      "answer": "c",
+      "explanation": "The median is one of the three primary measures of central tendency, along with mean and mode.",
+      "tags": ["descriptive-stats"]
+    },
+    {
+      "id": "11-statistical-thinking-q14",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to perform a t-test:",
+      "language": "python",
+      "code_template": "from scipy import stats\ndata1 = [1, 2, 3]\ndata2 = [4, 5, 6]\nt_statistic, p_value = stats.ttest_____(data1, data2)",
+      "blanks": [
+        { "id": "b1", "options": ["test", "t", "independent", "paired"], "answer": "independent" }
+      ],
+      "explanation": "The `ttest_ind` function is used to calculate the t-test for the means of two independent samples.",
+      "tags": ["statistical-inference"]
+    },
+    {
+      "id": "11-statistical-thinking-q15",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "A sample size of 30 is considered sufficiently large for the Central Limit Theorem to apply.",
+      "answer": true,
+      "explanation": "The Central Limit Theorem states that a sample size of 30 or more is generally sufficient for the distribution of the sample mean to be approximately normal.",
+      "tags": ["sampling"]
+    }
+  ]
+}

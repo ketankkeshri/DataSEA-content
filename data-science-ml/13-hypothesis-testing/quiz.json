@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "13-hypothesis-testing",
+  "type": "module",
+  "questions": [
+    {
+      "id": "13-hypothesis-testing-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the purpose of hypothesis testing?",
+      "options": [
+        { "id": "a", "text": "To prove a theory" },
+        { "id": "b", "text": "To make predictions" },
+        { "id": "c", "text": "To determine the validity of a claim" },
+        { "id": "d", "text": "To collect data" }
+      ],
+      "answer": "c",
+      "explanation": "Hypothesis testing helps in determining whether there is enough evidence to support a specific claim about a population.",
+      "tags": ["hypothesis-testing"]
+    },
+    {
+      "id": "13-hypothesis-testing-q2",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "A p-value less than 0.05 indicates strong evidence against the null hypothesis.",
+      "answer": true,
+      "explanation": "A p-value below 0.05 suggests that the observed data is unlikely under the null hypothesis, indicating strong evidence against it.",
+      "tags": ["p-values"]
+    },
+    {
+      "id": "13-hypothesis-testing-q3",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following tests is appropriate for comparing means of two independent groups?",
+      "options": [
+        { "id": "a", "text": "Paired t-test" },
+        { "id": "b", "text": "Chi-square test" },
+        { "id": "c", "text": "Independent t-test" },
+        { "id": "d", "text": "ANOVA" }
+      ],
+      "answer": "c",
+      "explanation": "The independent t-test is used to compare the means of two independent groups.",
+      "tags": ["t-tests"]
+    },
+    {
+      "id": "13-hypothesis-testing-q4",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to perform a t-test in Python:",
+      "language": "python",
+      "code_template": "from scipy.stats import ttest_____\nstatistic, p_value = ttest_____(group1, group2)",
+      "blanks": [
+        { "id": "b1", "options": ["test", "ttest_ind", "ttest_rel"], "answer": "ttest_ind" },
+        { "id": "b2", "options": ["test", "rel", "ind"], "answer": "ind" }
+      ],
+      "explanation": "The `ttest_ind` function is used for independent t-tests.",
+      "tags": ["t-tests"]
+    },
+    {
+      "id": "13-hypothesis-testing-q5",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(5 > 3 and 3 < 2)",
+      "options": [
+        { "id": "a", "text": "True" },
+        { "id": "b", "text": "False" },
+        { "id": "c", "text": "None" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "b",
+      "explanation": "The expression evaluates to False because 3 is not less than 2.",
+      "tags": ["logic"]
+    },
+    {
+      "id": "13-hypothesis-testing-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the null hypothesis in a t-test?",
+      "options": [
+        { "id": "a", "text": "There is no difference between the groups" },
+        { "id": "b", "text": "There is a significant difference between the groups" },
+        { "id": "c", "text": "All groups are the same" },
+        { "id": "d", "text": "The sample means are equal" }
+      ],
+      "answer": "a",
+      "explanation": "The null hypothesis states that there is no difference between the means of the groups being compared.",
+      "tags": ["t-tests"]
+    },
+    {
+      "id": "13-hypothesis-testing-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps for conducting a hypothesis test:",
+      "steps": [
+        { "id": "s1", "text": "Determine the significance level (alpha)" },
+        { "id": "s2", "text": "State the null and alternative hypotheses" },
+        { "id": "s3", "text": "Collect data" },
+        { "id": "s4", "text": "Calculate the test statistic" },
+        { "id": "s5", "text": "Make a decision based on the p-value" }
+      ],
+      "correctOrder": ["s2", "s1", "s3", "s4", "s5"],
+      "explanation": "The correct order starts with stating the hypotheses, followed by setting alpha, collecting data, calculating the statistic, and finally making a decision.",
+      "tags": ["hypothesis-testing"]
+    },
+    {
+      "id": "13-hypothesis-testing-q8",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "A p-value of 0.01 means that there is a 1% chance that the null hypothesis is true.",
+      "answer": false,
+      "explanation": "The p-value indicates the probability of observing the data given that the null hypothesis is true, not the chance of the null hypothesis itself.",
+      "tags": ["p-values"]
+    },
+    {
+      "id": "13-hypothesis-testing-q9",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does a chi-square test assess?",
+      "options": [
+        { "id": "a", "text": "Differences in means" },
+        { "id": "b", "text": "Relationships between categorical variables" },
+        { "id": "c", "text": "Variability of a dataset" },
+        { "id": "d", "text": "Normality of a distribution" }
+      ],
+      "answer": "b",
+      "explanation": "A chi-square test is used to determine if there is a significant association between two categorical variables.",
+      "tags": ["chi-square"]
+    },
+    {
+      "id": "13-hypothesis-testing-q10",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the code to perform a chi-square test:",
+      "language": "python",
+      "code_template": "from scipy.stats import chi2_contingency\nobserved = [[10, 20], [20, 30]]\nchi2, p, dof, expected = chi2_contingency(____)",
+      "blanks": [
+        { "id": "b1", "options": ["observed", "expected", "dof"], "answer": "observed" }
+      ],
+      "explanation": "The chi-square test uses the observed contingency table to calculate the test statistic.",
+      "tags": ["chi-square"]
+    },
+    {
+      "id": "13-hypothesis-testing-q11",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print('Hello' + 'World' + str(2023))",
+      "options": [
+        { "id": "a", "text": "Hello 2023" },
+        { "id": "b", "text": "HelloWorld2023" },
+        { "id": "c", "text": "HelloWorld" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "b",
+      "explanation": "The code concatenates the strings without spaces.",
+      "tags": ["string-manipulation"]
+    },
+    {
+      "id": "13-hypothesis-testing-q12",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following statements about p-values is false?",
+      "options": [
+        { "id": "a", "text": "A lower p-value indicates stronger evidence against the null hypothesis." },
+        { "id": "b", "text": "A p-value of 0.05 is always the threshold for significance." },
+        { "id": "c", "text": "P-values can be influenced by sample size." },
+        { "id": "d", "text": "P-values alone determine the validity of a hypothesis." }
+      ],
+      "answer": "b",
+      "explanation": "The threshold for significance can vary based on the context and is not always set at 0.05.",
+      "tags": ["p-values"]
+    },
+    {
+      "id": "13-hypothesis-testing-q13",
+      "type": "order_the_steps",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Order the steps to interpret a chi-square test result:",
+      "steps": [
+        { "id": "s1", "text": "Check the p-value against alpha." },
+        { "id": "s2", "text": "Calculate the chi-square statistic." },
+        { "id": "s3", "text": "State the null hypothesis." },
+        { "id": "s4", "text": "Compare the observed and expected frequencies." }
+      ],
+      "correctOrder": ["s3", "s4", "s2", "s1"],
+      "explanation": "First, state the null hypothesis, then compare frequencies, calculate the statistic, and finally check the p-value.",
+      "tags": ["chi-square"]
+    },
+    {
+      "id": "13-hypothesis-testing-q14",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "A higher p-value indicates that the null hypothesis is more likely to be true.",
+      "answer": false,
+      "explanation": "A higher p-value suggests weak evidence against the null hypothesis, but it does not confirm its truth.",
+      "tags": ["p-values"]
+    },
+    {
+      "id": "13-hypothesis-testing-q15",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What do you conclude if your p-value is 0.07 at a 0.05 significance level?",
+      "options": [
+        { "id": "a", "text": "Reject the null hypothesis" },
+        { "id": "b", "text": "Fail to reject the null hypothesis" },
+        { "id": "c", "text": "Accept the null hypothesis" },
+        { "id": "d", "text": "The test is inconclusive" }
+      ],
+      "answer": "b",
+      "explanation": "Since the p-value is greater than 0.05, you fail to reject the null hypothesis.",
+      "tags": ["p-values"]
+    }
+  ]
+}

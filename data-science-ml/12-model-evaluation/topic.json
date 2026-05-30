@@ -1,0 +1,38 @@
+{
+  "id": "12-model-evaluation",
+  "section": "data-science-ml",
+  "tier": "intermediate",
+  "moduleOrder": 12,
+  "version": 1,
+  "title": "Model Evaluation Metrics",
+  "shortDescription": "Model Evaluation Metrics \u2014 beginner to advanced concepts and code.",
+  "icon": "12-model-evaluation",
+  "estimatedMinutes": 32,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-classification-metrics",
+      "title": "Classification Metrics",
+      "minutes": 8
+    },
+    {
+      "id": "02-regression-metrics",
+      "title": "Regression Metrics",
+      "minutes": 8
+    },
+    {
+      "id": "03-ranking-metrics",
+      "title": "Ranking Metrics",
+      "minutes": 8
+    },
+    {
+      "id": "04-calibration",
+      "title": "Calibration",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

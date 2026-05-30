@@ -1,0 +1,38 @@
+{
+  "id": "13-hypothesis-testing",
+  "section": "data-science-ml",
+  "tier": "intermediate",
+  "moduleOrder": 13,
+  "version": 1,
+  "title": "Hypothesis Testing",
+  "shortDescription": "Hypothesis Testing \u2014 beginner to advanced concepts and code.",
+  "icon": "13-hypothesis-testing",
+  "estimatedMinutes": 32,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-t-tests",
+      "title": "T Tests",
+      "minutes": 8
+    },
+    {
+      "id": "03-chi-square",
+      "title": "Chi Square",
+      "minutes": 8
+    },
+    {
+      "id": "04-p-values-pitfalls",
+      "title": "P Values Pitfalls",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

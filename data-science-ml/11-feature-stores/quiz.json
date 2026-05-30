@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "11-feature-stores",
+  "type": "module",
+  "questions": [
+    {
+      "id": "11-feature-stores-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the primary purpose of a feature store?",
+      "options": [
+        { "id": "a", "text": "To store raw data indefinitely." },
+        { "id": "b", "text": "To manage and serve features for ML models." },
+        { "id": "c", "text": "To visualize data analytics." },
+        { "id": "d", "text": "To clean and preprocess data." }
+      ],
+      "answer": "b",
+      "explanation": "Feature stores are designed to manage and serve features specifically for machine learning models, making them crucial for ML workflows.",
+      "tags": ["feature-store"]
+    },
+    {
+      "id": "11-feature-stores-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which of the following best describes an online feature store?",
+      "options": [
+        { "id": "a", "text": "Used for batch processing." },
+        { "id": "b", "text": "Provides real-time feature access." },
+        { "id": "c", "text": "Stores features in a relational database." },
+        { "id": "d", "text": "Is only accessible during training." }
+      ],
+      "answer": "b",
+      "explanation": "An online feature store provides real-time access to features, which is essential for serving predictions in production environments.",
+      "tags": ["online-feature-store"]
+    },
+    {
+      "id": "11-feature-stores-q3",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Feature stores eliminate the need for data preprocessing.",
+      "answer": false,
+      "explanation": "Feature stores do not eliminate the need for preprocessing; they help manage and serve preprocessed features efficiently.",
+      "tags": ["feature-store"]
+    },
+    {
+      "id": "11-feature-stores-q4",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to retrieve a feature from a feature store:",
+      "language": "python",
+      "code_template": "feature_store.get_feature('feature_name', ____)",
+      "blanks": [
+        { "id": "b1", "options": ["user_id", "timestamp", "model_id", "feature_id"], "answer": "user_id" }
+      ],
+      "explanation": "You need to specify the primary key, like 'user_id', to retrieve the correct feature from the feature store."
+    },
+    {
+      "id": "11-feature-stores-q5",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print({x: x**2 for x in range(3)})",
+      "options": [
+        { "id": "a", "text": "{0: 0, 1: 1, 2: 4}" },
+        { "id": "b", "text": "{0, 1, 2}" },
+        { "id": "c", "text": "[0, 1, 4]" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The code creates a dictionary where each number maps to its square, resulting in {0: 0, 1: 1, 2: 4}.",
+      "tags": ["dictionary"]
+    },
+    {
+      "id": "11-feature-stores-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is a key difference between online and offline feature stores?",
+      "options": [
+        { "id": "a", "text": "Online stores are slower." },
+        { "id": "b", "text": "Offline stores use real-time data." },
+        { "id": "c", "text": "Online stores serve features instantly." },
+        { "id": "d", "text": "Offline stores are better for serving models." }
+      ],
+      "answer": "c",
+      "explanation": "Online feature stores are optimized for instant retrieval of features, making them suitable for real-time predictions.",
+      "tags": ["online-offline"]
+    },
+    {
+      "id": "11-feature-stores-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to create an online feature store:",
+      "steps": [
+        { "id": "s1", "text": "Define the features you need." },
+        { "id": "s2", "text": "Set up the feature store infrastructure." },
+        { "id": "s3", "text": "Ingest features into the store." },
+        { "id": "s4", "text": "Integrate with your ML model." }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "You first define the features, then set up the infrastructure, ingest the features, and finally integrate with the model.",
+      "tags": ["feature-store-setup"]
+    },
+    {
+      "id": "11-feature-stores-q8",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Fill in the blanks to check for staleness in a feature store:",
+      "language": "python",
+      "code_template": "if feature.is_stale(____): print('Stale feature!')",
+      "blanks": [
+        { "id": "b1", "options": ["ttl", "timestamp", "value", "name"], "answer": "ttl" }
+      ],
+      "explanation": "You check if the feature is stale by comparing its TTL (Time To Live) with the current time."
+    },
+    {
+      "id": "11-feature-stores-q9",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "When should you consider using an offline feature store?",
+      "options": [
+        { "id": "a", "text": "When you need real-time updates." },
+        { "id": "b", "text": "For batch training of ML models." },
+        { "id": "c", "text": "When features are expensive to compute." },
+        { "id": "d", "text": "If you need instant access to features." }
+      ],
+      "answer": "b",
+      "explanation": "Offline feature stores are ideal for batch training as they allow you to process large datasets without the need for real-time access.",
+      "tags": ["offline-feature-store"]
+    },
+    {
+      "id": "11-feature-stores-q10",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(sorted([3, 1, 2]))",
+      "options": [
+        { "id": "a", "text": "[1, 2, 3]" },
+        { "id": "b", "text": "[3, 2, 1]" },
+        { "id": "c", "text": "[2, 1, 3]" },
+        { "id": "d", "text": "[3, 1, 2]" }
+      ],
+      "answer": "a",
+      "explanation": "The sorted() function returns a new list containing all items from the iterable in ascending order.",
+      "tags": ["sorting"]
+    },
+    {
+      "id": "11-feature-stores-q11",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is TTL in the context of feature stores?",
+      "options": [
+        { "id": "a", "text": "Time to Live" },
+        { "id": "b", "text": "Total Time Loaded" },
+        { "id": "c", "text": "Tensor Time Length" },
+        { "id": "d", "text": "Temporal Transfer Layer" }
+      ],
+      "answer": "a",
+      "explanation": "TTL stands for Time to Live, which defines how long a feature is considered valid before it needs to be refreshed.",
+      "tags": ["ttl"]
+    },
+    {
+      "id": "11-feature-stores-q12",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following is NOT a benefit of using a feature store?",
+      "options": [
+        { "id": "a", "text": "Improved feature reuse" },
+        { "id": "b", "text": "Increased data privacy" },
+        { "id": "c", "text": "Real-time feature access" },
+        { "id": "d", "text": "Simplified collaboration" }
+      ],
+      "answer": "b",
+      "explanation": "Increased data privacy is not a direct benefit of using a feature store; rather, it focuses on improving feature management and access.",
+      "tags": ["feature-store-benefits"]
+    },
+    {
+      "id": "11-feature-stores-q13",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to ensure feature freshness:",
+      "steps": [
+        { "id": "s1", "text": "Evaluate feature staleness." },
+        { "id": "s2", "text": "Refresh stale features." },
+        { "id": "s3", "text": "Monitor feature usage." },
+        { "id": "s4", "text": "Implement TTL settings." }
+      ],
+      "correctOrder": ["s3", "s1", "s4", "s2"],
+      "explanation": "You first monitor usage to identify stale features, evaluate their staleness, check TTL settings, and refresh as necessary.",
+      "tags": ["feature-freshness"]
+    },
+    {
+      "id": "11-feature-stores-q14",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Feature staleness can negatively impact model performance.",
+      "answer": true,
+      "explanation": "Stale features can lead to outdated information being used in predictions, which can degrade model performance.",
+      "tags": ["feature-staleness"]
+    },
+    {
+      "id": "11-feature-stores-q15",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the code to check if a feature is stale:",
+      "language": "python",
+      "code_template": "if current_time - feature.timestamp > __: print('Feature is stale')",
+      "blanks": [
+        { "id": "b1", "options": ["ttl", "threshold", "expiry", "validity"], "answer": "ttl" }
+      ],
+      "explanation": "You compare the current time with the feature's timestamp against its TTL to determine if it's stale."
+    }
+  ]
+}

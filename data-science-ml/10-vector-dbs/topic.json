@@ -1,0 +1,48 @@
+{
+  "id": "10-vector-dbs",
+  "section": "data-science-ml",
+  "tier": "intermediate",
+  "moduleOrder": 10,
+  "version": 1,
+  "title": "Vector Databases",
+  "shortDescription": "Vector Databases \u2014 beginner to advanced concepts and code.",
+  "icon": "10-vector-dbs",
+  "estimatedMinutes": 48,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-embeddings-101",
+      "title": "Embeddings 101",
+      "minutes": 8
+    },
+    {
+      "id": "03-chromadb",
+      "title": "Chromadb",
+      "minutes": 8
+    },
+    {
+      "id": "04-faiss",
+      "title": "Faiss",
+      "minutes": 8
+    },
+    {
+      "id": "05-pinecone",
+      "title": "Pinecone",
+      "minutes": 8
+    },
+    {
+      "id": "06-similarity-metrics",
+      "title": "Similarity Metrics",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

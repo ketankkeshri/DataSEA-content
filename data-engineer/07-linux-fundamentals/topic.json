@@ -1,0 +1,43 @@
+{
+  "id": "07-linux-fundamentals",
+  "section": "data-engineer",
+  "tier": "beginner",
+  "moduleOrder": 7,
+  "version": 1,
+  "title": "Linux Fundamentals",
+  "shortDescription": "Linux Fundamentals \u2014 beginner to advanced concepts and code.",
+  "icon": "07-linux-fundamentals",
+  "estimatedMinutes": 40,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-fs-basics",
+      "title": "Fs Basics",
+      "minutes": 8
+    },
+    {
+      "id": "02-permissions",
+      "title": "Permissions",
+      "minutes": 8
+    },
+    {
+      "id": "03-processes",
+      "title": "Processes",
+      "minutes": 8
+    },
+    {
+      "id": "04-networking",
+      "title": "Networking",
+      "minutes": 8
+    },
+    {
+      "id": "05-systemd",
+      "title": "Systemd",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

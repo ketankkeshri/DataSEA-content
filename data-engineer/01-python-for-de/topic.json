@@ -1,0 +1,53 @@
+{
+  "id": "01-python-for-de",
+  "section": "data-engineer",
+  "tier": "beginner",
+  "moduleOrder": 1,
+  "version": 1,
+  "title": "Python for Data Engineering",
+  "shortDescription": "Python for Data Engineering \u2014 beginner to advanced concepts and code.",
+  "icon": "01-python-for-de",
+  "estimatedMinutes": 56,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-data-structures",
+      "title": "Data Structures",
+      "minutes": 8
+    },
+    {
+      "id": "03-file-io",
+      "title": "File Io",
+      "minutes": 8
+    },
+    {
+      "id": "04-context-managers",
+      "title": "Context Managers",
+      "minutes": 8
+    },
+    {
+      "id": "05-error-handling",
+      "title": "Error Handling",
+      "minutes": 8
+    },
+    {
+      "id": "06-virtualenv-pip",
+      "title": "Virtualenv Pip",
+      "minutes": 8
+    },
+    {
+      "id": "07-typing",
+      "title": "Typing",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

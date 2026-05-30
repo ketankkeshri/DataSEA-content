@@ -1,0 +1,38 @@
+{
+  "id": "05-data-types-cleaning",
+  "section": "data-analyst",
+  "tier": "beginner",
+  "moduleOrder": 5,
+  "version": 1,
+  "title": "Data Types & Cleaning",
+  "shortDescription": "Data Types & Cleaning \u2014 beginner to advanced concepts and code.",
+  "icon": "05-data-types-cleaning",
+  "estimatedMinutes": 32,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-common-types",
+      "title": "Common Types",
+      "minutes": 8
+    },
+    {
+      "id": "02-missing-data",
+      "title": "Missing Data",
+      "minutes": 8
+    },
+    {
+      "id": "03-duplicates",
+      "title": "Duplicates",
+      "minutes": 8
+    },
+    {
+      "id": "04-normalization",
+      "title": "Normalization",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

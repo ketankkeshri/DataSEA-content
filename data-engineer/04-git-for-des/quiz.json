@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "04-git-for-des",
+  "type": "module",
+  "questions": [
+    {
+      "id": "04-git-for-des-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does 'git init' do?",
+      "options": [
+        { "id": "a", "text": "Creates a new branch" },
+        { "id": "b", "text": "Creates a new repository" },
+        { "id": "c", "text": "Commits changes" },
+        { "id": "d", "text": "Clones a repository" }
+      ],
+      "answer": "b",
+      "explanation": "'git init' initializes a new git repository in the current directory.",
+      "tags": ["basics"]
+    },
+    {
+      "id": "04-git-for-des-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which command is used to check the current branch?",
+      "options": [
+        { "id": "a", "text": "git status" },
+        { "id": "b", "text": "git branch" },
+        { "id": "c", "text": "git checkout" },
+        { "id": "d", "text": "git log" }
+      ],
+      "answer": "b",
+      "explanation": "'git branch' lists all branches and highlights the current branch.",
+      "tags": ["basics"]
+    },
+    {
+      "id": "04-git-for-des-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to create a new branch:",
+      "language": "bash",
+      "code_template": "git ____ new-branch-name",
+      "blanks": [
+        { "id": "b1", "options": ["create", "branch", "checkout", "switch"], "answer": "branch" }
+      ],
+      "explanation": "The command 'git branch new-branch-name' creates a new branch.",
+      "tags": ["branching-strategies"]
+    },
+    {
+      "id": "04-git-for-des-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "bash",
+      "code": "git branch",
+      "options": [
+        { "id": "a", "text": "Error" },
+        { "id": "b", "text": "No branches found" },
+        { "id": "c", "text": "master" },
+        { "id": "d", "text": "* master" }
+      ],
+      "answer": "d",
+      "explanation": "If on the master branch, it prints '* master' indicating the current branch.",
+      "tags": ["basics"]
+    },
+    {
+      "id": "04-git-for-des-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "'git commit -m \"message\"' saves changes to the repository.",
+      "answer": true,
+      "explanation": "'git commit' with a message saves staged changes to the repository.",
+      "tags": ["basics"]
+    },
+    {
+      "id": "04-git-for-des-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the purpose of 'git push'?",
+      "options": [
+        { "id": "a", "text": "Upload changes to remote repository" },
+        { "id": "b", "text": "Download changes from remote repository" },
+        { "id": "c", "text": "Stage changes for commit" },
+        { "id": "d", "text": "Create a new branch" }
+      ],
+      "answer": "a",
+      "explanation": "'git push' uploads local commits to the remote repository.",
+      "tags": ["basics"]
+    },
+    {
+      "id": "04-git-for-des-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to merge a branch into main:",
+      "steps": [
+        { "id": "s1", "text": "Switch to the main branch" },
+        { "id": "s2", "text": "Merge the feature branch" },
+        { "id": "s3", "text": "Push changes to remote" },
+        { "id": "s4", "text": "Commit changes" }
+      ],
+      "correctOrder": ["s1", "s2", "s4", "s3"],
+      "explanation": "You need to be on the main branch to merge and commit changes before pushing.",
+      "tags": ["branching-strategies"]
+    },
+    {
+      "id": "04-git-for-des-q8",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Fill in the blank to start rebasing:",
+      "language": "bash",
+      "code_template": "git ____ feature-branch",
+      "blanks": [
+        { "id": "b1", "options": ["rebase", "merge", "checkout", "branch"], "answer": "rebase" }
+      ],
+      "explanation": "The command 'git rebase feature-branch' starts the rebasing process.",
+      "tags": ["rebasing"]
+    },
+    {
+      "id": "04-git-for-des-q9",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "bash",
+      "code": "git log --oneline",
+      "options": [
+        { "id": "a", "text": "Detailed commit history" },
+        { "id": "b", "text": "Summary of commits" },
+        { "id": "c", "text": "Branch names only" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "b",
+      "explanation": "'git log --oneline' shows a summary of commits in a compact format.",
+      "tags": ["basics"]
+    },
+    {
+      "id": "04-git-for-des-q10",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "'git stash' saves changes temporarily.",
+      "answer": true,
+      "explanation": "'git stash' allows you to save your uncommitted changes for later use.",
+      "tags": ["basics"]
+    },
+    {
+      "id": "04-git-for-des-q11",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which command will you use to discard changes in your working directory?",
+      "options": [
+        { "id": "a", "text": "git reset" },
+        { "id": "b", "text": "git checkout -- ." },
+        { "id": "c", "text": "git revert" },
+        { "id": "d", "text": "git stash drop" }
+      ],
+      "answer": "b",
+      "explanation": "'git checkout -- .' discards all changes in the working directory.",
+      "tags": ["basics"]
+    },
+    {
+      "id": "04-git-for-des-q12",
+      "type": "order_the_steps",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Order the steps to set up a pre-commit hook:",
+      "steps": [
+        { "id": "s1", "text": "Create a .git/hooks/pre-commit file" },
+        { "id": "s2", "text": "Make the file executable" },
+        { "id": "s3", "text": "Add the hook script" },
+        { "id": "s4", "text": "Commit your changes" }
+      ],
+      "correctOrder": ["s1", "s3", "s2", "s4"],
+      "explanation": "Set up the hook script before making it executable and committing changes.",
+      "tags": ["pre-commit-hooks"]
+    },
+    {
+      "id": "04-git-for-des-q13",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the function of a pre-commit hook?",
+      "options": [
+        { "id": "a", "text": "Automatically merge branches" },
+        { "id": "b", "text": "Run tests before committing" },
+        { "id": "c", "text": "Push changes to remote" },
+        { "id": "d", "text": "Create backups of files" }
+      ],
+      "answer": "b",
+      "explanation": "A pre-commit hook runs tests or checks before allowing a commit.",
+      "tags": ["pre-commit-hooks"]
+    },
+    {
+      "id": "04-git-for-des-q14",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Pre-commit hooks can prevent a commit if certain conditions are not met.",
+      "answer": true,
+      "explanation": "Pre-commit hooks can enforce rules like running tests successfully before allowing commits.",
+      "tags": ["pre-commit-hooks"]
+    },
+    {
+      "id": "04-git-for-des-q15",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Fill in the blank to check the status of the repository:",
+      "language": "bash",
+      "code_template": "git ____",
+      "blanks": [
+        { "id": "b1", "options": ["status", "log", "commit", "branch"], "answer": "status" }
+      ],
+      "explanation": "'git status' displays the state of the working directory and staging area.",
+      "tags": ["basics"]
+    }
+  ]
+}

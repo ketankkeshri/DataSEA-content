@@ -1,0 +1,38 @@
+{
+  "id": "10-google-sheets-advanced",
+  "section": "data-analyst",
+  "tier": "intermediate",
+  "moduleOrder": 10,
+  "version": 1,
+  "title": "Google Sheets Advanced",
+  "shortDescription": "Google Sheets Advanced \u2014 beginner to advanced concepts and code.",
+  "icon": "10-google-sheets-advanced",
+  "estimatedMinutes": 32,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-query-function",
+      "title": "Query Function",
+      "minutes": 8
+    },
+    {
+      "id": "02-importrange",
+      "title": "Importrange",
+      "minutes": 8
+    },
+    {
+      "id": "03-appsscript-intro",
+      "title": "Appsscript Intro",
+      "minutes": 8
+    },
+    {
+      "id": "04-automation",
+      "title": "Automation",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

@@ -1,0 +1,232 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "15-metabase-embedding",
+  "type": "module",
+  "questions": [
+    {
+      "id": "15-metabase-embedding-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the primary purpose of Metabase?",
+      "options": [
+        { "id": "a", "text": "Data storage" },
+        { "id": "b", "text": "Data visualization" },
+        { "id": "c", "text": "Data transformation" },
+        { "id": "d", "text": "Data integration" }
+      ],
+      "answer": "b",
+      "explanation": "Metabase is primarily designed to visualize data and create dashboards."
+    },
+    {
+      "id": "15-metabase-embedding-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which feature allows users to interact with data in Metabase?",
+      "options": [
+        { "id": "a", "text": "Dashboards" },
+        { "id": "b", "text": "Reports" },
+        { "id": "c", "text": "Alerts" },
+        { "id": "d", "text": "Connectors" }
+      ],
+      "answer": "a",
+      "explanation": "Dashboards in Metabase allow users to visualize and interact with data."
+    },
+    {
+      "id": "15-metabase-embedding-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to embed a Metabase dashboard:",
+      "language": "html",
+      "code_template": "<iframe src='https://yourmetabase.com/embed/dashboard/____?token=____'></iframe>",
+      "blanks": [
+        { "id": "b1", "options": ["1", "2", "3", "4"], "answer": "1" },
+        { "id": "b2", "options": ["abc123", "xyz789", "def456", "ghi012"], "answer": "abc123" }
+      ],
+      "explanation": "You need the dashboard ID and the token for secure embedding."
+    },
+    {
+      "id": "15-metabase-embedding-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(list(range(2, 5)))",
+      "options": [
+        { "id": "a", "text": "[2, 3, 4]" },
+        { "id": "b", "text": "[2, 3, 4, 5]" },
+        { "id": "c", "text": "[2, 5]" },
+        { "id": "d", "text": "[5, 4, 3, 2]" }
+      ],
+      "answer": "a",
+      "explanation": "The range function generates numbers starting from 2 up to, but not including, 5."
+    },
+    {
+      "id": "15-metabase-embedding-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Metabase supports SQL queries for data analysis.",
+      "answer": true,
+      "explanation": "Metabase allows users to write SQL queries to analyze data from connected databases."
+    },
+    {
+      "id": "15-metabase-embedding-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is a signed embedding in Metabase?",
+      "options": [
+        { "id": "a", "text": "An embedded dashboard with public access" },
+        { "id": "b", "text": "An embedded dashboard with authentication" },
+        { "id": "c", "text": "An embedded dashboard with no security" },
+        { "id": "d", "text": "An embedded dashboard for guest users" }
+      ],
+      "answer": "b",
+      "explanation": "A signed embedding requires a token for authentication to access the embedded dashboard."
+    },
+    {
+      "id": "15-metabase-embedding-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to create a Metabase dashboard:",
+      "steps": [
+        { "id": "s1", "text": "Add charts and tables" },
+        { "id": "s2", "text": "Select data sources" },
+        { "id": "s3", "text": "Design layout" },
+        { "id": "s4", "text": "Save the dashboard" }
+      ],
+      "correctOrder": ["s2", "s1", "s3", "s4"],
+      "explanation": "First, select data sources, then add visualizations, design the layout, and finally save."
+    },
+    {
+      "id": "15-metabase-embedding-q8",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to set up a signed embedding:",
+      "language": "python",
+      "code_template": "token = ____; dashboard_id = ____",
+      "blanks": [
+        { "id": "b1", "options": ["get_token()", "create_token()", "fetch_token()", "generate_token()"], "answer": "generate_token()" },
+        { "id": "b2", "options": ["123", "456", "789", "321"], "answer": "123" }
+      ],
+      "explanation": "You need to generate a token and specify the dashboard ID for signed embedding."
+    },
+    {
+      "id": "15-metabase-embedding-q9",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print('Hello' + ' World')",
+      "options": [
+        { "id": "a", "text": "Hello World" },
+        { "id": "b", "text": "HelloWorld" },
+        { "id": "c", "text": "Hello World!" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The '+' operator concatenates the two strings, resulting in 'Hello World'."
+    },
+    {
+      "id": "15-metabase-embedding-q10",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Metabase can embed charts as well as dashboards.",
+      "answer": true,
+      "explanation": "Metabase allows embedding of both charts and dashboards for flexible visualization."
+    },
+    {
+      "id": "15-metabase-embedding-q11",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which method is used to configure the embedded dashboard URL?",
+      "options": [
+        { "id": "a", "text": "set_url()" },
+        { "id": "b", "text": "configure_url()" },
+        { "id": "c", "text": "embed_url()" },
+        { "id": "d", "text": "set_embed_url()" }
+      ],
+      "answer": "d",
+      "explanation": "The 'set_embed_url()' method is used to configure the URL for an embedded dashboard."
+    },
+    {
+      "id": "15-metabase-embedding-q12",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to create a signed embedding token:",
+      "steps": [
+        { "id": "s1", "text": "Define expiration time" },
+        { "id": "s2", "text": "Generate a token" },
+        { "id": "s3", "text": "Specify user permissions" },
+        { "id": "s4", "text": "Embed the dashboard" }
+      ],
+      "correctOrder": ["s1", "s3", "s2", "s4"],
+      "explanation": "First, define the expiration time and user permissions, then generate the token and embed."
+    },
+    {
+      "id": "15-metabase-embedding-q13",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to filter data in Metabase:",
+      "language": "sql",
+      "code_template": "SELECT * FROM users WHERE age > ____;",
+      "blanks": [
+        { "id": "b1", "options": ["18", "21", "25", "30"], "answer": "18" }
+      ],
+      "explanation": "You can filter users who are older than 18 using the WHERE clause."
+    },
+    {
+      "id": "15-metabase-embedding-q14",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print([x for x in range(3) if x % 2 == 0])",
+      "options": [
+        { "id": "a", "text": "[0, 1, 2]" },
+        { "id": "b", "text": "[0, 2]" },
+        { "id": "c", "text": "[1, 2]" },
+        { "id": "d", "text": "[]" }
+      ],
+      "answer": "b",
+      "explanation": "The list comprehension filters even numbers from the range, resulting in [0, 2]."
+    },
+    {
+      "id": "15-metabase-embedding-q15",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Metabase allows users to schedule reports.",
+      "answer": true,
+      "explanation": "Users can schedule reports in Metabase to receive them at specified intervals."
+    }
+  ]
+}

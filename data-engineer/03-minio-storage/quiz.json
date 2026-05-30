@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "03-minio-storage",
+  "type": "module",
+  "questions": [
+    {
+      "id": "03-minio-storage-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is MinIO primarily used for?",
+      "options": [
+        { "id": "a", "text": "Data visualization" },
+        { "id": "b", "text": "Object storage" },
+        { "id": "c", "text": "Data processing" },
+        { "id": "d", "text": "Machine learning" }
+      ],
+      "answer": "b",
+      "explanation": "MinIO is designed to provide high-performance object storage, similar to AWS S3.",
+      "tags": ["minio", "storage"]
+    },
+    {
+      "id": "03-minio-storage-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which command is used to create a new bucket in MinIO?",
+      "options": [
+        { "id": "a", "text": "mc mb mybucket" },
+        { "id": "b", "text": "mc create mybucket" },
+        { "id": "c", "text": "mc make mybucket" },
+        { "id": "d", "text": "mc newbucket mybucket" }
+      ],
+      "answer": "a",
+      "explanation": "The command 'mc mb' is used to create a new bucket in MinIO.",
+      "tags": ["minio", "buckets"]
+    },
+    {
+      "id": "03-minio-storage-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to set a bucket policy:",
+      "language": "python",
+      "code_template": "mc policy ____ mybucket",
+      "blanks": [
+        { "id": "b1", "options": ["public", "private", "read-only", "write-only"], "answer": "public" }
+      ],
+      "explanation": "Setting a bucket policy to 'public' allows everyone to read the objects in that bucket."
+    },
+    {
+      "id": "03-minio-storage-q4",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "MinIO supports AWS S3 API compatibility.",
+      "answer": true,
+      "explanation": "MinIO is fully compatible with the AWS S3 API, allowing users to use S3-compatible tools and SDKs.",
+      "tags": ["minio", "s3"]
+    },
+    {
+      "id": "03-minio-storage-q5",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which command would you use to list all buckets in MinIO?",
+      "options": [
+        { "id": "a", "text": "mc ls" },
+        { "id": "b", "text": "mc list" },
+        { "id": "c", "text": "mc show" },
+        { "id": "d", "text": "mc buckets" }
+      ],
+      "answer": "a",
+      "explanation": "The command 'mc ls' lists all buckets in your MinIO instance.",
+      "tags": ["minio", "buckets"]
+    },
+    {
+      "id": "03-minio-storage-q6",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(2 ** 3 + 1)",
+      "options": [
+        { "id": "a", "text": "9" },
+        { "id": "b", "text": "8" },
+        { "id": "c", "text": "7" },
+        { "id": "d", "text": "6" }
+      ],
+      "answer": "a",
+      "explanation": "2 raised to the power of 3 is 8, and adding 1 gives 9."
+    },
+    {
+      "id": "03-minio-storage-q7",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to delete a bucket:",
+      "language": "bash",
+      "code_template": "mc rb ____",
+      "blanks": [
+        { "id": "b1", "options": ["mybucket", "delete-bucket", "remove-bucket", "bucket-delete"], "answer": "mybucket" }
+      ],
+      "explanation": "The command 'mc rb mybucket' removes the specified bucket if it's empty."
+    },
+    {
+      "id": "03-minio-storage-q8",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to upload a file to MinIO:",
+      "steps": [
+        { "id": "s1", "text": "Authenticate with MinIO" },
+        { "id": "s2", "text": "Select the bucket" },
+        { "id": "s3", "text": "Use the mc cp command" },
+        { "id": "s4", "text": "Check upload status" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "You need to authenticate first, then select the bucket, upload the file, and finally check the status."
+    },
+    {
+      "id": "03-minio-storage-q9",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the primary purpose of bucket lifecycle policies?",
+      "options": [
+        { "id": "a", "text": "To manage bucket permissions" },
+        { "id": "b", "text": "To automatically transition or delete objects" },
+        { "id": "c", "text": "To encrypt bucket data" },
+        { "id": "d", "text": "To optimize bucket performance" }
+      ],
+      "answer": "b",
+      "explanation": "Lifecycle policies help in managing objects by automatically transitioning or deleting them based on defined rules.",
+      "tags": ["minio", "lifecycle"]
+    },
+    {
+      "id": "03-minio-storage-q10",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "MinIO can be deployed on Kubernetes.",
+      "answer": true,
+      "explanation": "MinIO has native support for Kubernetes, allowing easy deployment and management.",
+      "tags": ["minio", "kubernetes"]
+    },
+    {
+      "id": "03-minio-storage-q11",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following is NOT a valid storage class in MinIO?",
+      "options": [
+        { "id": "a", "text": "STANDARD" },
+        { "id": "b", "text": "INTELLIGENT_TIERING" },
+        { "id": "c", "text": "GLACIER" },
+        { "id": "d", "text": "DEEP_ARCHIVE" }
+      ],
+      "answer": "d",
+      "explanation": "DEEP_ARCHIVE is not a valid storage class in MinIO. MinIO supports STANDARD and INTELLIGENT_TIERING.",
+      "tags": ["minio", "storage"]
+    },
+    {
+      "id": "03-minio-storage-q12",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the snippet for setting a lifecycle policy:",
+      "language": "json",
+      "code_template": "{ 'Rules': [ { 'ID': 'lifecycle-rule', 'Filter': { 'Prefix': 'documents/' }, 'Status': 'Enabled', 'Expiration': { 'Days': ____ } } ] }",
+      "blanks": [
+        { "id": "b1", "options": ["30", "60", "90", "120"], "answer": "30" }
+      ],
+      "explanation": "The policy sets the expiration of objects under 'documents/' prefix to 30 days."
+    },
+    {
+      "id": "03-minio-storage-q13",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print('Hello, World!'.split(','))",
+      "options": [
+        { "id": "a", "text": "['Hello', ' World!']" },
+        { "id": "b", "text": "['Hello', ' World!']" },
+        { "id": "c", "text": "['Hello, World!']" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "c",
+      "explanation": "The split method divides the string at the commas, but there are none, so it returns the full string in a list."
+    },
+    {
+      "id": "03-minio-storage-q14",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following tools can be used with MinIO?",
+      "options": [
+        { "id": "a", "text": "Docker" },
+        { "id": "b", "text": "Kubernetes" },
+        { "id": "c", "text": "Terraform" },
+        { "id": "d", "text": "All of the above" }
+      ],
+      "answer": "d",
+      "explanation": "MinIO can be integrated with Docker, Kubernetes, and Terraform for deployment and management.",
+      "tags": ["minio", "tools"]
+    },
+    {
+      "id": "03-minio-storage-q15",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "MinIO offers server-side encryption for data at rest.",
+      "answer": true,
+      "explanation": "MinIO provides options for server-side encryption, ensuring data is secure at rest.",
+      "tags": ["minio", "encryption"]
+    }
+  ]
+}

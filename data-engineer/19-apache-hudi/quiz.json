@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "19-apache-hudi",
+  "type": "module",
+  "questions": [
+    {
+      "id": "19-apache-hudi-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the primary purpose of Apache Hudi?",
+      "options": [
+        { "id": "a", "text": "Data visualization" },
+        { "id": "b", "text": "Real-time data ingestion" },
+        { "id": "c", "text": "Batch data processing" },
+        { "id": "d", "text": "Data storage optimization" }
+      ],
+      "answer": "b",
+      "explanation": "Apache Hudi focuses on enabling real-time data ingestion and processing for big data systems.",
+      "tags": ["intro"]
+    },
+    {
+      "id": "19-apache-hudi-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which of the following is a key feature of Hudi?",
+      "options": [
+        { "id": "a", "text": "Time travel" },
+        { "id": "b", "text": "Machine Learning" },
+        { "id": "c", "text": "Data Encryption" },
+        { "id": "d", "text": "Data Compression" }
+      ],
+      "answer": "a",
+      "explanation": "Time travel allows users to query historical versions of data, making Hudi unique.",
+      "tags": ["time-travel"]
+    },
+    {
+      "id": "19-apache-hudi-q3",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does COW stand for in Hudi?",
+      "options": [
+        { "id": "a", "text": "Change Of Write" },
+        { "id": "b", "text": "Copy On Write" },
+        { "id": "c", "text": "Commit On Write" },
+        { "id": "d", "text": "Cluster On Write" }
+      ],
+      "answer": "b",
+      "explanation": "COW stands for Copy On Write, which is one of the storage types in Hudi.",
+      "tags": ["cow-vs-mor"]
+    },
+    {
+      "id": "19-apache-hudi-q4",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to write data to Hudi:",
+      "language": "python",
+      "code_template": "hudi_df.write.format('hudi').option('hoodie.table.name', 'my_table').____().____()",
+      "blanks": [
+        { "id": "b1", "options": ["mode", "save", "partitionBy", "option"], "answer": "mode" },
+        { "id": "b2", "options": ["overwrite", "append", "complete", "error"], "answer": "overwrite" }
+      ],
+      "explanation": "The 'mode' option specifies how data should be written; 'overwrite' replaces existing data.",
+      "tags": ["write-paths"]
+    },
+    {
+      "id": "19-apache-hudi-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Hudi supports both batch and streaming data ingestion.",
+      "answer": true,
+      "explanation": "Hudi is designed to handle both batch and streaming data, making it versatile.",
+      "tags": ["intro"]
+    },
+    {
+      "id": "19-apache-hudi-q6",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this code print?",
+      "language": "python",
+      "code": "print([x for x in range(5) if x % 2 == 0])",
+      "options": [
+        { "id": "a", "text": "[0, 1, 2, 3, 4]" },
+        { "id": "b", "text": "[0, 2, 4]" },
+        { "id": "c", "text": "[1, 3]" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "b",
+      "explanation": "The code filters even numbers from 0 to 4, resulting in [0, 2, 4].",
+      "tags": ["general"]
+    },
+    {
+      "id": "19-apache-hudi-q7",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the main advantage of using MOR over COW?",
+      "options": [
+        { "id": "a", "text": "Faster read performance" },
+        { "id": "b", "text": "Lower disk space usage" },
+        { "id": "c", "text": "Easier data management" },
+        { "id": "d", "text": "Better integration with Spark" }
+      ],
+      "answer": "b",
+      "explanation": "MOR (Merge On Read) is more efficient in terms of disk space compared to COW.",
+      "tags": ["cow-vs-mor"]
+    },
+    {
+      "id": "19-apache-hudi-q8",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to perform compaction in Hudi:",
+      "steps": [
+        { "id": "s1", "text": "Identify files to compact" },
+        { "id": "s2", "text": "Merge the identified files" },
+        { "id": "s3", "text": "Write the compacted file" },
+        { "id": "s4", "text": "Update the metadata" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "Compaction involves identifying files first, merging them, writing the result, and updating metadata.",
+      "tags": ["compaction"]
+    },
+    {
+      "id": "19-apache-hudi-q9",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Compaction in Hudi is only required for COW tables.",
+      "answer": false,
+      "explanation": "Compaction can also be useful for MOR tables to optimize read performance.",
+      "tags": ["compaction"]
+    },
+    {
+      "id": "19-apache-hudi-q10",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What triggers a compaction operation in Hudi?",
+      "options": [
+        { "id": "a", "text": "Scheduled time intervals" },
+        { "id": "b", "text": "User-defined events" },
+        { "id": "c", "text": "Data volume thresholds" },
+        { "id": "d", "text": "All of the above" }
+      ],
+      "answer": "d",
+      "explanation": "Compaction can be triggered by various conditions including time, events, and thresholds.",
+      "tags": ["compaction"]
+    },
+    {
+      "id": "19-apache-hudi-q11",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this code print?",
+      "language": "python",
+      "code": "print(len(set([1, 2, 2, 3, 4, 4, 5])))",
+      "options": [
+        { "id": "a", "text": "5" },
+        { "id": "b", "text": "6" },
+        { "id": "c", "text": "4" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "c",
+      "explanation": "The set removes duplicates, leaving [1, 2, 3, 4, 5], which has a length of 5.",
+      "tags": ["general"]
+    },
+    {
+      "id": "19-apache-hudi-q12",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following is NOT a supported format for Hudi?",
+      "options": [
+        { "id": "a", "text": "JSON" },
+        { "id": "b", "text": "Avro" },
+        { "id": "c", "text": "Parquet" },
+        { "id": "d", "text": "XML" }
+      ],
+      "answer": "d",
+      "explanation": "Hudi supports JSON, Avro, and Parquet but does not support XML format.",
+      "tags": ["intro"]
+    },
+    {
+      "id": "19-apache-hudi-q13",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the code to read from a Hudi table:",
+      "language": "python",
+      "code_template": "hudi_df = spark.read.format('hudi').option('hoodie.table.name', 'my_table').____()",
+      "blanks": [
+        { "id": "b1", "options": ["load", "read", "insert", "select"], "answer": "load" }
+      ],
+      "explanation": "The 'load' method is used to read data from a specified Hudi table.",
+      "tags": ["write-paths"]
+    },
+    {
+      "id": "19-apache-hudi-q14",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "In Hudi, which of the following is used to manage versioning?",
+      "options": [
+        { "id": "a", "text": "Commit time" },
+        { "id": "b", "text": "Record key" },
+        { "id": "c", "text": "Partition path" },
+        { "id": "d", "text": "File size" }
+      ],
+      "answer": "a",
+      "explanation": "Commit time is crucial for managing and tracking data versions in Hudi.",
+      "tags": ["time-travel"]
+    },
+    {
+      "id": "19-apache-hudi-q15",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Hudi can be integrated with Apache Spark.",
+      "answer": true,
+      "explanation": "Hudi is designed to work seamlessly with Apache Spark for data processing.",
+      "tags": ["intro"]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "lastUpdated": "2026-05-29",
+  "appMinVersion": "1.0.0",
+  "modules": {
+    "data-analyst/01-sql-basics": 1
+  },
+  "feed": {
+    "version": 0
+  },
+  "independentQuizzes": {
+    "version": 1
+  }
+}

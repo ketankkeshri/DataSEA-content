@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "03-excel-for-analysts",
+  "type": "module",
+  "questions": [
+    {
+      "id": "03-excel-for-analysts-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What function do you use to find the average of a range in Excel?",
+      "options": [
+        { "id": "a", "text": "SUM" },
+        { "id": "b", "text": "AVERAGE" },
+        { "id": "c", "text": "COUNT" },
+        { "id": "d", "text": "MEDIAN" }
+      ],
+      "answer": "b",
+      "explanation": "The AVERAGE function calculates the mean of a given range of numbers.",
+      "tags": ["formulas"]
+    },
+    {
+      "id": "03-excel-for-analysts-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does the VLOOKUP function do?",
+      "options": [
+        { "id": "a", "text": "Looks up a value in a row" },
+        { "id": "b", "text": "Looks up a value in a column" },
+        { "id": "c", "text": "Looks up a value in a table" },
+        { "id": "d", "text": "Looks up a value in a chart" }
+      ],
+      "answer": "c",
+      "explanation": "VLOOKUP searches for a value in the first column of a table and returns a value in the same row from a specified column.",
+      "tags": ["vlookup-xlookup"]
+    },
+    {
+      "id": "03-excel-for-analysts-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to calculate the total sales: ",
+      "language": "excel",
+      "code_template": "=SUM(____)",
+      "blanks": [
+        { "id": "b1", "options": ["A1:A10", "B1:B10", "C1:C10"], "answer": "A1:A10" }
+      ],
+      "explanation": "You want to sum the values in cells A1 through A10.",
+      "tags": ["formulas"]
+    },
+    {
+      "id": "03-excel-for-analysts-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does the following formula return? =IF(A1>10, 'High', 'Low') where A1=15",
+      "language": "excel",
+      "code": "=IF(A1>10, 'High', 'Low')",
+      "options": [
+        { "id": "a", "text": "'High'" },
+        { "id": "b", "text": "'Low'" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "None" }
+      ],
+      "answer": "a",
+      "explanation": "Since A1 is greater than 10, the formula returns 'High'.",
+      "tags": ["formulas"]
+    },
+    {
+      "id": "03-excel-for-analysts-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "The CONCATENATE function can combine multiple text strings into one.",
+      "answer": true,
+      "explanation": "That's correct! CONCATENATE joins together multiple text strings into a single string.",
+      "tags": ["formulas"]
+    },
+    {
+      "id": "03-excel-for-analysts-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following is a common use of Pivot Tables?",
+      "options": [
+        { "id": "a", "text": "Creating charts" },
+        { "id": "b", "text": "Summarizing large data sets" },
+        { "id": "c", "text": "Inputting formulas" },
+        { "id": "d", "text": "Formatting cells" }
+      ],
+      "answer": "b",
+      "explanation": "Pivot Tables are used to summarize and analyze large sets of data quickly.",
+      "tags": ["pivot-tables"]
+    },
+    {
+      "id": "03-excel-for-analysts-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to create a Pivot Table correctly:",
+      "steps": [
+        { "id": "s1", "text": "Select the data range" },
+        { "id": "s2", "text": "Go to the Insert tab" },
+        { "id": "s3", "text": "Choose Pivot Table" },
+        { "id": "s4", "text": "Drag fields to Rows and Values" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "Start by selecting the data range, then go to the Insert tab and choose Pivot Table before dragging fields to configure it.",
+      "tags": ["pivot-tables"]
+    },
+    {
+      "id": "03-excel-for-analysts-q8",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Fill in the blank to create a line chart: ",
+      "language": "excel",
+      "code_template": "ChartObjects(____).Chart.ChartType = xlLine",
+      "blanks": [
+        { "id": "b1", "options": ["1", "2", "3"], "answer": "1" }
+      ],
+      "explanation": "You need to specify the index of the chart object to set its type.",
+      "tags": ["charts"]
+    },
+    {
+      "id": "03-excel-for-analysts-q9",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this formula return? =COUNTIF(A1:A10, '>5') where A1=3, A2=8, A3=6",
+      "language": "excel",
+      "code": "=COUNTIF(A1:A10, '>5')",
+      "options": [
+        { "id": "a", "text": "2" },
+        { "id": "b", "text": "1" },
+        { "id": "c", "text": "3" },
+        { "id": "d", "text": "0" }
+      ],
+      "answer": "a",
+      "explanation": "The range contains two values greater than 5: 8 and 6.",
+      "tags": ["formulas"]
+    },
+    {
+      "id": "03-excel-for-analysts-q10",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What is the main difference between VLOOKUP and XLOOKUP?",
+      "options": [
+        { "id": "a", "text": "XLOOKUP can only search left to right" },
+        { "id": "b", "text": "VLOOKUP requires sorted data" },
+        { "id": "c", "text": "XLOOKUP can return multiple values" },
+        { "id": "d", "text": "VLOOKUP works with multiple criteria" }
+      ],
+      "answer": "c",
+      "explanation": "XLOOKUP can return multiple values, while VLOOKUP can only return a single value from a specified column.",
+      "tags": ["vlookup-xlookup"]
+    },
+    {
+      "id": "03-excel-for-analysts-q11",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "A Pivot Table can automatically update when new data is added to the source.",
+      "answer": false,
+      "explanation": "Pivot Tables do not update automatically; you must refresh them to reflect new data.",
+      "tags": ["pivot-tables"]
+    },
+    {
+      "id": "03-excel-for-analysts-q12",
+      "type": "order_the_steps",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Order these steps to create a basic chart:",
+      "steps": [
+        { "id": "s1", "text": "Select the data" },
+        { "id": "s2", "text": "Click on the Chart button" },
+        { "id": "s3", "text": "Choose chart type" },
+        { "id": "s4", "text": "Adjust chart settings" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "Select the data first, then click the Chart button, choose the chart type, and finally adjust settings.",
+      "tags": ["charts"]
+    },
+    {
+      "id": "03-excel-for-analysts-q13",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which chart type is best for showing trends over time?",
+      "options": [
+        { "id": "a", "text": "Pie Chart" },
+        { "id": "b", "text": "Bar Chart" },
+        { "id": "c", "text": "Line Chart" },
+        { "id": "d", "text": "Scatter Plot" }
+      ],
+      "answer": "c",
+      "explanation": "Line Charts are ideal for displaying trends over time as they show data points connected by lines.",
+      "tags": ["charts"]
+    },
+    {
+      "id": "03-excel-for-analysts-q14",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does the following formula return? =SUM(A1:A3) where A1=1, A2=2, A3=3",
+      "language": "excel",
+      "code": "=SUM(A1:A3)",
+      "options": [
+        { "id": "a", "text": "3" },
+        { "id": "b", "text": "6" },
+        { "id": "c", "text": "0" },
+        { "id": "d", "text": "1" }
+      ],
+      "answer": "b",
+      "explanation": "The SUM function adds the values in A1, A2, and A3, resulting in 6.",
+      "tags": ["formulas"]
+    },
+    {
+      "id": "03-excel-for-analysts-q15",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "You can use the IF function to check multiple conditions.",
+      "answer": true,
+      "explanation": "That's correct! The IF function can be nested to check multiple conditions.",
+      "tags": ["formulas"]
+    }
+  ]
+}

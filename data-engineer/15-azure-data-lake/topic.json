@@ -1,0 +1,38 @@
+{
+  "id": "15-azure-data-lake",
+  "section": "data-engineer",
+  "tier": "intermediate",
+  "moduleOrder": 15,
+  "version": 1,
+  "title": "Azure Data Lake Storage",
+  "shortDescription": "Azure Data Lake Storage \u2014 beginner to advanced concepts and code.",
+  "icon": "15-azure-data-lake",
+  "estimatedMinutes": 32,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-gen2-hierarchical",
+      "title": "Gen2 Hierarchical",
+      "minutes": 8
+    },
+    {
+      "id": "03-security",
+      "title": "Security",
+      "minutes": 8
+    },
+    {
+      "id": "04-integration-synapse",
+      "title": "Integration Synapse",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

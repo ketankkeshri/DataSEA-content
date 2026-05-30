@@ -1,0 +1,60 @@
+{
+  "sections": [
+    {
+      "id": "data-analyst",
+      "title": "Data Analytics",
+      "tagline": "Read the data. Tell the story.",
+      "gradient": [
+        "#06D6FF",
+        "#1B4FFF"
+      ],
+      "tiers": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ]
+    },
+    {
+      "id": "data-engineer",
+      "title": "Data Engineering",
+      "tagline": "Build the pipes that power the world.",
+      "gradient": [
+        "#1B4FFF",
+        "#A6FF4D"
+      ],
+      "tiers": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ]
+    },
+    {
+      "id": "data-science-ml",
+      "title": "Data Science & ML",
+      "tagline": "Train the future.",
+      "gradient": [
+        "#FF2E93",
+        "#FFA94D"
+      ],
+      "tiers": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ]
+    },
+    {
+      "id": "dataops-mlops",
+      "title": "DataOps + MLOps",
+      "tagline": "Ship reliably. Scale infinitely.",
+      "gradient": [
+        "#A6FF4D",
+        "#06D6FF"
+      ],
+      "tiers": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ]
+    }
+  ]
+}

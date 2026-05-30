@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "23-trino-internals",
+  "type": "module",
+  "questions": [
+    {
+      "id": "23-trino-internals-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the primary purpose of the cost-based optimizer in Trino?",
+      "options": [
+        { "id": "a", "text": "To speed up query execution." },
+        { "id": "b", "text": "To reduce the amount of data processed." },
+        { "id": "c", "text": "To select the most efficient query plan." },
+        { "id": "d", "text": "To enable fault tolerance." }
+      ],
+      "answer": "c",
+      "explanation": "The cost-based optimizer selects the most efficient query plan based on cost estimates."
+    },
+    {
+      "id": "23-trino-internals-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which component of Trino is responsible for query planning?",
+      "options": [
+        { "id": "a", "text": "Query Engine" },
+        { "id": "b", "text": "Coordinator" },
+        { "id": "c", "text": "Worker Node" },
+        { "id": "d", "text": "Connector" }
+      ],
+      "answer": "b",
+      "explanation": "The Coordinator is responsible for parsing SQL queries and planning their execution."
+    },
+    {
+      "id": "23-trino-internals-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to enable fault tolerance in Trino:",
+      "language": "sql",
+      "code_template": "SET SESSION fault_tolerance = ____;",
+      "blanks": [
+        { "id": "b1", "options": ["true", "false", "enabled", "disabled"], "answer": "true" }
+      ],
+      "explanation": "Setting 'fault_tolerance' to true enables fault tolerance for query execution in Trino."
+    },
+    {
+      "id": "23-trino-internals-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this SQL query return?",
+      "language": "sql",
+      "code": "SELECT COUNT(*) FROM orders WHERE amount > 100;",
+      "options": [
+        { "id": "a", "text": "Number of orders with amount greater than 100." },
+        { "id": "b", "text": "Total sum of orders with amount greater than 100." },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "All orders with amount greater than 100." }
+      ],
+      "answer": "a",
+      "explanation": "The query counts how many orders have an amount greater than 100."
+    },
+    {
+      "id": "23-trino-internals-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Trino supports real-time data querying from multiple data sources.",
+      "answer": true,
+      "explanation": "Trino can query data from various sources in real-time, which is one of its key features."
+    },
+    {
+      "id": "23-trino-internals-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following best describes federation patterns in Trino?",
+      "options": [
+        { "id": "a", "text": "Running queries against a single data source." },
+        { "id": "b", "text": "Combining results from multiple data sources." },
+        { "id": "c", "text": "Storing data in a central repository." },
+        { "id": "d", "text": "Querying data in a distributed environment." }
+      ],
+      "answer": "b",
+      "explanation": "Federation patterns allow Trino to combine results from multiple data sources seamlessly."
+    },
+    {
+      "id": "23-trino-internals-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps in the cost-based optimization process:",
+      "steps": [
+        { "id": "s1", "text": "Estimate costs for each plan." },
+        { "id": "s2", "text": "Generate possible query plans." },
+        { "id": "s3", "text": "Select the plan with the lowest cost." },
+        { "id": "s4", "text": "Analyze query structure." }
+      ],
+      "correctOrder": ["s2", "s4", "s1", "s3"],
+      "explanation": "First, generate possible plans, analyze the structure, estimate costs, and then select the best plan."
+    },
+    {
+      "id": "23-trino-internals-q8",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the SQL query to perform data federation:",
+      "language": "sql",
+      "code_template": "SELECT * FROM remote_table AS r ____;",
+      "blanks": [
+        { "id": "b1", "options": ["JOIN local_table AS l ON r.id = l.id", "FILTER l.id = r.id", "WHERE r.id = l.id", "GROUP BY r.id"], "answer": "JOIN local_table AS l ON r.id = l.id" }
+      ],
+      "explanation": "Joining a remote table with a local table enables data federation."
+    },
+    {
+      "id": "23-trino-internals-q9",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Trino can only execute queries on data stored in cloud environments.",
+      "answer": false,
+      "explanation": "Trino can query data from various environments, including on-premises data sources."
+    },
+    {
+      "id": "23-trino-internals-q10",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this SQL query return?",
+      "language": "sql",
+      "code": "SELECT DISTINCT category FROM products WHERE price < 50;",
+      "options": [
+        { "id": "a", "text": "All product categories." },
+        { "id": "b", "text": "All distinct categories of products priced below 50." },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "Total count of categories." }
+      ],
+      "answer": "b",
+      "explanation": "The query returns distinct categories of products where the price is less than 50."
+    },
+    {
+      "id": "23-trino-internals-q11",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following statements about Trino's fault-tolerant execution is true?",
+      "options": [
+        { "id": "a", "text": "It guarantees zero data loss." },
+        { "id": "b", "text": "It retries failed tasks automatically." },
+        { "id": "c", "text": "It requires manual intervention." },
+        { "id": "d", "text": "It only works on small datasets." }
+      ],
+      "answer": "b",
+      "explanation": "Trino's fault-tolerant execution can automatically retry failed tasks to maintain query integrity."
+    },
+    {
+      "id": "23-trino-internals-q12",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps in the fault-tolerant execution process:",
+      "steps": [
+        { "id": "s1", "text": "Detect task failure." },
+        { "id": "s2", "text": "Retry the task." },
+        { "id": "s3", "text": "Mark task as failed." },
+        { "id": "s4", "text": "Notify the coordinator." }
+      ],
+      "correctOrder": ["s1", "s4", "s2", "s3"],
+      "explanation": "The process starts with detecting failure, notifying the coordinator, retrying the task, and marking it as failed if necessary."
+    },
+    {
+      "id": "23-trino-internals-q13",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does the command 'SHOW TABLES' return in Trino?",
+      "options": [
+        { "id": "a", "text": "List of all tables in the database." },
+        { "id": "b", "text": "List of all databases." },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "Details of the current session." }
+      ],
+      "answer": "a",
+      "explanation": "'SHOW TABLES' retrieves a list of all tables available in the current database context."
+    },
+    {
+      "id": "23-trino-internals-q14",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the query to filter results based on a condition:",
+      "language": "sql",
+      "code_template": "SELECT * FROM users WHERE age ____;",
+      "blanks": [
+        { "id": "b1", "options": ["> 18", "< 18", "IS NULL", "= NULL"], "answer": "> 18" }
+      ],
+      "explanation": "Filtering users by age greater than 18 selects adult users."
+    },
+    {
+      "id": "23-trino-internals-q15",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Trino can execute queries in parallel across different nodes.",
+      "answer": true,
+      "explanation": "Trino's distributed architecture allows for parallel query execution across multiple nodes."
+    }
+  ]
+}

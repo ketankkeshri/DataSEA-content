@@ -1,0 +1,43 @@
+{
+  "id": "08-power-bi",
+  "section": "data-analyst",
+  "tier": "intermediate",
+  "moduleOrder": 8,
+  "version": 1,
+  "title": "Power BI Essentials",
+  "shortDescription": "Power BI Essentials \u2014 beginner to advanced concepts and code.",
+  "icon": "08-power-bi",
+  "estimatedMinutes": 40,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-dax-basics",
+      "title": "Dax Basics",
+      "minutes": 8
+    },
+    {
+      "id": "03-relationships",
+      "title": "Relationships",
+      "minutes": 8
+    },
+    {
+      "id": "04-visuals",
+      "title": "Visuals",
+      "minutes": 8
+    },
+    {
+      "id": "05-publishing",
+      "title": "Publishing",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

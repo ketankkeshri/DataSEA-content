@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "06-feature-engineering",
+  "type": "module",
+  "questions": [
+    {
+      "id": "06-feature-engineering-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is feature engineering?",
+      "options": [
+        { "id": "a", "text": "Creating new features from existing data" },
+        { "id": "b", "text": "Building a machine learning model" },
+        { "id": "c", "text": "Cleaning data from outliers" },
+        { "id": "d", "text": "Evaluating model performance" }
+      ],
+      "answer": "a",
+      "explanation": "Feature engineering involves creating new features to improve model performance."
+    },
+    {
+      "id": "06-feature-engineering-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does scaling do in feature engineering?",
+      "options": [
+        { "id": "a", "text": "Removes duplicates from the dataset" },
+        { "id": "b", "text": "Transforms features to a similar scale" },
+        { "id": "c", "text": "Encodes categorical variables" },
+        { "id": "d", "text": "Fills missing values" }
+      ],
+      "answer": "b",
+      "explanation": "Scaling transforms features to a similar range, which can improve model performance."
+    },
+    {
+      "id": "06-feature-engineering-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet:",
+      "language": "python",
+      "code_template": "from sklearn.preprocessing import ____\nscaler = ____()\nscaled_data = scaler.____(data)",
+      "blanks": [
+        { "id": "b1", "options": ["StandardScaler", "MinMaxScaler", "LabelEncoder", "OneHotEncoder"], "answer": "MinMaxScaler" },
+        { "id": "b2", "options": ["MinMaxScaler", "fit_transform", "transform", "fit"], "answer": "fit_transform" }
+      ],
+      "explanation": "MinMaxScaler scales the data to a range of [0, 1]."
+    },
+    {
+      "id": "06-feature-engineering-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(['cat' * 2 for _ in range(2)])",
+      "options": [
+        { "id": "a", "text": "['catcat', 'catcat']" },
+        { "id": "b", "text": "['cat', 'cat']" },
+        { "id": "c", "text": "['catcatcatcat']" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The list comprehension repeats 'cat' twice for each iteration."
+    },
+    {
+      "id": "06-feature-engineering-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Feature engineering is only necessary for deep learning models.",
+      "answer": false,
+      "explanation": "Feature engineering is important for all types of models, including traditional ML."
+    },
+    {
+      "id": "06-feature-engineering-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which method is commonly used to encode categorical variables?",
+      "options": [
+        { "id": "a", "text": "Label Encoding" },
+        { "id": "b", "text": "Feature Scaling" },
+        { "id": "c", "text": "Normalization" },
+        { "id": "d", "text": "Data Imputation" }
+      ],
+      "answer": "a",
+      "explanation": "Label Encoding converts categorical values to numeric values."
+    },
+    {
+      "id": "06-feature-engineering-q7",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet for one-hot encoding:",
+      "language": "python",
+      "code_template": "import pandas as pd\npd.get_dummies(df, columns=['____'])",
+      "blanks": [
+        { "id": "b1", "options": ["category", "label", "text", "date"], "answer": "category" }
+      ],
+      "explanation": "One-hot encoding is applied to categorical columns to create binary columns."
+    },
+    {
+      "id": "06-feature-engineering-q8",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print('Hello'.lower())",
+      "options": [
+        { "id": "a", "text": "hello" },
+        { "id": "b", "text": "Hello" },
+        { "id": "c", "text": "HELLO" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The lower() method converts all characters to lowercase."
+    },
+    {
+      "id": "06-feature-engineering-q9",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps for feature extraction:",
+      "steps": [
+        { "id": "s1", "text": "Scale the features" },
+        { "id": "s2", "text": "Extract features from raw data" },
+        { "id": "s3", "text": "Encode categorical variables" },
+        { "id": "s4", "text": "Combine new features into the dataset" }
+      ],
+      "correctOrder": ["s2", "s3", "s1", "s4"],
+      "explanation": "First, extract features, then encode them, scale, and finally combine into the dataset."
+    },
+    {
+      "id": "06-feature-engineering-q10",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the main purpose of datetime features?",
+      "options": [
+        { "id": "a", "text": "To represent numerical data" },
+        { "id": "b", "text": "To analyze time-related trends" },
+        { "id": "c", "text": "To encode text data" },
+        { "id": "d", "text": "To handle missing values" }
+      ],
+      "answer": "b",
+      "explanation": "Datetime features help analyze trends over time."
+    },
+    {
+      "id": "06-feature-engineering-q11",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Datetime features can be created from a timestamp by extracting year, month, and day.",
+      "answer": true,
+      "explanation": "You can extract various components from a timestamp for analysis."
+    },
+    {
+      "id": "06-feature-engineering-q12",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which is a common anti-pattern in feature engineering?",
+      "options": [
+        { "id": "a", "text": "Overfitting the model with too many features" },
+        { "id": "b", "text": "Using too few features" },
+        { "id": "c", "text": "Scaling data before splitting" },
+        { "id": "d", "text": "All of the above" }
+      ],
+      "answer": "d",
+      "explanation": "All mentioned options can lead to poor model performance."
+    },
+    {
+      "id": "06-feature-engineering-q13",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps in text feature extraction:",
+      "steps": [
+        { "id": "s1", "text": "Tokenize the text" },
+        { "id": "s2", "text": "Vectorize the tokens" },
+        { "id": "s3", "text": "Clean the text data" },
+        { "id": "s4", "text": "Create a vocabulary" }
+      ],
+      "correctOrder": ["s3", "s1", "s4", "s2"],
+      "explanation": "First clean the text, then tokenize, create a vocabulary, and finally vectorize."
+    },
+    {
+      "id": "06-feature-engineering-q14",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet for datetime conversion:",
+      "language": "python",
+      "code_template": "df['date'] = pd.to_datetime(df['____'])",
+      "blanks": [
+        { "id": "b1", "options": ["timestamp", "date_string", "time", "datetime"], "answer": "date_string" }
+      ],
+      "explanation": "pd.to_datetime() converts strings to datetime objects."
+    },
+    {
+      "id": "06-feature-engineering-q15",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(' '.join(['Data', 'Science']))",
+      "options": [
+        { "id": "a", "text": "DataScience" },
+        { "id": "b", "text": "Data Science" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "Data  Science" }
+      ],
+      "answer": "b",
+      "explanation": "The join() method combines the strings with a space."
+    }
+  ]
+}

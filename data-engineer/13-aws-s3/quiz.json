@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "13-aws-s3",
+  "type": "module",
+  "questions": [
+    {
+      "id": "13-aws-s3-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is Amazon S3 primarily used for?",
+      "options": [
+        { "id": "a", "text": "Real-time data processing" },
+        { "id": "b", "text": "Object storage" },
+        { "id": "c", "text": "Database management" },
+        { "id": "d", "text": "Machine learning modeling" }
+      ],
+      "answer": "b",
+      "explanation": "Amazon S3 is designed for storing and retrieving any amount of data at any time, making it an object storage service."
+    },
+    {
+      "id": "13-aws-s3-q2",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to list objects in a bucket:",
+      "language": "python",
+      "code_template": "s3_client.list_objects_v2(Bucket='my_bucket', ____)",
+      "blanks": [
+        { "id": "b1", "options": ["Prefix='folder/'", "Delimiter='/'", "MaxKeys=10", "All=True"], "answer": "Prefix='folder/'" }
+      ],
+      "explanation": "The 'Prefix' parameter allows you to filter the objects that are returned based on the specified prefix."
+    },
+    {
+      "id": "13-aws-s3-q3",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print([x for x in range(5) if x % 2 == 0])",
+      "options": [
+        { "id": "a", "text": "[0, 2, 4]" },
+        { "id": "b", "text": "[1, 3]" },
+        { "id": "c", "text": "[0, 1, 2, 3, 4]" },
+        { "id": "d", "text": "[2, 4]" }
+      ],
+      "answer": "a",
+      "explanation": "The list comprehension filters the numbers 0 through 4, returning only the even numbers."
+    },
+    {
+      "id": "13-aws-s3-q4",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "AWS S3 supports versioning of objects.",
+      "answer": true,
+      "explanation": "True. AWS S3 allows you to enable versioning on buckets, which helps you manage different versions of the same object."
+    },
+    {
+      "id": "13-aws-s3-q5",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to set up S3 bucket lifecycle policies correctly:",
+      "steps": [
+        { "id": "s1", "text": "Define the lifecycle policy" },
+        { "id": "s2", "text": "Choose the S3 bucket" },
+        { "id": "s3", "text": "Review the policy settings" },
+        { "id": "s4", "text": "Apply the lifecycle policy" }
+      ],
+      "correctOrder": ["s2", "s1", "s3", "s4"],
+      "explanation": "First, select the bucket, then define and review the policy before applying it."
+    },
+    {
+      "id": "13-aws-s3-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which S3 storage class is best for infrequently accessed data?",
+      "options": [
+        { "id": "a", "text": "S3 Standard" },
+        { "id": "b", "text": "S3 Intelligent-Tiering" },
+        { "id": "c", "text": "S3 One Zone-IA" },
+        { "id": "d", "text": "S3 Glacier" }
+      ],
+      "answer": "c",
+      "explanation": "S3 One Zone-IA is designed specifically for infrequently accessed data that does not require the resilience of multiple availability zones."
+    },
+    {
+      "id": "13-aws-s3-q7",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the code to enable server-side encryption:",
+      "language": "python",
+      "code_template": "s3_client.put_object(Bucket='my_bucket', Key='my_object', Body='data', ____)",
+      "blanks": [
+        { "id": "b1", "options": ["SSEAlgorithm='AES256'", "Encryption='enabled'", "Encrypt=True", "SSE='True'"], "answer": "SSEAlgorithm='AES256'" }
+      ],
+      "explanation": "The SSEAlgorithm parameter specifies the server-side encryption method to be used."
+    },
+    {
+      "id": "13-aws-s3-q8",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Amazon S3 Lifecycle Policies can automatically delete objects after a specified time.",
+      "answer": true,
+      "explanation": "True. S3 Lifecycle Policies allow you to define rules for automatically transitioning or expiring objects."
+    },
+    {
+      "id": "13-aws-s3-q9",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(len([x for x in range(10) if x > 5]))",
+      "options": [
+        { "id": "a", "text": "5" },
+        { "id": "b", "text": "4" },
+        { "id": "c", "text": "6" },
+        { "id": "d", "text": "3" }
+      ],
+      "answer": "b",
+      "explanation": "The list comprehension generates numbers greater than 5, resulting in the list [6, 7, 8, 9], which has a length of 4."
+    },
+    {
+      "id": "13-aws-s3-q10",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does IAM stand for?",
+      "options": [
+        { "id": "a", "text": "Internet Access Management" },
+        { "id": "b", "text": "Identity and Access Management" },
+        { "id": "c", "text": "Internal Account Management" },
+        { "id": "c", "text": "Identity and Asset Management" },
+        { "id": "d", "text": "Identity Automated Management" }
+      ],
+      "answer": "b",
+      "explanation": "IAM stands for Identity and Access Management, which is a framework for managing user access to resources."
+    },
+    {
+      "id": "13-aws-s3-q11",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to perform a multipart upload correctly:",
+      "steps": [
+        { "id": "s1", "text": "Initiate multipart upload" },
+        { "id": "s2", "text": "Upload each part" },
+        { "id": "s3", "text": "Complete the multipart upload" },
+        { "id": "s4", "text": "Check upload status" }
+      ],
+      "correctOrder": ["s1", "s2", "s4", "s3"],
+      "explanation": "First, initiate the upload, then upload parts, check the status, and finally complete the upload."
+    },
+    {
+      "id": "13-aws-s3-q12",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the maximum size of an individual part in a multipart upload?",
+      "options": [
+        { "id": "a", "text": "5 GB" },
+        { "id": "b", "text": "10 GB" },
+        { "id": "c", "text": "100 MB" },
+        { "id": "d", "text": "1 GB" }
+      ],
+      "answer": "a",
+      "explanation": "The maximum size of an individual part in a multipart upload is 5 GB."
+    },
+    {
+      "id": "13-aws-s3-q13",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "S3 buckets can only be accessed publicly when configured for public access.",
+      "answer": true,
+      "explanation": "True. By default, S3 buckets are private, and public access must be explicitly enabled."
+    },
+    {
+      "id": "13-aws-s3-q14",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the code to query S3 data using Athena:",
+      "language": "sql",
+      "code_template": "SELECT * FROM ____.my_table;",
+      "blanks": [
+        { "id": "b1", "options": ["s3", "athena", "my_database", "my_bucket"], "answer": "my_database" }
+      ],
+      "explanation": "You need to specify the database name in which the table resides when querying with Athena."
+    },
+    {
+      "id": "13-aws-s3-q15",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the purpose of bucket policies in S3?",
+      "options": [
+        { "id": "a", "text": "To manage billing" },
+        { "id": "b", "text": "To control access to buckets" },
+        { "id": "c", "text": "To manage data transfer" },
+        { "id": "d", "text": "To monitor usage" }
+      ],
+      "answer": "b",
+      "explanation": "Bucket policies are used to define permissions for who can access the bucket and its objects."
+    }
+  ]
+}

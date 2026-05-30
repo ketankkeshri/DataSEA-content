@@ -1,0 +1,53 @@
+{
+  "id": "09-dbt",
+  "section": "data-engineer",
+  "tier": "intermediate",
+  "moduleOrder": 9,
+  "version": 1,
+  "title": "dbt Transformations",
+  "shortDescription": "dbt Transformations \u2014 beginner to advanced concepts and code.",
+  "icon": "09-dbt",
+  "estimatedMinutes": 56,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-models",
+      "title": "Models",
+      "minutes": 8
+    },
+    {
+      "id": "03-sources-refs",
+      "title": "Sources Refs",
+      "minutes": 8
+    },
+    {
+      "id": "04-tests",
+      "title": "Tests",
+      "minutes": 8
+    },
+    {
+      "id": "05-snapshots",
+      "title": "Snapshots",
+      "minutes": 8
+    },
+    {
+      "id": "06-macros",
+      "title": "Macros",
+      "minutes": 8
+    },
+    {
+      "id": "07-dbt-mesh-overview",
+      "title": "Dbt Mesh Overview",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

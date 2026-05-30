@@ -1,0 +1,413 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "packId": "interview-sprint",
+  "type": "independent",
+  "title": "Interview Sprint",
+  "description": "25 mixed questions covering SQL, Spark, Airflow, Kafka, Python, system design — the topics that actually show up in DE interviews.",
+  "questions": [
+    {
+      "id": "interview-sprint-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8,
+      "question": "An interviewer asks: 'What's the difference between WHERE and HAVING?'",
+      "options": [
+        { "id": "a", "text": "Nothing — they're interchangeable" },
+        { "id": "b", "text": "WHERE filters rows before aggregation; HAVING filters groups after aggregation" },
+        { "id": "c", "text": "WHERE works on numbers, HAVING works on strings" },
+        { "id": "d", "text": "HAVING is faster than WHERE" }
+      ],
+      "answer": "b",
+      "explanation": "Logical order: WHERE → GROUP BY → HAVING. WHERE can't reference aggregates because they haven't been computed yet.",
+      "tags": ["sql", "where", "having"]
+    },
+    {
+      "id": "interview-sprint-q2",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15,
+      "question": "Your dbt model is slow. The model joins a 100M row events table to a 10M users table. Which is the BEST first optimization?",
+      "options": [
+        { "id": "a", "text": "Add SELECT DISTINCT to remove duplicates" },
+        { "id": "b", "text": "Partition events by event_date and filter early in the model" },
+        { "id": "c", "text": "Run the model on a bigger warehouse" },
+        { "id": "d", "text": "Switch from LEFT JOIN to INNER JOIN" }
+      ],
+      "answer": "b",
+      "explanation": "Partition pruning + early filtering is the biggest lever. Throwing compute at the problem ($) and changing join semantics (correctness risk) are inferior first moves.",
+      "tags": ["dbt", "performance", "partitioning"]
+    },
+    {
+      "id": "interview-sprint-q3",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8,
+      "question": "In Apache Airflow, a DAG can have cycles as long as they eventually terminate.",
+      "answer": false,
+      "explanation": "DAG stands for Directed *Acyclic* Graph. Cycles aren't allowed — Airflow will refuse to parse the DAG.",
+      "tags": ["airflow", "dags"]
+    },
+    {
+      "id": "interview-sprint-q4",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the PySpark snippet to count distinct users per day:",
+      "language": "python",
+      "code_template": "df.groupBy('date').agg(\n    ____.____('user_id').alias('dau')\n)",
+      "blanks": [
+        { "id": "b1", "options": ["F", "spark", "pyspark", "pd"], "answer": "F" },
+        { "id": "b2", "options": ["countDistinct", "count_distinct", "distinct", "unique"], "answer": "countDistinct" }
+      ],
+      "explanation": "`from pyspark.sql import functions as F` is the convention. `F.countDistinct('user_id')` counts unique users.",
+      "tags": ["spark", "pyspark"]
+    },
+    {
+      "id": "interview-sprint-q5",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25,
+      "question": "A Kafka consumer in a 3-partition topic has 5 instances. What happens?",
+      "options": [
+        { "id": "a", "text": "All 5 consumers share the 3 partitions equally" },
+        { "id": "b", "text": "Only 3 consumers get partitions; 2 sit idle as standby" },
+        { "id": "c", "text": "Kafka rejects the configuration and throws an error" },
+        { "id": "d", "text": "Each consumer reads from all partitions" }
+      ],
+      "answer": "b",
+      "explanation": "Kafka assigns at most 1 partition per consumer instance within a group. With 5 instances and 3 partitions, 2 instances sit idle as hot standbys.",
+      "tags": ["kafka", "consumer-groups"]
+    },
+    {
+      "id": "interview-sprint-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which is the BEST file format for analytical queries over historical data on S3?",
+      "options": [
+        { "id": "a", "text": "JSON — universal compatibility" },
+        { "id": "b", "text": "CSV — easy to inspect" },
+        { "id": "c", "text": "Parquet — columnar, compressed, predicate pushdown" },
+        { "id": "d", "text": "XML — schema validation built in" }
+      ],
+      "answer": "c",
+      "explanation": "Parquet is columnar (read only what you query), heavily compressed, and supports predicate pushdown — typically 10-100× faster than row-based formats for analytics.",
+      "tags": ["file-formats", "parquet"]
+    },
+    {
+      "id": "interview-sprint-q7",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this Python snippet print?",
+      "language": "python",
+      "code": "d = {'a': 1, 'b': 2}\nd['c'] = d.get('c', 0) + 5\nprint(d['c'])",
+      "options": [
+        { "id": "a", "text": "5" },
+        { "id": "b", "text": "0" },
+        { "id": "c", "text": "KeyError" },
+        { "id": "d", "text": "None" }
+      ],
+      "answer": "a",
+      "explanation": "`d.get('c', 0)` returns 0 because 'c' doesn't exist. 0 + 5 = 5. The pattern is the standard 'increment-or-init' idiom.",
+      "tags": ["python", "dicts"]
+    },
+    {
+      "id": "interview-sprint-q8",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25,
+      "question": "Your Airflow DAG fails intermittently because an upstream API rate-limits you. What's the MOST idiomatic fix?",
+      "options": [
+        { "id": "a", "text": "Wrap the API call in a try/except that swallows the error" },
+        { "id": "b", "text": "Set retries=5 and retry_delay=timedelta(minutes=2) on the task" },
+        { "id": "c", "text": "Increase the DAG's schedule_interval" },
+        { "id": "d", "text": "Disable the upstream dependency" }
+      ],
+      "answer": "b",
+      "explanation": "Airflow's retry mechanism with backoff is the standard pattern for transient failures like rate-limiting. Don't swallow errors silently (a) — you lose observability.",
+      "tags": ["airflow", "retries"]
+    },
+    {
+      "id": "interview-sprint-q9",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25,
+      "question": "A teammate proposes using `SELECT COUNT(DISTINCT user_id)` over a 10B row events table every minute for real-time DAU. What's the BEST critique?",
+      "options": [
+        { "id": "a", "text": "It's fine — modern warehouses are fast" },
+        { "id": "b", "text": "COUNT(DISTINCT) at that scale is expensive; use HyperLogLog (approx_count_distinct) instead" },
+        { "id": "c", "text": "Use COUNT(*) instead" },
+        { "id": "d", "text": "Add an index on user_id" }
+      ],
+      "answer": "b",
+      "explanation": "COUNT(DISTINCT) over billions of rows is brutal — it requires deduplication. APPROX_COUNT_DISTINCT (HyperLogLog) is ~99% accurate for a tiny fraction of the cost. Industry standard for real-time analytics.",
+      "tags": ["sql", "performance", "hyperloglog"]
+    },
+    {
+      "id": "interview-sprint-q10",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15,
+      "question": "Idempotent pipelines produce the same output regardless of how many times they're re-run with the same input.",
+      "answer": true,
+      "explanation": "That's the definition. Achieved via deterministic transforms, primary keys for upserts, partition-based overwrites, etc. Critical for backfills and retries.",
+      "tags": ["data-engineering", "idempotency"]
+    },
+    {
+      "id": "interview-sprint-q11",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25,
+      "question": "Your Spark job has 200 stages and one stage takes 90% of total runtime. What's the LIKELY cause?",
+      "options": [
+        { "id": "a", "text": "Insufficient driver memory" },
+        { "id": "b", "text": "Data skew — one or two partitions have most of the data" },
+        { "id": "c", "text": "Wrong file format" },
+        { "id": "d", "text": "Network issues between executors" }
+      ],
+      "answer": "b",
+      "explanation": "Skew is the #1 cause of 'one slow task'. A few partitions hold most of the data (often due to skewed keys in a join/groupBy). Solutions: salting, broadcast joins, or AQE skew handling.",
+      "tags": ["spark", "skew", "performance"]
+    },
+    {
+      "id": "interview-sprint-q12",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which dbt test would you use to enforce a column has only specific values?",
+      "options": [
+        { "id": "a", "text": "unique" },
+        { "id": "b", "text": "not_null" },
+        { "id": "c", "text": "accepted_values" },
+        { "id": "d", "text": "relationships" }
+      ],
+      "answer": "c",
+      "explanation": "`accepted_values: ['active', 'paused', 'cancelled']` is the dbt-native way to constrain a column's domain.",
+      "tags": ["dbt", "testing"]
+    },
+    {
+      "id": "interview-sprint-q13",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the SQL window function to rank orders within each user:",
+      "language": "sql",
+      "code_template": "SELECT user_id, amount,\n  ROW_NUMBER() OVER (PARTITION BY ____ ORDER BY amount DESC) AS rn\nFROM orders;",
+      "blanks": [
+        { "id": "b1", "options": ["amount", "user_id", "order_id", "DESC"], "answer": "user_id" }
+      ],
+      "explanation": "PARTITION BY user_id resets the row numbers within each user. ORDER BY amount DESC ranks highest-amount order first.",
+      "tags": ["sql", "window-functions"]
+    },
+    {
+      "id": "interview-sprint-q14",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15,
+      "question": "What's the primary advantage of Apache Iceberg over plain Parquet on S3?",
+      "options": [
+        { "id": "a", "text": "Better compression ratio" },
+        { "id": "b", "text": "ACID transactions, schema evolution, time travel — table-level guarantees over a directory of files" },
+        { "id": "c", "text": "Faster reads on small files" },
+        { "id": "d", "text": "Built-in encryption" }
+      ],
+      "answer": "b",
+      "explanation": "Iceberg adds table-format semantics — atomic commits, snapshot isolation, schema/partition evolution — over the same Parquet files. That's the lakehouse value prop.",
+      "tags": ["iceberg", "lakehouse"]
+    },
+    {
+      "id": "interview-sprint-q15",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "from datetime import datetime\nimport pytz\ndt = datetime(2026, 5, 29, 23, 30)\nutc = pytz.UTC.localize(dt)\nist = utc.astimezone(pytz.timezone('Asia/Kolkata'))\nprint(ist.date())",
+      "options": [
+        { "id": "a", "text": "2026-05-29" },
+        { "id": "b", "text": "2026-05-30" },
+        { "id": "c", "text": "2026-05-28" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "b",
+      "explanation": "23:30 UTC + 5:30 IST offset = 05:00 the next day. Classic timezone bug — partitioning events by UTC date vs local date produces different aggregations.",
+      "tags": ["python", "timezones"]
+    },
+    {
+      "id": "interview-sprint-q16",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25,
+      "question": "You need to deduplicate a 100M row table where rows might differ in a `loaded_at` timestamp but represent the same business event. Best approach?",
+      "options": [
+        { "id": "a", "text": "SELECT DISTINCT * FROM table" },
+        { "id": "b", "text": "Use ROW_NUMBER() OVER (PARTITION BY business_key ORDER BY loaded_at DESC) and keep rn=1" },
+        { "id": "c", "text": "GROUP BY every column except loaded_at" },
+        { "id": "d", "text": "Drop the loaded_at column entirely" }
+      ],
+      "answer": "b",
+      "explanation": "Window function with ROW_NUMBER ranked by `loaded_at DESC` lets you keep the most recent record per business key — the standard 'pick latest' dedup pattern.",
+      "tags": ["sql", "window-functions", "deduplication"]
+    },
+    {
+      "id": "interview-sprint-q17",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which Kubernetes resource manages stateful workloads with stable identities and persistent volumes?",
+      "options": [
+        { "id": "a", "text": "Deployment" },
+        { "id": "b", "text": "DaemonSet" },
+        { "id": "c", "text": "StatefulSet" },
+        { "id": "d", "text": "Job" }
+      ],
+      "answer": "c",
+      "explanation": "StatefulSets give each pod a stable hostname and PVC. Used for databases, Kafka, Zookeeper — anything stateful.",
+      "tags": ["kubernetes"]
+    },
+    {
+      "id": "interview-sprint-q18",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 25,
+      "coins": 8,
+      "question": "A Spark broadcast join sends the smaller dataframe to every executor.",
+      "answer": true,
+      "explanation": "Broadcast joins replicate the small table to all executors, eliminating the shuffle of the large table. Only viable when the small side fits in memory (default threshold: 10MB).",
+      "tags": ["spark", "joins"]
+    },
+    {
+      "id": "interview-sprint-q19",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25,
+      "question": "Your warehouse runs CDC from a Postgres source via Debezium → Kafka → Snowflake. Mid-day, the source DB does a major schema change. What's the BEST design to handle this?",
+      "options": [
+        { "id": "a", "text": "Pause Debezium, let the schema change, then resume" },
+        { "id": "b", "text": "Use Schema Registry with Avro and forward-compatible schema evolution" },
+        { "id": "c", "text": "Drop and rebuild the destination table on every change" },
+        { "id": "d", "text": "Manually patch downstream models" }
+      ],
+      "answer": "b",
+      "explanation": "Schema Registry + Avro lets producers and consumers evolve independently. Forward-compatibility means new fields don't break old consumers. This is the industry-standard pattern for evolving CDC pipelines.",
+      "tags": ["kafka", "cdc", "schema-evolution"]
+    },
+    {
+      "id": "interview-sprint-q20",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25,
+      "question": "Order the steps of a typical batch ELT pipeline:",
+      "steps": [
+        { "id": "s1", "text": "Transform with dbt models (silver/gold)" },
+        { "id": "s2", "text": "Land raw data in cloud storage / staging tables" },
+        { "id": "s3", "text": "Extract from source systems" },
+        { "id": "s4", "text": "Serve to dashboards / reverse-ETL" },
+        { "id": "s5", "text": "Run data quality tests" }
+      ],
+      "correctOrder": ["s3", "s2", "s1", "s5", "s4"],
+      "explanation": "ELT = Extract → Load (land raw) → Transform (dbt) → Test → Serve. Tests gate publishing, not transforming.",
+      "tags": ["data-engineering", "elt", "pipeline-design"]
+    },
+    {
+      "id": "interview-sprint-q21",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25,
+      "question": "Your nightly Snowflake job costs $300/day. Looking at query history, 80% of cost is a single MERGE on a 5B row table. Best optimization?",
+      "options": [
+        { "id": "a", "text": "Increase warehouse size to finish faster" },
+        { "id": "b", "text": "Cluster the table on the merge key so micro-partition pruning works" },
+        { "id": "c", "text": "Switch to TRUNCATE + INSERT" },
+        { "id": "d", "text": "Run the job less frequently" }
+      ],
+      "answer": "b",
+      "explanation": "Snowflake MERGE on unclustered tables forces full table scans. Clustering on the merge key enables micro-partition pruning — often 5-20× cost reduction with no logic change.",
+      "tags": ["snowflake", "cost-optimization", "clustering"]
+    },
+    {
+      "id": "interview-sprint-q22",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which is NOT a valid reason to use Apache Airflow over a cron + bash setup?",
+      "options": [
+        { "id": "a", "text": "Visual DAG view of task dependencies" },
+        { "id": "b", "text": "Built-in retries with backoff" },
+        { "id": "c", "text": "Backfills for historical date ranges" },
+        { "id": "d", "text": "Lower compute cost for small pipelines" }
+      ],
+      "answer": "d",
+      "explanation": "Airflow has real infrastructure cost (scheduler, webserver, metadata DB). For tiny pipelines, cron is cheaper and simpler. The win is at scale: orchestration, visibility, retries, backfills.",
+      "tags": ["airflow", "orchestration"]
+    },
+    {
+      "id": "interview-sprint-q23",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 40,
+      "coins": 15,
+      "question": "In a Lakehouse architecture, the Gold layer is meant to be the raw, untransformed ingest layer.",
+      "answer": false,
+      "explanation": "It's the opposite. Bronze = raw, Silver = cleaned/conformed, Gold = business-level aggregates ready for BI/ML.",
+      "tags": ["lakehouse", "medallion"]
+    },
+    {
+      "id": "interview-sprint-q24",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25,
+      "question": "Your RAG system retrieves irrelevant context ~30% of the time. Which improvement has the BIGGEST typical impact?",
+      "options": [
+        { "id": "a", "text": "Switch from cosine to dot-product similarity" },
+        { "id": "b", "text": "Improve chunking strategy + add a reranker" },
+        { "id": "c", "text": "Increase embedding dimensions" },
+        { "id": "d", "text": "Use a larger LLM for generation" }
+      ],
+      "answer": "b",
+      "explanation": "Retrieval quality is bottlenecked by chunking and ranking, not similarity math. Smart chunking + a cross-encoder reranker is the highest-ROI change. Bigger LLM doesn't fix bad context.",
+      "tags": ["rag", "llm", "retrieval"]
+    },
+    {
+      "id": "interview-sprint-q25",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 60,
+      "coins": 25,
+      "question": "System design: you must build a pipeline that ingests 100K events/sec from web clients, enriches each with user profile data, and writes to a query-able store within 30s. What's a reasonable stack?",
+      "options": [
+        { "id": "a", "text": "Cron job + Postgres" },
+        { "id": "b", "text": "Kafka (ingest) → Flink (enrich with side-input from a key-value store) → Iceberg or ClickHouse (serve)" },
+        { "id": "c", "text": "Dump events to S3 in JSON, query with Athena" },
+        { "id": "d", "text": "REST API writes directly to the warehouse" }
+      ],
+      "answer": "b",
+      "explanation": "100K events/sec with sub-minute SLA is streaming territory. Kafka absorbs the firehose, Flink (or similar) handles stateful enrichment, and Iceberg/ClickHouse handle low-latency analytical reads. Batch tooling can't hit the SLA.",
+      "tags": ["system-design", "streaming"]
+    }
+  ]
+}

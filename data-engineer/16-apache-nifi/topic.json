@@ -1,0 +1,38 @@
+{
+  "id": "16-apache-nifi",
+  "section": "data-engineer",
+  "tier": "intermediate",
+  "moduleOrder": 16,
+  "version": 1,
+  "title": "Apache NiFi",
+  "shortDescription": "Apache NiFi \u2014 beginner to advanced concepts and code.",
+  "icon": "16-apache-nifi",
+  "estimatedMinutes": 32,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-processors",
+      "title": "Processors",
+      "minutes": 8
+    },
+    {
+      "id": "03-flow-design",
+      "title": "Flow Design",
+      "minutes": 8
+    },
+    {
+      "id": "04-monitoring",
+      "title": "Monitoring",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

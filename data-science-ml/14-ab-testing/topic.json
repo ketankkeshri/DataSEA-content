@@ -1,0 +1,38 @@
+{
+  "id": "14-ab-testing",
+  "section": "data-science-ml",
+  "tier": "intermediate",
+  "moduleOrder": 14,
+  "version": 1,
+  "title": "A/B Testing Frameworks",
+  "shortDescription": "A/B Testing Frameworks \u2014 beginner to advanced concepts and code.",
+  "icon": "14-ab-testing",
+  "estimatedMinutes": 32,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-design",
+      "title": "Design",
+      "minutes": 8
+    },
+    {
+      "id": "02-sample-size",
+      "title": "Sample Size",
+      "minutes": 8
+    },
+    {
+      "id": "03-srm",
+      "title": "Srm",
+      "minutes": 8
+    },
+    {
+      "id": "04-sequential-testing",
+      "title": "Sequential Testing",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

@@ -1,0 +1,38 @@
+{
+  "id": "12-postgres-internals",
+  "section": "data-engineer",
+  "tier": "intermediate",
+  "moduleOrder": 12,
+  "version": 1,
+  "title": "PostgreSQL Internals",
+  "shortDescription": "PostgreSQL Internals \u2014 beginner to advanced concepts and code.",
+  "icon": "12-postgres-internals",
+  "estimatedMinutes": 32,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-mvcc",
+      "title": "Mvcc",
+      "minutes": 8
+    },
+    {
+      "id": "02-vacuum-bloat",
+      "title": "Vacuum Bloat",
+      "minutes": 8
+    },
+    {
+      "id": "03-indexes-deep",
+      "title": "Indexes Deep",
+      "minutes": 8
+    },
+    {
+      "id": "04-replication-basics",
+      "title": "Replication Basics",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

@@ -1,0 +1,218 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "05-probability-for-ds",
+  "type": "module",
+  "questions": [
+    {
+      "id": "05-probability-for-ds-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the purpose of a probability distribution?",
+      "options": [
+        { "id": "a", "text": "To visualize data" },
+        { "id": "b", "text": "To describe how probabilities are distributed over values" },
+        { "id": "c", "text": "To generate random numbers" },
+        { "id": "d", "text": "To collect data" }
+      ],
+      "answer": "b",
+      "explanation": "A probability distribution describes how probabilities are allocated across different outcomes.",
+      "tags": ["intro"]
+    },
+    {
+      "id": "05-probability-for-ds-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which of the following is a common probability distribution?",
+      "options": [
+        { "id": "a", "text": "Gaussian" },
+        { "id": "b", "text": "Linear" },
+        { "id": "c", "text": "Cubic" },
+        { "id": "d", "text": "Exponential" }
+      ],
+      "answer": "a",
+      "explanation": "The Gaussian distribution, also known as the normal distribution, is one of the most common probability distributions.",
+      "tags": ["common-distributions"]
+    },
+    {
+      "id": "05-probability-for-ds-q3",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "The sum of probabilities in a probability distribution equals 1.",
+      "answer": true,
+      "explanation": "In any valid probability distribution, the total probability must equal 1.",
+      "tags": ["intro"]
+    },
+    {
+      "id": "05-probability-for-ds-q4",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to calculate conditional probability:",
+      "language": "python",
+      "code_template": "P_A_given_B = P_A * P_B / ____",
+      "blanks": [
+        { "id": "b1", "options": ["P_B_given_A", "P_A_and_B", "P_B", "P_A_or_B"], "answer": "P_B" }
+      ],
+      "explanation": "This formula is derived from Bayes' theorem, which is used to calculate conditional probabilities.",
+      "tags": ["bayes"]
+    },
+    {
+      "id": "05-probability-for-ds-q5",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(sum([1/2**n for n in range(1, 5)]))",
+      "options": [
+        { "id": "a", "text": "1.875" },
+        { "id": "b", "text": "2.0" },
+        { "id": "c", "text": "2.5" },
+        { "id": "d", "text": "3.0" }
+      ],
+      "answer": "a",
+      "explanation": "The expression calculates the sum of the first four terms of a geometric series, yielding 1.875.",
+      "tags": ["common-distributions"]
+    },
+    {
+      "id": "05-probability-for-ds-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "In a Bayesian framework, which term refers to the prior probability?",
+      "options": [
+        { "id": "a", "text": "P(A)" },
+        { "id": "b", "text": "P(B)" },
+        { "id": "c", "text": "P(A|B)" },
+        { "id": "d", "text": "P(B|A)" }
+      ],
+      "answer": "a",
+      "explanation": "P(A) represents the prior probability of event A before any evidence is considered.",
+      "tags": ["bayes"]
+    },
+    {
+      "id": "05-probability-for-ds-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to apply Bayes' theorem:",
+      "steps": [
+        { "id": "s1", "text": "Calculate the likelihood P(B|A)" },
+        { "id": "s2", "text": "Calculate the prior P(A)" },
+        { "id": "s3", "text": "Calculate the evidence P(B)" },
+        { "id": "s4", "text": "Apply Bayes' theorem to get P(A|B)" }
+      ],
+      "correctOrder": ["s2", "s1", "s3", "s4"],
+      "explanation": "You first need to calculate the prior and likelihood before applying Bayes' theorem.",
+      "tags": ["bayes"]
+    },
+    {
+      "id": "05-probability-for-ds-q8",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which distribution is used for modeling binary outcomes?",
+      "options": [
+        { "id": "a", "text": "Normal" },
+        { "id": "b", "text": "Binomial" },
+        { "id": "c", "text": "Poisson" },
+        { "id": "d", "text": "Exponential" }
+      ],
+      "answer": "b",
+      "explanation": "The Binomial distribution is specifically designed to model the number of successes in a fixed number of trials.",
+      "tags": ["common-distributions"]
+    },
+    {
+      "id": "05-probability-for-ds-q9",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "A standard normal distribution has a mean of 0 and a standard deviation of 1.",
+      "answer": true,
+      "explanation": "The standard normal distribution is defined with these parameters.",
+      "tags": ["common-distributions"]
+    },
+    {
+      "id": "05-probability-for-ds-q10",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the code to create a normal distribution in Python:",
+      "language": "python",
+      "code_template": "import numpy as np\nx = np.random.normal(____, ____)\n",
+      "blanks": [
+        { "id": "b1", "options": ["0", "mean", "average", "1"], "answer": "0" },
+        { "id": "b2", "options": ["1", "0", "2", "5"], "answer": "1" }
+      ],
+      "explanation": "This code snippet generates random samples from a normal distribution with mean 0 and standard deviation 1.",
+      "tags": ["common-distributions"]
+    },
+    {
+      "id": "05-probability-for-ds-q11",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(len([x for x in range(6) if x % 2 == 0]))",
+      "options": [
+        { "id": "a", "text": "3" },
+        { "id": "b", "text": "4" },
+        { "id": "c", "text": "2" },
+        { "id": "d", "text": "0" }
+      ],
+      "answer": "a",
+      "explanation": "The list comprehension counts the even numbers in the range from 0 to 5 (inclusive), which are 0, 2, 4.",
+      "tags": ["intro"]
+    },
+    {
+      "id": "05-probability-for-ds-q12",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following is true about the Poisson distribution?",
+      "options": [
+        { "id": "a", "text": "It models continuous data." },
+        { "id": "b", "text": "It models the number of events in a fixed interval." },
+        { "id": "c", "text": "It has a fixed mean and variance." },
+        { "id": "d", "text": "It is symmetric." }
+      ],
+      "answer": "b",
+      "explanation": "The Poisson distribution is used for counting the number of events in a fixed interval of time or space.",
+      "tags": ["common-distributions"]
+    },
+    {
+      "id": "05-probability-for-ds-q13",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to perform hypothesis testing:",
+      "steps": [
+        { "id": "s1", "text": "Choose a significance level" },
+        { "id": "s2", "text": "Calculate the test statistic" },
+        { "id": "s3", "text": "State the null and alternative hypotheses" },
+        { "id": "s4", "text": "Make a decision based on the p-value" }
+      ],
+      "correctOrder": ["s3", "s1", "s2", "s4"],
+      "explanation": "You first define your hypotheses before choosing a significance level and then calculating the test statistic.",
+      "tags": ["conditional"]
+    }
+  ]
+}

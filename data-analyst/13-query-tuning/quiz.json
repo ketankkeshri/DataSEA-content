@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "13-query-tuning",
+  "type": "module",
+  "questions": [
+    {
+      "id": "13-query-tuning-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does an index do in a database?",
+      "options": [
+        { "id": "a", "text": "Stores data in a random fashion." },
+        { "id": "b", "text": "Speeds up data retrieval." },
+        { "id": "c", "text": "Increases data redundancy." },
+        { "id": "d", "text": "Ensures data integrity." }
+      ],
+      "answer": "b",
+      "explanation": "Indexes are data structures that improve the speed of data retrieval operations on a database table."
+    },
+    {
+      "id": "13-query-tuning-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the purpose of partitioning in databases?",
+      "options": [
+        { "id": "a", "text": "To duplicate data." },
+        { "id": "b", "text": "To split a table into smaller, manageable pieces." },
+        { "id": "c", "text": "To encrypt sensitive information." },
+        { "id": "d", "text": "To compress data." }
+      ],
+      "answer": "b",
+      "explanation": "Partitioning helps in managing large tables by dividing them into smaller, more manageable pieces."
+    },
+    {
+      "id": "13-query-tuning-q3",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Caching can improve query performance.",
+      "answer": true,
+      "explanation": "Caching stores the results of expensive queries, allowing faster retrieval on subsequent requests."
+    },
+    {
+      "id": "13-query-tuning-q4",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to create an index:",
+      "language": "sql",
+      "code_template": "CREATE INDEX idx_name ON table_name(____);",
+      "blanks": [
+        { "id": "b1", "options": ["column_name", "index_name", "table_name", "data_type"], "answer": "column_name" }
+      ],
+      "explanation": "You need to specify the column name on which you want to create the index."
+    },
+    {
+      "id": "13-query-tuning-q5",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following is a caching strategy?",
+      "options": [
+        { "id": "a", "text": "Database normalization" },
+        { "id": "b", "text": "Materialized views" },
+        { "id": "c", "text": "Data type conversion" },
+        { "id": "d", "text": "Sharding" }
+      ],
+      "answer": "b",
+      "explanation": "Materialized views cache the results of a query, allowing faster access to data."
+    },
+    {
+      "id": "13-query-tuning-q6",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(sum([1, 2, 3, 4]))",
+      "options": [
+        { "id": "a", "text": "6" },
+        { "id": "b", "text": "10" },
+        { "id": "c", "text": "4" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "b",
+      "explanation": "The sum of the list [1, 2, 3, 4] is 10."
+    },
+    {
+      "id": "13-query-tuning-q7",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to enable caching in SQL:",
+      "language": "sql",
+      "code_template": "SET ____ = TRUE;",
+      "blanks": [
+        { "id": "b1", "options": ["cache_results", "enable_cache", "use_cache", "cache_query"], "answer": "cache_results" }
+      ],
+      "explanation": "Setting cache_results to TRUE enables caching for the session."
+    },
+    {
+      "id": "13-query-tuning-q8",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to create a partitioned table:",
+      "steps": [
+        { "id": "s1", "text": "Define the partition key." },
+        { "id": "s2", "text": "Create the main table." },
+        { "id": "s3", "text": "Insert data into the table." },
+        { "id": "s4", "text": "Create partitions." }
+      ],
+      "correctOrder": ["s2", "s1", "s4", "s3"],
+      "explanation": "First, create the main table, then define the partition key, create partitions, and finally insert data."
+    },
+    {
+      "id": "13-query-tuning-q9",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following is NOT a benefit of indexing?",
+      "options": [
+        { "id": "a", "text": "Improved query performance" },
+        { "id": "b", "text": "Increased data redundancy" },
+        { "id": "c", "text": "Faster data retrieval" },
+        { "id": "d", "text": "Reduced disk I/O" }
+      ],
+      "answer": "b",
+      "explanation": "Indexes do not increase data redundancy; they improve query performance and data retrieval speed."
+    },
+    {
+      "id": "13-query-tuning-q10",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Partitioning always improves performance.",
+      "answer": false,
+      "explanation": "While partitioning can enhance performance, it may not always be the best solution depending on the workload and query patterns."
+    },
+    {
+      "id": "13-query-tuning-q11",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this code print?",
+      "language": "python",
+      "code": "print([x for x in range(5) if x % 2 == 0])",
+      "options": [
+        { "id": "a", "text": "[0, 1, 2, 3, 4]" },
+        { "id": "b", "text": "[0, 2, 4]" },
+        { "id": "c", "text": "[1, 3]" },
+        { "id": "d", "text": "[2, 4]" }
+      ],
+      "answer": "b",
+      "explanation": "The list comprehension filters even numbers from the range of 5, resulting in [0, 2, 4]."
+    },
+    {
+      "id": "13-query-tuning-q12",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the SQL code to drop an index:",
+      "language": "sql",
+      "code_template": "DROP INDEX ____;",
+      "blanks": [
+        { "id": "b1", "options": ["index_name", "idx_name", "drop_index", "remove_index"], "answer": "index_name" }
+      ],
+      "explanation": "You must specify the name of the index you want to drop."
+    },
+    {
+      "id": "13-query-tuning-q13",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which caching strategy is best for frequently accessed data?",
+      "options": [
+        { "id": "a", "text": "Disk caching" },
+        { "id": "b", "text": "Memory caching" },
+        { "id": "c", "text": "Database normalization" },
+        { "id": "d", "text": "Data partitioning" }
+      ],
+      "answer": "b",
+      "explanation": "Memory caching provides faster access for frequently accessed data compared to disk caching."
+    },
+    {
+      "id": "13-query-tuning-q14",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to optimize a query:",
+      "steps": [
+        { "id": "s1", "text": "Analyze the query execution plan." },
+        { "id": "s2", "text": "Add indexes if necessary." },
+        { "id": "s3", "text": "Rewrite the query for efficiency." },
+        { "id": "s4", "text": "Test the performance of the optimized query." }
+      ],
+      "correctOrder": ["s1", "s3", "s2", "s4"],
+      "explanation": "Start by analyzing the execution plan, rewrite the query, add indexes, then test the performance."
+    },
+    {
+      "id": "13-query-tuning-q15",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Indexes consume additional disk space.",
+      "answer": true,
+      "explanation": "While indexes speed up queries, they require extra disk space for storage."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "03-matplotlib-seaborn",
+  "section": "data-science-ml",
+  "tier": "beginner",
+  "moduleOrder": 3,
+  "version": 1,
+  "title": "Matplotlib & Seaborn",
+  "shortDescription": "Matplotlib & Seaborn \u2014 beginner to advanced concepts and code.",
+  "icon": "03-matplotlib-seaborn",
+  "estimatedMinutes": 40,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-figure-axes",
+      "title": "Figure Axes",
+      "minutes": 8
+    },
+    {
+      "id": "03-common-plots",
+      "title": "Common Plots",
+      "minutes": 8
+    },
+    {
+      "id": "04-seaborn-statistical",
+      "title": "Seaborn Statistical",
+      "minutes": 8
+    },
+    {
+      "id": "05-customization",
+      "title": "Customization",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

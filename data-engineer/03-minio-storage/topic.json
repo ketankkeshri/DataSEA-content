@@ -1,0 +1,43 @@
+{
+  "id": "03-minio-storage",
+  "section": "data-engineer",
+  "tier": "beginner",
+  "moduleOrder": 3,
+  "version": 1,
+  "title": "MinIO Object Storage",
+  "shortDescription": "MinIO Object Storage \u2014 beginner to advanced concepts and code.",
+  "icon": "03-minio-storage",
+  "estimatedMinutes": 40,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-mc-client",
+      "title": "Mc Client",
+      "minutes": 8
+    },
+    {
+      "id": "03-buckets-policies",
+      "title": "Buckets Policies",
+      "minutes": 8
+    },
+    {
+      "id": "04-s3-compat",
+      "title": "S3 Compat",
+      "minutes": 8
+    },
+    {
+      "id": "05-lifecycle",
+      "title": "Lifecycle",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "08-apache-airflow",
+  "type": "module",
+  "questions": [
+    {
+      "id": "08-apache-airflow-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is Apache Airflow primarily used for?",
+      "options": [
+        { "id": "a", "text": "Data visualization" },
+        { "id": "b", "text": "Workflow orchestration" },
+        { "id": "c", "text": "Database management" },
+        { "id": "d", "text": "Machine learning model training" }
+      ],
+      "answer": "b",
+      "explanation": "Apache Airflow is designed to programmatically author, schedule, and monitor workflows."
+    },
+    {
+      "id": "08-apache-airflow-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does a DAG stand for in Airflow?",
+      "options": [
+        { "id": "a", "text": "Directed Acyclic Graph" },
+        { "id": "b", "text": "Dynamic Abstract Graph" },
+        { "id": "c", "text": "Data Aggregation Graph" },
+        { "id": "d", "text": "Distributed Application Graph" }
+      ],
+      "answer": "a",
+      "explanation": "DAG stands for Directed Acyclic Graph, which is a collection of tasks organized in a way that each task is dependent on the previous one."
+    },
+    {
+      "id": "08-apache-airflow-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to create a task in Airflow:",
+      "language": "python",
+      "code_template": "task = BashOperator(____='echo Hello World', ____=dag)",
+      "blanks": [
+        { "id": "b1", "options": ["task_id='hello'", "task_name='hello'", "id='hello'", "operator_id='hello'"], "answer": "task_id='hello'" },
+        { "id": "b2", "options": ["default_args", "context", "dag", "operator"], "answer": "dag" }
+      ],
+      "explanation": "The BashOperator requires a task_id and a reference to the DAG it belongs to."
+    },
+    {
+      "id": "08-apache-airflow-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print when run?",
+      "language": "python",
+      "code": "print(2 ** 3 + 1)",
+      "options": [
+        { "id": "a", "text": "7" },
+        { "id": "b", "text": "8" },
+        { "id": "c", "text": "9" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The expression evaluates to 8 (2 raised to the power of 3) plus 1, resulting in 9."
+    },
+    {
+      "id": "08-apache-airflow-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "XComs are used in Airflow to share data between tasks.",
+      "answer": true,
+      "explanation": "XComs allow tasks to exchange messages or small amounts of data within a DAG."
+    },
+    {
+      "id": "08-apache-airflow-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which operator is best suited for running Python functions in Airflow?",
+      "options": [
+        { "id": "a", "text": "PythonOperator" },
+        { "id": "b", "text": "BashOperator" },
+        { "id": "c", "text": "DockerOperator" },
+        { "id": "d", "text": "BranchPythonOperator" }
+      ],
+      "answer": "a",
+      "explanation": "PythonOperator is specifically designed to execute Python callable functions."
+    },
+    {
+      "id": "08-apache-airflow-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to create a DAG in Airflow:",
+      "steps": [
+        { "id": "s1", "text": "Define the DAG object" },
+        { "id": "s2", "text": "Instantiate operators" },
+        { "id": "s3", "text": "Set task dependencies" },
+        { "id": "s4", "text": "Import Airflow modules" }
+      ],
+      "correctOrder": ["s4", "s1", "s2", "s3"],
+      "explanation": "First, you need to import the necessary modules, then define the DAG, instantiate operators, and finally set dependencies."
+    },
+    {
+      "id": "08-apache-airflow-q8",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Airflow allows the scheduling of tasks to run at specific times.",
+      "answer": true,
+      "explanation": "Airflow has powerful scheduling capabilities, allowing tasks to be executed at specified intervals or times."
+    },
+    {
+      "id": "08-apache-airflow-q9",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the purpose of a Sensor in Airflow?",
+      "options": [
+        { "id": "a", "text": "To trigger tasks based on external conditions" },
+        { "id": "b", "text": "To execute Python code" },
+        { "id": "c", "text": "To run SQL queries" },
+        { "id": "d", "text": "To manage database connections" }
+      ],
+      "answer": "a",
+      "explanation": "Sensors are special types of operators that wait for a certain condition to be met before proceeding."
+    },
+    {
+      "id": "08-apache-airflow-q10",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the task definition using XComs:",
+      "language": "python",
+      "code_template": "def push_value(**kwargs):\n    return kwargs['ti'].____('key', 'value')",
+      "blanks": [
+        { "id": "b1", "options": ["xcom_push", "xcom_set", "push_xcom", "set_xcom"], "answer": "xcom_push" }
+      ],
+      "explanation": "The method xcom_push is used to push values to XComs for inter-task communication."
+    },
+    {
+      "id": "08-apache-airflow-q11",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following options is NOT a best practice for Airflow?",
+      "options": [
+        { "id": "a", "text": "Keep DAGs lightweight" },
+        { "id": "b", "text": "Use a single DAG for all tasks" },
+        { "id": "c", "text": "Use descriptive task IDs" },
+        { "id": "d", "text": "Monitor task performance" }
+      ],
+      "answer": "b",
+      "explanation": "Using a single DAG for all tasks can lead to complexity and is not a best practice; it's better to modularize."
+    },
+    {
+      "id": "08-apache-airflow-q12",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Airflow does not support parallel task execution.",
+      "answer": false,
+      "explanation": "Airflow supports parallel task execution, allowing multiple tasks to run simultaneously based on dependencies."
+    },
+    {
+      "id": "08-apache-airflow-q13",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the default executor used in Airflow?",
+      "options": [
+        { "id": "a", "text": "LocalExecutor" },
+        { "id": "b", "text": "CeleryExecutor" },
+        { "id": "c", "text": "KubernetesExecutor" },
+        { "id": "d", "text": "SequentialExecutor" }
+      ],
+      "answer": "d",
+      "explanation": "The default executor in Airflow is SequentialExecutor, which runs tasks one at a time."
+    },
+    {
+      "id": "08-apache-airflow-q14",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to set up a sensor in Airflow:",
+      "steps": [
+        { "id": "s1", "text": "Define the Sensor operator" },
+        { "id": "s2", "text": "Set the parameters for the Sensor" },
+        { "id": "s3", "text": "Add it to the DAG" },
+        { "id": "s4", "text": "Set task dependencies" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "Define the Sensor, set its parameters, add it to the DAG, and finally define dependencies."
+    },
+    {
+      "id": "08-apache-airflow-q15",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the following code to backfill a DAG:",
+      "language": "python",
+      "code_template": "airflow dags backfill ____ --start-date '2023-01-01' --end-date '2023-01-07'",
+      "blanks": [
+        { "id": "b1", "options": ["my_dag_id", "dag_id", "dag_name", "dag"], "answer": "my_dag_id" }
+      ],
+      "explanation": "The command requires the specific DAG ID to backfill the defined date range."
+    }
+  ]
+}

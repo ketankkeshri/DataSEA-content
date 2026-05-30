@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "17-snowflake-engineering",
+  "type": "module",
+  "questions": [
+    {
+      "id": "17-snowflake-engineering-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is a Snowflake warehouse primarily used for?",
+      "options": [
+        { "id": "a", "text": "Storing data indefinitely." },
+        { "id": "b", "text": "Executing queries and processing data." },
+        { "id": "c", "text": "Monitoring user activity." },
+        { "id": "d", "text": "Creating dashboards." }
+      ],
+      "answer": "b",
+      "explanation": "A Snowflake warehouse is designed for executing queries and processing data efficiently.",
+      "tags": ["warehouses"]
+    },
+    {
+      "id": "17-snowflake-engineering-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does Snowpipe do?",
+      "options": [
+        { "id": "a", "text": "Manages user permissions." },
+        { "id": "b", "text": "Loads data continuously into Snowflake." },
+        { "id": "c", "text": "Creates and manages warehouses." },
+        { "id": "d", "text": "Optimizes SQL queries." }
+      ],
+      "answer": "b",
+      "explanation": "Snowpipe allows for continuous loading of data into Snowflake as soon as new data arrives.",
+      "tags": ["snowpipe"]
+    },
+    {
+      "id": "17-snowflake-engineering-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to create a stream on a table:",
+      "language": "sql",
+      "code_template": "CREATE STREAM my_stream ON TABLE my_table ______________;",
+      "blanks": [
+        { "id": "b1", "options": ["(APPEND_ONLY)", "(REPLACE)", "(INSERT_ONLY)", "(FORCE)"], "answer": "(APPEND_ONLY)" }
+      ],
+      "explanation": "The APPEND_ONLY option ensures the stream captures only new rows added to the table.",
+      "tags": ["streams"]
+    },
+    {
+      "id": "17-snowflake-engineering-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this SQL command return?",
+      "language": "sql",
+      "code": "SELECT COUNT(*) FROM my_table WHERE status = 'active';",
+      "options": [
+        { "id": "a", "text": "The number of active rows in my_table." },
+        { "id": "b", "text": "An error message." },
+        { "id": "c", "text": "The total number of rows in my_table." },
+        { "id": "d", "text": "The status of my_table." }
+      ],
+      "answer": "a",
+      "explanation": "The COUNT(*) function returns the number of rows that match the specified condition (status = 'active').",
+      "tags": ["sql"]
+    },
+    {
+      "id": "17-snowflake-engineering-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Snowflake automatically scales resources based on workload demands.",
+      "answer": true,
+      "explanation": "Snowflake's multi-cluster architecture allows it to automatically scale compute resources to handle varying workloads.",
+      "tags": ["cost-optimization"]
+    },
+    {
+      "id": "17-snowflake-engineering-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which command is used to create a task in Snowflake?",
+      "options": [
+        { "id": "a", "text": "CREATE JOB" },
+        { "id": "b", "text": "CREATE TASK" },
+        { "id": "c", "text": "CREATE PROCEDURE" },
+        { "id": "d", "text": "CREATE FUNCTION" }
+      ],
+      "answer": "b",
+      "explanation": "The correct command to create a task in Snowflake is CREATE TASK.",
+      "tags": ["tasks"]
+    },
+    {
+      "id": "17-snowflake-engineering-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to optimize Snowflake costs:",
+      "steps": [
+        { "id": "s1", "text": "Monitor query performance." },
+        { "id": "s2", "text": "Resize warehouses based on usage." },
+        { "id": "s3", "text": "Implement auto-suspend for warehouses." },
+        { "id": "s4", "text": "Consolidate frequent queries." }
+      ],
+      "correctOrder": ["s1", "s4", "s2", "s3"],
+      "explanation": "First, monitor performance, then consolidate queries, resize as needed, and finally implement auto-suspend to save costs.",
+      "tags": ["cost-optimization"]
+    },
+    {
+      "id": "17-snowflake-engineering-q8",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the SQL statement to create a Snowpipe:",
+      "language": "sql",
+      "code_template": "CREATE PIPE my_pipe AS COPY INTO my_table FROM ______________;",
+      "blanks": [
+        { "id": "b1", "options": ["@my_stage", "@my_bucket", "@my_file", "@my_schema"], "answer": "@my_stage" }
+      ],
+      "explanation": "The FROM clause specifies the stage where the data will be loaded from, so '@my_stage' is correct.",
+      "tags": ["snowpipe"]
+    },
+    {
+      "id": "17-snowflake-engineering-q9",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Using streams, you can capture changes made to tables in real-time.",
+      "answer": true,
+      "explanation": "Streams in Snowflake allow you to track changes (inserts, updates, deletes) on a table in real-time.",
+      "tags": ["streams"]
+    },
+    {
+      "id": "17-snowflake-engineering-q10",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What will this SQL query return?",
+      "language": "sql",
+      "code": "SELECT DISTINCT status FROM my_table;",
+      "options": [
+        { "id": "a", "text": "All unique statuses from my_table." },
+        { "id": "b", "text": "All statuses including duplicates." },
+        { "id": "c", "text": "An error if status is NULL." },
+        { "id": "d", "text": "The total count of statuses." }
+      ],
+      "answer": "a",
+      "explanation": "DISTINCT retrieves unique values from the specified column, so it returns all unique statuses.",
+      "tags": ["sql"]
+    },
+    {
+      "id": "17-snowflake-engineering-q11",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following is NOT a benefit of using Snowflake's architecture?",
+      "options": [
+        { "id": "a", "text": "Separation of storage and compute." },
+        { "id": "b", "text": "Automatic scaling." },
+        { "id": "c", "text": "In-memory data processing." },
+        { "id": "d", "text": "Concurrency handling." }
+      ],
+      "answer": "c",
+      "explanation": "Snowflake's architecture does not primarily focus on in-memory processing, as it separates storage and compute.",
+      "tags": ["architecture"]
+    },
+    {
+      "id": "17-snowflake-engineering-q12",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to set up a new Snowpipe:",
+      "steps": [
+        { "id": "s1", "text": "Create a stage for data." },
+        { "id": "s2", "text": "Create a Snowpipe." },
+        { "id": "s3", "text": "Validate the Snowpipe configuration." },
+        { "id": "s4", "text": "Load data into the stage." }
+      ],
+      "correctOrder": ["s1", "s4", "s2", "s3"],
+      "explanation": "First, create a stage, load data, then create the Snowpipe, and finally validate its configuration.",
+      "tags": ["snowpipe"]
+    },
+    {
+      "id": "17-snowflake-engineering-q13",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the main purpose of a Snowflake task?",
+      "options": [
+        { "id": "a", "text": "To manage user access." },
+        { "id": "b", "text": "To automate SQL statements execution." },
+        { "id": "c", "text": "To store data." },
+        { "id": "d", "text": "To create tables." }
+      ],
+      "answer": "b",
+      "explanation": "A Snowflake task is designed to automate the execution of SQL statements on a scheduled basis.",
+      "tags": ["tasks"]
+    },
+    {
+      "id": "17-snowflake-engineering-q14",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the SQL command to start a task:",
+      "language": "sql",
+      "code_template": "ALTER TASK my_task ______________;",
+      "blanks": [
+        { "id": "b1", "options": ["SET", "START", "RESUME", "ENABLE"], "answer": "RESUME" }
+      ],
+      "explanation": "The RESUME command is used to start a task that has been suspended.",
+      "tags": ["tasks"]
+    },
+    {
+      "id": "17-snowflake-engineering-q15",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Snowflake requires manual intervention to scale resources.",
+      "answer": false,
+      "explanation": "Snowflake automatically scales resources based on workload demands without manual intervention.",
+      "tags": ["cost-optimization"]
+    }
+  ]
+}

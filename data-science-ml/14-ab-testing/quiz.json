@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "14-ab-testing",
+  "type": "module",
+  "questions": [
+    {
+      "id": "14-ab-testing-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the primary goal of A/B testing?",
+      "options": [
+        { "id": "a", "text": "To analyze big data" },
+        { "id": "b", "text": "To compare two versions to determine which performs better" },
+        { "id": "c", "text": "To visualize data" },
+        { "id": "d", "text": "To clean data for analysis" }
+      ],
+      "answer": "b",
+      "explanation": "A/B testing is used to compare two versions of a webpage or app to see which one performs better."
+    },
+    {
+      "id": "14-ab-testing-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which of the following is NOT a key component of A/B testing?",
+      "options": [
+        { "id": "a", "text": "Hypothesis" },
+        { "id": "b", "text": "Sample size" },
+        { "id": "c", "text": "Data cleaning" },
+        { "id": "d", "text": "Control group" }
+      ],
+      "answer": "c",
+      "explanation": "Data cleaning is important in data analysis but not specifically a key component of A/B testing."
+    },
+    {
+      "id": "14-ab-testing-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to calculate the required sample size for an A/B test:",
+      "language": "python",
+      "code_template": "from statsmodels.stats.power import TTestIndPower\npower_analysis = TTestIndPower()\nsample_size = power_analysis.____(effect_size=0.5, alpha=0.05, power=0.8)\nprint(sample_size)",
+      "blanks": [
+        { "id": "b1", "options": ["solve_power", "calculate_sample_size", "get_sample_size", "estimate_sample_size"], "answer": "solve_power" }
+      ],
+      "explanation": "The 'solve_power' method calculates the required sample size based on effect size, alpha, and power."
+    },
+    {
+      "id": "14-ab-testing-q4",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "In A/B testing, a larger sample size increases the statistical power of the test.",
+      "answer": true,
+      "explanation": "A larger sample size reduces variability in results, increasing the likelihood of detecting a true effect."
+    },
+    {
+      "id": "14-ab-testing-q5",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is an example of a metric you might track in an A/B test?",
+      "options": [
+        { "id": "a", "text": "User engagement" },
+        { "id": "b", "text": "Code efficiency" },
+        { "id": "c", "text": "Data redundancy" },
+        { "id": "d", "text": "API response time" }
+      ],
+      "answer": "a",
+      "explanation": "User engagement is a common metric to evaluate the effectiveness of changes in an A/B test."
+    },
+    {
+      "id": "14-ab-testing-q6",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "results = [1, 2, 3]\nprint(results[1:3])",
+      "options": [
+        { "id": "a", "text": "[2, 3]" },
+        { "id": "b", "text": "[1, 2]" },
+        { "id": "c", "text": "[1, 2, 3]" },
+        { "id": "d", "text": "[3]" }
+      ],
+      "answer": "a",
+      "explanation": "In Python, slicing a list returns elements from index 1 to 2 (exclusive of 3), resulting in [2, 3]."
+    },
+    {
+      "id": "14-ab-testing-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps for conducting an A/B test:",
+      "steps": [
+        { "id": "s1", "text": "Analyze results" },
+        { "id": "s2", "text": "Determine the hypothesis" },
+        { "id": "s3", "text": "Run the experiment" },
+        { "id": "s4", "text": "Collect data" }
+      ],
+      "correctOrder": ["s2", "s4", "s3", "s1"],
+      "explanation": "First, determine the hypothesis, then collect data, run the experiment, and finally analyze results."
+    },
+    {
+      "id": "14-ab-testing-q8",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the code to perform a sequential test:",
+      "language": "python",
+      "code_template": "from sequential_test import SequentialTest\nst = SequentialTest(____)\nst.test(data)",
+      "blanks": [
+        { "id": "b1", "options": ["alpha=0.05", "sample_size=100", "effect_size=0.2", "power=0.8"], "answer": "alpha=0.05" }
+      ],
+      "explanation": "You need to define the significance level (alpha) when creating an instance of SequentialTest."
+    },
+    {
+      "id": "14-ab-testing-q9",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Sequential testing allows for continuous analysis of results without a fixed end date.",
+      "answer": true,
+      "explanation": "Sequential testing permits ongoing evaluation, allowing researchers to make decisions before the test concludes."
+    },
+    {
+      "id": "14-ab-testing-q10",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following is a potential issue with A/B testing?",
+      "options": [
+        { "id": "a", "text": "Data leakage" },
+        { "id": "b", "text": "Sample selection bias" },
+        { "id": "c", "text": "Overfitting" },
+        { "id": "d", "text": "All of the above" }
+      ],
+      "answer": "d",
+      "explanation": "All options listed can pose significant problems in A/B testing if not addressed properly."
+    },
+    {
+      "id": "14-ab-testing-q11",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this code return?",
+      "language": "python",
+      "code": "a = [1, 2, 3]\nb = a.copy()\nb[0] = 4\nprint(a)",
+      "options": [
+        { "id": "a", "text": "[1, 2, 3]" },
+        { "id": "b", "text": "[4, 2, 3]" },
+        { "id": "c", "text": "[1, 4, 3]" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The copy() method creates a shallow copy, so modifying b does not affect a."
+    },
+    {
+      "id": "14-ab-testing-q12",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Fill in the blank to calculate the mean in Python:",
+      "language": "python",
+      "code_template": "import numpy as np\nmean_value = np.____(data)",
+      "blanks": [
+        { "id": "b1", "options": ["average", "mean", "median", "std"], "answer": "mean" }
+      ],
+      "explanation": "The correct function to calculate the mean in NumPy is np.mean()."
+    },
+    {
+      "id": "14-ab-testing-q13",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the purpose of the control group in A/B testing?",
+      "options": [
+        { "id": "a", "text": "To provide a baseline for comparison" },
+        { "id": "b", "text": "To test a new feature" },
+        { "id": "c", "text": "To implement changes" },
+        { "id": "d", "text": "To confuse users" }
+      ],
+      "answer": "a",
+      "explanation": "The control group serves as a baseline to compare the effect of changes against."
+    },
+    {
+      "id": "14-ab-testing-q14",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "A/B tests can be used to optimize user experience.",
+      "answer": true,
+      "explanation": "A/B testing is widely used to enhance user experience by systematically evaluating changes."
+    },
+    {
+      "id": "14-ab-testing-q15",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Arrange the steps for analyzing A/B test results:",
+      "steps": [
+        { "id": "s1", "text": "Calculate conversion rates" },
+        { "id": "s2", "text": "Draw conclusions" },
+        { "id": "s3", "text": "Perform statistical tests" },
+        { "id": "s4", "text": "Collect data" }
+      ],
+      "correctOrder": ["s4", "s1", "s3", "s2"],
+      "explanation": "First, collect data, then calculate conversion rates, perform statistical tests, and finally draw conclusions."
+    }
+  ]
+}

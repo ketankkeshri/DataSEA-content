@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "08-power-bi",
+  "type": "module",
+  "questions": [
+    {
+      "id": "08-power-bi-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does the DAX function 'SUM' do?",
+      "options": [
+        { "id": "a", "text": "Multiplies values in a column." },
+        { "id": "b", "text": "Adds up all the values in a column." },
+        { "id": "c", "text": "Finds the average of values." },
+        { "id": "d", "text": "Counts the number of rows." }
+      ],
+      "answer": "b",
+      "explanation": "The 'SUM' function computes the total of all the values in a specified column.",
+      "tags": ["dax-basics"]
+    },
+    {
+      "id": "08-power-bi-q2",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to calculate the average sales:",
+      "language": "python",
+      "code_template": "df['Sales'].____()",
+      "blanks": [
+        { "id": "b1", "options": ["mean", "avg", "average", "sum"], "answer": "mean" }
+      ],
+      "explanation": "The 'mean()' function is used to calculate the average of a numerical column in pandas.",
+      "tags": ["data-analytics"]
+    },
+    {
+      "id": "08-power-bi-q3",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print([x + 1 for x in range(3)])",
+      "options": [
+        { "id": "a", "text": "[1, 2, 3]" },
+        { "id": "b", "text": "[0, 1, 2]" },
+        { "id": "c", "text": "[1, 2]" },
+        { "id": "d", "text": "[1, 2, 3, 4]" }
+      ],
+      "answer": "a",
+      "explanation": "The list comprehension adds 1 to each number in the range, resulting in [1, 2, 3].",
+      "tags": ["dax-basics"]
+    },
+    {
+      "id": "08-power-bi-q4",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "DAX is a formula language used in Power BI.",
+      "answer": true,
+      "explanation": "DAX, or Data Analysis Expressions, is specifically designed for data manipulation in tools like Power BI.",
+      "tags": ["dax-basics"]
+    },
+    {
+      "id": "08-power-bi-q5",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to create a Power BI report:",
+      "steps": [
+        { "id": "s1", "text": "Publish the report to Power BI service." },
+        { "id": "s2", "text": "Connect to your data source." },
+        { "id": "s3", "text": "Create visuals based on the data." },
+        { "id": "s4", "text": "Load the data into Power BI." }
+      ],
+      "correctOrder": ["s2", "s4", "s3", "s1"],
+      "explanation": "First, you connect to the data source, then load the data, create visuals, and finally publish the report.",
+      "tags": ["publishing"]
+    },
+    {
+      "id": "08-power-bi-q6",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the purpose of relationships in Power BI?",
+      "options": [
+        { "id": "a", "text": "To filter data in visuals." },
+        { "id": "b", "text": "To connect different data tables." },
+        { "id": "c", "text": "To sort data alphabetically." },
+        { "id": "d", "text": "To create calculated columns." }
+      ],
+      "answer": "b",
+      "explanation": "Relationships link different tables, allowing for coherent data analysis across multiple sources.",
+      "tags": ["relationships"]
+    },
+    {
+      "id": "08-power-bi-q7",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Fill in the blank to create a new calculated column:",
+      "language": "python",
+      "code_template": "df['New_Column'] = df['Sales'] * ____",
+      "blanks": [
+        { "id": "b1", "options": ["0.1", "1.1", "10", "100"], "answer": "1.1" }
+      ],
+      "explanation": "Multiplying by 1.1 increases the sales value by 10%.",
+      "tags": ["dax-basics"]
+    },
+    {
+      "id": "08-power-bi-q8",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this DAX measure return?",
+      "language": "dax",
+      "code": "Total Sales = SUM(Sales[Amount])",
+      "options": [
+        { "id": "a", "text": "Total count of sales." },
+        { "id": "b", "text": "The total amount of sales." },
+        { "id": "c", "text": "The maximum sale amount." },
+        { "id": "d", "text": "Average sales per transaction." }
+      ],
+      "answer": "b",
+      "explanation": "The measure calculates the total amount from the 'Amount' column in the 'Sales' table.",
+      "tags": ["dax-basics"]
+    },
+    {
+      "id": "08-power-bi-q9",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Power BI can only connect to Microsoft products.",
+      "answer": false,
+      "explanation": "Power BI can connect to various data sources, including non-Microsoft products such as MySQL and PostgreSQL.",
+      "tags": ["intro"]
+    },
+    {
+      "id": "08-power-bi-q10",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to optimize a Power BI report:",
+      "steps": [
+        { "id": "s1", "text": "Reduce the number of visuals." },
+        { "id": "s2", "text": "Use aggregations for large datasets." },
+        { "id": "s3", "text": "Optimize data model relationships." },
+        { "id": "s4", "text": "Remove unnecessary columns." }
+      ],
+      "correctOrder": ["s4", "s2", "s3", "s1"],
+      "explanation": "To optimize, first remove unnecessary columns, then use aggregations, optimize relationships, and reduce visuals.",
+      "tags": ["visuals"]
+    },
+    {
+      "id": "08-power-bi-q11",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following is a valid DAX function to filter a table?",
+      "options": [
+        { "id": "a", "text": "FILTER" },
+        { "id": "b", "text": "SELECT" },
+        { "id": "c", "text": "WHERE" },
+        { "id": "d", "text": "GET" }
+      ],
+      "answer": "a",
+      "explanation": "The 'FILTER' function is used in DAX to return a table that represents a subset of another table.",
+      "tags": ["dax-basics"]
+    },
+    {
+      "id": "08-power-bi-q12",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this DAX expression return?",
+      "language": "dax",
+      "code": "Sales Growth = DIVIDE(SUM(Sales[Current]), SUM(Sales[Previous]))",
+      "options": [
+        { "id": "a", "text": "Percentage of total sales." },
+        { "id": "b", "text": "Growth rate of sales." },
+        { "id": "c", "text": "Total current sales." },
+        { "id": "d", "text": "Total previous sales." }
+      ],
+      "answer": "b",
+      "explanation": "The expression calculates the growth rate by dividing current sales by previous sales.",
+      "tags": ["dax-basics"]
+    },
+    {
+      "id": "08-power-bi-q13",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "In Power BI, you can create a measure without using DAX.",
+      "answer": false,
+      "explanation": "Measures in Power BI are created using DAX, which is essential for calculations.",
+      "tags": ["dax-basics"]
+    },
+    {
+      "id": "08-power-bi-q14",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which visual is best for showing trends over time?",
+      "options": [
+        { "id": "a", "text": "Bar chart" },
+        { "id": "b", "text": "Pie chart" },
+        { "id": "c", "text": "Line chart" },
+        { "id": "d", "text": "Table" }
+      ],
+      "answer": "c",
+      "explanation": "Line charts are ideal for visualizing trends over time, as they clearly show changes across a time series.",
+      "tags": ["visuals"]
+    },
+    {
+      "id": "08-power-bi-q15",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Fill in the blank to create a new measure for total revenue:",
+      "language": "dax",
+      "code_template": "Total Revenue = SUMX(Sales, Sales[Quantity] * ____)",
+      "blanks": [
+        { "id": "b1", "options": ["Sales[Price]", "Sales[Total]", "Sales[Discount]", "Sales[Commission]"], "answer": "Sales[Price]" }
+      ],
+      "explanation": "The measure calculates total revenue by multiplying quantity by price for each sale.",
+      "tags": ["dax-basics"]
+    }
+  ]
+}

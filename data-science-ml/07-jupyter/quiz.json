@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "07-jupyter",
+  "type": "module",
+  "questions": [
+    {
+      "id": "07-jupyter-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does the command %matplotlib inline do?",
+      "options": [
+        { "id": "a", "text": "Enables interactive plotting" },
+        { "id": "b", "text": "Displays plots inline within the notebook" },
+        { "id": "c", "text": "Saves plots to a file" },
+        { "id": "d", "text": "Clears existing plots" }
+      ],
+      "answer": "b",
+      "explanation": "The %matplotlib inline command allows for plots to be displayed directly in the Jupyter notebook."
+    },
+    {
+      "id": "07-jupyter-q2",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet:",
+      "language": "python",
+      "code_template": "import pandas as pd\\ndf = pd.read_csv('data.csv')\\ndf.____('column_name').____()",
+      "blanks": [
+        { "id": "b1", "options": ["filter", "groupby", "drop", "merge"], "answer": "drop" },
+        { "id": "b2", "options": ["sum", "mean", "count", "max"], "answer": "mean" }
+      ],
+      "explanation": "The drop method is used to exclude a specified column, and mean computes the average of remaining values."
+    },
+    {
+      "id": "07-jupyter-q3",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print('Hello' + ' World!')",
+      "options": [
+        { "id": "a", "text": "Hello World!" },
+        { "id": "b", "text": "HelloWorld!" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "Hello World" }
+      ],
+      "answer": "a",
+      "explanation": "String concatenation in Python combines 'Hello' and ' World!' resulting in 'Hello World!'."
+    },
+    {
+      "id": "07-jupyter-q4",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "The command %run executes a Python script in the Jupyter notebook environment.",
+      "answer": true,
+      "explanation": "The %run command allows you to execute an external Python script as if it was a part of your notebook."
+    },
+    {
+      "id": "07-jupyter-q5",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to create a reproducible Jupyter notebook:",
+      "steps": [
+        { "id": "s1", "text": "Document assumptions and dependencies" },
+        { "id": "s2", "text": "Add comments to clarify the code" },
+        { "id": "s3", "text": "Use version control for your notebook" },
+        { "id": "s4", "text": "Ensure data sources are accessible" }
+      ],
+      "correctOrder": ["s4", "s1", "s3", "s2"],
+      "explanation": "Begin by ensuring data sources are accessible, document assumptions, use version control, and finally add comments."
+    },
+    {
+      "id": "07-jupyter-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the purpose of Jupyter magics?",
+      "options": [
+        { "id": "a", "text": "To execute code faster" },
+        { "id": "b", "text": "To enhance Jupyter's functionality" },
+        { "id": "c", "text": "To automate data cleaning" },
+        { "id": "d", "text": "To create interactive visualizations" }
+      ],
+      "answer": "b",
+      "explanation": "Magics are special commands in Jupyter that extend its functionality for tasks such as timing, plotting, and more."
+    },
+    {
+      "id": "07-jupyter-q7",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "The command %%time measures the execution time of a single cell.",
+      "answer": true,
+      "explanation": "The %%time cell magic allows you to measure how long it takes to run the entire cell."
+    },
+    {
+      "id": "07-jupyter-q8",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to convert a notebook to HTML:",
+      "language": "python",
+      "code_template": "!jupyter nbconvert --to ____ notebook.ipynb",
+      "blanks": [
+        { "id": "b1", "options": ["html", "pdf", "markdown", "script"], "answer": "html" }
+      ],
+      "explanation": "The nbconvert tool allows you to convert Jupyter notebooks to various formats including HTML."
+    },
+    {
+      "id": "07-jupyter-q9",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "for i in range(3): print(i);",
+      "options": [
+        { "id": "a", "text": "0 1 2" },
+        { "id": "b", "text: "0 1 2 3" },
+        { "id": "c", "text": "0\n1\n2" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "c",
+      "explanation": "The loop prints each value of i on a new line, resulting in '0\\n1\\n2'."
+    },
+    {
+      "id": "07-jupyter-q10",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which command is used to clear all output in a Jupyter notebook?",
+      "options": [
+        { "id": "a", "text": "Clear Output" },
+        { "id": "b", "text": "Reset Kernel" },
+        { "id": "c", "text": "Run All" },
+        { "id": "d", "text": "Save Notebook" }
+      ],
+      "answer": "a",
+      "explanation": "The 'Clear Output' command removes all output displayed in the notebook cells."
+    },
+    {
+      "id": "07-jupyter-q11",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to create a new cell in Jupyter:",
+      "language": "python",
+      "code_template": "____()",
+      "blanks": [
+        { "id": "b1", "options": ["add_cell", "insert_cell", "new_cell", "create_cell"], "answer": "insert_cell" }
+      ],
+      "explanation": "The insert_cell method is used to add a new cell in the Jupyter notebook interface."
+    },
+    {
+      "id": "07-jupyter-q12",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Jupyter notebooks can only run Python code.",
+      "answer": false,
+      "explanation": "Jupyter notebooks support multiple programming languages through kernels, not just Python."
+    },
+    {
+      "id": "07-jupyter-q13",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of these is NOT a benefit of using Jupyter notebooks?",
+      "options": [
+        { "id": "a", "text": "Interactive data visualization" },
+        { "id": "b", "text": "Automatic code optimization" },
+        { "id": "c", "text": "Easy sharing of results" },
+        { "id": "d", "text": "Markdown support for documentation" }
+      ],
+      "answer": "b",
+      "explanation": "Jupyter notebooks offer many features, but automatic code optimization is not one of them."
+    },
+    {
+      "id": "07-jupyter-q14",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Fill in the blanks to save a notebook as a PDF:",
+      "language": "python",
+      "code_template": "!jupyter nbconvert --to ____ notebook.ipynb",
+      "blanks": [
+        { "id": "b1", "options": ["pdf", "html", "script", "markdown"], "answer": "pdf" }
+      ],
+      "explanation": "This command converts the notebook to PDF format for easy sharing and presentation."
+    },
+    {
+      "id": "07-jupyter-q15",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print([x**2 for x in range(4) if x % 2 == 0])",
+      "options": [
+        { "id": "a", "text": "[0, 1, 4, 9]" },
+        { "id": "b", "text": "[0, 4, 16]" },
+        { "id": "c", "text": "[0, 4]" },
+        { "id": "d", "text": "[1, 4, 9]" }
+      ],
+      "answer": "c",
+      "explanation": "The list comprehension filters even numbers and squares them, resulting in [0, 4]."
+    }
+  ]
+}

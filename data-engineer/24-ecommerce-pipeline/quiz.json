@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "24-ecommerce-pipeline",
+  "type": "module",
+  "questions": [
+    {
+      "id": "24-ecommerce-pipeline-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does a data ingestion layer do?",
+      "options": [
+        { "id": "a", "text": "Transforms raw data." },
+        { "id": "b", "text": "Collects data from various sources." },
+        { "id": "c", "text": "Stores data for later use." },
+        { "id": "d", "text": "Visualizes data insights." }
+      ],
+      "answer": "b",
+      "explanation": "The data ingestion layer is responsible for collecting and importing data from various sources."
+    },
+    {
+      "id": "24-ecommerce-pipeline-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which of the following is a common format for data transformation?",
+      "options": [
+        { "id": "a", "text": "CSV" },
+        { "id": "b", "text": "JSON" },
+        { "id": "c", "text": "Parquet" },
+        { "id": "d", "text": "All of the above" }
+      ],
+      "answer": "d",
+      "explanation": "All of the mentioned formats can be used for data transformation in different contexts."
+    },
+    {
+      "id": "24-ecommerce-pipeline-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to filter a DataFrame:",
+      "language": "python",
+      "code_template": "df.____('column_name') == 'value'",
+      "blanks": [
+        { "id": "b1", "options": ["filter", "where", "select", "drop"], "answer": "filter" }
+      ],
+      "explanation": "The filter method allows you to select rows based on a condition applied to a column."
+    },
+    {
+      "id": "24-ecommerce-pipeline-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print([x + 1 for x in range(3)])",
+      "options": [
+        { "id": "a", "text": "[0, 1, 2]" },
+        { "id": "b", "text": "[1, 2, 3]" },
+        { "id": "c", "text": "[1, 2, 0]" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "b",
+      "explanation": "The list comprehension adds 1 to each number in the range, resulting in [1, 2, 3]."
+    },
+    {
+      "id": "24-ecommerce-pipeline-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "The transformation layer only processes structured data.",
+      "answer": false,
+      "explanation": "The transformation layer can process both structured and unstructured data."
+    },
+    {
+      "id": "24-ecommerce-pipeline-q6",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps in the data ingestion process:",
+      "steps": [
+        { "id": "s1", "text": "Define data sources." },
+        { "id": "s2", "text": "Extract data." },
+        { "id": "s3", "text": "Load data into storage." },
+        { "id": "s4", "text": "Validate data." }
+      ],
+      "correctOrder": ["s1", "s2", "s4", "s3"],
+      "explanation": "First, define the data sources, then extract, validate, and finally load the data."
+    },
+    {
+      "id": "24-ecommerce-pipeline-q7",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following is NOT a key component of the serving layer?",
+      "options": [
+        { "id": "a", "text": "APIs for data access" },
+        { "id": "b", "text": "Data storage" },
+        { "id": "c", "text": "Data transformation" },
+        { "id": "d", "text": "Data caching" }
+      ],
+      "answer": "c",
+      "explanation": "The serving layer focuses on accessing and delivering data, not on transforming it."
+    },
+    {
+      "id": "24-ecommerce-pipeline-q8",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Observability is only concerned with logging errors.",
+      "answer": false,
+      "explanation": "Observability involves monitoring metrics, logs, and traces, not just logging errors."
+    },
+    {
+      "id": "24-ecommerce-pipeline-q9",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the following code to optimize the DataFrame:",
+      "language": "python",
+      "code_template": "df.____().____()",
+      "blanks": [
+        { "id": "b1", "options": ["cache", "persist", "collect", "filter"], "answer": "persist" },
+        { "id": "b2", "options": ["count", "show", "columns", "describe"], "answer": "count" }
+      ],
+      "explanation": "Persisting a DataFrame allows it to be cached in memory, optimizing subsequent actions."
+    },
+    {
+      "id": "24-ecommerce-pipeline-q10",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(len({x: x*2 for x in range(3)}))",
+      "options": [
+        { "id": "a", "text": "2" },
+        { "id": "b", "text": "3" },
+        { "id": "c", "text": "4" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "b",
+      "explanation": "The dictionary comprehension creates 3 unique key-value pairs, so the length is 3."
+    },
+    {
+      "id": "24-ecommerce-pipeline-q11",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the primary purpose of the transformation layer?",
+      "options": [
+        { "id": "a", "text": "Store data." },
+        { "id": "b", "text": "Transform raw data into usable formats." },
+        { "id": "c", "text": "Ingest data." },
+        { "id": "d", "text": "Serve data to users." }
+      ],
+      "answer": "b",
+      "explanation": "The transformation layer prepares raw data for analysis by converting it into usable formats."
+    },
+    {
+      "id": "24-ecommerce-pipeline-q12",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps in the observability framework:",
+      "steps": [
+        { "id": "s1", "text": "Monitor system performance." },
+        { "id": "s2", "text": "Collect logs and metrics." },
+        { "id": "s3", "text": "Analyze collected data." },
+        { "id": "s4", "text": "Respond to incidents." }
+      ],
+      "correctOrder": ["s2", "s1", "s3", "s4"],
+      "explanation": "First, collect data, then monitor, analyze, and finally respond to any incidents."
+    },
+    {
+      "id": "24-ecommerce-pipeline-q13",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "The serving layer is directly responsible for data transformation.",
+      "answer": false,
+      "explanation": "The serving layer is not responsible for transformation; it serves data that has already been transformed."
+    },
+    {
+      "id": "24-ecommerce-pipeline-q14",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is an important consideration when designing the ingestion layer?",
+      "options": [
+        { "id": "a", "text": "Data format consistency." },
+        { "id": "b", "text": "User interface design." },
+        { "id": "c", "text": "Cost of storage." },
+        { "id": "d", "text": "Data visualization." }
+      ],
+      "answer": "a",
+      "explanation": "Data format consistency is crucial to ensure smooth integration and processing downstream."
+    },
+    {
+      "id": "24-ecommerce-pipeline-q15",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the code snippet to create a DataFrame:",
+      "language": "python",
+      "code_template": "import pandas as pd\ndf = pd.____({'column': [1, 2, 3]})",
+      "blanks": [
+        { "id": "b1", "options": ["DataFrame", "read_csv", "from_records", "read_sql"], "answer": "DataFrame" }
+      ],
+      "explanation": "The DataFrame constructor is used to create a DataFrame from a dictionary."
+    }
+  ]
+}

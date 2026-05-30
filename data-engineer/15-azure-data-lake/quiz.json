@@ -1,0 +1,218 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "15-azure-data-lake",
+  "type": "module",
+  "questions": [
+    {
+      "id": "15-azure-data-lake-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is Azure Data Lake Storage Gen2 primarily used for?",
+      "options": [
+        { "id": "a", "text": "Real-time data processing" },
+        { "id": "b", "text": "Storing large amounts of unstructured data" },
+        { "id": "c", "text": "ETL operations" },
+        { "id": "d", "text": "Data visualization" }
+      ],
+      "answer": "b",
+      "explanation": "Azure Data Lake Storage Gen2 is designed to store vast amounts of unstructured data efficiently.",
+      "tags": ["azure", "data-lake"]
+    },
+    {
+      "id": "15-azure-data-lake-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which of the following is a feature of hierarchical namespace in Azure Data Lake Storage Gen2?",
+      "options": [
+        { "id": "a", "text": "Flat structure" },
+        { "id": "b", "text": "File-level access control" },
+        { "id": "c", "text": "Limited file sizes" },
+        { "id": "d", "text": "No support for access tiers" }
+      ],
+      "answer": "b",
+      "explanation": "Hierarchical namespace allows for file-level access control, improving data security.",
+      "tags": ["gen2", "namespace"]
+    },
+    {
+      "id": "15-azure-data-lake-q3",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What type of authentication is recommended for accessing Azure Data Lake Storage?",
+      "options": [
+        { "id": "a", "text": "Anonymous access" },
+        { "id": "b", "text": "Access keys" },
+        { "id": "c", "text": "Azure Active Directory" },
+        { "id": "d", "text": "Shared access signatures" }
+      ],
+      "answer": "c",
+      "explanation": "Azure Active Directory provides a more secure method for authentication compared to other methods.",
+      "tags": ["security", "authentication"]
+    },
+    {
+      "id": "15-azure-data-lake-q4",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to read a file from Azure Data Lake Storage:",
+      "language": "python",
+      "code_template": "from azure.storage.filedatalake import DataLakeServiceClient\n\ndls = DataLakeServiceClient.from_connection_string('...')\nfile_system_client = dls.get_file_system_client(file_system='my-file-system')\nfile_client = file_system_client.get_file_client('...')\nfile_content = file_client.download_file().readall()",
+      "blanks": [
+        { "id": "b1", "options": ["my_connection_string", "my_storage_account", "my_key", "my_url"], "answer": "my_connection_string" },
+        { "id": "b2", "options": ["my_file", "my_folder", "my_blob", "my_data"], "answer": "my_file" }
+      ],
+      "explanation": "You need to provide the connection string and the file name to access the file.",
+      "tags": ["code", "data-lake"]
+    },
+    {
+      "id": "15-azure-data-lake-q5",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print([x for x in range(5) if x % 2 == 0])",
+      "options": [
+        { "id": "a", "text": "[0, 1, 2, 3, 4]" },
+        { "id": "b", "text": "[0, 2, 4]" },
+        { "id": "c", "text": "[1, 3]" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "b",
+      "explanation": "The code filters even numbers from the range of 0 to 4, resulting in [0, 2, 4].",
+      "tags": ["python", "output"]
+    },
+    {
+      "id": "15-azure-data-lake-q6",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Azure Data Lake Storage Gen2 supports both blob and file storage capabilities.",
+      "answer": true,
+      "explanation": "Gen2 combines the capabilities of Azure Blob Storage with file system features.",
+      "tags": ["gen2", "storage"]
+    },
+    {
+      "id": "15-azure-data-lake-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to set up an Azure Data Lake Storage account:",
+      "steps": [
+        { "id": "s1", "text": "Create a resource group" },
+        { "id": "s2", "text": "Provision Azure Data Lake Storage account" },
+        { "id": "s3", "text": "Set up access permissions" },
+        { "id": "s4", "text": "Configure hierarchical namespace" }
+      ],
+      "correctOrder": ["s1", "s2", "s4", "s3"],
+      "explanation": "First, create a resource group, then provision the storage account, configure the namespace and finally set access permissions.",
+      "tags": ["setup", "order"]
+    },
+    {
+      "id": "15-azure-data-lake-q8",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which service is commonly integrated with Azure Data Lake for analytics?",
+      "options": [
+        { "id": "a", "text": "Azure Functions" },
+        { "id": "b", "text": "Azure Synapse Analytics" },
+        { "id": "c", "text": "Azure DevOps" },
+        { "id": "d", "text": "Azure Logic Apps" }
+      ],
+      "answer": "b",
+      "explanation": "Azure Synapse Analytics is designed for big data and analytics workloads on data stored in Data Lake.",
+      "tags": ["integration", "analytics"]
+    },
+    {
+      "id": "15-azure-data-lake-q9",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What is a potential drawback of using a hierarchical namespace?",
+      "options": [
+        { "id": "a", "text": "Increased storage costs" },
+        { "id": "b", "text": "Reduced performance in file operations" },
+        { "id": "c", "text": "Limited scalability" },
+        { "id": "d", "text": "Complex permissions management" }
+      ],
+      "answer": "b",
+      "explanation": "Using a hierarchical namespace may introduce additional latency in file operations compared to a flat namespace.",
+      "tags": ["performance", "namespace"]
+    },
+    {
+      "id": "15-azure-data-lake-q10",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Fill in the blanks to create a DataFrame from a CSV in Azure Data Lake Storage:",
+      "language": "python",
+      "code_template": "import pandas as pd\n\nstorage_path = 'abfss://my-file-system@my-account.dfs.core.windows.net/____'\ndf = pd.read_csv(storage_path)",
+      "blanks": [
+        { "id": "b1", "options": ["my_file.csv", "data/my_file.csv", "data/my_file", "my_folder/my_file.csv"], "answer": "data/my_file.csv" }
+      ],
+      "explanation": "The correct path must include the full URI to access the CSV file in the Data Lake.",
+      "tags": ["dataframe", "csv"]
+    },
+    {
+      "id": "15-azure-data-lake-q11",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Azure Data Lake Storage Gen2 does not support lifecycle management policies.",
+      "answer": false,
+      "explanation": "Gen2 does support lifecycle management policies for optimizing storage costs.",
+      "tags": ["lifecycle", "policies"]
+    },
+    {
+      "id": "15-azure-data-lake-q12",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "data = [1, 2, 3]\nprint(data[-1])",
+      "options": [
+        { "id": "a", "text": "1" },
+        { "id": "b", "text": "2" },
+        { "id": "c", "text": "3" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "c",
+      "explanation": "Negative indexing returns elements from the end of the list, so data[-1] is 3.",
+      "tags": ["python", "output"]
+    },
+    {
+      "id": "15-azure-data-lake-q13",
+      "type": "order_the_steps",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Order these steps to integrate Azure Data Lake with Azure Synapse Analytics:",
+      "steps": [
+        { "id": "s1", "text": "Create an Azure Synapse workspace" },
+        { "id": "s2", "text": "Link Azure Data Lake Storage to Synapse" },
+        { "id": "s3", "text": "Set up the necessary permissions" },
+        { "id": "s4", "text": "Build data pipelines in Synapse" }
+      ],
+      "correctOrder": ["s1", "s3", "s2", "s4"],
+      "explanation": "First, create a Synapse workspace, set permissions, link Data Lake, and then build pipelines.",
+      "tags": ["integration", "synapse"]
+    }
+  ]
+}

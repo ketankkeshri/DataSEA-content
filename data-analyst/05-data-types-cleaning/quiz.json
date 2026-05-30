@@ -1,0 +1,232 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "05-data-types-cleaning",
+  "type": "module",
+  "questions": [
+    {
+      "id": "05-data-types-cleaning-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is a common data type for numerical values in pandas?",
+      "options": [
+        { "id": "a", "text": "String" },
+        { "id": "b", "text": "Integer" },
+        { "id": "c", "text": "Object" },
+        { "id": "d", "text": "DateTime" }
+      ],
+      "answer": "b",
+      "explanation": "In pandas, integer is a common data type used for numerical values."
+    },
+    {
+      "id": "05-data-types-cleaning-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which method is used to check for missing values in a DataFrame?",
+      "options": [
+        { "id": "a", "text": "isna()" },
+        { "id": "b", "text": "isnull()" },
+        { "id": "c", "text": "dropna()" },
+        { "id": "d", "text": "fillna()" }
+      ],
+      "answer": "a",
+      "explanation": "The isna() method is used to identify missing values in a DataFrame."
+    },
+    {
+      "id": "05-data-types-cleaning-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to drop duplicates:",
+      "language": "python",
+      "code_template": "df.____().____()",
+      "blanks": [
+        { "id": "b1", "options": ["drop_duplicates", "remove_duplicates", "delete_duplicates", "clear_duplicates"], "answer": "drop_duplicates" },
+        { "id": "b2", "options": ["inplace=True", "reset_index()", "fillna()", "sort_values()"], "answer": "inplace=True" }
+      ],
+      "explanation": "drop_duplicates() removes duplicate rows from the DataFrame."
+    },
+    {
+      "id": "05-data-types-cleaning-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(pd.Series([1, 2, None]).isnull())",
+      "options": [
+        { "id": "a", "text": "[False, False, False]" },
+        { "id": "b", "text": "[True, True, True]" },
+        { "id": "c", "text": "[False, False, True]" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "c",
+      "explanation": "The isnull() method returns True for missing values, so it outputs [False, False, True]."
+    },
+    {
+      "id": "05-data-types-cleaning-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Normalization helps to scale the data between a specific range.",
+      "answer": true,
+      "explanation": "Normalization scales data to a specified range, often between 0 and 1."
+    },
+    {
+      "id": "05-data-types-cleaning-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which function can be used to fill missing values in a DataFrame?",
+      "options": [
+        { "id": "a", "text": "fillna()" },
+        { "id": "b", "text": "dropna()" },
+        { "id": "c", "text": "replace()" },
+        { "id": "d", "text": "isna()" }
+      ],
+      "answer": "a",
+      "explanation": "The fillna() function is specifically used to fill missing values in a DataFrame."
+    },
+    {
+      "id": "05-data-types-cleaning-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to normalize data:",
+      "steps": [
+        { "id": "s1", "text": "Identify the column to normalize." },
+        { "id": "s2", "text": "Calculate the minimum and maximum values." },
+        { "id": "s3", "text": "Apply the normalization formula." },
+        { "id": "s4", "text": "Replace the original column with normalized values." }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "The correct order starts with identifying the column, then calculating min/max, applying the formula, and finally replacing the original values."
+    },
+    {
+      "id": "05-data-types-cleaning-q8",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What is the result of applying the dropna() method?",
+      "options": [
+        { "id": "a", "text": "It fills missing values." },
+        { "id": "b", "text": "It removes rows with missing values." },
+        { "id": "c", "text": "It replaces missing values with zero." },
+        { "id": "d", "text": "It identifies missing values." }
+      ],
+      "answer": "b",
+      "explanation": "dropna() removes any rows that contain missing values in the DataFrame."
+    },
+    {
+      "id": "05-data-types-cleaning-q9",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the code to normalize data to a range of 0 to 1:",
+      "language": "python",
+      "code_template": "df['normalized'] = (df['column'] - df['column'].____()) / (df['column'].____() - df['column'].____())",
+      "blanks": [
+        { "id": "b1", "options": ["min()", "max()", "mean()", "std()"], "answer": "min()" },
+        { "id": "b2", "options": ["max()", "min()", "mean()", "std()"], "answer": "max()" },
+        { "id": "b3", "options": ["min()", "max()", "mean()", "std()"], "answer": "min()" }
+      ],
+      "explanation": "This formula normalizes a column to a range of 0 to 1 using min-max normalization."
+    },
+    {
+      "id": "05-data-types-cleaning-q10",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(pd.Series([1, 2, 2, 3]).unique())",
+      "options": [
+        { "id": "a", "text": "[1, 2, 3]" },
+        { "id": "b", "text": "[1, 2, 2, 3]" },
+        { "id": "c", "text": "[1, 2]" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The unique() function returns unique values from the Series, which are [1, 2, 3]."
+    },
+    {
+      "id": "05-data-types-cleaning-q11",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Data cleaning is a one-time process and does not require ongoing maintenance.",
+      "answer": false,
+      "explanation": "Data cleaning is an ongoing process that may need repeated attention as data changes."
+    },
+    {
+      "id": "05-data-types-cleaning-q12",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which method can be used to convert a column to a numeric type?",
+      "options": [
+        { "id": "a", "text": "astype()" },
+        { "id": "b", "text": "convert()" },
+        { "id": "c", "text": "to_numeric()" },
+        { "id": "d", "text": "cast()" }
+      ],
+      "answer": "c",
+      "explanation": "The to_numeric() function converts a column to a numeric data type."
+    },
+    {
+      "id": "05-data-types-cleaning-q13",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to handle missing data:",
+      "steps": [
+        { "id": "s1", "text": "Decide on a strategy (drop or fill)." },
+        { "id": "s2", "text": "Identify missing values." },
+        { "id": "s3", "text": "Apply the chosen method." },
+        { "id": "s4", "text": "Verify that missing data is handled." }
+      ],
+      "correctOrder": ["s2", "s1", "s3", "s4"],
+      "explanation": "First, identify missing values, then decide on a strategy, apply it, and verify the results."
+    },
+    {
+      "id": "05-data-types-cleaning-q14",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the code to remove duplicates based on a specific column:",
+      "language": "python",
+      "code_template": "df.____('column_name').____()",
+      "blanks": [
+        { "id": "b1", "options": ["drop_duplicates", "remove_duplicates", "delete_duplicates", "clear_duplicates"], "answer": "drop_duplicates" },
+        { "id": "b2", "options": ["inplace=True", "reset_index()", "keep='first'", "ignore_index=True"], "answer": "inplace=True" }
+      ],
+      "explanation": "drop_duplicates() is used to remove duplicate rows based on a specified column."
+    },
+    {
+      "id": "05-data-types-cleaning-q15",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Data normalization and standardization are the same processes.",
+      "answer": false,
+      "explanation": "Normalization scales data to a range, while standardization scales data to have a mean of 0 and a standard deviation of 1."
+    }
+  ]
+}

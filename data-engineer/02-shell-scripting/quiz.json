@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "02-shell-scripting",
+  "type": "module",
+  "questions": [
+    {
+      "id": "02-shell-scripting-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does the command 'echo' do?",
+      "options": [
+        { "id": "a", "text": "Displays text on the terminal" },
+        { "id": "b", "text": "Creates a new file" },
+        { "id": "c", "text": "Changes the directory" },
+        { "id": "d", "text": "Deletes a file" }
+      ],
+      "answer": "a",
+      "explanation": "'echo' is used to display a line of text or a variable value in the terminal.",
+      "tags": ["intro"]
+    },
+    {
+      "id": "02-shell-scripting-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which symbol is used for comments in shell scripting?",
+      "options": [
+        { "id": "a", "text": "#" },
+        { "id": "b", "text": "//" },
+        { "id": "c", "text": "/*" },
+        { "id": "d", "text": "--" }
+      ],
+      "answer": "a",
+      "explanation": "In shell scripting, the '#' symbol is used to denote comments.",
+      "tags": ["intro"]
+    },
+    {
+      "id": "02-shell-scripting-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to create a variable:",
+      "language": "bash",
+      "code_template": "name=____",
+      "blanks": [
+        { "id": "b1", "options": ["'John'", "'John Doe'", "'John'", "John"], "answer": "'John'" }
+      ],
+      "explanation": "In shell scripting, variable assignments do not require spaces around the equals sign."
+    },
+    {
+      "id": "02-shell-scripting-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "bash",
+      "code": "echo {1..5}",
+      "options": [
+        { "id": "a", "text": "1 2 3 4 5" },
+        { "id": "b", "text": "12345" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "1, 2, 3, 4, 5" }
+      ],
+      "answer": "a",
+      "explanation": "The sequence expression '{1..5}' expands to '1 2 3 4 5'.",
+      "tags": ["variables-flow"]
+    },
+    {
+      "id": "02-shell-scripting-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "The command 'ls -l' lists files in long format.",
+      "answer": true,
+      "explanation": "'ls -l' displays detailed information about files and directories, including permissions and sizes.",
+      "tags": ["intro"]
+    },
+    {
+      "id": "02-shell-scripting-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does the command 'grep' do?",
+      "options": [
+        { "id": "a", "text": "Searches for a pattern in files" },
+        { "id": "b", "text": "Sorts lines of text" },
+        { "id": "c", "text": "Displays file contents" },
+        { "id": "d", "text": "Counts lines in a file" }
+      ],
+      "answer": "a",
+      "explanation": "'grep' is used to search for a specific pattern in files or input.",
+      "tags": ["find-grep-awk"]
+    },
+    {
+      "id": "02-shell-scripting-q7",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the command to find files with a specific extension:",
+      "language": "bash",
+      "code_template": "find . -name '*.____'",
+      "blanks": [
+        { "id": "b1", "options": ["txt", "pdf", "jpg", "doc"], "answer": "txt" }
+      ],
+      "explanation": "The command 'find' is used to search for files, and '*.txt' specifies files with the .txt extension."
+    },
+    {
+      "id": "02-shell-scripting-q8",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these pipeline steps correctly to count the number of lines in a file:",
+      "steps": [
+        { "id": "s1", "text": "Use the 'cat' command to read the file" },
+        { "id": "s2", "text": "Pipe the output to 'wc'" },
+        { "id": "s3", "text": "Use the 'wc -l' command" },
+        { "id": "s4", "text": "Display the line count" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "First, we read the file with 'cat', then pipe the output to 'wc -l' to count the lines."
+    },
+    {
+      "id": "02-shell-scripting-q9",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this command print?",
+      "language": "bash",
+      "code": "echo $(date +%Y-%m-%d)",
+      "options": [
+        { "id": "a", "text": "Current date in YYYY-MM-DD format" },
+        { "id": "b", "text": "Current date in MM-DD-YYYY format" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "Current time" }
+      ],
+      "answer": "a",
+      "explanation": "The command outputs the current date formatted as YYYY-MM-DD.",
+      "tags": ["intro"]
+    },
+    {
+      "id": "02-shell-scripting-q10",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "The 'cron' command is used to schedule tasks in Unix-like operating systems.",
+      "answer": true,
+      "explanation": "'cron' is indeed used to schedule recurring tasks at specified intervals.",
+      "tags": ["cron"]
+    },
+    {
+      "id": "02-shell-scripting-q11",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does 'chmod 755 filename' do?",
+      "options": [
+        { "id": "a", "text": "Makes the file executable by everyone" },
+        { "id": "b", "text": "Grants read and execute permission to everyone" },
+        { "id": "c", "text": "Grants read, write, and execute permissions to the owner, and read and execute to others" },
+        { "id": "d", "text": "Removes all permissions from the file" }
+      ],
+      "answer": "c",
+      "explanation": "'chmod 755' sets permissions: owner can read/write/execute, others can read/execute.",
+      "tags": ["intro"]
+    },
+    {
+      "id": "02-shell-scripting-q12",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the script to debug a command:",
+      "language": "bash",
+      "code_template": "command ____",
+      "blanks": [
+        { "id": "b1", "options": ["-d", "--debug", "-x", "--verbose"], "answer": "-x" }
+      ],
+      "explanation": "The '-x' option is used to enable debugging mode in shell scripts."
+    },
+    {
+      "id": "02-shell-scripting-q13",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to redirect output to a file:",
+      "steps": [
+        { "id": "s1", "text": "Write the command" },
+        { "id": "s2", "text": "Use '>' to redirect output" },
+        { "id": "s3", "text": "Specify the file name" }
+      ],
+      "correctOrder": ["s1", "s2", "s3"],
+      "explanation": "First, write the command, then use '>' to redirect the output to the specified file."
+    },
+    {
+      "id": "02-shell-scripting-q14",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "The 'awk' command is used for text processing.",
+      "answer": true,
+      "explanation": "'awk' is a powerful text processing tool used to manipulate and analyze text data.",
+      "tags": ["find-grep-awk"]
+    },
+    {
+      "id": "02-shell-scripting-q15",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which command is used to list scheduled cron jobs?",
+      "options": [
+        { "id": "a", "text": "crontab -e" },
+        { "id": "b", "text": "crontab -l" },
+        { "id": "c", "text": "cron -l" },
+        { "id": "d", "text": "jobs" }
+      ],
+      "answer": "b",
+      "explanation": "'crontab -l' lists all scheduled cron jobs for the user.",
+      "tags": ["cron"]
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "10-google-sheets-advanced",
+  "type": "module",
+  "questions": [
+    {
+      "id": "10-google-sheets-advanced-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does the QUERY function do in Google Sheets?",
+      "options": [
+        { "id": "a", "text": "Combines multiple sheets into one." },
+        { "id": "b", "text": "Filters and manipulates data based on SQL-like syntax." },
+        { "id": "c", "text": "Automatically fills in blank cells." },
+        { "id": "d", "text": "Creates charts from selected data." }
+      ],
+      "answer": "b",
+      "explanation": "The QUERY function allows you to filter and manipulate data using a SQL-like syntax, making data analysis easier."
+    },
+    {
+      "id": "10-google-sheets-advanced-q2",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to use QUERY:",
+      "language": "python",
+      "code_template": "=QUERY(A1:B10, 'SELECT A WHERE B = ____')",
+      "blanks": [
+        { "id": "b1", "options": ["'value'", "'value' AND", "'value' OR", "'value' NOT"], "answer": "'value'" }
+      ],
+      "explanation": "You need to specify a single value to filter the results in the SELECT statement."
+    },
+    {
+      "id": "10-google-sheets-advanced-q3",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this QUERY print?",
+      "language": "python",
+      "code": "=QUERY(A1:B10, 'SELECT A WHERE B > 10')",
+      "options": [
+        { "id": "a", "text": "Values in column A where corresponding B > 10" },
+        { "id": "b", "text": "All values in column A" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "Values in column B where A > 10" }
+      ],
+      "answer": "a",
+      "explanation": "The QUERY function returns all values from column A where the corresponding value in column B is greater than 10."
+    },
+    {
+      "id": "10-google-sheets-advanced-q4",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "The IMPORTRANGE function can pull data from different Google Sheets.",
+      "answer": true,
+      "explanation": "IMPORTRANGE allows you to import data from one Google Sheet to another, enabling cross-sheet data analysis."
+    },
+    {
+      "id": "10-google-sheets-advanced-q5",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to set up an automation in Google Sheets:",
+      "steps": [
+        { "id": "s1", "text": "Set triggers in Google Apps Script." },
+        { "id": "s2", "text": "Write the function to automate." },
+        { "id": "s3", "text": "Open Google Sheets." },
+        { "id": "s4", "text": "Test the automation." }
+      ],
+      "correctOrder": ["s3", "s2", "s1", "s4"],
+      "explanation": "You need to start by opening Google Sheets, write the function, set the triggers, and finally test the automation."
+    },
+    {
+      "id": "10-google-sheets-advanced-q6",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which function would you use to combine data from two different sheets?",
+      "options": [
+        { "id": "a", "text": "JOIN" },
+        { "id": "b", "text": "IMPORTRANGE" },
+        { "id": "c", "text": "CONCATENATE" },
+        { "id": "d", "text": "VLOOKUP" }
+      ],
+      "answer": "b",
+      "explanation": "IMPORTRANGE is specifically designed to import data from different sheets, while other functions serve different purposes."
+    },
+    {
+      "id": "10-google-sheets-advanced-q7",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the formula to import a range from another sheet:",
+      "language": "python",
+      "code_template": "=IMPORTRANGE('spreadsheet_url', '____')",
+      "blanks": [
+        { "id": "b1", "options": ["'Sheet1!A1:B10'", "'Sheet1'", "'A1:B10'", "'URL'"], "answer": "'Sheet1!A1:B10'" }
+      ],
+      "explanation": "You need to specify both the sheet name and the range of cells you want to import."
+    },
+    {
+      "id": "10-google-sheets-advanced-q8",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this formula return?",
+      "language": "python",
+      "code": "=COUNTIF(A1:A10, '>10')",
+      "options": [
+        { "id": "a", "text": "Number of cells greater than 10" },
+        { "id": "b", "text": "Sum of values greater than 10" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "Total count of cells" }
+      ],
+      "answer": "a",
+      "explanation": "COUNTIF counts the number of cells in the specified range that satisfy the given condition, which is greater than 10 in this case."
+    },
+    {
+      "id": "10-google-sheets-advanced-q9",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Google Apps Script is used for creating custom functions in Google Sheets.",
+      "answer": true,
+      "explanation": "Google Apps Script allows users to write custom functions and automate tasks in Google Sheets."
+    },
+    {
+      "id": "10-google-sheets-advanced-q10",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order the steps to create a custom function using Apps Script:",
+      "steps": [
+        { "id": "s1", "text": "Open the Apps Script editor." },
+        { "id": "s2", "text": "Write your function code." },
+        { "id": "s3", "text": "Save and name your project." },
+        { "id": "s4", "text": "Use the function in your Google Sheet." }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "You must first open the Apps Script editor, write your function, save it, and then you can use it in your Google Sheet."
+    },
+    {
+      "id": "10-google-sheets-advanced-q11",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which function would you use to automate data refreshing?",
+      "options": [
+        { "id": "a", "text": "IMPORTRANGE" },
+        { "id": "b", "text": "QUERY" },
+        { "id": "c", "text": "VLOOKUP" },
+        { "id": "d", "text": "Apps Script" }
+      ],
+      "answer": "d",
+      "explanation": "Apps Script can be used to set up triggers that automate tasks, including refreshing data."
+    },
+    {
+      "id": "10-google-sheets-advanced-q12",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Fill in the blanks to create a basic Apps Script function:",
+      "language": "javascript",
+      "code_template": "function ____() { return ____; }",
+      "blanks": [
+        { "id": "b1", "options": ["myFunction", "main", "execute", "run"], "answer": "myFunction" },
+        { "id": "b2", "options": ["'Hello, World!'", "'Goodbye!'", "'DataSEA'", "'Function executed'"], "answer": "'Hello, World!'" }
+      ],
+      "explanation": "The function name should be descriptive and the return value can be any string you wish to display."
+    },
+    {
+      "id": "10-google-sheets-advanced-q13",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What will this Apps Script log to the console?",
+      "language": "javascript",
+      "code": "Logger.log('DataSEA is awesome!');",
+      "options": [
+        { "id": "a", "text": "DataSEA is awesome!" },
+        { "id": "b", "text": "Logger is undefined" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "Nothing" }
+      ],
+      "answer": "a",
+      "explanation": "The Logger.log function captures the string and outputs it to the console, which can be viewed in the Apps Script editor."
+    },
+    {
+      "id": "10-google-sheets-advanced-q14",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "You cannot use the QUERY function with dynamic ranges.",
+      "answer": false,
+      "explanation": "The QUERY function can work with dynamic ranges as long as they are defined correctly."
+    },
+    {
+      "id": "10-google-sheets-advanced-q15",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following is NOT a valid way to trigger an Apps Script function?",
+      "options": [
+        { "id": "a", "text": "On form submit" },
+        { "id": "b", "text": "On edit" },
+        { "id": "c", "text": "On open" },
+        { "id": "d", "text": "On cell select" }
+      ],
+      "answer": "d",
+      "explanation": "While you can trigger scripts on form submit, edit, or open, there is no built-in trigger for cell selection in Apps Script."
+    }
+  ]
+}

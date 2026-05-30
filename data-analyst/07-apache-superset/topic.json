@@ -1,0 +1,43 @@
+{
+  "id": "07-apache-superset",
+  "section": "data-analyst",
+  "tier": "intermediate",
+  "moduleOrder": 7,
+  "version": 1,
+  "title": "Apache Superset",
+  "shortDescription": "Apache Superset \u2014 beginner to advanced concepts and code.",
+  "icon": "07-apache-superset",
+  "estimatedMinutes": 40,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-datasets",
+      "title": "Datasets",
+      "minutes": 8
+    },
+    {
+      "id": "03-dashboards",
+      "title": "Dashboards",
+      "minutes": 8
+    },
+    {
+      "id": "04-sql-lab",
+      "title": "Sql Lab",
+      "minutes": 8
+    },
+    {
+      "id": "05-custom-viz",
+      "title": "Custom Viz",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

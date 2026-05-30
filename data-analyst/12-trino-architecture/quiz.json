@@ -1,0 +1,238 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "12-trino-architecture",
+  "type": "module",
+  "questions": [
+    {
+      "id": "12-trino-architecture-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the role of the coordinator in Trino architecture?",
+      "options": [
+        { "id": "a", "text": "Executing queries" },
+        { "id": "b", "text": "Managing query distribution" },
+        { "id": "c", "text": "Storing data" },
+        { "id": "d", "text": "Providing user interfaces" }
+      ],
+      "answer": "b",
+      "explanation": "The coordinator manages query distribution and execution across worker nodes."
+    },
+    {
+      "id": "12-trino-architecture-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which component of Trino handles data connectors?",
+      "options": [
+        { "id": "a", "text": "Coordinator" },
+        { "id": "b", "text": "Worker" },
+        { "id": "c", "text": "Query engine" },
+        { "id": "d", "text": "Client" }
+      ],
+      "answer": "b",
+      "explanation": "Workers are responsible for fetching data from various connectors during query execution."
+    },
+    {
+      "id": "12-trino-architecture-q3",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is a primary benefit of using Trino for analytics?",
+      "options": [
+        { "id": "a", "text": "Single-threaded execution" },
+        { "id": "b", "text": "Distributed query execution" },
+        { "id": "c", "text": "Data storage" },
+        { "id": "d", "text": "Limited connector support" }
+      ],
+      "answer": "b",
+      "explanation": "Trino's distributed query execution allows for processing large datasets efficiently."
+    },
+    {
+      "id": "12-trino-architecture-q4",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to connect to a data source in Trino:",
+      "language": "sql",
+      "code_template": "CREATE TABLE my_table AS SELECT * FROM ____;",
+      "blanks": [
+        { "id": "b1", "options": ["my_source", "another_source", "source_table", "external_source"], "answer": "my_source" }
+      ],
+      "explanation": "The snippet initializes a table using data from the specified source in Trino."
+    },
+    {
+      "id": "12-trino-architecture-q5",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this SQL query return?",
+      "language": "sql",
+      "code": "SELECT COUNT(*) FROM my_table WHERE value > 10;",
+      "options": [
+        { "id": "a", "text": "Total number of rows" },
+        { "id": "b", "text": "Number of rows with value greater than 10" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "List of values" }
+      ],
+      "answer": "b",
+      "explanation": "The query counts the number of rows where the 'value' column exceeds 10."
+    },
+    {
+      "id": "12-trino-architecture-q6",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Trino can query data from multiple sources simultaneously.",
+      "answer": true,
+      "explanation": "Trino's architecture allows it to query and join data from various sources in a single query."
+    },
+    {
+      "id": "12-trino-architecture-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps in the Trino query execution process:",
+      "steps": [
+        { "id": "s1", "text": "Coordinator parses the SQL query" },
+        { "id": "s2", "text": "Workers execute the query" },
+        { "id": "s3", "text": "Results are returned to the coordinator" },
+        { "id": "s4", "text": "Coordinator sends the final result to the client" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "The coordinator first parses the query, then workers execute it, followed by the return of results."
+    },
+    {
+      "id": "12-trino-architecture-q8",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What happens when a query is submitted to Trino?",
+      "options": [
+        { "id": "a", "text": "It is executed immediately" },
+        { "id": "b", "text": "It is sent to the coordinator for parsing" },
+        { "id": "c", "text": "It is ignored" },
+        { "id": "d", "text": "It is queued indefinitely" }
+      ],
+      "answer": "b",
+      "explanation": "The query is sent to the coordinator where it is parsed and planned for execution."
+    },
+    {
+      "id": "12-trino-architecture-q9",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following is a disadvantage of using Trino?",
+      "options": [
+        { "id": "a", "text": "Supports multiple data sources" },
+        { "id": "b", "text": "Requires a separate cluster for each data source" },
+        { "id": "c", "text": "Can handle large amounts of data" },
+        { "id": "d", "text": "May require tuning for performance" }
+      ],
+      "answer": "d",
+      "explanation": "While Trino is powerful, achieving optimal performance may require tuning based on workload."
+    },
+    {
+      "id": "12-trino-architecture-q10",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this SQL query output?",
+      "language": "sql",
+      "code": "SELECT AVG(value) FROM my_table WHERE value IS NOT NULL;",
+      "options": [
+        { "id": "a", "text": "Average of all values" },
+        { "id": "b", "text": "Average excluding NULL values" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "Sum of all values" }
+      ],
+      "answer": "b",
+      "explanation": "The query calculates the average of the 'value' column, excluding NULLs."
+    },
+    {
+      "id": "12-trino-architecture-q11",
+      "type": "code_completion",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Complete the query to group data in Trino:",
+      "language": "sql",
+      "code_template": "SELECT category, COUNT(*) FROM my_table GROUP BY ____;",
+      "blanks": [
+        { "id": "b1", "options": ["category", "value", "type", "name"], "answer": "category" }
+      ],
+      "explanation": "The query groups the results by the 'category' column."
+    },
+    {
+      "id": "12-trino-architecture-q12",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Trino does not support real-time data processing.",
+      "answer": true,
+      "explanation": "Trino is designed for interactive analytics and batch processing, not real-time data processing."
+    },
+    {
+      "id": "12-trino-architecture-q13",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which query optimization technique can improve Trino performance?",
+      "options": [
+        { "id": "a", "text": "Reducing the number of workers" },
+        { "id": "b", "text": "Using data compression" },
+        { "id": "c", "text": "Increasing the size of the coordinator" },
+        { "id": "d", "text": "Eliminating joins in queries" }
+      ],
+      "answer": "b",
+      "explanation": "Data compression reduces the amount of data transferred, improving performance."
+    },
+    {
+      "id": "12-trino-architecture-q14",
+      "type": "order_the_steps",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Order these steps for executing a query in Trino:",
+      "steps": [
+        { "id": "s1", "text": "Query is submitted" },
+        { "id": "s2", "text": "Coordinator plans the query" },
+        { "id": "s3", "text": "Workers execute the plan" },
+        { "id": "s4", "text": "Results are aggregated" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "The process begins with query submission, followed by planning, execution, and aggregation."
+    },
+    {
+      "id": "12-trino-architecture-q15",
+      "type": "tap_the_output",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does this SQL output?",
+      "language": "sql",
+      "code": "SELECT DISTINCT type FROM my_table;",
+      "options": [
+        { "id": "a", "text": "All rows from my_table" },
+        { "id": "b", "text": "Unique types from my_table" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "Count of types" }
+      ],
+      "answer": "b",
+      "explanation": "The query retrieves unique values from the 'type' column in my_table."
+    }
+  ]
+}

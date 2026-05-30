@@ -1,0 +1,48 @@
+{
+  "id": "02-pandas",
+  "section": "data-science-ml",
+  "tier": "beginner",
+  "moduleOrder": 2,
+  "version": 1,
+  "title": "Pandas Essentials",
+  "shortDescription": "Pandas Essentials \u2014 beginner to advanced concepts and code.",
+  "icon": "02-pandas",
+  "estimatedMinutes": 48,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-series-dataframe",
+      "title": "Series Dataframe",
+      "minutes": 8
+    },
+    {
+      "id": "03-indexing",
+      "title": "Indexing",
+      "minutes": 8
+    },
+    {
+      "id": "04-groupby",
+      "title": "Groupby",
+      "minutes": 8
+    },
+    {
+      "id": "05-merge-join",
+      "title": "Merge Join",
+      "minutes": 8
+    },
+    {
+      "id": "06-reshaping",
+      "title": "Reshaping",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

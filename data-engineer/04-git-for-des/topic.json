@@ -1,0 +1,38 @@
+{
+  "id": "04-git-for-des",
+  "section": "data-engineer",
+  "tier": "beginner",
+  "moduleOrder": 4,
+  "version": 1,
+  "title": "Git for Data Engineers",
+  "shortDescription": "Git for Data Engineers \u2014 beginner to advanced concepts and code.",
+  "icon": "04-git-for-des",
+  "estimatedMinutes": 32,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-basics",
+      "title": "Basics",
+      "minutes": 8
+    },
+    {
+      "id": "02-branching-strategies",
+      "title": "Branching Strategies",
+      "minutes": 8
+    },
+    {
+      "id": "03-rebasing",
+      "title": "Rebasing",
+      "minutes": 8
+    },
+    {
+      "id": "04-pre-commit-hooks",
+      "title": "Pre Commit Hooks",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

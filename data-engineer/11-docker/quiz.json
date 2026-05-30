@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "11-docker",
+  "type": "module",
+  "questions": [
+    {
+      "id": "11-docker-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the purpose of a Docker image?",
+      "options": [
+        { "id": "a", "text": "To run containers" },
+        { "id": "b", "text": "To store data" },
+        { "id": "c", "text": "To define container behavior" },
+        { "id": "d", "text": "To build applications" }
+      ],
+      "answer": "c",
+      "explanation": "A Docker image defines the behavior and environment of a container."
+    },
+    {
+      "id": "11-docker-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which command is used to create a Docker container?",
+      "options": [
+        { "id": "a", "text": "docker run" },
+        { "id": "b", "text": "docker create" },
+        { "id": "c", "text": "docker build" },
+        { "id": "d", "text": "docker start" }
+      ],
+      "answer": "a",
+      "explanation": "The 'docker run' command creates and starts a container in one step."
+    },
+    {
+      "id": "11-docker-q3",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Docker containers share the same kernel with the host system.",
+      "answer": true,
+      "explanation": "Containers are lightweight and share the host's kernel, allowing for efficient resource usage."
+    },
+    {
+      "id": "11-docker-q4",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the correct format for a Dockerfile instruction to copy files?",
+      "options": [
+        { "id": "a", "text": "COPY ./src /app" },
+        { "id": "b", "text": "COPY src -> app" },
+        { "id": "c", "text": "COPY src /app" },
+        { "id": "d", "text": "COPY ./src -> /app" }
+      ],
+      "answer": "a",
+      "explanation": "The COPY instruction in a Dockerfile uses the format 'COPY <source> <destination>'."
+    },
+    {
+      "id": "11-docker-q5",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the Dockerfile snippet:",
+      "language": "dockerfile",
+      "code_template": "FROM ubuntu:20.04\nRUN apt-get update && apt-get install -y ____\n",
+      "blanks": [
+        { "id": "b1", "options": ["curl", "wget", "git", "vim"], "answer": "curl" }
+      ],
+      "explanation": "The 'apt-get install' command installs packages in a Debian-based image. 'curl' is commonly used."
+    },
+    {
+      "id": "11-docker-q6",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this command output?",
+      "language": "bash",
+      "code": "docker ps -a | wc -l",
+      "options": [
+        { "id": "a", "text": "Number of running containers" },
+        { "id": "b", "text": "Total number of containers" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "List of container IDs" }
+      ],
+      "answer": "b",
+      "explanation": "The command counts all containers, including stopped ones, hence the output is the total number."
+    },
+    {
+      "id": "11-docker-q7",
+      "type": "order_the_steps",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Order these Docker commands correctly to create and run a container:",
+      "steps": [
+        { "id": "s1", "text": "docker run <options> <image>" },
+        { "id": "s2", "text": "docker pull <image>" },
+        { "id": "s3", "text": "docker build -t <tag> <path>" },
+        { "id": "s4", "text": "docker exec <container> <command>" }
+      ],
+      "correctOrder": ["s2", "s3", "s1", "s4"],
+      "explanation": "You pull the image, build it if necessary, run the container, and then execute commands inside it."
+    },
+    {
+      "id": "11-docker-q8",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What is the primary purpose of Docker Compose?",
+      "options": [
+        { "id": "a", "text": "To manage container networking" },
+        { "id": "b", "text": "To build Docker images" },
+        { "id": "c", "text": "To define and run multi-container applications" },
+        { "id": "d", "text": "To optimize Dockerfiles" }
+      ],
+      "answer": "c",
+      "explanation": "Docker Compose is used to define and manage multi-container Docker applications through a YAML file."
+    },
+    {
+      "id": "11-docker-q9",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Docker containers can communicate with each other using the default bridge network.",
+      "answer": true,
+      "explanation": "By default, containers on the same bridge network can communicate with each other using their container names."
+    },
+    {
+      "id": "11-docker-q10",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the command to remove all stopped containers:",
+      "language": "bash",
+      "code_template": "docker ____ $(docker ps -a -q -f status=exited)",
+      "blanks": [
+        { "id": "b1", "options": ["remove", "rm", "delete", "clear"], "answer": "rm" }
+      ],
+      "explanation": "The 'docker rm' command is used to remove containers. The command lists all stopped containers."
+    },
+    {
+      "id": "11-docker-q11",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What is the output of this command?",
+      "language": "bash",
+      "code": "docker inspect --format='{{.State.Status}}' <container_id>",
+      "options": [
+        { "id": "a", "text": "running" },
+        { "id": "b", "text": "stopped" },
+        { "id": "c", "text": "exited" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "This command inspects a container and returns its current state, which can be 'running' or 'stopped'."
+    },
+    {
+      "id": "11-docker-q12",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to link containers using Docker Compose:",
+      "steps": [
+        { "id": "s1", "text": "Define services in docker-compose.yml" },
+        { "id": "s2", "text": "Run 'docker-compose up'" },
+        { "id": "s3", "text": "Specify dependencies between services" },
+        { "id": "s4", "text": "Check logs for service output" }
+      ],
+      "correctOrder": ["s1", "s3", "s2", "s4"],
+      "explanation": "You define services and their dependencies in the YAML file before bringing them up and checking output."
+    }
+  ]
+}

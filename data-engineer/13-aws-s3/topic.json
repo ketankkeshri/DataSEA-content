@@ -1,0 +1,48 @@
+{
+  "id": "13-aws-s3",
+  "section": "data-engineer",
+  "tier": "intermediate",
+  "moduleOrder": 13,
+  "version": 1,
+  "title": "AWS S3",
+  "shortDescription": "AWS S3 \u2014 beginner to advanced concepts and code.",
+  "icon": "13-aws-s3",
+  "estimatedMinutes": 48,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-iam-policies",
+      "title": "Iam Policies",
+      "minutes": 8
+    },
+    {
+      "id": "03-lifecycle-tiers",
+      "title": "Lifecycle Tiers",
+      "minutes": 8
+    },
+    {
+      "id": "04-multipart-upload",
+      "title": "Multipart Upload",
+      "minutes": 8
+    },
+    {
+      "id": "05-encryption",
+      "title": "Encryption",
+      "minutes": 8
+    },
+    {
+      "id": "06-athena-integration",
+      "title": "Athena Integration",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

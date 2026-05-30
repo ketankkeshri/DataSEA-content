@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "14-gcp-cloud-storage",
+  "type": "module",
+  "questions": [
+    {
+      "id": "14-gcp-cloud-storage-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is a bucket in GCP Cloud Storage?",
+      "options": [
+        { "id": "a", "text": "A database" },
+        { "id": "b", "text": "A storage container" },
+        { "id": "c", "text": "A type of VM" },
+        { "id": "d", "text": "A networking component" }
+      ],
+      "answer": "b",
+      "explanation": "A bucket is a storage container in GCP Cloud Storage used to hold data objects."
+    },
+    {
+      "id": "14-gcp-cloud-storage-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which IAM role grants full control over GCP Cloud Storage?",
+      "options": [
+        { "id": "a", "text": "Storage Object Viewer" },
+        { "id": "b", "text": "Storage Object Admin" },
+        { "id": "c", "text": "Storage Admin" },
+        { "id": "d", "text": "Storage Viewer" }
+      ],
+      "answer": "c",
+      "explanation": "The Storage Admin role grants full control over buckets and objects in GCP Cloud Storage."
+    },
+    {
+      "id": "14-gcp-cloud-storage-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to create a bucket:",
+      "language": "python",
+      "code_template": "from google.cloud import storage\n\nclient = storage.Client()\nbucket = client.____('my_bucket')",
+      "blanks": [
+        { "id": "b1", "options": ["create_bucket", "get_bucket", "list_buckets", "delete_bucket"], "answer": "get_bucket" }
+      ],
+      "explanation": "The get_bucket method retrieves an existing bucket in GCP Cloud Storage."
+    },
+    {
+      "id": "14-gcp-cloud-storage-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What will this code print?",
+      "language": "python",
+      "code": "print('Hello, World!'.split(','))",
+      "options": [
+        { "id": "a", "text": "['Hello', ' World!']" },
+        { "id": "b", "text": "['Hello', 'World!']" },
+        { "id": "c", "text": "['Hello, World!']" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "c",
+      "explanation": "The split method separates the string by the specified delimiter, which is a comma here."
+    },
+    {
+      "id": "14-gcp-cloud-storage-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "GCP Cloud Storage only supports binary data.",
+      "answer": false,
+      "explanation": "GCP Cloud Storage supports various types of data, including text, images, and binary data."
+    },
+    {
+      "id": "14-gcp-cloud-storage-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the purpose of lifecycle management in GCP Cloud Storage?",
+      "options": [
+        { "id": "a", "text": "To monitor bucket usage" },
+        { "id": "b", "text": "To manage object versions" },
+        { "id": "c", "text": "To automate data retention" },
+        { "id": "d", "text": "To compress stored data" }
+      ],
+      "answer": "c",
+      "explanation": "Lifecycle management automates the transition and deletion of objects based on specified rules."
+    },
+    {
+      "id": "14-gcp-cloud-storage-q7",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Fill in the blank to set a lifecycle rule:",
+      "language": "python",
+      "code_template": "lifecycle_rule = storage.LifecycleRule(____, ____)\n",
+      "blanks": [
+        { "id": "b1", "options": ["delete", "set_storage_class"], "answer": "delete" },
+        { "id": "b2", "options": ["set_lifecycle", "set_condition"], "answer": "set_condition" }
+      ],
+      "explanation": "A lifecycle rule can be created to delete objects based on certain conditions."
+    },
+    {
+      "id": "14-gcp-cloud-storage-q8",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Signed URLs can be used to grant temporary access to private objects.",
+      "answer": true,
+      "explanation": "Signed URLs provide temporary access to private objects without changing their permissions."
+    },
+    {
+      "id": "14-gcp-cloud-storage-q9",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which method is used to generate a signed URL in GCP Cloud Storage?",
+      "options": [
+        { "id": "a", "text": "generate_signed_url" },
+        { "id": "b", "text": "create_signed_url" },
+        { "id": "c", "text": "get_signed_url" },
+        { "id": "d", "text": "sign_url" }
+      ],
+      "answer": "a",
+      "explanation": "The generate_signed_url method creates a signed URL for accessing private objects."
+    },
+    {
+      "id": "14-gcp-cloud-storage-q10",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to create a bucket:",
+      "steps": [
+        { "id": "s1", "text": "Create a storage client" },
+        { "id": "s2", "text": "Define the bucket name" },
+        { "id": "s3", "text": "Call create_bucket method" },
+        { "id": "s4", "text": "Set bucket properties" }
+      ],
+      "correctOrder": ["s1", "s2", "s4", "s3"],
+      "explanation": "First, create a storage client, then define the bucket name and properties, and finally create it."
+    },
+    {
+      "id": "14-gcp-cloud-storage-q11",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What will this print?",
+      "language": "python",
+      "code": "print(len([1, 2, 3]) == 3)",
+      "options": [
+        { "id": "a", "text": "True" },
+        { "id": "b", "text": "False" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "None" }
+      ],
+      "answer": "a",
+      "explanation": "The expression checks if the length of the list is equal to 3, which is true."
+    },
+    {
+      "id": "14-gcp-cloud-storage-q12",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the snippet to integrate with BigQuery:",
+      "language": "python",
+      "code_template": "from google.cloud import bigquery\n\nclient = bigquery.Client()\njob_config = bigquery.LoadJobConfig(____=____)\n",
+      "blanks": [
+        { "id": "b1", "options": ["source_format", "destination", "write_disposition", "max_bad_records"], "answer": "source_format" },
+        { "id": "b2", "options": ["bigquery.SourceFormat.CSV", "bigquery.SourceFormat.JSON", "bigquery.SourceFormat.AVRO", "bigquery.SourceFormat.PARQUET"], "answer": "bigquery.SourceFormat.CSV" }
+      ],
+      "explanation": "The LoadJobConfig specifies the source format for loading data into BigQuery."
+    },
+    {
+      "id": "14-gcp-cloud-storage-q13",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the default storage class for new buckets?",
+      "options": [
+        { "id": "a", "text": "Standard" },
+        { "id": "b", "text": "Nearline" },
+        { "id": "c", "text": "Coldline" },
+        { "id": "d", "text": "Archive" }
+      ],
+      "answer": "a",
+      "explanation": "The default storage class for new buckets in GCP Cloud Storage is Standard."
+    },
+    {
+      "id": "14-gcp-cloud-storage-q14",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "GCP Cloud Storage can store data across multiple regions.",
+      "answer": true,
+      "explanation": "GCP Cloud Storage supports multi-region storage options for high availability."
+    },
+    {
+      "id": "14-gcp-cloud-storage-q15",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following is NOT a type of GCP Cloud Storage class?",
+      "options": [
+        { "id": "a", "text": "Standard" },
+        { "id": "b", "text": "Reduced Redundancy" },
+        { "id": "c", "text": "Coldline" },
+        { "id": "d", "text": "Archive" }
+      ],
+      "answer": "b",
+      "explanation": "Reduced Redundancy is not a GCP Cloud Storage class; GCP uses Standard, Nearline, Coldline, and Archive."
+    }
+  ]
+}

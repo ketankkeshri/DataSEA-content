@@ -1,0 +1,38 @@
+{
+  "id": "05-probability-for-ds",
+  "section": "data-science-ml",
+  "tier": "beginner",
+  "moduleOrder": 5,
+  "version": 1,
+  "title": "Probability for DS",
+  "shortDescription": "Probability for DS \u2014 beginner to advanced concepts and code.",
+  "icon": "05-probability-for-ds",
+  "estimatedMinutes": 32,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-conditional",
+      "title": "Conditional",
+      "minutes": 8
+    },
+    {
+      "id": "03-bayes",
+      "title": "Bayes",
+      "minutes": 8
+    },
+    {
+      "id": "04-common-distributions",
+      "title": "Common Distributions",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "01-sql-basics",
+  "type": "module",
+  "questions": [
+    {
+      "id": "01-sql-basics-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does the SELECT statement do in SQL?",
+      "options": [
+        { "id": "a", "text": "Deletes records from a table." },
+        { "id": "b", "text": "Retrieves data from a database." },
+        { "id": "c", "text": "Updates existing records." },
+        { "id": "d", "text": "Creates a new table." }
+      ],
+      "answer": "b",
+      "explanation": "The SELECT statement is used to retrieve data from one or more tables in a database.",
+      "tags": ["select"]
+    },
+    {
+      "id": "01-sql-basics-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which clause is used to filter records in SQL?",
+      "options": [
+        { "id": "a", "text": "ORDER BY" },
+        { "id": "b", "text": "GROUP BY" },
+        { "id": "c", "text": "WHERE" },
+        { "id": "d", "text": "HAVING" }
+      ],
+      "answer": "c",
+      "explanation": "The WHERE clause is used to filter records that meet a specified condition.",
+      "tags": ["where"]
+    },
+    {
+      "id": "01-sql-basics-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the SQL snippet:",
+      "language": "sql",
+      "code_template": "SELECT * FROM users WHERE age > _____;",
+      "blanks": [
+        { "id": "b1", "options": ["30", "age", "users", "birthdate"], "answer": "30" }
+      ],
+      "explanation": "This query retrieves all records from the 'users' table where the age is greater than 30.",
+      "tags": ["where"]
+    },
+    {
+      "id": "01-sql-basics-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this SQL query print?",
+      "language": "sql",
+      "code": "SELECT COUNT(*) FROM orders WHERE status = 'completed';",
+      "options": [
+        { "id": "a", "text": "Total number of completed orders." },
+        { "id": "b", "text": "All orders." },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "List of order statuses." }
+      ],
+      "answer": "a",
+      "explanation": "This query counts the number of records in the 'orders' table where the status is 'completed'.",
+      "tags": ["count"]
+    },
+    {
+      "id": "01-sql-basics-q5",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which SQL command is used to combine rows from two or more tables?",
+      "options": [
+        { "id": "a", "text": "JOIN" },
+        { "id": "b", "text": "UNION" },
+        { "id": "c", "text": "MERGE" },
+        { "id": "d", "text": "LINK" }
+      ],
+      "answer": "a",
+      "explanation": "The JOIN command is used to combine rows from two or more tables based on a related column.",
+      "tags": ["joins"]
+    },
+    {
+      "id": "01-sql-basics-q6",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "The DISTINCT keyword is used to remove duplicate records from the result set.",
+      "answer": true,
+      "explanation": "The DISTINCT keyword ensures that the result set contains only unique records.",
+      "tags": ["distinct"]
+    },
+    {
+      "id": "01-sql-basics-q7",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the SQL snippet:",
+      "language": "sql",
+      "code_template": "SELECT AVG(price) FROM products WHERE category = _____;",
+      "blanks": [
+        { "id": "b1", "options": ["'electronics'", "'avg'", "'products'", "'price'"], "answer": "'electronics'" }
+      ],
+      "explanation": "This query calculates the average price of products in the 'electronics' category.",
+      "tags": ["aggregations"]
+    },
+    {
+      "id": "01-sql-basics-q8",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to perform a successful SQL query:",
+      "steps": [
+        { "id": "s1", "text": "Execute the SQL query." },
+        { "id": "s2", "text": "Write the SQL query." },
+        { "id": "s3", "text": "Connect to the database." },
+        { "id": "s4", "text": "Fetch and display results." }
+      ],
+      "correctOrder": ["s3", "s2", "s1", "s4"],
+      "explanation": "First, you connect to the database, then write the query, execute it, and finally fetch and display the results.",
+      "tags": ["query_process"]
+    },
+    {
+      "id": "01-sql-basics-q9",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which SQL clause is used to sort the result set?",
+      "options": [
+        { "id": "a", "text": "SORT BY" },
+        { "id": "b", "text": "ORDER BY" },
+        { "id": "c", "text": "GROUP BY" },
+        { "id": "d", "text": "ARRANGE BY" }
+      ],
+      "answer": "b",
+      "explanation": "The ORDER BY clause is used to sort the result set based on one or more columns.",
+      "tags": ["ordering"]
+    },
+    {
+      "id": "01-sql-basics-q10",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this SQL query return?",
+      "language": "sql",
+      "code": "SELECT name FROM users WHERE age < 20 ORDER BY name ASC;",
+      "options": [
+        { "id": "a", "text": "Names of users under 20, sorted ascending." },
+        { "id": "b", "text": "All users under 20." },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "Names of all users." }
+      ],
+      "answer": "a",
+      "explanation": "This query retrieves names of users under 20 years old and sorts them in ascending order.",
+      "tags": ["ordering"]
+    },
+    {
+      "id": "01-sql-basics-q11",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does the GROUP BY clause do?",
+      "options": [
+        { "id": "a", "text": "Groups rows that have the same values." },
+        { "id": "b", "text": "Sorts the rows in the result set." },
+        { "id": "c", "text": "Filters the result set." },
+        { "id": "d", "text": "Aggregates the result set." }
+      ],
+      "answer": "a",
+      "explanation": "The GROUP BY clause groups rows that have the same values in specified columns into summary rows.",
+      "tags": ["group_by"]
+    },
+    {
+      "id": "01-sql-basics-q12",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Using WHERE with an aggregate function is valid in SQL.",
+      "answer": false,
+      "explanation": "You cannot use aggregate functions like SUM or COUNT directly in the WHERE clause; use HAVING instead.",
+      "tags": ["aggregate"]
+    },
+    {
+      "id": "01-sql-basics-q13",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the default sorting order in SQL?",
+      "options": [
+        { "id": "a", "text": "Descending" },
+        { "id": "b", "text": "Ascending" },
+        { "id": "c", "text": "Random" },
+        { "id": "d", "text": "Alphabetical" }
+      ],
+      "answer": "b",
+      "explanation": "The default sorting order in SQL is ascending unless specified otherwise.",
+      "tags": ["ordering"]
+    },
+    {
+      "id": "01-sql-basics-q14",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the SQL snippet:",
+      "language": "sql",
+      "code_template": "SELECT DISTINCT _____ FROM employees;",
+      "blanks": [
+        { "id": "b1", "options": ["department", "age", "name", "salary"], "answer": "department" }
+      ],
+      "explanation": "This query retrieves unique department names from the 'employees' table.",
+      "tags": ["distinct"]
+    },
+    {
+      "id": "01-sql-basics-q15",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these SQL execution steps:",
+      "steps": [
+        { "id": "s1", "text": "Parse the SQL query." },
+        { "id": "s2", "text": "Execute the query." },
+        { "id": "s3", "text": "Optimize the execution plan." },
+        { "id": "s4", "text": "Return results to the user." }
+      ],
+      "correctOrder": ["s1", "s3", "s2", "s4"],
+      "explanation": "First, the SQL query is parsed, then the execution plan is optimized, executed, and finally results are returned.",
+      "tags": ["query_process"]
+    }
+  ]
+}

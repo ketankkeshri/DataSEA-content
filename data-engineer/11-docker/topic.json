@@ -1,0 +1,48 @@
+{
+  "id": "11-docker",
+  "section": "data-engineer",
+  "tier": "intermediate",
+  "moduleOrder": 11,
+  "version": 1,
+  "title": "Docker Fundamentals",
+  "shortDescription": "Docker Fundamentals \u2014 beginner to advanced concepts and code.",
+  "icon": "11-docker",
+  "estimatedMinutes": 48,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-images-containers",
+      "title": "Images Containers",
+      "minutes": 8
+    },
+    {
+      "id": "03-dockerfile",
+      "title": "Dockerfile",
+      "minutes": 8
+    },
+    {
+      "id": "04-networking",
+      "title": "Networking",
+      "minutes": 8
+    },
+    {
+      "id": "05-volumes",
+      "title": "Volumes",
+      "minutes": 8
+    },
+    {
+      "id": "06-compose",
+      "title": "Compose",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

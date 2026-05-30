@@ -1,0 +1,43 @@
+{
+  "id": "07-jupyter",
+  "section": "data-science-ml",
+  "tier": "beginner",
+  "moduleOrder": 7,
+  "version": 1,
+  "title": "Jupyter Productivity",
+  "shortDescription": "Jupyter Productivity \u2014 beginner to advanced concepts and code.",
+  "icon": "07-jupyter",
+  "estimatedMinutes": 40,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-magics",
+      "title": "Magics",
+      "minutes": 8
+    },
+    {
+      "id": "03-reproducibility",
+      "title": "Reproducibility",
+      "minutes": 8
+    },
+    {
+      "id": "04-papermill",
+      "title": "Papermill",
+      "minutes": 8
+    },
+    {
+      "id": "05-nbconvert",
+      "title": "Nbconvert",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "12-postgres-internals",
+  "type": "module",
+  "questions": [
+    {
+      "id": "12-postgres-internals-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does MVCC stand for in PostgreSQL?",
+      "options": [
+        { "id": "a", "text": "Multi-Version Concurrency Control" },
+        { "id": "b", "text": "Multi-Value Control Connection" },
+        { "id": "c", "text": "Managed Version of Concurrency Control" },
+        { "id": "d", "text": "Multi-Version Control Cache" }
+      ],
+      "answer": "a",
+      "explanation": "MVCC stands for Multi-Version Concurrency Control, which allows multiple transactions to occur simultaneously without locking each other out.",
+      "tags": ["mvcc"]
+    },
+    {
+      "id": "12-postgres-internals-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the primary purpose of the VACUUM command?",
+      "options": [
+        { "id": "a", "text": "To delete unused rows" },
+        { "id": "b", "text": "To optimize disk space" },
+        { "id": "c", "text": "To perform a backup" },
+        { "id": "d", "text": "To analyze query performance" }
+      ],
+      "answer": "b",
+      "explanation": "The VACUUM command is primarily used to reclaim storage by removing dead tuples and optimizing disk space.",
+      "tags": ["vacuum-bloat"]
+    },
+    {
+      "id": "12-postgres-internals-q3",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "PostgreSQL automatically reclaims space from deleted rows.",
+      "answer": false,
+      "explanation": "PostgreSQL does not automatically reclaim space; it requires the VACUUM command to do so.",
+      "tags": ["vacuum-bloat"]
+    },
+    {
+      "id": "12-postgres-internals-q4",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which index type is best for searching unique values?",
+      "options": [
+        { "id": "a", "text": "B-tree" },
+        { "id": "b", "text": "Hash" },
+        { "id": "c", "text": "GIN" },
+        { "id": "d", "text": "BRIN" }
+      ],
+      "answer": "a",
+      "explanation": "B-tree indexes are optimal for searching unique values because they maintain sorted data and allow for efficient range queries.",
+      "tags": ["indexes-deep"]
+    },
+    {
+      "id": "12-postgres-internals-q5",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to create a B-tree index:",
+      "language": "sql",
+      "code_template": "CREATE INDEX idx_name ON table_name (____);",
+      "blanks": [
+        { "id": "b1", "options": ["column_name", "column_list", "expression", "unique_column"], "answer": "column_name" }
+      ],
+      "explanation": "To create a B-tree index, you specify the column name on which the index will be built.",
+      "tags": ["indexes-deep"]
+    },
+    {
+      "id": "12-postgres-internals-q6",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print([x**2 for x in range(3)])",
+      "options": [
+        { "id": "a", "text": "[0, 1, 4]" },
+        { "id": "b", "text": "[1, 2, 3]" },
+        { "id": "c", "text": "[0, 1, 2]" },
+        { "id": "d", "text": "[0, 1, 2, 3]" }
+      ],
+      "answer": "a",
+      "explanation": "The list comprehension squares each number from 0 to 2, resulting in [0, 1, 4].",
+      "tags": ["general"]
+    },
+    {
+      "id": "12-postgres-internals-q7",
+      "type": "order_the_steps",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Order these steps to perform replication in PostgreSQL:",
+      "steps": [
+        { "id": "s1", "text": "Set up the primary server." },
+        { "id": "s2", "text": "Start the standby server." },
+        { "id": "s3", "text": "Configure recovery settings on the standby." },
+        { "id": "s4", "text": "Create a base backup." }
+      ],
+      "correctOrder": ["s1", "s4", "s2", "s3"],
+      "explanation": "First, you set up the primary server, create a base backup, then start the standby server and configure its recovery settings.",
+      "tags": ["replication-basics"]
+    },
+    {
+      "id": "12-postgres-internals-q8",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the main effect of a VACUUM FULL command?",
+      "options": [
+        { "id": "a", "text": "Reclaims disk space to the OS" },
+        { "id": "b", "text": "Only analyzes the table" },
+        { "id": "c", "text": "Removes all rows from the table" },
+        { "id": "d", "text": "Optimizes query performance without locking" }
+      ],
+      "answer": "a",
+      "explanation": "VACUUM FULL reclaims disk space back to the operating system by compacting the table and removing dead tuples.",
+      "tags": ["vacuum-bloat"]
+    },
+    {
+      "id": "12-postgres-internals-q9",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Indexes can slow down write operations in PostgreSQL.",
+      "answer": true,
+      "explanation": "Indexes can indeed slow down write operations because the index must be updated every time a write occurs, which adds overhead.",
+      "tags": ["indexes-deep"]
+    },
+    {
+      "id": "12-postgres-internals-q10",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following is NOT a replication method in PostgreSQL?",
+      "options": [
+        { "id": "a", "text": "Streaming Replication" },
+        { "id": "b", "text": "Logical Replication" },
+        { "id": "c", "text": "Point-in-Time Recovery" },
+        { "id": "d", "text": "Warm Standby" }
+      ],
+      "answer": "c",
+      "explanation": "Point-in-Time Recovery is not a replication method; it's a recovery mechanism for restoring a database to a specific moment.",
+      "tags": ["replication-basics"]
+    },
+    {
+      "id": "12-postgres-internals-q11",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the SQL statement to drop an index:",
+      "language": "sql",
+      "code_template": "DROP INDEX ____;",
+      "blanks": [
+        { "id": "b1", "options": ["index_name", "table_name", "schema_name", "view_name"], "answer": "index_name" }
+      ],
+      "explanation": "To drop an index, specify the index name in the DROP INDEX command.",
+      "tags": ["indexes-deep"]
+    },
+    {
+      "id": "12-postgres-internals-q12",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this SQL query return?",
+      "language": "sql",
+      "code": "SELECT COUNT(*) FROM table_name WHERE column_name IS NULL;",
+      "options": [
+        { "id": "a", "text": "Total count of rows" },
+        { "id": "b", "text": "Count of non-null values" },
+        { "id": "c", "text": "Count of null values" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "c",
+      "explanation": "The query counts the number of rows where column_name is NULL, returning the count of null values.",
+      "tags": ["general"]
+    },
+    {
+      "id": "12-postgres-internals-q13",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these optimization steps for a PostgreSQL database:",
+      "steps": [
+        { "id": "s1", "text": "Analyze the database." },
+        { "id": "s2", "text": "Create indexes." },
+        { "id": "s3", "text": "Run VACUUM." },
+        { "id": "s4", "text": "Monitor query performance." }
+      ],
+      "correctOrder": ["s1", "s4", "s3", "s2"],
+      "explanation": "First, analyze the database to gather statistics, monitor query performance, then run VACUUM to reclaim space, and finally create indexes to optimize queries.",
+      "tags": ["vacuum-bloat", "indexes-deep"]
+    },
+    {
+      "id": "12-postgres-internals-q14",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Replication in PostgreSQL can only be set up in a primary-standby configuration.",
+      "answer": false,
+      "explanation": "Replication can be configured in various ways, including primary-standby, cascading replication, and logical replication setups.",
+      "tags": ["replication-basics"]
+    },
+    {
+      "id": "12-postgres-internals-q15",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of these impacts the performance of a B-tree index?",
+      "options": [
+        { "id": "a", "text": "Index size" },
+        { "id": "b", "text": "Data distribution" },
+        { "id": "c", "text": "Query patterns" },
+        { "id": "d", "text": "All of the above" }
+      ],
+      "answer": "d",
+      "explanation": "All these factors can impact the performance of a B-tree index, as they affect how efficiently the index can be traversed.",
+      "tags": ["indexes-deep"]
+    }
+  ]
+}

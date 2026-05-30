@@ -1,0 +1,238 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "21-apache-kafka",
+  "type": "module",
+  "questions": [
+    {
+      "id": "21-apache-kafka-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the role of a Kafka Producer?",
+      "options": [
+        { "id": "a", "text": "To consume messages from topics" },
+        { "id": "b", "text": "To send messages to topics" },
+        { "id": "c", "text": "To manage the Kafka cluster" },
+        { "id": "d", "text": "To store messages on disk" }
+      ],
+      "answer": "b",
+      "explanation": "A Kafka Producer is responsible for publishing messages to Kafka topics."
+    },
+    {
+      "id": "21-apache-kafka-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is a Kafka Topic?",
+      "options": [
+        { "id": "a", "text": "A unit of work in Kafka" },
+        { "id": "b", "text": "A stream of messages" },
+        { "id": "c", "text": "A consumer group" },
+        { "id": "d", "text": "A configuration setting" }
+      ],
+      "answer": "b",
+      "explanation": "A Kafka Topic is a category or feed name to which records are published."
+    },
+    {
+      "id": "21-apache-kafka-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to create a Kafka consumer:",
+      "language": "python",
+      "code_template": "consumer = KafkaConsumer(____, ____)",
+      "blanks": [
+        { "id": "b1", "options": ["'my_topic'", "'my_group'", "'localhost'", "'auto_offset'"], "answer": "'my_topic'" },
+        { "id": "b2", "options": ["'my_group'", "'localhost'", "'auto_offset'", "'my_topic'"], "answer": "'my_group'" }
+      ],
+      "explanation": "The KafkaConsumer needs a topic name and a consumer group for its configuration."
+    },
+    {
+      "id": "21-apache-kafka-q4",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following best describes Kafka Partitions?",
+      "options": [
+        { "id": "a", "text": "Each partition is a separate Kafka broker" },
+        { "id": "b", "text": "Partitions allow for parallel processing" },
+        { "id": "c", "text": "Partitions are where consumers read from" },
+        { "id": "d", "text": "Partitions are used to store schemas" }
+      ],
+      "answer": "b",
+      "explanation": "Partitions enable Kafka to scale by allowing multiple consumers to read data in parallel."
+    },
+    {
+      "id": "21-apache-kafka-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Kafka guarantees the order of messages within a partition.",
+      "answer": true,
+      "explanation": "Messages are strictly ordered within a partition, which is crucial for processing."
+    },
+    {
+      "id": "21-apache-kafka-q6",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print('Hello, World!'.split(','))",
+      "options": [
+        { "id": "a", "text": "['Hello', ' World!']" },
+        { "id": "b", "text": "['Hello, World!']" },
+        { "id": "c", "text": "['Hello', 'World!']" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "b",
+      "explanation": "The string doesn't contain a comma, so it returns the whole string in a list."
+    },
+    {
+      "id": "21-apache-kafka-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these Kafka stream processing steps correctly:",
+      "steps": [
+        { "id": "s1", "text": "Process the data" },
+        { "id": "s2", "text": "Read from the input topic" },
+        { "id": "s3", "text": "Write to the output topic" },
+        { "id": "s4", "text": "Initialize the stream" }
+      ],
+      "correctOrder": ["s4", "s2", "s1", "s3"],
+      "explanation": "You must first initialize the stream, then read data, process it, and finally write to an output topic."
+    },
+    {
+      "id": "21-apache-kafka-q8",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "When a consumer fails, what happens to its offset?",
+      "options": [
+        { "id": "a", "text": "It is reset to zero" },
+        { "id": "b", "text": "It is committed to the Kafka broker" },
+        { "id": "c", "text": "It is lost and cannot be recovered" },
+        { "id": "d", "text": "It is stored in Zookeeper" }
+      ],
+      "answer": "b",
+      "explanation": "Offsets are committed to ensure that consumers can resume from where they left off."
+    },
+    {
+      "id": "21-apache-kafka-q9",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does the term 'consumer group' refer to in Kafka?",
+      "options": [
+        { "id": "a", "text": "A single consumer instance" },
+        { "id": "b", "text": "Multiple consumers sharing the same group ID" },
+        { "id": "c", "text": "A group of producers" },
+        { "id": "d", "text": "A configuration for message retention" }
+      ],
+      "answer": "b",
+      "explanation": "A consumer group consists of multiple consumers that work together to read from topics."
+    },
+    {
+      "id": "21-apache-kafka-q10",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Kafka supports message retention based on time and size.",
+      "answer": true,
+      "explanation": "Kafka allows configuring retention policies based on time (duration) or size (bytes)."
+    },
+    {
+      "id": "21-apache-kafka-q11",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to configure a Kafka producer:",
+      "language": "python",
+      "code_template": "producer = KafkaProducer(____, ____)",
+      "blanks": [
+        { "id": "b1", "options": ["bootstrap_servers='localhost'", "topic='my_topic'", "group_id='my_group'", "acks='all'"], "answer": "bootstrap_servers='localhost'" },
+        { "id": "b2", "options": ["topic='my_topic'", "acks='all'", "group_id='my_group'", "bootstrap_servers='localhost'"], "answer": "acks='all'" }
+      ],
+      "explanation": "The producer needs the bootstrap server address and acknowledgment level for message delivery."
+    },
+    {
+      "id": "21-apache-kafka-q12",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print({x: x**2 for x in [1, 2, 3]})",
+      "options": [
+        { "id": "a", "text": "{1: 1, 2: 4, 3: 9}" },
+        { "id": "b", "text": "{1: 2, 2: 3, 3: 4}" },
+        { "id": "c", "text": "{1: 3, 2: 2, 3: 1}" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The dictionary comprehension creates key-value pairs of numbers and their squares."
+    },
+    {
+      "id": "21-apache-kafka-q13",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which API is used to define Kafka schemas?",
+      "options": [
+        { "id": "a", "text": "Kafka Streams API" },
+        { "id": "b", "text": "Kafka Connect API" },
+        { "id": "c", "text": "Schema Registry API" },
+        { "id": "d", "text": "Consumer API" }
+      ],
+      "answer": "c",
+      "explanation": "The Schema Registry API is specifically designed for managing schemas in Kafka."
+    },
+    {
+      "id": "21-apache-kafka-q14",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What is the primary benefit of using Kafka Streams over traditional stream processing?",
+      "options": [
+        { "id": "a", "text": "Easier to set up" },
+        { "id": "b", "text": "Native support for stateful processing" },
+        { "id": "c", "text": "Lower latency" },
+        { "id": "d", "text": "More programming languages supported" }
+      ],
+      "answer": "b",
+      "explanation": "Kafka Streams provides native support for stateful operations, making it suitable for complex processing."
+    },
+    {
+      "id": "21-apache-kafka-q15",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to create a Kafka topic:",
+      "steps": [
+        { "id": "s1", "text": "Define topic configuration" },
+        { "id": "s2", "text": "Send a request to the broker" },
+        { "id": "s3", "text": "Receive confirmation from the broker" },
+        { "id": "s4", "text": "Create the topic" }
+      ],
+      "correctOrder": ["s1", "s2", "s4", "s3"],
+      "explanation": "The configuration must be defined first, followed by a request to create the topic, then the topic is created and confirmation is received."
+    }
+  ]
+}

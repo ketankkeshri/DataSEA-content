@@ -1,0 +1,252 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "27-schema-evolution",
+  "type": "module",
+  "questions": [
+    {
+      "id": "27-schema-evolution-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is schema evolution?",
+      "options": [
+        { "id": "a", "text": "Changing data types" },
+        { "id": "b", "text": "Modifying the structure of data" },
+        { "id": "c", "text": "Upgrading software versions" },
+        { "id": "d", "text": "Optimizing query performance" }
+      ],
+      "answer": "b",
+      "explanation": "Schema evolution refers to modifying the structure of data as it changes over time.",
+      "tags": ["schema", "evolution"]
+    },
+    {
+      "id": "27-schema-evolution-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which of the following is a backward-compatible change?",
+      "options": [
+        { "id": "a", "text": "Adding a new field" },
+        { "id": "b", "text": "Removing an existing field" },
+        { "id": "c", "text": "Changing a field type" },
+        { "id": "d", "text": "Renaming a field" }
+      ],
+      "answer": "a",
+      "explanation": "Adding a new field is a backward-compatible change since existing data remains valid.",
+      "tags": ["compatibility", "backward"]
+    },
+    {
+      "id": "27-schema-evolution-q3",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does a forward-compatible schema allow?",
+      "options": [
+        { "id": "a", "text": "Old clients to use new data" },
+        { "id": "b", "text": "New clients to use old data" },
+        { "id": "c", "text": "No changes to existing data" },
+        { "id": "d", "text": "All of the above" }
+      ],
+      "answer": "b",
+      "explanation": "Forward compatibility allows new clients to read old data without issues.",
+      "tags": ["compatibility", "forward"]
+    },
+    {
+      "id": "27-schema-evolution-q4",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to register a new schema:",
+      "language": "python",
+      "code_template": "schema_registry.register(____, ____)",
+      "blanks": [
+        { "id": "b1", "options": ["new_schema", "current_schema", "old_schema", "temporary_schema"], "answer": "new_schema" },
+        { "id": "b2", "options": ["version=1", "user='admin'", "timeout=30", "description='test'"], "answer": "version=1" }
+      ],
+      "explanation": "Registering a new schema typically involves defining its version for tracking.",
+      "tags": ["schema", "registry"]
+    },
+    {
+      "id": "27-schema-evolution-q5",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print({x: x**2 for x in [1, 2, 3]})",
+      "options": [
+        { "id": "a", "text": "{1: 1, 2: 4, 3: 9}" },
+        { "id": "b", "text": "{1, 2, 3}" },
+        { "id": "c", "text": "[1, 4, 9]" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The code creates a dictionary with keys as numbers and values as their squares.",
+      "tags": ["dictionary", "comprehension"]
+    },
+    {
+      "id": "27-schema-evolution-q6",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Schema evolution can lead to data loss.",
+      "answer": true,
+      "explanation": "Improper schema evolution, like removing fields, can indeed result in data loss.",
+      "tags": ["data", "loss"]
+    },
+    {
+      "id": "27-schema-evolution-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to handle schema evolution:",
+      "steps": [
+        { "id": "s1", "text": "Deploy the new schema" },
+        { "id": "s2", "text": "Test the compatibility" },
+        { "id": "s3", "text": "Update consumers" },
+        { "id": "s4", "text": "Monitor changes" }
+      ],
+      "correctOrder": ["s2", "s1", "s3", "s4"],
+      "explanation": "Testing compatibility should always come before deploying the new schema to avoid issues.",
+      "tags": ["steps", "process"]
+    },
+    {
+      "id": "27-schema-evolution-q8",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which registry pattern helps manage schema versions?",
+      "options": [
+        { "id": "a", "text": "Single schema registry" },
+        { "id": "b", "text": "Versioned schema registry" },
+        { "id": "c", "text": "Decentralized schema registry" },
+        { "id": "d", "text": "Flat schema registry" }
+      ],
+      "answer": "b",
+      "explanation": "A versioned schema registry allows tracking of multiple schema versions effectively.",
+      "tags": ["registry", "versioning"]
+    },
+    {
+      "id": "27-schema-evolution-q9",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following is NOT a breaking change?",
+      "options": [
+        { "id": "a", "text": "Removing a required field" },
+        { "id": "b", "text": "Changing a field from optional to required" },
+        { "id": "c", "text": "Adding a new field" },
+        { "id": "d", "text": "Modifying a field type" }
+      ],
+      "answer": "c",
+      "explanation": "Adding a new field is not a breaking change as existing data remains unaffected.",
+      "tags": ["breaking", "change"]
+    },
+    {
+      "id": "27-schema-evolution-q10",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Fill in the blanks to ensure backward compatibility:",
+      "language": "python",
+      "code_template": "def migrate(data):\n    return data.get('new_field', ____)  # default value",
+      "blanks": [
+        { "id": "b1", "options": ["None", "0", "''", "default_value"], "answer": "None" }
+      ],
+      "explanation": "Using a default value ensures that old data without the 'new_field' still works.",
+      "tags": ["migration", "compatibility"]
+    },
+    {
+      "id": "27-schema-evolution-q11",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this code output?",
+      "language": "python",
+      "code": "print(sorted({3, 1, 2}))",
+      "options": [
+        { "id": "a", "text": "[1, 2, 3]" },
+        { "id": "b", "text": "{1, 2, 3}" },
+        { "id": "c", "text": "[3, 1, 2]" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The sorted function returns a sorted list of the set elements.",
+      "tags": ["sorting", "sets"]
+    },
+    {
+      "id": "27-schema-evolution-q12",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Forward compatibility is more challenging than backward compatibility.",
+      "answer": true,
+      "explanation": "Forward compatibility is often more challenging because new versions must accommodate older data structures.",
+      "tags": ["compatibility", "forward"]
+    },
+    {
+      "id": "27-schema-evolution-q13",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is a common strategy for handling breaking changes?",
+      "options": [
+        { "id": "a", "text": "Immediate removal of old schema" },
+        { "id": "b", "text": "Deprecation period" },
+        { "id": "c", "text": "No changes" },
+        { "id": "d", "text": "Ignore the issue" }
+      ],
+      "answer": "b",
+      "explanation": "A deprecation period allows consumers to transition before breaking changes take effect.",
+      "tags": ["breaking", "change", "strategy"]
+    },
+    {
+      "id": "27-schema-evolution-q14",
+      "type": "order_the_steps",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Order these steps in the schema evolution process:",
+      "steps": [
+        { "id": "s1", "text": "Analyze existing schema" },
+        { "id": "s2", "text": "Implement changes" },
+        { "id": "s3", "text": "Test new schema" },
+        { "id": "s4", "text": "Document changes" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "Analyzing the existing schema should come first to inform the necessary changes.",
+      "tags": ["process", "schema"]
+    },
+    {
+      "id": "27-schema-evolution-q15",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does the term 'breaking change' refer to?",
+      "options": [
+        { "id": "a", "text": "Any schema change" },
+        { "id": "b", "text": "Changes that impact existing consumers" },
+        { "id": "c", "text": "Changes that improve performance" },
+        { "id": "d", "text": "Changes that add new features" }
+      ],
+      "answer": "b",
+      "explanation": "A breaking change specifically refers to modifications that disrupt existing consumers' operations.",
+      "tags": ["breaking", "change"]
+    }
+  ]
+}

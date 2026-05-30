@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "10-file-formats",
+  "type": "module",
+  "questions": [
+    {
+      "id": "10-file-formats-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is Parquet primarily used for?",
+      "options": [
+        { "id": "a", "text": "Storing JSON data" },
+        { "id": "b", "text": "Columnar storage in big data applications" },
+        { "id": "c", "text": "Row-based storage" },
+        { "id": "d", "text": "Real-time data processing" }
+      ],
+      "answer": "b",
+      "explanation": "Parquet is optimized for columnar storage which is ideal for analytics."
+    },
+    {
+      "id": "10-file-formats-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which format is schema evolution supported?",
+      "options": [
+        { "id": "a", "text": "CSV" },
+        { "id": "b", "text": "Avro" },
+        { "id": "c", "text": "ORC" },
+        { "id": "d", "text": "JSON" }
+      ],
+      "answer": "b",
+      "explanation": "Avro supports schema evolution, allowing you to change the schema without breaking compatibility."
+    },
+    {
+      "id": "10-file-formats-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to read a parquet file in PySpark:",
+      "language": "python",
+      "code_template": "df = spark.____('data.parquet')",
+      "blanks": [
+        { "id": "b1", "options": ["read", "load", "import", "open"], "answer": "read" }
+      ],
+      "explanation": "In PySpark, you use the 'read' method to load data files."
+    },
+    {
+      "id": "10-file-formats-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print({x: x**2 for x in range(3)})",
+      "options": [
+        { "id": "a", "text": "{0: 0, 1: 1, 2: 4}" },
+        { "id": "b", "text": "{0: 0, 1: 1, 2: 2}" },
+        { "id": "c", "text": "{0: 0, 1: 1, 2: 2, 3: 9}" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "This prints a dictionary with keys as numbers and values as their squares."
+    },
+    {
+      "id": "10-file-formats-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "ORC files are optimized for read-heavy operations.",
+      "answer": true,
+      "explanation": "ORC files are designed for read-heavy workloads, providing efficient data access."
+    },
+    {
+      "id": "10-file-formats-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which compression codec is commonly used with Parquet?",
+      "options": [
+        { "id": "a", "text": "Gzip" },
+        { "id": "b", "text": "Snappy" },
+        { "id": "c", "text": "LZ4" },
+        { "id": "d", "text": "All of the above" }
+      ],
+      "answer": "d",
+      "explanation": "Parquet supports multiple compression codecs including Gzip, Snappy, and LZ4."
+    },
+    {
+      "id": "10-file-formats-q7",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to write a DataFrame to Avro format:",
+      "language": "python",
+      "code_template": "df.write.____('avro', 'data.avro')",
+      "blanks": [
+        { "id": "b1", "options": ["save", "write", "format", "output"], "answer": "format" }
+      ],
+      "explanation": "The 'format' method is used to specify the output format while writing."
+    },
+    {
+      "id": "10-file-formats-q8",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print([x for x in range(5) if x % 2 == 0])",
+      "options": [
+        { "id": "a", "text": "[0, 1, 2, 3, 4]" },
+        { "id": "b", "text": "[0, 2, 4]" },
+        { "id": "c", "text": "[1, 3]" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "b",
+      "explanation": "This prints a list of even numbers from 0 to 4."
+    },
+    {
+      "id": "10-file-formats-q9",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to convert a CSV to Parquet:",
+      "steps": [
+        { "id": "s1", "text": "Load CSV into DataFrame" },
+        { "id": "s2", "text": "Set up Parquet options" },
+        { "id": "s3", "text": "Write DataFrame to Parquet" },
+        { "id": "s4", "text": "Save Parquet file" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "First, load the CSV, then set options, write the DataFrame, and finally save the file."
+    },
+    {
+      "id": "10-file-formats-q10",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following is a key advantage of ORC files?",
+      "options": [
+        { "id": "a", "text": "Faster writes compared to Parquet" },
+        { "id": "b", "text": "Better performance for complex queries" },
+        { "id": "c", "text": "Easier to read with standard text editors" },
+        { "id": "d", "text": "Higher compatibility with SQL databases" }
+      ],
+      "answer": "b",
+      "explanation": "ORC files are optimized for complex queries and provide better performance in such scenarios."
+    },
+    {
+      "id": "10-file-formats-q11",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "JSON files are more space-efficient than binary formats like Avro.",
+      "answer": false,
+      "explanation": "Binary formats like Avro are typically more space-efficient than JSON due to their encoding methods."
+    },
+    {
+      "id": "10-file-formats-q12",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is a disadvantage of using JSON for data storage?",
+      "options": [
+        { "id": "a", "text": "Human-readable format" },
+        { "id": "b", "text": "Lack of schema enforcement" },
+        { "id": "c", "text": "Very fast to read" },
+        { "id": "d", "text": "Easily compressed" }
+      ],
+      "answer": "b",
+      "explanation": "JSON does not enforce a schema, which can lead to inconsistencies in data."
+    },
+    {
+      "id": "10-file-formats-q13",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to optimize a Parquet file for performance:",
+      "steps": [
+        { "id": "s1", "text": "Choose appropriate compression codec" },
+        { "id": "s2", "text": "Partition data effectively" },
+        { "id": "s3", "text": "Define schema before writing" },
+        { "id": "s4", "text": "Write data in batches" }
+      ],
+      "correctOrder": ["s3", "s1", "s2", "s4"],
+      "explanation": "Defining a schema first ensures data consistency, followed by selecting compression, partitioning, and batching."
+    },
+    {
+      "id": "10-file-formats-q14",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to read an ORC file in PySpark:",
+      "language": "python",
+      "code_template": "df = spark.____('data.orc')",
+      "blanks": [
+        { "id": "b1", "options": ["read", "load", "import", "open"], "answer": "read" }
+      ],
+      "explanation": "Just like Parquet, you use the 'read' method to load ORC files in PySpark."
+    },
+    {
+      "id": "10-file-formats-q15",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Avro files require a schema to be defined for both reading and writing.",
+      "answer": true,
+      "explanation": "Avro files are schema-based, requiring the schema to be defined for proper serialization and deserialization."
+    }
+  ]
+}

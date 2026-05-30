@@ -1,0 +1,48 @@
+{
+  "id": "06-advanced-sql",
+  "section": "data-analyst",
+  "tier": "intermediate",
+  "moduleOrder": 6,
+  "version": 1,
+  "title": "Advanced SQL",
+  "shortDescription": "Advanced SQL \u2014 beginner to advanced concepts and code.",
+  "icon": "06-advanced-sql",
+  "estimatedMinutes": 48,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-window-functions",
+      "title": "Window Functions",
+      "minutes": 8
+    },
+    {
+      "id": "02-ctes",
+      "title": "Ctes",
+      "minutes": 8
+    },
+    {
+      "id": "03-subqueries",
+      "title": "Subqueries",
+      "minutes": 8
+    },
+    {
+      "id": "04-recursive-cte",
+      "title": "Recursive Cte",
+      "minutes": 8
+    },
+    {
+      "id": "05-pivot-unpivot",
+      "title": "Pivot Unpivot",
+      "minutes": 8
+    },
+    {
+      "id": "06-set-operations",
+      "title": "Set Operations",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

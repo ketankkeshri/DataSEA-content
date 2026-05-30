@@ -1,0 +1,43 @@
+{
+  "id": "06-feature-engineering",
+  "section": "data-science-ml",
+  "tier": "beginner",
+  "moduleOrder": 6,
+  "version": 1,
+  "title": "Feature Engineering Basics",
+  "shortDescription": "Feature Engineering Basics \u2014 beginner to advanced concepts and code.",
+  "icon": "06-feature-engineering",
+  "estimatedMinutes": 40,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-scaling",
+      "title": "Scaling",
+      "minutes": 8
+    },
+    {
+      "id": "03-encoding-categorical",
+      "title": "Encoding Categorical",
+      "minutes": 8
+    },
+    {
+      "id": "04-datetime-features",
+      "title": "Datetime Features",
+      "minutes": 8
+    },
+    {
+      "id": "05-text-features",
+      "title": "Text Features",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "16-snowflake-analysts",
+  "type": "module",
+  "questions": [
+    {
+      "id": "16-snowflake-analysts-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is Snowflake primarily designed for?",
+      "options": [
+        { "id": "a", "text": "Data storage" },
+        { "id": "b", "text": "Data analytics" },
+        { "id": "c", "text": "Data visualization" },
+        { "id": "d", "text": "Data modeling" }
+      ],
+      "answer": "b",
+      "explanation": "Snowflake is primarily designed for data analytics, allowing users to perform complex queries on large datasets.",
+      "tags": ["intro"]
+    },
+    {
+      "id": "16-snowflake-analysts-q2",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to calculate total sales by category:",
+      "language": "python",
+      "code_template": "df.____('category').____('sales')",
+      "blanks": [
+        { "id": "b1", "options": ["groupby", "filter", "join", "agg"], "answer": "groupby" },
+        { "id": "b2", "options": ["sum", "len", "values", "count"], "answer": "sum" }
+      ],
+      "explanation": "Using 'groupby' allows you to aggregate data based on a specific column, and 'sum' calculates the total sales.",
+      "tags": ["warehouses-credits"]
+    },
+    {
+      "id": "16-snowflake-analysts-q3",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print({x: x**2 for x in range(3)})",
+      "options": [
+        { "id": "a", "text": "{0: 0, 1: 1, 2: 4}" },
+        { "id": "b", "text": "{0: 0, 1: 1, 2: 2}" },
+        { "id": "c", "text": "{0: 0, 1: 2, 2: 4}" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The code creates a dictionary where each key is a number and its value is the square of that number.",
+      "tags": ["semi-structured"]
+    },
+    {
+      "id": "16-snowflake-analysts-q4",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Snowflake uses a traditional on-premises data warehouse model. True or False?",
+      "answer": false,
+      "explanation": "False, Snowflake is a cloud-based data warehouse that offers a modern architecture and scalability.",
+      "tags": ["intro"]
+    },
+    {
+      "id": "16-snowflake-analysts-q5",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to enable time travel in Snowflake:",
+      "steps": [
+        { "id": "s1", "text": "Create a clone of the original table." },
+        { "id": "s2", "text": "Insert new data into the original table." },
+        { "id": "s3", "text": "Query the clone to retrieve data from a specific time." },
+        { "id": "s4", "text": "Enable time travel feature on the table." }
+      ],
+      "correctOrder": ["s4", "s1", "s2", "s3"],
+      "explanation": "First, you enable the time travel feature, then create a clone, insert new data, and finally query the clone.",
+      "tags": ["time-travel"]
+    },
+    {
+      "id": "16-snowflake-analysts-q6",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What type of data can Snowflake handle natively?",
+      "options": [
+        { "id": "a", "text": "Only structured data" },
+        { "id": "b", "text": "Only semi-structured data" },
+        { "id": "c", "text": "Both structured and semi-structured data" },
+        { "id": "d", "text": "Only unstructured data" }
+      ],
+      "answer": "c",
+      "explanation": "Snowflake can handle both structured and semi-structured data types like JSON and Avro.",
+      "tags": ["semi-structured"]
+    },
+    {
+      "id": "16-snowflake-analysts-q7",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Fill in the blanks to create a temporary table:",
+      "language": "sql",
+      "code_template": "CREATE ____ temp_table AS SELECT * FROM original_table;",
+      "blanks": [
+        { "id": "b1", "options": ["TABLE", "TEMPORARY TABLE", "TEMP TABLE", "TABLE TEMP"], "answer": "TEMPORARY TABLE" }
+      ],
+      "explanation": "The correct command is 'CREATE TEMPORARY TABLE' to create a temporary table in Snowflake.",
+      "tags": ["warehouses-credits"]
+    },
+    {
+      "id": "16-snowflake-analysts-q8",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this SQL query return?",
+      "language": "sql",
+      "code": "SELECT COUNT(*) FROM sales WHERE amount > 100;",
+      "options": [
+        { "id": "a", "text": "Total number of sales" },
+        { "id": "b", "text": "Total number of sales with amount greater than 100" },
+        { "id": "c", "text": "Sum of all sales" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "b",
+      "explanation": "This query counts the number of records in the sales table where the amount is greater than 100.",
+      "tags": ["warehouses-credits"]
+    },
+    {
+      "id": "16-snowflake-analysts-q9",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Snowflake allows querying of data in real-time. True or False?",
+      "answer": true,
+      "explanation": "True, Snowflake supports real-time querying of data as it continuously ingests data.",
+      "tags": ["intro"]
+    },
+    {
+      "id": "16-snowflake-analysts-q10",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps for optimizing a Snowflake query:",
+      "steps": [
+        { "id": "s1", "text": "Analyze query performance using the query profiler." },
+        { "id": "s2", "text": "Rewrite the query for efficiency." },
+        { "id": "s3", "text": "Use clustering keys if necessary." },
+        { "id": "s4", "text": "Test the query with sample data." }
+      ],
+      "correctOrder": ["s1", "s4", "s2", "s3"],
+      "explanation": "Start by analyzing the performance, then test and modify the query for optimization.",
+      "tags": ["warehouses-credits"]
+    },
+    {
+      "id": "16-snowflake-analysts-q11",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which feature allows you to revert to a previous state of a table in Snowflake?",
+      "options": [
+        { "id": "a", "text": "Cloning" },
+        { "id": "b", "text": "Time Travel" },
+        { "id": "c", "text": "Data Sharing" },
+        { "id": "d", "text": "Data Retention" }
+      ],
+      "answer": "b",
+      "explanation": "Time Travel allows users to revert to a previous state of a table, making it easier to recover from errors.",
+      "tags": ["time-travel"]
+    },
+    {
+      "id": "16-snowflake-analysts-q12",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the SQL statement to filter records:",
+      "language": "sql",
+      "code_template": "SELECT * FROM orders WHERE status = ____;",
+      "blanks": [
+        { "id": "b1", "options": ["'completed'", "'pending'", "'shipped'", "'cancelled'"], "answer": "'completed'" }
+      ],
+      "explanation": "This snippet filters orders to return only those with a status of 'completed'.",
+      "tags": ["warehouses-credits"]
+    },
+    {
+      "id": "16-snowflake-analysts-q13",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this SQL query return?",
+      "language": "sql",
+      "code": "SELECT AVG(amount) FROM transactions;",
+      "options": [
+        { "id": "a", "text": "Average amount of all transactions" },
+        { "id": "b", "text": "Total amount of transactions" },
+        { "id": "c", "text": "Count of transactions" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The query calculates the average of the 'amount' column from the transactions table.",
+      "tags": ["warehouses-credits"]
+    },
+    {
+      "id": "16-snowflake-analysts-q14",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Snowflake supports both SQL and Python for data manipulation. True or False?",
+      "answer": true,
+      "explanation": "True, Snowflake allows users to manipulate data using both SQL and Python through its integration with various tools.",
+      "tags": ["intro"]
+    },
+    {
+      "id": "16-snowflake-analysts-q15",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following is NOT a benefit of using Snowflake?",
+      "options": [
+        { "id": "a", "text": "Separation of compute and storage" },
+        { "id": "b", "text": "Automatic scaling" },
+        { "id": "c", "text": "High licensing costs" },
+        { "id": "d", "text": "Support for semi-structured data" }
+      ],
+      "answer": "c",
+      "explanation": "High licensing costs is not a benefit; Snowflake is known for its cost-effective pricing model.",
+      "tags": ["intro"]
+    }
+  ]
+}
