@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "15-soda-core",
+  "type": "module",
+  "questions": [
+    {
+      "id": "15-soda-core-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the primary purpose of Data Quality monitoring?",
+      "options": [
+        { "id": "a", "text": "To increase data processing speed" },
+        { "id": "b", "text": "To ensure data accuracy and reliability" },
+        { "id": "c", "text": "To create data visualizations" },
+        { "id": "d", "text": "To manage data storage solutions" }
+      ],
+      "answer": "b",
+      "explanation": "Data Quality monitoring focuses on verifying that data is accurate, consistent, and reliable."
+    },
+    {
+      "id": "15-soda-core-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which command is used to start a Soda CLI scan?",
+      "options": [
+        { "id": "a", "text": "soda scan" },
+        { "id": "b", "text": "soda start" },
+        { "id": "c", "text": "soda run" },
+        { "id": "d", "text": "soda execute" }
+      ],
+      "answer": "a",
+      "explanation": "The command 'soda scan' is used to initiate a scan for data quality checks."
+    },
+    {
+      "id": "15-soda-core-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to load a Soda YAML configuration:",
+      "language": "python",
+      "code_template": "soda.load_yaml(____)",
+      "blanks": [
+        { "id": "b1", "options": ["config_file", "yaml_file", "data_file", "scan_file"], "answer": "yaml_file" }
+      ],
+      "explanation": "You need to load the YAML configuration file to set up Soda for scanning."
+    },
+    {
+      "id": "15-soda-core-q4",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Soda's CLI can be integrated with CI/CD pipelines.",
+      "answer": true,
+      "explanation": "Soda's CLI is designed to work seamlessly with CI/CD tools to automate data quality checks."
+    },
+    {
+      "id": "15-soda-core-q5",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print([x**2 for x in range(4)])",
+      "options": [
+        { "id": "a", "text": "[0, 1, 4, 9]" },
+        { "id": "b", "text": "[0, 1, 2, 3]" },
+        { "id": "c", "text": "[0, 4, 9, 16]" },
+        { "id": "d", "text": "[0, 1, 4, 9, 16]" }
+      ],
+      "answer": "a",
+      "explanation": "The list comprehension squares each number in the range from 0 to 3."
+    },
+    {
+      "id": "15-soda-core-q6",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet for CI integration:",
+      "language": "python",
+      "code_template": "if __name__ == '__main__':\n    soda.____()",
+      "blanks": [
+        { "id": "b1", "options": ["run", "execute", "scan", "check"], "answer": "scan" }
+      ],
+      "explanation": "In CI integration, you typically want to run scans on your data."
+    },
+    {
+      "id": "15-soda-core-q7",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What can Soda's CLI provide as output?",
+      "options": [
+        { "id": "a", "text": "Data visualizations" },
+        { "id": "b", "text": "Scan reports" },
+        { "id": "c", "text": "Database backups" },
+        { "id": "d", "text": "Data storage metrics" }
+      ],
+      "answer": "b",
+      "explanation": "Soda's CLI provides detailed scan reports on data quality checks performed."
+    },
+    {
+      "id": "15-soda-core-q8",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps for setting up Soda in a CI pipeline:",
+      "steps": [
+        { "id": "s1", "text": "Add Soda CLI to your project dependencies" },
+        { "id": "s2", "text": "Create a Soda YAML configuration" },
+        { "id": "s3", "text": "Run the Soda scan command" },
+        { "id": "s4", "text": "Integrate the scan command into your CI configuration" }
+      ],
+      "correctOrder": ["s1", "s2", "s4", "s3"],
+      "explanation": "First, you add Soda to your project, configure it, integrate it, and finally run the scan."
+    },
+    {
+      "id": "15-soda-core-q9",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "a = [1, 2, 3]\nb = [x + 1 for x in a]\nprint(b)",
+      "options": [
+        { "id": "a", "text": "[1, 2, 3]" },
+        { "id": "b", "text": "[2, 3, 4]" },
+        { "id": "c", "text": "[3, 4, 5]" },
+        { "id": "d", "text": "[1, 3, 5]" }
+      ],
+      "answer": "b",
+      "explanation": "The code increases each element of list 'a' by 1."
+    },
+    {
+      "id": "15-soda-core-q10",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following is NOT a data quality dimension?",
+      "options": [
+        { "id": "a", "text": "Accuracy" },
+        { "id": "b", "text": "Completeness" },
+        { "id": "c", "text": "Speed" },
+        { "id": "d", "text": "Consistency" }
+      ],
+      "answer": "c",
+      "explanation": "Speed is not considered a dimension of data quality; it refers to performance."
+    },
+    {
+      "id": "15-soda-core-q11",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Data quality tests can only be run on structured data.",
+      "answer": false,
+      "explanation": "Data quality tests can be applied to both structured and unstructured data."
+    },
+    {
+      "id": "15-soda-core-q12",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does the 'soda scan' command primarily check?",
+      "options": [
+        { "id": "a", "text": "Data storage size" },
+        { "id": "b", "text": "Data integrity and quality" },
+        { "id": "c", "text": "Data processing speed" },
+        { "id": "d", "text": "Data model accuracy" }
+      ],
+      "answer": "b",
+      "explanation": "'soda scan' is focused on assessing data integrity and quality."
+    },
+    {
+      "id": "15-soda-core-q13",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the following code to handle data quality exceptions:",
+      "language": "python",
+      "code_template": "try:\n    soda.scan()\nexcept ____ as e:\n    print(e)",
+      "blanks": [
+        { "id": "b1", "options": ["DataQualityError", "ScanError", "Exception", "ValueError"], "answer": "DataQualityError" }
+      ],
+      "explanation": "Handling specific exceptions allows for better error management during data quality checks."
+    },
+    {
+      "id": "15-soda-core-q14",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following is a best practice when using Soda for data quality?",
+      "options": [
+        { "id": "a", "text": "Running scans only once a month" },
+        { "id": "b", "text": "Integrating scans into the CI/CD pipeline" },
+        { "id": "c", "text": "Ignoring failed scans" },
+        { "id": "d", "text": "Limiting scans to only production data" }
+      ],
+      "answer": "b",
+      "explanation": "Integrating scans into CI/CD helps catch data issues early in the development process."
+    },
+    {
+      "id": "15-soda-core-q15",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps for troubleshooting a failed data quality scan:",
+      "steps": [
+        { "id": "s1", "text": "Review scan logs for errors" },
+        { "id": "s2", "text": "Check data source for issues" },
+        { "id": "s3", "text": "Modify scan configuration if needed" },
+        { "id": "s4", "text": "Re-run the scan" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "First, you need to review logs, check data sources, modify configs if required, and then re-run."
+    }
+  ]
+}

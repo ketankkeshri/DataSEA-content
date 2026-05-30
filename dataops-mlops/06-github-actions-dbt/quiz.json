@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "06-github-actions-dbt",
+  "type": "module",
+  "questions": [
+    {
+      "id": "06-github-actions-dbt-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the primary purpose of GitHub Actions?",
+      "options": [
+        { "id": "a", "text": "To manage databases" },
+        { "id": "b", "text": "To automate software workflows" },
+        { "id": "c", "text": "To write documentation" },
+        { "id": "d", "text": "To host applications" }
+      ],
+      "answer": "b",
+      "explanation": "GitHub Actions is designed to automate software workflows, allowing for CI/CD processes.",
+      "tags": ["GitHub Actions"]
+    },
+    {
+      "id": "06-github-actions-dbt-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which file is typically used to define workflows in GitHub Actions?",
+      "options": [
+        { "id": "a", "text": ".github/workflows/main.yml" },
+        { "id": "b", "text": "workflow.yml" },
+        { "id": "c", "text": "actions.yml" },
+        { "id": "d", "text": "config.yml" }
+      ],
+      "answer": "a",
+      "explanation": "Workflows in GitHub Actions are defined in YAML files located in the .github/workflows directory.",
+      "tags": ["GitHub Actions"]
+    },
+    {
+      "id": "06-github-actions-dbt-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet for a dbt run step:",
+      "language": "yaml",
+      "code_template": "steps:\n  - name: Run dbt\n    run: dbt ____",
+      "blanks": [
+        { "id": "b1", "options": ["run", "test", "compile", "seed"], "answer": "run" }
+      ],
+      "explanation": "The dbt run command is used to execute the models defined in your dbt project.",
+      "tags": ["dbt", "GitHub Actions"]
+    },
+    {
+      "id": "06-github-actions-dbt-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print('Hello' + ' World!')",
+      "options": [
+        { "id": "a", "text": "'Hello World!'" },
+        { "id": "b", "text": "'HelloWorld!'" },
+        { "id": "c", "text": "'Hello World!'" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The '+' operator concatenates the two strings, resulting in 'Hello World!'.",
+      "tags": ["Python"]
+    },
+    {
+      "id": "06-github-actions-dbt-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "GitHub Actions can only be triggered by push events.",
+      "answer": false,
+      "explanation": "GitHub Actions can be triggered by various events, including pull requests, issues, and schedule events.",
+      "tags": ["GitHub Actions"]
+    },
+    {
+      "id": "06-github-actions-dbt-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the purpose of dbt's 'seeds' feature?",
+      "options": [
+        { "id": "a", "text": "To run SQL tests" },
+        { "id": "b", "text": "To load CSV files into the database" },
+        { "id": "c", "text": "To model data" },
+        { "id": "d", "text": "To document models" }
+      ],
+      "answer": "b",
+      "explanation": "The 'seeds' feature in dbt allows you to load CSV files into your database as tables.",
+      "tags": ["dbt"]
+    },
+    {
+      "id": "06-github-actions-dbt-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps for a successful CI pipeline in GitHub Actions:",
+      "steps": [
+        { "id": "s1", "text": "Run dbt tests" },
+        { "id": "s2", "text": "Install dependencies" },
+        { "id": "s3", "text": "Build models" },
+        { "id": "s4", "text": "Deploy to production" }
+      ],
+      "correctOrder": ["s2", "s3", "s1", "s4"],
+      "explanation": "First, install dependencies, build models, run tests, and finally deploy to production.",
+      "tags": ["GitHub Actions", "CI"]
+    },
+    {
+      "id": "06-github-actions-dbt-q8",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Fill in the blank to secure secrets in GitHub Actions:",
+      "language": "yaml",
+      "code_template": "env:\n  SECRET_KEY: ${{ secrets.____ }}",
+      "blanks": [
+        { "id": "b1", "options": ["my_secret", "secret_key", "dbt_secret", "api_key"], "answer": "my_secret" }
+      ],
+      "explanation": "Using `${{ secrets.my_secret }}` accesses the secret stored in GitHub's secrets management.",
+      "tags": ["GitHub Actions", "secrets"]
+    },
+    {
+      "id": "06-github-actions-dbt-q9",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "dbt can be used without a data warehouse.",
+      "answer": false,
+      "explanation": "dbt requires a data warehouse to function, as it transforms data within it.",
+      "tags": ["dbt"]
+    },
+    {
+      "id": "06-github-actions-dbt-q10",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following is NOT a benefit of using dbt?",
+      "options": [
+        { "id": "a", "text": "Version control for data models" },
+        { "id": "b", "text": "Automatic data validation" },
+        { "id": "c", "text": "Easy integration with GitHub Actions" },
+        { "id": "d", "text": "Real-time data processing" }
+      ],
+      "answer": "d",
+      "explanation": "dbt is designed for batch processing and does not support real-time data processing.",
+      "tags": ["dbt"]
+    },
+    {
+      "id": "06-github-actions-dbt-q11",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this code print?",
+      "language": "python",
+      "code": "print(sum([1, 2, 3]) == 6)",
+      "options": [
+        { "id": "a", "text": "True" },
+        { "id": "b", "text": "False" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "None" }
+      ],
+      "answer": "a",
+      "explanation": "The sum of the list [1, 2, 3] equals 6, so the expression evaluates to True.",
+      "tags": ["Python"]
+    },
+    {
+      "id": "06-github-actions-dbt-q12",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order the steps to set up GitHub Actions for a dbt project:",
+      "steps": [
+        { "id": "s1", "text": "Create a GitHub repository" },
+        { "id": "s2", "text": "Define a workflow file" },
+        { "id": "s3", "text": "Push your dbt project" },
+        { "id": "s4", "text": "Configure dbt profiles" }
+      ],
+      "correctOrder": ["s1", "s3", "s4", "s2"],
+      "explanation": "First, create a repository, push your project, configure dbt profiles, and then define the workflow.",
+      "tags": ["GitHub Actions", "dbt"]
+    },
+    {
+      "id": "06-github-actions-dbt-q13",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does the 'slim-ci' action do?",
+      "options": [
+        { "id": "a", "text": "Runs tests in parallel" },
+        { "id": "b", "text": "Reduces CI build time" },
+        { "id": "c", "text": "Cleans up the repository" },
+        { "id": "d", "text": "Generates reports" }
+      ],
+      "answer": "b",
+      "explanation": "'slim-ci' is designed to optimize and reduce the CI build time by streamlining processes.",
+      "tags": ["GitHub Actions"]
+    },
+    {
+      "id": "06-github-actions-dbt-q14",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "You can access environment variables in GitHub Actions using the syntax ${{ github.env.VARIABLE_NAME }}.",
+      "answer": false,
+      "explanation": "The correct syntax is `${{ env.VARIABLE_NAME }}` to access environment variables.",
+      "tags": ["GitHub Actions"]
+    },
+    {
+      "id": "06-github-actions-dbt-q15",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Fill in the missing part for GitHub Actions to run dbt tests:",
+      "language": "yaml",
+      "code_template": "steps:\n  - name: Run dbt tests\n    run: dbt ____",
+      "blanks": [
+        { "id": "b1", "options": ["run", "test", "compile", "seed"], "answer": "test" }
+      ],
+      "explanation": "The 'test' command in dbt is used to run the tests defined in your dbt project.",
+      "tags": ["dbt", "GitHub Actions"]
+    }
+  ]
+}

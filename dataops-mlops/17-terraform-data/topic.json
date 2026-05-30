@@ -1,0 +1,38 @@
+{
+  "id": "17-terraform-data",
+  "section": "dataops-mlops",
+  "tier": "advanced",
+  "moduleOrder": 17,
+  "version": 1,
+  "title": "Terraform for Stateful Data Stacks",
+  "shortDescription": "Terraform for Stateful Data Stacks \u2014 beginner to advanced concepts and code.",
+  "icon": "17-terraform-data",
+  "estimatedMinutes": 32,
+  "isPro": true,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-statefulset-patterns",
+      "title": "Statefulset Patterns",
+      "minutes": 8
+    },
+    {
+      "id": "03-drift-prevention",
+      "title": "Drift Prevention",
+      "minutes": 8
+    },
+    {
+      "id": "04-multi-env",
+      "title": "Multi Env",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

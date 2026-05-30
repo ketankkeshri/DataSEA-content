@@ -1,0 +1,232 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "23-distributed-training",
+  "type": "module",
+  "questions": [
+    {
+      "id": "23-distributed-training-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is data parallelism?",
+      "options": [
+        { "id": "a", "text": "Splitting data into smaller batches" },
+        { "id": "b", "text": "Distributing model parameters across nodes" },
+        { "id": "c", "text": "Running the same model on different data subsets" },
+        { "id": "d", "text": "Combining results from multiple models" }
+      ],
+      "answer": "c",
+      "explanation": "Data parallelism involves running the same model simultaneously on different subsets of the data."
+    },
+    {
+      "id": "23-distributed-training-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the main benefit of model parallelism?",
+      "options": [
+        { "id": "a", "text": "Reduced memory usage" },
+        { "id": "b", "text": "Faster training times" },
+        { "id": "c", "text": "Ability to use larger models" },
+        { "id": "d", "text": "Simpler code" }
+      ],
+      "answer": "c",
+      "explanation": "Model parallelism allows for training larger models that do not fit into the memory of a single device."
+    },
+    {
+      "id": "23-distributed-training-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet:",
+      "language": "python",
+      "code_template": "from deepspeed import ____\n\ndeepspeed.initialize(____)",
+      "blanks": [
+        { "id": "b1", "options": ["DeepSpeed", "DS", "Speed", "Parallel"], "answer": "DeepSpeed" },
+        { "id": "b2", "options": ["model=model", "engine=engine", "parameters=params", "optimizer=optimizer"], "answer": "model=model" }
+      ],
+      "explanation": "DeepSpeed is a library for distributed training that optimizes performance and resource utilization."
+    },
+    {
+      "id": "23-distributed-training-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print([x**2 for x in range(5)])",
+      "options": [
+        { "id": "a", "text": "[1, 4, 9, 16]" },
+        { "id": "b", "text": "[0, 1, 4, 9, 16]" },
+        { "id": "c", "text": "[0, 1, 2, 3, 4]" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "b",
+      "explanation": "The output is a list of squares of numbers from 0 to 4."
+    },
+    {
+      "id": "23-distributed-training-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "DeepSpeed can be used for both model and data parallelism.",
+      "answer": true,
+      "explanation": "DeepSpeed supports both model and data parallelism to optimize resource use and training speed."
+    },
+    {
+      "id": "23-distributed-training-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the purpose of Fully Sharded Data Parallel (FSDP)?",
+      "options": [
+        { "id": "a", "text": "To shard the model weights across devices" },
+        { "id": "b", "text": "To reduce communication overhead" },
+        { "id": "c", "text": "To increase batch size" },
+        { "id": "d", "text": "To optimize data loading" }
+      ],
+      "answer": "a",
+      "explanation": "FSDP shards the model's parameters across different devices to optimize memory usage."
+    },
+    {
+      "id": "23-distributed-training-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to set up data parallel training:",
+      "steps": [
+        { "id": "s1", "text": "Initialize the model" },
+        { "id": "s2", "text": "Distribute the data" },
+        { "id": "s3", "text": "Set up the training loop" },
+        { "id": "s4", "text": "Configure the optimizer" }
+      ],
+      "correctOrder": ["s1", "s2", "s4", "s3"],
+      "explanation": "You must initialize the model first, then distribute the data, configure the optimizer, and finally set up the training loop."
+    },
+    {
+      "id": "23-distributed-training-q8",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following is a common challenge with distributed training?",
+      "options": [
+        { "id": "a", "text": "Increased model accuracy" },
+        { "id": "b", "text": "Communication overhead" },
+        { "id": "c", "text": "Easier debugging" },
+        { "id": "d", "text": "Reduced training time" }
+      ],
+      "answer": "b",
+      "explanation": "Communication overhead is a significant challenge in distributed training as it can slow down the training process."
+    },
+    {
+      "id": "23-distributed-training-q9",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Using model parallelism always leads to faster training times.",
+      "answer": false,
+      "explanation": "Model parallelism can lead to slower training due to increased communication costs between devices."
+    },
+    {
+      "id": "23-distributed-training-q10",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to enable FSDP:",
+      "language": "python",
+      "code_template": "from torch.distributed import ____\n\ndistributed.init_process_group(____)",
+      "blanks": [
+        { "id": "b1", "options": ["fsdp", "init", "distributed", "process"], "answer": "distributed" },
+        { "id": "b2", "options": ["backend='gloo'", "backend='tcp'", "backend='nccl'", "backend='mpi'"], "answer": "backend='nccl'" }
+      ],
+      "explanation": "FSDP requires initializing the distributed process group, commonly with the NCCL backend for GPU communication."
+    },
+    {
+      "id": "23-distributed-training-q11",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(sum([1, 2, 3, 4]))",
+      "options": [
+        { "id": "a", "text": "10" },
+        { "id": "b", "text": "9" },
+        { "id": "c", "text": "7" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The sum of the list [1, 2, 3, 4] is 10."
+    },
+    {
+      "id": "23-distributed-training-q12",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which method reduces the communication overhead in distributed training?",
+      "options": [
+        { "id": "a", "text": "Gradient accumulation" },
+        { "id": "b", "text": "Data sharding" },
+        { "id": "c", "text": "Batch normalization" },
+        { "id": "d", "text": "Dropout" }
+      ],
+      "answer": "a",
+      "explanation": "Gradient accumulation allows for fewer communication updates, thereby reducing overhead."
+    },
+    {
+      "id": "23-distributed-training-q13",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to optimize model training:",
+      "steps": [
+        { "id": "s1", "text": "Tune hyperparameters" },
+        { "id": "s2", "text": "Select training data" },
+        { "id": "s3", "text": "Evaluate model performance" },
+        { "id": "s4", "text": "Train the model" }
+      ],
+      "correctOrder": ["s2", "s1", "s4", "s3"],
+      "explanation": "Select training data first, then tune hyperparameters, train the model, and finally evaluate performance."
+    },
+    {
+      "id": "23-distributed-training-q14",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Data parallelism can effectively utilize multiple GPUs.",
+      "answer": true,
+      "explanation": "Data parallelism is designed to leverage multiple GPUs for improved training efficiency."
+    },
+    {
+      "id": "23-distributed-training-q15",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following libraries is commonly used for distributed training?",
+      "options": [
+        { "id": "a", "text": "TensorFlow" },
+        { "id": "b", "text": "PyTorch" },
+        { "id": "c", "text": "Keras" },
+        { "id": "d", "text": "All of the above" }
+      ],
+      "answer": "d",
+      "explanation": "All these libraries support distributed training, each with its own implementation."
+    }
+  ]
+}

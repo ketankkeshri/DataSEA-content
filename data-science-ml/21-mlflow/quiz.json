@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "21-mlflow",
+  "type": "module",
+  "questions": [
+    {
+      "id": "21-mlflow-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the purpose of MLflow Tracking?",
+      "options": [
+        { "id": "a", "text": "To visualize data" },
+        { "id": "b", "text": "To manage machine learning experiments" },
+        { "id": "c", "text": "To deploy models" },
+        { "id": "d", "text": "To clean datasets" }
+      ],
+      "answer": "b",
+      "explanation": "MLflow Tracking is designed to manage and log machine learning experiments."
+    },
+    {
+      "id": "21-mlflow-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which command is used to log parameters in MLflow?",
+      "options": [
+        { "id": "a", "text": "mlflow.log_param()" },
+        { "id": "b", "text": "mlflow.record_param()" },
+        { "id": "c", "text": "mlflow.add_param()" },
+        { "id": "d", "text": "mlflow.track_param()" }
+      ],
+      "answer": "a",
+      "explanation": "The function mlflow.log_param() is used to log parameters during experiments."
+    },
+    {
+      "id": "21-mlflow-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to log a model:",
+      "language": "python",
+      "code_template": "mlflow.___(model, artifacts={'model': model_path})",
+      "blanks": [
+        { "id": "b1", "options": ["log_model", "save_model", "register_model", "track_model"], "answer": "log_model" }
+      ],
+      "explanation": "You use mlflow.log_model() to log your model along with its artifacts."
+    },
+    {
+      "id": "21-mlflow-q4",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "MLflow can track the performance of models over time.",
+      "answer": true,
+      "explanation": "MLflow is designed to track model performance metrics over multiple runs."
+    },
+    {
+      "id": "21-mlflow-q5",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is an MLflow Model Registry?",
+      "options": [
+        { "id": "a", "text": "A place to store datasets" },
+        { "id": "b", "text": "A centralized model repository" },
+        { "id": "c", "text": "A visualization tool" },
+        { "id": "d", "text": "A library of algorithms" }
+      ],
+      "answer": "b",
+      "explanation": "The Model Registry is a centralized repository to manage and version your models."
+    },
+    {
+      "id": "21-mlflow-q6",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this code print?",
+      "language": "python",
+      "code": "print('Hello' + 'World')",
+      "options": [
+        { "id": "a", "text": "Hello World" },
+        { "id": "b", "text": "HelloWorld" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "HelloWorld!" }
+      ],
+      "answer": "b",
+      "explanation": "The output is 'HelloWorld' because the two strings are concatenated without a space."
+    },
+    {
+      "id": "21-mlflow-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to log a model in MLflow:",
+      "steps": [
+        { "id": "s1", "text": "Log the model" },
+        { "id": "s2", "text": "Start an MLflow run" },
+        { "id": "s3", "text": "Specify the model parameters" },
+        { "id": "s4", "text": "End the MLflow run" }
+      ],
+      "correctOrder": ["s2", "s3", "s1", "s4"],
+      "explanation": "You start an MLflow run, specify parameters, log the model, and then end the run."
+    },
+    {
+      "id": "21-mlflow-q8",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following is NOT a feature of the MLflow Model Registry?",
+      "options": [
+        { "id": "a", "text": "Versioning" },
+        { "id": "b", "text": "Model lineage" },
+        { "id": "c", "text": "Data preprocessing" },
+        { "id": "d", "text": "Stage transitions" }
+      ],
+      "answer": "c",
+      "explanation": "Data preprocessing is not a feature of the MLflow Model Registry."
+    },
+    {
+      "id": "21-mlflow-q9",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "MLflow supports tracking experiments across different programming languages.",
+      "answer": true,
+      "explanation": "MLflow can track experiments in Python, R, Java, and more."
+    },
+    {
+      "id": "21-mlflow-q10",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Fill in the blanks to create an MLflow model:",
+      "language": "python",
+      "code_template": "model = ____.load_model('my_model')",
+      "blanks": [
+        { "id": "b1", "options": ["mlflow", "sklearn", "tensorflow", "pytorch"], "answer": "mlflow" }
+      ],
+      "explanation": "You use mlflow.load_model() to load a model that has been previously logged."
+    },
+    {
+      "id": "21-mlflow-q11",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "When deploying a model with MLflow, which of the following is true?",
+      "options": [
+        { "id": "a", "text": "Only Python models can be deployed" },
+        { "id": "b", "text": "Deployment is not supported" },
+        { "id": "c", "text": "Models can be deployed in different formats" },
+        { "id": "d", "text": "Only registered models can be deployed" }
+      ],
+      "answer": "c",
+      "explanation": "MLflow supports deploying models in various formats such as REST API, docker images, etc."
+    },
+    {
+      "id": "21-mlflow-q12",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this code print?",
+      "language": "python",
+      "code": "print(3 * 'abc')",
+      "options": [
+        { "id": "a", "text": "abcabcabc" },
+        { "id": "b", "text": "abc abc abc" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "abc" }
+      ],
+      "answer": "a",
+      "explanation": "The output is 'abcabcabc' because the string 'abc' is repeated three times."
+    },
+    {
+      "id": "21-mlflow-q13",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is a run in MLflow?",
+      "options": [
+        { "id": "a", "text": "A single experiment execution" },
+        { "id": "b", "text": "A dataset" },
+        { "id": "c", "text": "A model version" },
+        { "id": "d", "text": "An MLflow API" }
+      ],
+      "answer": "a",
+      "explanation": "A run refers to the execution of an experiment in MLflow, capturing parameters and metrics."
+    },
+    {
+      "id": "21-mlflow-q14",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to register a model in MLflow:",
+      "steps": [
+        { "id": "s1", "text": "End the run" },
+        { "id": "s2", "text": "Log the model" },
+        { "id": "s3", "text": "Create a model registration" },
+        { "id": "s4", "text": "Start a new run" }
+      ],
+      "correctOrder": ["s4", "s2", "s3", "s1"],
+      "explanation": "You start a new run, log the model, create the registration, and then end the run."
+    },
+    {
+      "id": "21-mlflow-q15",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the following code to log metrics:",
+      "language": "python",
+      "code_template": "mlflow.log_metric('accuracy', ____)",
+      "blanks": [
+        { "id": "b1", "options": ["0.95", "accuracy_score", "metrics.accuracy", "100"], "answer": "0.95" }
+      ],
+      "explanation": "You log metrics like accuracy as a float value, such as 0.95."
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "17-terraform-data",
+  "type": "module",
+  "questions": [
+    {
+      "id": "17-terraform-data-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the primary purpose of Terraform?",
+      "options": [
+        { "id": "a", "text": "To manage application code" },
+        { "id": "b", "text": "To define infrastructure as code" },
+        { "id": "c", "text": "To monitor system performance" },
+        { "id": "d", "text": "To provide data storage solutions" }
+      ],
+      "answer": "b",
+      "explanation": "Terraform is used to define and provision infrastructure as code, enabling automation."
+    },
+    {
+      "id": "17-terraform-data-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which command initializes a Terraform working directory?",
+      "options": [
+        { "id": "a", "text": "terraform apply" },
+        { "id": "b", "text": "terraform init" },
+        { "id": "c", "text": "terraform plan" },
+        { "id": "d", "text": "terraform validate" }
+      ],
+      "answer": "b",
+      "explanation": "The `terraform init` command initializes a Terraform working directory containing configuration files."
+    },
+    {
+      "id": "17-terraform-data-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to create a stateful set in Kubernetes:",
+      "language": "hcl",
+      "code_template": "resource \"kubernetes_stateful_set\" \"example\" { \n  metadata { \n    name = \"example\" \n  } \n  spec { \n    service_name = \"example\" \n    replicas = __b1__ \n    selector { \n      match_labels = { \n        app = \"example\" \n      } \n    } \n    template { \n      metadata { \n        labels = { \n          app = \"example\" \n        } \n      } \n      spec { \n        container { \n          name  = \"example\" \n          image = \"nginx:latest\" \n        } \n      } \n    } \n  } \n}",
+      "blanks": [
+        { "id": "b1", "options": ["1", "2", "3", "4"], "answer": "3" }
+      ],
+      "explanation": "The number of replicas defines how many instances of the pod should be running."
+    },
+    {
+      "id": "17-terraform-data-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this Terraform configuration output?",
+      "language": "hcl",
+      "code": "output \"instance_ip\" { \n  value = aws_instance.example.public_ip \n}",
+      "options": [
+        { "id": "a", "text": "An IP address" },
+        { "id": "b", "text": "The instance ID" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "The instance type" }
+      ],
+      "answer": "a",
+      "explanation": "The output block is used to declare outputs from your Terraform configuration, in this case, the public IP."
+    },
+    {
+      "id": "17-terraform-data-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Terraform can manage both cloud and on-premises infrastructure.",
+      "answer": true,
+      "explanation": "Terraform can provision resources in various environments, including cloud providers and on-premises."
+    },
+    {
+      "id": "17-terraform-data-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is a Helm chart?",
+      "options": [
+        { "id": "a", "text": "A Kubernetes deployment tool" },
+        { "id": "b", "text": "A package manager for Kubernetes" },
+        { "id": "c", "text": "A Terraform module" },
+        { "id": "d", "text": "A CI/CD tool" }
+      ],
+      "answer": "b",
+      "explanation": "A Helm chart is a collection of files that describe a related set of Kubernetes resources."
+    },
+    {
+      "id": "17-terraform-data-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these Terraform commands correctly to apply changes:",
+      "steps": [
+        { "id": "s1", "text": "terraform plan" },
+        { "id": "s2", "text": "terraform apply" },
+        { "id": "s3", "text": "terraform init" },
+        { "id": "s4", "text": "terraform validate" }
+      ],
+      "correctOrder": ["s3", "s4", "s1", "s2"],
+      "explanation": "You initialize the directory, validate the configuration, plan the changes, and then apply them."
+    },
+    {
+      "id": "17-terraform-data-q8",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which resource block is used to define a virtual machine in Azure?",
+      "options": [
+        { "id": "a", "text": "azurerm_virtual_machine" },
+        { "id": "b", "text": "azure_vm" },
+        { "id": "c", "text": "azurerm_vm" },
+        { "id": "d", "text": "vm_azure" }
+      ],
+      "answer": "a",
+      "explanation": "The `azurerm_virtual_machine` resource block is used for defining a virtual machine in Azure."
+    },
+    {
+      "id": "17-terraform-data-q9",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Terraform state files are stored in plain text format.",
+      "answer": true,
+      "explanation": "Terraform state files are indeed stored in plain text, which can be version-controlled."
+    },
+    {
+      "id": "17-terraform-data-q10",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What might happen if you accidentally delete your Terraform state file?",
+      "options": [
+        { "id": "a", "text": "You can still apply changes" },
+        { "id": "b", "text": "Terraform will lose track of your resources" },
+        { "id": "c", "text": "Your infrastructure will be destroyed" },
+        { "id": "d", "text": "Nothing will happen" }
+      ],
+      "answer": "b",
+      "explanation": "Deleting the state file means Terraform cannot track the resources it manages, leading to potential issues."
+    },
+    {
+      "id": "17-terraform-data-q11",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Fill in the blanks to configure drift prevention in Terraform:",
+      "language": "hcl",
+      "code_template": "resource \"aws_s3_bucket\" \"example\" { \n  bucket = \"example-bucket\" \n  versioning { \n    enabled = __b1__ \n  } \n  lifecycle { \n    prevent_destroy = __b2__ \n  } \n}",
+      "blanks": [
+        { "id": "b1", "options": ["true", "false"], "answer": "true" },
+        { "id": "b2", "options": ["true", "false"], "answer": "true" }
+      ],
+      "explanation": "Enabling versioning and preventing destruction helps maintain state consistency."
+    },
+    {
+      "id": "17-terraform-data-q12",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this code output?",
+      "language": "hcl",
+      "code": "resource \"null_resource\" \"example\" { \n  triggers = { \n    always_run = \"${timestamp()}\" \n  } \n}",
+      "options": [
+        { "id": "a", "text": "A resource ID" },
+        { "id": "b", "text": "A timestamp" },
+        { "id": "c", "text": "An error" },
+        { "id": "d", "text": "No output" }
+      ],
+      "answer": "d",
+      "explanation": "Null resources have no output; they are used for side effects or triggers."
+    },
+    {
+      "id": "17-terraform-data-q13",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which command shows the current state of resources managed by Terraform?",
+      "options": [
+        { "id": "a", "text": "terraform show" },
+        { "id": "b", "text": "terraform state" },
+        { "id": "c", "text": "terraform list" },
+        { "id": "d", "text": "terraform status" }
+      ],
+      "answer": "a",
+      "explanation": "The `terraform show` command displays detailed information about the current state of resources."
+    },
+    {
+      "id": "17-terraform-data-q14",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Terraform modules help organize and reuse code.",
+      "answer": true,
+      "explanation": "Modules encapsulate resources, making it easier to manage and reuse code."
+    },
+    {
+      "id": "17-terraform-data-q15",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the role of a backend in Terraform?",
+      "options": [
+        { "id": "a", "text": "To configure network settings" },
+        { "id": "b", "text": "To manage state files" },
+        { "id": "c", "text": "To provision resources" },
+        { "id": "d", "text": "To define modules" }
+      ],
+      "answer": "b",
+      "explanation": "The backend determines how Terraform stores and manages the state files."
+    }
+  ]
+}

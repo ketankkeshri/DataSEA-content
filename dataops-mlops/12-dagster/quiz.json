@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "12-dagster",
+  "type": "module",
+  "questions": [
+    {
+      "id": "12-dagster-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is Dagster primarily used for?",
+      "options": [
+        { "id": "a", "text": "Data storage" },
+        { "id": "b", "text": "Data orchestration" },
+        { "id": "c", "text": "Machine learning" },
+        { "id": "d", "text": "Data visualization" }
+      ],
+      "answer": "b",
+      "explanation": "Dagster is a data orchestration tool designed to manage data workflows efficiently.",
+      "tags": ["dagster", "data orchestration"]
+    },
+    {
+      "id": "12-dagster-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is a software-defined asset in Dagster?",
+      "options": [
+        { "id": "a", "text": "A physical server" },
+        { "id": "b", "text": "A dataset defined in code" },
+        { "id": "c", "text": "A cloud storage service" },
+        { "id": "d", "text": "A network configuration" }
+      ],
+      "answer": "b",
+      "explanation": "A software-defined asset in Dagster represents datasets or other components defined in code.",
+      "tags": ["dagster", "software-defined assets"]
+    },
+    {
+      "id": "12-dagster-q3",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Dagster allows scheduling of pipelines.",
+      "answer": true,
+      "explanation": "Dagster has built-in scheduling capabilities to automate pipeline executions.",
+      "tags": ["dagster", "scheduling"]
+    },
+    {
+      "id": "12-dagster-q4",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which command is used to run a Dagster pipeline?",
+      "options": [
+        { "id": "a", "text": "dagster run" },
+        { "id": "b", "text": "dagster pipeline run" },
+        { "id": "c", "text": "dagit run" },
+        { "id": "d", "text": "dagster execute" }
+      ],
+      "answer": "b",
+      "explanation": "The command 'dagster pipeline run' initiates the execution of a specified pipeline.",
+      "tags": ["dagster", "pipeline execution"]
+    },
+    {
+      "id": "12-dagster-q5",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to define a solid:",
+      "language": "python",
+      "code_template": "@dagster.___(name='my_solid')\ndef my_solid():\n    pass",
+      "blanks": [
+        { "id": "b1", "options": ["solid", "pipeline", "op", "asset"], "answer": "op" }
+      ],
+      "explanation": "In Dagster, you use the @op decorator to define a solid, which is a computational unit.",
+      "tags": ["dagster", "solids"]
+    },
+    {
+      "id": "12-dagster-q6",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(1 + 2 * 3)",
+      "options": [
+        { "id": "a", "text": "5" },
+        { "id": "b", "text": "9" },
+        { "id": "c", "text": "8" },
+        { "id": "d", "text": "6" }
+      ],
+      "answer": "a",
+      "explanation": "The expression evaluates to 1 + (2 * 3) = 1 + 6 = 7.",
+      "tags": ["python", "output"]
+    },
+    {
+      "id": "12-dagster-q7",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following can trigger a sensor in Dagster?",
+      "options": [
+        { "id": "a", "text": "Time-based conditions" },
+        { "id": "b", "text": "Data changes" },
+        { "id": "c", "text": "User interactions" },
+        { "id": "d", "text": "All of the above" }
+      ],
+      "answer": "d",
+      "explanation": "Sensors in Dagster can be triggered by various conditions, including time, data, and user interactions.",
+      "tags": ["dagster", "sensors"]
+    },
+    {
+      "id": "12-dagster-q8",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these Dagster pipeline steps correctly:",
+      "steps": [
+        { "id": "s1", "text": "Define the pipeline" },
+        { "id": "s2", "text": "Implement solids" },
+        { "id": "s3", "text": "Create assets" },
+        { "id": "s4", "text": "Run the pipeline" }
+      ],
+      "correctOrder": ["s2", "s3", "s1", "s4"],
+      "explanation": "First, you implement solids, create assets, define the pipeline, and finally run it.",
+      "tags": ["dagster", "pipeline steps"]
+    },
+    {
+      "id": "12-dagster-q9",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Fill in the blank to optimize this pipeline:",
+      "language": "python",
+      "code_template": "@dagster.op\ndef my_op(context):\n    context.___('This is a log message')",
+      "blanks": [
+        { "id": "b1", "options": ["log", "info", "warning", "debug"], "answer": "info" }
+      ],
+      "explanation": "Using context.info logs messages at the info level, which is suitable for general logging.",
+      "tags": ["dagster", "logging"]
+    },
+    {
+      "id": "12-dagster-q10",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this Dagster command output?",
+      "language": "python",
+      "code": "dagster pipeline list",
+      "options": [
+        { "id": "a", "text": "List of available pipelines" },
+        { "id": "b", "text": "Error: command not found" },
+        { "id": "c", "text": "Current pipeline execution" },
+        { "id": "d", "text": "List of solids" }
+      ],
+      "answer": "a",
+      "explanation": "The command 'dagster pipeline list' outputs a list of all pipelines registered in the current environment.",
+      "tags": ["dagster", "command"]
+    },
+    {
+      "id": "12-dagster-q11",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What type of data does a Dagster asset represent?",
+      "options": [
+        { "id": "a", "text": "Real-time data" },
+        { "id": "b", "text": "Temporal data" },
+        { "id": "c", "text": "Static data" },
+        { "id": "d", "text": "All types of data" }
+      ],
+      "answer": "d",
+      "explanation": "Dagster assets can represent any type of data, including real-time, static, and temporal data.",
+      "tags": ["dagster", "assets"]
+    },
+    {
+      "id": "12-dagster-q12",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Dagster supports only Python as a programming language.",
+      "answer": false,
+      "explanation": "Dagster can work with multiple languages, although Python is the primary language used.",
+      "tags": ["dagster", "languages"]
+    },
+    {
+      "id": "12-dagster-q13",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps for creating a Dagster job:",
+      "steps": [
+        { "id": "s1", "text": "Define the job" },
+        { "id": "s2", "text": "Add solids" },
+        { "id": "s3", "text": "Set parameters" },
+        { "id": "s4", "text": "Run the job" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "You first define the job, then add solids, set parameters, and finally run the job.",
+      "tags": ["dagster", "job creation"]
+    },
+    {
+      "id": "12-dagster-q14",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does a Dagster schedule define?",
+      "options": [
+        { "id": "a", "text": "A sequence of tasks" },
+        { "id": "b", "text": "When to run a job" },
+        { "id": "c", "text": "Data storage location" },
+        { "id": "d", "text": "User permissions" }
+      ],
+      "answer": "b",
+      "explanation": "A Dagster schedule defines when a job should be executed based on defined intervals.",
+      "tags": ["dagster", "scheduling"]
+    },
+    {
+      "id": "12-dagster-q15",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Dagster can only run jobs in a local environment.",
+      "answer": false,
+      "explanation": "Dagster can run jobs in various environments, including local, cloud, and on-premise setups.",
+      "tags": ["dagster", "job execution"]
+    }
+  ]
+}

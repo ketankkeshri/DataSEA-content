@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "24-model-quantization",
+  "type": "module",
+  "questions": [
+    {
+      "id": "24-model-quantization-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is model quantization?",
+      "options": [
+        { "id": "a", "text": "A way to simplify data structures" },
+        { "id": "b", "text": "Reducing model size and improving inference speed" },
+        { "id": "c", "text": "An optimization for training deep learning models" },
+        { "id": "d", "text": "A technique for data augmentation" }
+      ],
+      "answer": "b",
+      "explanation": "Model quantization reduces the size of the model and enhances inference speed by using lower precision data types.",
+      "tags": ["quantization"]
+    },
+    {
+      "id": "24-model-quantization-q2",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to apply quantization:",
+      "language": "python",
+      "code_template": "model.quantize(____, ____)",
+      "blanks": [
+        { "id": "b1", "options": ["int8", "float32", "int16", "float64"], "answer": "int8" },
+        { "id": "b2", "options": ["retrain", "evaluate", "fine-tune", "skip"], "answer": "fine-tune" }
+      ],
+      "explanation": "Using 'int8' for quantization and 'fine-tune' allows the model to maintain performance after quantization.",
+    },
+    {
+      "id": "24-model-quantization-q3",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print([round(x * 0.5) for x in range(4)])",
+      "options": [
+        { "id": "a", "text": "[0, 1, 2, 3]" },
+        { "id": "b", "text": "[0, 1, 1, 2]" },
+        { "id": "c", "text": "[0, 0, 1, 2]" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "b",
+      "explanation": "The list comprehension rounds half of each integer, resulting in [0, 1, 1, 2].",
+    },
+    {
+      "id": "24-model-quantization-q4",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Model quantization can only be applied during model training.",
+      "answer": false,
+      "explanation": "Model quantization can be applied both during training and post-training to reduce model size.",
+    },
+    {
+      "id": "24-model-quantization-q5",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps for implementing model quantization:",
+      "steps": [
+        { "id": "s1", "text": "Evaluate model performance" },
+        { "id": "s2", "text": "Choose quantization method" },
+        { "id": "s3", "text": "Quantize the model" },
+        { "id": "s4", "text": "Fine-tune the quantized model" }
+      ],
+      "correctOrder": ["s2", "s3", "s4", "s1"],
+      "explanation": "First, choose the quantization method, then quantize, fine-tune, and finally evaluate the performance.",
+    },
+    {
+      "id": "24-model-quantization-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is one benefit of using int4 over int8 in model quantization?",
+      "options": [
+        { "id": "a", "text": "Better accuracy" },
+        { "id": "b", "text": "Lower memory footprint" },
+        { "id": "c", "text": "Faster training times" },
+        { "id": "d", "text": "Easier implementation" }
+      ],
+      "answer": "b",
+      "explanation": "Using int4 reduces the memory footprint by half compared to int8, which is crucial for resource-constrained environments.",
+      "tags": ["int4", "int8"]
+    },
+    {
+      "id": "24-model-quantization-q7",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Fill in the blanks for the following quantization function:",
+      "language": "python",
+      "code_template": "def quantize_model(model, precision=____):",
+      "blanks": [
+        { "id": "b1", "options": ["int8", "int4", "float32", "float64"], "answer": "int8" }
+      ],
+      "explanation": "The default precision for quantizing a model is often set to int8 for efficiency.",
+    },
+    {
+      "id": "24-model-quantization-q8",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Quantization can help reduce latency in model inference.",
+      "answer": true,
+      "explanation": "Quantization reduces the computational load, leading to lower latency during inference.",
+    },
+    {
+      "id": "24-model-quantization-q9",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which of the following is a type of quantization?",
+      "options": [
+        { "id": "a", "text": "Dynamic quantization" },
+        { "id": "b", "text": "Static quantization" },
+        { "id": "c", "text": "Both a and b" },
+        { "id": "d", "text": "None of the above" }
+      ],
+      "answer": "c",
+      "explanation": "Both dynamic and static quantization are common techniques used for model quantization.",
+      "tags": ["quantization"]
+    },
+    {
+      "id": "24-model-quantization-q10",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print([x//2 for x in range(5)])",
+      "options": [
+        { "id": "a", "text": "[0, 1, 2, 3, 4]" },
+        { "id": "b", "text": "[0, 0, 1, 1, 2]" },
+        { "id": "c", "text": "[0, 1, 2, 2, 3]" },
+        { "id": "d", "text": "[0, 1, 2, 3, 4]" }
+      ],
+      "answer": "b",
+      "explanation": "Using integer division (//) results in [0, 0, 1, 1, 2] as it divides and truncates the decimal.",
+    },
+    {
+      "id": "24-model-quantization-q11",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What is a potential downside of model quantization?",
+      "options": [
+        { "id": "a", "text": "Increased model size" },
+        { "id": "b", "text": "Loss of accuracy" },
+        { "id": "c", "text": "Longer training times" },
+        { "id": "d", "text": "Complex implementation" }
+      ],
+      "answer": "b",
+      "explanation": "Quantization can lead to a loss of accuracy, particularly if not done carefully.",
+      "tags": ["downsides"]
+    },
+    {
+      "id": "24-model-quantization-q12",
+      "type": "order_the_steps",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Order these steps for evaluating a quantized model:",
+      "steps": [
+        { "id": "s1", "text": "Deploy the quantized model" },
+        { "id": "s2", "text": "Measure inference time" },
+        { "id": "s3", "text": "Compare with baseline model" },
+        { "id": "s4", "text": "Check accuracy" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "First, deploy the model, measure inference time, compare it with the baseline, and finally check accuracy.",
+    },
+    {
+      "id": "24-model-quantization-q13",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Quantization is only applicable to deep learning models.",
+      "answer": false,
+      "explanation": "Quantization can be applied to various machine learning models, not just deep learning models.",
+    },
+    {
+      "id": "24-model-quantization-q14",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which hardware is most commonly optimized for quantized models?",
+      "options": [
+        { "id": "a", "text": "CPU" },
+        { "id": "b", "text": "GPU" },
+        { "id": "c", "text": "TPU" },
+        { "id": "d", "text": "FPGA" }
+      ],
+      "answer": "c",
+      "explanation": "TPUs are specifically designed to accelerate tensor operations, making them ideal for quantized models.",
+      "tags": ["hardware"]
+    },
+    {
+      "id": "24-model-quantization-q15",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the code snippet for model quantization:",
+      "language": "python",
+      "code_template": "quantized_model = quantize(____, method='dynamic')",
+      "blanks": [
+        { "id": "b1", "options": ["model", "data", "features", "weights"], "answer": "model" }
+      ],
+      "explanation": "The quantization function requires the model as input to perform the quantization process."
+    }
+  ]
+}

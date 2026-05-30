@@ -1,0 +1,38 @@
+{
+  "id": "08-helm-charts",
+  "section": "dataops-mlops",
+  "tier": "intermediate",
+  "moduleOrder": 8,
+  "version": 1,
+  "title": "Helm Charts",
+  "shortDescription": "Helm Charts \u2014 beginner to advanced concepts and code.",
+  "icon": "08-helm-charts",
+  "estimatedMinutes": 32,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-templating",
+      "title": "Templating",
+      "minutes": 8
+    },
+    {
+      "id": "03-values",
+      "title": "Values",
+      "minutes": 8
+    },
+    {
+      "id": "04-upgrades-rollback",
+      "title": "Upgrades Rollback",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

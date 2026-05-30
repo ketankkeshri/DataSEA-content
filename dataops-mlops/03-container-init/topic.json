@@ -1,0 +1,38 @@
+{
+  "id": "03-container-init",
+  "section": "dataops-mlops",
+  "tier": "beginner",
+  "moduleOrder": 3,
+  "version": 1,
+  "title": "Container Initialization",
+  "shortDescription": "Container Initialization \u2014 beginner to advanced concepts and code.",
+  "icon": "03-container-init",
+  "estimatedMinutes": 32,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-docker-recap",
+      "title": "Docker Recap",
+      "minutes": 8
+    },
+    {
+      "id": "02-multi-stage-builds",
+      "title": "Multi Stage Builds",
+      "minutes": 8
+    },
+    {
+      "id": "03-layer-caching",
+      "title": "Layer Caching",
+      "minutes": 8
+    },
+    {
+      "id": "04-entrypoint-vs-cmd",
+      "title": "Entrypoint Vs Cmd",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

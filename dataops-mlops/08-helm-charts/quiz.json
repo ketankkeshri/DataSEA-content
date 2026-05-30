@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "08-helm-charts",
+  "type": "module",
+  "questions": [
+    {
+      "id": "08-helm-charts-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the primary purpose of Helm charts?",
+      "options": [
+        { "id": "a", "text": "To manage Docker images" },
+        { "id": "b", "text": "To define, install, and upgrade Kubernetes applications" },
+        { "id": "c", "text": "To monitor Kubernetes clusters" },
+        { "id": "d", "text": "To create CI/CD pipelines" }
+      ],
+      "answer": "b",
+      "explanation": "Helm charts simplify the deployment and management of applications on Kubernetes."
+    },
+    {
+      "id": "08-helm-charts-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is templating in Helm?",
+      "options": [
+        { "id": "a", "text": "Creating static files" },
+        { "id": "b", "text": "Dynamic generation of Kubernetes manifests" },
+        { "id": "c", "text": "Versioning Helm charts" },
+        { "id": "d", "text": "Managing secrets" }
+      ],
+      "answer": "b",
+      "explanation": "Templating allows you to generate Kubernetes manifests dynamically using placeholders."
+    },
+    {
+      "id": "08-helm-charts-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to create a Helm chart:",
+      "language": "yaml",
+      "code_template": "apiVersion: v2\nname: mychart\nversion: 0.1.0\n\n____:\n  - name: myapp\n    ____: Deployment",
+      "blanks": [
+        { "id": "b1", "options": ["templates", "charts", "releases", "values"], "answer": "templates" },
+        { "id": "b2", "options": ["kind", "type", "apiVersion", "metadata"], "answer": "kind" }
+      ],
+      "explanation": "You need to define templates for your resources and specify their kind."
+    },
+    {
+      "id": "08-helm-charts-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(['{{ .Values.image }}' for _ in range(2)])",
+      "options": [
+        { "id": "a", "text": "['{{ .Values.image }}', '{{ .Values.image }}']" },
+        { "id": "b", "text": "['.Values.image', .Values.image]" },
+        { "id": "c", "text": "['image', 'image']" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The output is an array with two identical templated strings."
+    },
+    {
+      "id": "08-helm-charts-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Helm can manage the lifecycle of Kubernetes applications.",
+      "answer": true,
+      "explanation": "Helm is designed to manage the entire lifecycle of applications in Kubernetes."
+    },
+    {
+      "id": "08-helm-charts-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What command is used to install a Helm chart?",
+      "options": [
+        { "id": "a", "text": "helm deploy" },
+        { "id": "b", "text": "helm install" },
+        { "id": "c", "text": "helm create" },
+        { "id": "d", "text": "helm upgrade" }
+      ],
+      "answer": "b",
+      "explanation": "The command 'helm install' is used to install a Helm chart into a Kubernetes cluster."
+    },
+    {
+      "id": "08-helm-charts-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to upgrade a Helm release correctly:",
+      "steps": [
+        { "id": "s1", "text": "Run 'helm upgrade <release>'" },
+        { "id": "s2", "text": "Modify the values file" },
+        { "id": "s3", "text": "Check the release status" },
+        { "id": "s4", "text": "Get the current release version" }
+      ],
+      "correctOrder": ["s4", "s2", "s1", "s3"],
+      "explanation": "First, you check the current version, modify the values, upgrade, and finally check the status."
+    },
+    {
+      "id": "08-helm-charts-q8",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the purpose of the 'values.yaml' file in a Helm chart?",
+      "options": [
+        { "id": "a", "text": "To specify Kubernetes cluster configuration" },
+        { "id": "b", "text": "To define default values for templates" },
+        { "id": "c", "text": "To list dependencies" },
+        { "id": "d", "text": "To configure Helm itself" }
+      ],
+      "answer": "b",
+      "explanation": "'values.yaml' provides default values that can be overridden during chart installation."
+    },
+    {
+      "id": "08-helm-charts-q9",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Rolling back a Helm release is not possible once it has been upgraded.",
+      "answer": false,
+      "explanation": "Helm allows you to roll back a release to a previous version using the 'helm rollback' command."
+    },
+    {
+      "id": "08-helm-charts-q10",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the snippet to define a template for a Service in Helm:",
+      "language": "yaml",
+      "code_template": "apiVersion: v1\nkind: Service\nmetadata:\n  name: my-service\nspec:\n  type: ____\n  ports:\n    - port: 80\n      targetPort: 80\n  selector:\n    app: myapp",
+      "blanks": [
+        { "id": "b1", "options": ["LoadBalancer", "NodePort", "ClusterIP", "ExternalName"], "answer": "LoadBalancer" }
+      ],
+      "explanation": "The Service type determines how the service is exposed - LoadBalancer is one option."
+    },
+    {
+      "id": "08-helm-charts-q11",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which command upgrades a Helm chart while allowing for value overrides?",
+      "options": [
+        { "id": "a", "text": "helm install --set" },
+        { "id": "b", "text": "helm upgrade --set" },
+        { "id": "c", "text": "helm install --values" },
+        { "id": "d", "text": "helm upgrade --values" }
+      ],
+      "answer": "b",
+      "explanation": "The 'helm upgrade --set' command allows you to override values during an upgrade."
+    },
+    {
+      "id": "08-helm-charts-q12",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this Helm command output?",
+      "language": "bash",
+      "code": "helm list --output table",
+      "options": [
+        { "id": "a", "text": "List of installed Helm charts" },
+        { "id": "b", "text": "List of available Helm repositories" },
+        { "id": "c", "text": "List of Helm chart versions" },
+        { "id": "d", "text": "Error: unknown command" }
+      ],
+      "answer": "a",
+      "explanation": "The command 'helm list' displays all installed releases in a table format."
+    },
+    {
+      "id": "08-helm-charts-q13",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following can be used to roll back a Helm release?",
+      "options": [
+        { "id": "a", "text": "helm revert" },
+        { "id": "b", "text": "helm rollback" },
+        { "id": "c", "text": "helm undo" },
+        { "id": "d", "text": "helm rollback-version" }
+      ],
+      "answer": "b",
+      "explanation": "'helm rollback' is the correct command to revert a release to a previous version."
+    },
+    {
+      "id": "08-helm-charts-q14",
+      "type": "order_the_steps",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Order these steps to create a new Helm chart:",
+      "steps": [
+        { "id": "s1", "text": "Run 'helm create <chart-name>'" },
+        { "id": "s2", "text": "Modify the templates" },
+        { "id": "s3", "text": "Package the chart" },
+        { "id": "s4", "text": "Install the chart" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "First, create the chart, modify it, package, and finally install it."
+    },
+    {
+      "id": "08-helm-charts-q15",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Helm charts can only be used for deploying applications, not services.",
+      "answer": false,
+      "explanation": "Helm charts can be used to deploy both applications and services in Kubernetes."
+    }
+  ]
+}

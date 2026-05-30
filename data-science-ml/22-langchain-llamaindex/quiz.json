@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "22-langchain-llamaindex",
+  "type": "module",
+  "questions": [
+    {
+      "id": "22-langchain-llamaindex-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is LangChain primarily used for?",
+      "options": [
+        { "id": "a", "text": "Data cleaning" },
+        { "id": "b", "text": "Building applications with LLMs" },
+        { "id": "c", "text": "Visualizing data" },
+        { "id": "d", "text": "Statistical analysis" }
+      ],
+      "answer": "b",
+      "explanation": "LangChain is a framework designed for creating applications using Large Language Models (LLMs).",
+      "tags": ["langchain"]
+    },
+    {
+      "id": "22-langchain-llamaindex-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which component of LangChain manages the flow of data?",
+      "options": [
+        { "id": "a", "text": "Chains" },
+        { "id": "b", "text": "Agents" },
+        { "id": "c", "text": "Prompts" },
+        { "id": "d", "text": "Indexes" }
+      ],
+      "answer": "a",
+      "explanation": "Chains in LangChain are responsible for managing how data flows between different components.",
+      "tags": ["chains"]
+    },
+    {
+      "id": "22-langchain-llamaindex-q3",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "LlamaIndex is used to manage large datasets efficiently.",
+      "answer": true,
+      "explanation": "LlamaIndex provides tools for handling large datasets in a scalable manner.",
+      "tags": ["llamaindex"]
+    },
+    {
+      "id": "22-langchain-llamaindex-q4",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What role do agents play in LangChain?",
+      "options": [
+        { "id": "a", "text": "They store data." },
+        { "id": "b", "text": "They execute tasks and make decisions." },
+        { "id": "c", "text": "They visualize outputs." },
+        { "id": "d", "text": "They manage API calls." }
+      ],
+      "answer": "b",
+      "explanation": "Agents in LangChain are responsible for executing tasks and making decisions based on the data they receive.",
+      "tags": ["agents"]
+    },
+    {
+      "id": "22-langchain-llamaindex-q5",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to create a simple chain:",
+      "language": "python",
+      "code_template": "from langchain.chains import ____\n\nchain = ____()",
+      "blanks": [
+        { "id": "b1", "options": ["LLMChain", "DataChain", "PromptChain", "TaskChain"], "answer": "LLMChain" },
+        { "id": "b2", "options": ["LLMChain()", "DataChain()", "PromptChain()", "TaskChain()"], "answer": "LLMChain()" }
+      ],
+      "explanation": "LLMChain is the correct class to instantiate for creating a simple chain that interacts with a Language Model.",
+      "tags": ["chains"]
+    },
+    {
+      "id": "22-langchain-llamaindex-q6",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "x = [1, 2, 3]\nprint([i**2 for i in x])",
+      "options": [
+        { "id": "a", "text": "[1, 2, 3]" },
+        { "id": "b", "text": "[1, 4, 9]" },
+        { "id": "c", "text": "[2, 4, 6]" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "b",
+      "explanation": "The list comprehension squares each element in the list, resulting in [1, 4, 9].",
+      "tags": ["python"]
+    },
+    {
+      "id": "22-langchain-llamaindex-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to create a LangChain agent:",
+      "steps": [
+        { "id": "s1", "text": "Define the tools the agent will use." },
+        { "id": "s2", "text": "Create an agent object." },
+        { "id": "s3", "text": "Set up the environment for the agent." },
+        { "id": "s4", "text": "Specify the agent's goal." }
+      ],
+      "correctOrder": ["s3", "s1", "s4", "s2"],
+      "explanation": "First, you need to set up the environment, then define the tools, specify the goal, and finally create the agent object.",
+      "tags": ["agents"]
+    },
+    {
+      "id": "22-langchain-llamaindex-q8",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following methods is used to query LlamaIndex?",
+      "options": [
+        { "id": "a", "text": "query()" },
+        { "id": "b", "text": "fetch()" },
+        { "id": "c", "text": "retrieve()" },
+        { "id": "d", "text": "access()" }
+      ],
+      "answer": "a",
+      "explanation": "The query() method is specifically designed for querying datasets in LlamaIndex.",
+      "tags": ["llamaindex"]
+    },
+    {
+      "id": "22-langchain-llamaindex-q9",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "LangChain supports both synchronous and asynchronous operations.",
+      "answer": true,
+      "explanation": "LangChain can handle both synchronous and asynchronous tasks, providing flexibility in application design.",
+      "tags": ["langchain"]
+    },
+    {
+      "id": "22-langchain-llamaindex-q10",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Fill in the blanks to optimize a query using LlamaIndex:",
+      "language": "python",
+      "code_template": "result = llamaindex.query(____, ____=True)",
+      "blanks": [
+        { "id": "b1", "options": ["query_string", "data_set", "index_name", "input_data"], "answer": "query_string" },
+        { "id": "b2", "options": ["optimize", "verbose", "timeout", "cache"], "answer": "verbose" }
+      ],
+      "explanation": "Setting 'verbose' to True provides additional details during the query execution, which helps in debugging.",
+      "tags": ["llamaindex"]
+    },
+    {
+      "id": "22-langchain-llamaindex-q11",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print('Hello'.lower().replace('h', 'H'))",
+      "options": [
+        { "id": "a", "text": "Hello" },
+        { "id": "b", "text": "hello" },
+        { "id": "c", "text": "Hello" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "b",
+      "explanation": "The string is converted to lowercase and then 'h' is replaced with 'H', resulting in 'hello'.",
+      "tags": ["python"]
+    },
+    {
+      "id": "22-langchain-llamaindex-q12",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to compare two LLM models:",
+      "steps": [
+        { "id": "s1", "text": "Define the evaluation metrics." },
+        { "id": "s2", "text": "Run both models on a test dataset." },
+        { "id": "s3", "text": "Analyze the results." },
+        { "id": "s4", "text": "Select the models to compare." }
+      ],
+      "correctOrder": ["s4", "s1", "s2", "s3"],
+      "explanation": "You begin by selecting models, defining metrics, running tests, and finally analyzing results.",
+      "tags": ["comparison"]
+    },
+    {
+      "id": "22-langchain-llamaindex-q13",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which method would you use to optimize a LangChain agent's performance?",
+      "options": [
+        { "id": "a", "text": "set_parameters()" },
+        { "id": "b", "text": "optimize_agent()" },
+        { "id": "c", "text": "tune()" },
+        { "id": "d", "text": "adjust_metrics()" }
+      ],
+      "answer": "a",
+      "explanation": "set_parameters() allows you to adjust the parameters used by an agent, optimizing its performance.",
+      "tags": ["agents"]
+    },
+    {
+      "id": "22-langchain-llamaindex-q14",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "LlamaIndex can only query structured data.",
+      "answer": false,
+      "explanation": "LlamaIndex is capable of querying both structured and unstructured data, increasing its versatility.",
+      "tags": ["llamaindex"]
+    },
+    {
+      "id": "22-langchain-llamaindex-q15",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Fill in the blanks to implement a chain with error handling:",
+      "language": "python",
+      "code_template": "try:\n    result = chain.run(____)\nexcept ____ as e:\n    print(e)",
+      "blanks": [
+        { "id": "b1", "options": ["input_data", "query", "data", "info"], "answer": "input_data" },
+        { "id": "b2", "options": ["Error", "Exception", "Warning", "Fail"], "answer": "Exception" }
+      ],
+      "explanation": "The code captures any exceptions that occur during the execution of the chain when running the provided input data.",
+      "tags": ["chains"]
+    }
+  ]
+}

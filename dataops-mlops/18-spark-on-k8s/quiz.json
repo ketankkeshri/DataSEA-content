@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "18-spark-on-k8s",
+  "type": "module",
+  "questions": [
+    {
+      "id": "18-spark-on-k8s-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the main purpose of Spark on Kubernetes?",
+      "options": [
+        { "id": "a", "text": "Data storage" },
+        { "id": "b", "text": "Distributed processing" },
+        { "id": "c", "text": "Data visualization" },
+        { "id": "d", "text": "Web hosting" }
+      ],
+      "answer": "b",
+      "explanation": "Spark on Kubernetes is designed for distributed data processing across a cluster.",
+      "tags": ["kubernetes", "spark"]
+    },
+    {
+      "id": "18-spark-on-k8s-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which component of Kubernetes manages the lifecycle of pods?",
+      "options": [
+        { "id": "a", "text": "Kubelet" },
+        { "id": "b", "text": "Controller Manager" },
+        { "id": "c", "text": "Scheduler" },
+        { "id": "d", "text": "API Server" }
+      ],
+      "answer": "a",
+      "explanation": "Kubelet is responsible for managing the lifecycle of pods on a node.",
+      "tags": ["kubernetes", "pods"]
+    },
+    {
+      "id": "18-spark-on-k8s-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to create a Spark session in Kubernetes:",
+      "language": "python",
+      "code_template": "from pyspark.sql import SparkSession\nspark = SparkSession.builder.____('appName').____()",
+      "blanks": [
+        { "id": "b1", "options": ["master", "config", "app", "getOrCreate"], "answer": "master" },
+        { "id": "b2", "options": ["getOrCreate", "get", "create", "start"], "answer": "getOrCreate" }
+      ],
+      "explanation": "The 'master' method specifies the Kubernetes master URL, and 'getOrCreate' initializes the session.",
+      "tags": ["spark", "session"]
+    },
+    {
+      "id": "18-spark-on-k8s-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this code output?",
+      "language": "python",
+      "code": "print([x**2 for x in range(3)])",
+      "options": [
+        { "id": "a", "text": "[0, 1, 4]" },
+        { "id": "b", "text": "[1, 4, 9]" },
+        { "id": "c", "text": "[0, 1, 2]" },
+        { "id": "d", "text": "[0, 2, 4]" }
+      ],
+      "answer": "a",
+      "explanation": "The list comprehension squares each number in the range from 0 to 2.",
+      "tags": ["python", "list_comprehension"]
+    },
+    {
+      "id": "18-spark-on-k8s-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Kubernetes can automatically scale Spark applications based on resource usage.",
+      "answer": true,
+      "explanation": "Kubernetes supports horizontal pod autoscaling, which can be leveraged for Spark applications.",
+      "tags": ["kubernetes", "scaling"]
+    },
+    {
+      "id": "18-spark-on-k8s-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is the role of the Spark operator in Kubernetes?",
+      "options": [
+        { "id": "a", "text": "Deploying Spark jobs" },
+        { "id": "b", "text": "Monitoring Spark jobs" },
+        { "id": "c", "text": "Configuring Kubernetes" },
+        { "id": "d", "text": "Creating Docker images" }
+      ],
+      "answer": "a",
+      "explanation": "The Spark operator automates the deployment and management of Spark applications on Kubernetes.",
+      "tags": ["spark", "operator"]
+    },
+    {
+      "id": "18-spark-on-k8s-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to deploy a Spark job on Kubernetes correctly:",
+      "steps": [
+        { "id": "s1", "text": "Submit the Spark job using kubectl." },
+        { "id": "s2", "text": "Create a Spark cluster on Kubernetes." },
+        { "id": "s3", "text": "Configure the Spark application." },
+        { "id": "s4", "text": "Build the Docker image." }
+      ],
+      "correctOrder": ["s2", "s4", "s3", "s1"],
+      "explanation": "First, create the cluster, then build the Docker image, configure the application, and finally submit the job.",
+      "tags": ["deployment", "spark"]
+    },
+    {
+      "id": "18-spark-on-k8s-q8",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is dynamic allocation in Spark?",
+      "options": [
+        { "id": "a", "text": "Automatically scaling resources" },
+        { "id": "b", "text": "Using static resource allocation" },
+        { "id": "c", "text": "Distributing data evenly" },
+        { "id": "d", "text": "Caching data in memory" }
+      ],
+      "answer": "a",
+      "explanation": "Dynamic allocation allows Spark to adjust the number of executors based on workload.",
+      "tags": ["spark", "dynamic_allocation"]
+    },
+    {
+      "id": "18-spark-on-k8s-q9",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the Spark configuration for dynamic allocation:",
+      "language": "python",
+      "code_template": "conf.set('spark.dynamicAllocation.enabled', ____)",
+      "blanks": [
+        { "id": "b1", "options": ["true", "false", "on", "yes"], "answer": "true" }
+      ],
+      "explanation": "Setting 'spark.dynamicAllocation.enabled' to true enables dynamic resource allocation.",
+      "tags": ["spark", "configuration"]
+    },
+    {
+      "id": "18-spark-on-k8s-q10",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "GPU scheduling in Spark on Kubernetes allows for fine-grained resource management.",
+      "answer": true,
+      "explanation": "GPU scheduling enables precise allocation of GPU resources for Spark tasks.",
+      "tags": ["spark", "gpu_scheduling"]
+    },
+    {
+      "id": "18-spark-on-k8s-q11",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following is a benefit of using GPU scheduling in Spark?",
+      "options": [
+        { "id": "a", "text": "Faster CPU processing" },
+        { "id": "b", "text": "Improved memory allocation" },
+        { "id": "c", "text": "Enhanced parallel processing" },
+        { "id": "d", "text": "Lower energy consumption" }
+      ],
+      "answer": "c",
+      "explanation": "GPU scheduling allows for enhanced parallel processing of data, leveraging the power of GPUs.",
+      "tags": ["spark", "gpu_scheduling"]
+    },
+    {
+      "id": "18-spark-on-k8s-q12",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this code print?",
+      "language": "python",
+      "code": "print(sum([i for i in range(5) if i % 2 == 0]))",
+      "options": [
+        { "id": "a", "text": "4" },
+        { "id": "b", "text": "6" },
+        { "id": "c", "text": "10" },
+        { "id": "d", "text": "0" }
+      ],
+      "answer": "b",
+      "explanation": "The sum of even numbers (0, 2, 4) in the range of 5 is 6.",
+      "tags": ["python", "sum"]
+    },
+    {
+      "id": "18-spark-on-k8s-q13",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps for optimizing Spark jobs on Kubernetes:",
+      "steps": [
+        { "id": "s1", "text": "Profile job execution." },
+        { "id": "s2", "text": "Adjust resource configurations." },
+        { "id": "s3", "text": "Apply caching strategies." },
+        { "id": "s4", "text": "Review Spark logs." }
+      ],
+      "correctOrder": ["s1", "s4", "s2", "s3"],
+      "explanation": "Start by profiling the job, then review logs, adjust configurations, and finally apply caching strategies.",
+      "tags": ["optimization", "spark"]
+    },
+    {
+      "id": "18-spark-on-k8s-q14",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What is a common anti-pattern when using Spark with Kubernetes?",
+      "options": [
+        { "id": "a", "text": "Over-provisioning resources" },
+        { "id": "b", "text": "Under-utilizing resources" },
+        { "id": "c", "text": "Ignoring data locality" },
+        { "id": "d", "text": "All of the above" }
+      ],
+      "answer": "d",
+      "explanation": "All these practices can lead to inefficient resource management and performance issues.",
+      "tags": ["anti-pattern", "spark"]
+    },
+    {
+      "id": "18-spark-on-k8s-q15",
+      "type": "true_false",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Using a static resource allocation strategy is often more efficient than dynamic allocation in Spark.",
+      "answer": false,
+      "explanation": "Dynamic allocation can optimize resource usage by scaling based on actual workload, unlike static allocation.",
+      "tags": ["spark", "dynamic_allocation"]
+    }
+  ]
+}

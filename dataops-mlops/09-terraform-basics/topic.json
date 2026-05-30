@@ -1,0 +1,43 @@
+{
+  "id": "09-terraform-basics",
+  "section": "dataops-mlops",
+  "tier": "intermediate",
+  "moduleOrder": 9,
+  "version": 1,
+  "title": "Terraform Basics",
+  "shortDescription": "Terraform Basics \u2014 beginner to advanced concepts and code.",
+  "icon": "09-terraform-basics",
+  "estimatedMinutes": 40,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-providers",
+      "title": "Providers",
+      "minutes": 8
+    },
+    {
+      "id": "03-state",
+      "title": "State",
+      "minutes": 8
+    },
+    {
+      "id": "04-modules",
+      "title": "Modules",
+      "minutes": 8
+    },
+    {
+      "id": "05-drift-detection",
+      "title": "Drift Detection",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

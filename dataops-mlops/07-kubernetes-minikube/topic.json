@@ -1,0 +1,43 @@
+{
+  "id": "07-kubernetes-minikube",
+  "section": "dataops-mlops",
+  "tier": "intermediate",
+  "moduleOrder": 7,
+  "version": 1,
+  "title": "Kubernetes with Minikube",
+  "shortDescription": "Kubernetes with Minikube \u2014 beginner to advanced concepts and code.",
+  "icon": "07-kubernetes-minikube",
+  "estimatedMinutes": 40,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-pods-deployments",
+      "title": "Pods Deployments",
+      "minutes": 8
+    },
+    {
+      "id": "03-services",
+      "title": "Services",
+      "minutes": 8
+    },
+    {
+      "id": "04-configmaps-secrets",
+      "title": "Configmaps Secrets",
+      "minutes": 8
+    },
+    {
+      "id": "05-local-cluster-tips",
+      "title": "Local Cluster Tips",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

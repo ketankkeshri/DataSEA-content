@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "02-linux-server-basics",
+  "type": "module",
+  "questions": [
+    {
+      "id": "02-linux-server-basics-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What does SSH stand for?",
+      "options": [
+        { "id": "a", "text": "Secure Shell" },
+        { "id": "b", "text": "Super Secure Host" },
+        { "id": "c", "text": "Secure Socket Handler" },
+        { "id": "d", "text": "Simple Shell" }
+      ],
+      "answer": "a",
+      "explanation": "SSH stands for Secure Shell, a protocol for secure remote login.",
+      "tags": ["ssh"]
+    },
+    {
+      "id": "02-linux-server-basics-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which command is used to change file permissions in Linux?",
+      "options": [
+        { "id": "a", "text": "chmod" },
+        { "id": "b", "text": "chown" },
+        { "id": "c", "text": "cp" },
+        { "id": "d", "text": "mv" }
+      ],
+      "answer": "a",
+      "explanation": "The chmod command is used to change file permissions in Linux.",
+      "tags": ["file-perms"]
+    },
+    {
+      "id": "02-linux-server-basics-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the command to install a package using apt:",
+      "language": "bash",
+      "code_template": "sudo apt-____ package-name",
+      "blanks": [
+        { "id": "b1", "options": ["install", "remove", "update", "list"], "answer": "install" }
+      ],
+      "explanation": "The correct command to install a package using apt is 'sudo apt-install package-name'."
+    },
+    {
+      "id": "02-linux-server-basics-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this command print?",
+      "language": "bash",
+      "code": "echo $((3 + 4))",
+      "options": [
+        { "id": "a", "text": "3" },
+        { "id": "b", "text": "4" },
+        { "id": "c", "text": "7" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "c",
+      "explanation": "The command evaluates the expression and prints the result, which is 7.",
+      "tags": ["package-mgmt"]
+    },
+    {
+      "id": "02-linux-server-basics-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "The 'tail' command can be used to view the last lines of a log file.",
+      "answer": true,
+      "explanation": "True. The 'tail' command is specifically designed for this purpose.",
+      "tags": ["log-files"]
+    },
+    {
+      "id": "02-linux-server-basics-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which command will show you the contents of a directory?",
+      "options": [
+        { "id": "a", "text": "cat" },
+        { "id": "b", "text": "ls" },
+        { "id": "c", "text": "cd" },
+        { "id": "d", "text": "mkdir" }
+      ],
+      "answer": "b",
+      "explanation": "The 'ls' command lists the contents of a directory.",
+      "tags": ["file-perms"]
+    },
+    {
+      "id": "02-linux-server-basics-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps for checking log files:",
+      "steps": [
+        { "id": "s1", "text": "Identify the log file you need to check." },
+        { "id": "s2", "text": "Use the tail command to view the last entries." },
+        { "id": "s3", "text": "Open the terminal." },
+        { "id": "s4", "text": "Analyze the output for errors." }
+      ],
+      "correctOrder": ["s3", "s1", "s2", "s4"],
+      "explanation": "First, you open the terminal, then identify the log file, use 'tail' to view it, and finally analyze the output.",
+      "tags": ["log-files"]
+    },
+    {
+      "id": "02-linux-server-basics-q8",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Fill in the blank to check the current directory:",
+      "language": "bash",
+      "code_template": "____",
+      "blanks": [
+        { "id": "b1", "options": ["pwd", "ls", "cd", "dir"], "answer": "pwd" }
+      ],
+      "explanation": "'pwd' prints the current working directory in the terminal."
+    },
+    {
+      "id": "02-linux-server-basics-q9",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "The 'chmod' command can only be used to grant permissions.",
+      "answer": false,
+      "explanation": "False. The 'chmod' command can also be used to revoke permissions.",
+      "tags": ["file-perms"]
+    },
+    {
+      "id": "02-linux-server-basics-q10",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which command is used to view the contents of a file?",
+      "options": [
+        { "id": "a", "text": "cat" },
+        { "id": "b", "text": "touch" },
+        { "id": "c", "text": "echo" },
+        { "id": "d", "text": "less" }
+      ],
+      "answer": "a",
+      "explanation": "The 'cat' command is used to display the contents of a file.",
+      "tags": ["log-files"]
+    },
+    {
+      "id": "02-linux-server-basics-q11",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this command print?",
+      "language": "bash",
+      "code": "echo 'Hello, World!' | awk '{print $2}'",
+      "options": [
+        { "id": "a", "text": "Hello," },
+        { "id": "b", "text": "World!" },
+        { "id": "c", "text": "Hello World!" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "b",
+      "explanation": "The command prints the second word from the input string, which is 'World!'.",
+      "tags": ["ssh"]
+    },
+    {
+      "id": "02-linux-server-basics-q12",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What is the default port for SSH?",
+      "options": [
+        { "id": "a", "text": "22" },
+        { "id": "b", "text": "80" },
+        { "id": "c", "text": "443" },
+        { "id": "d", "text": "21" }
+      ],
+      "answer": "a",
+      "explanation": "The default port for SSH is 22.",
+      "tags": ["ssh"]
+    },
+    {
+      "id": "02-linux-server-basics-q13",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Fill in the blank to check disk usage:",
+      "language": "bash",
+      "code_template": "df -____",
+      "blanks": [
+        { "id": "b1", "options": ["h", "k", "m", "g"], "answer": "h" }
+      ],
+      "explanation": "The '-h' flag provides human-readable disk usage in the df command."
+    },
+    {
+      "id": "02-linux-server-basics-q14",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps for updating packages:",
+      "steps": [
+        { "id": "s1", "text": "Run 'sudo apt update'." },
+        { "id": "s2", "text": "Run 'sudo apt upgrade'." },
+        { "id": "s3", "text": "Open the terminal." },
+        { "id": "s4", "text": "Check for outdated packages." }
+      ],
+      "correctOrder": ["s3", "s1", "s4", "s2"],
+      "explanation": "First, you open the terminal, then update the package list, check for outdated packages, and finally upgrade them.",
+      "tags": ["package-mgmt"]
+    },
+    {
+      "id": "02-linux-server-basics-q15",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "The 'grep' command is used to search within files.",
+      "answer": true,
+      "explanation": "True. The 'grep' command is a powerful tool for searching text within files.",
+      "tags": ["log-files"]
+    }
+  ]
+}

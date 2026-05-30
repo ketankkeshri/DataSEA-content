@@ -1,0 +1,38 @@
+{
+  "id": "12-dagster",
+  "section": "dataops-mlops",
+  "tier": "intermediate",
+  "moduleOrder": 12,
+  "version": 1,
+  "title": "Dagster Fundamentals",
+  "shortDescription": "Dagster Fundamentals \u2014 beginner to advanced concepts and code.",
+  "icon": "12-dagster",
+  "estimatedMinutes": 32,
+  "isPro": false,
+  "tags": [],
+  "lessons": [
+    {
+      "id": "01-intro",
+      "title": "Intro",
+      "minutes": 8
+    },
+    {
+      "id": "02-software-defined-assets",
+      "title": "Software Defined Assets",
+      "minutes": 8
+    },
+    {
+      "id": "03-ops",
+      "title": "Ops",
+      "minutes": 8
+    },
+    {
+      "id": "04-schedules-sensors",
+      "title": "Schedules Sensors",
+      "minutes": 8
+    }
+  ],
+  "hasQuiz": true,
+  "hasCheatsheet": true,
+  "hasBossQuiz": false
+}

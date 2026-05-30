@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "19-prod-model-monitoring",
+  "type": "module",
+  "questions": [
+    {
+      "id": "19-prod-model-monitoring-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the purpose of latency-error budgets in production monitoring?",
+      "options": [
+        { "id": "a", "text": "To measure user engagement" },
+        { "id": "b", "text": "To allocate resources dynamically" },
+        { "id": "c", "text": "To balance performance and reliability" },
+        { "id": "d", "text": "To track software bugs" }
+      ],
+      "answer": "c",
+      "explanation": "Latency-error budgets help in balancing performance and reliability by setting thresholds for acceptable latency and error rates.",
+      "tags": ["latency-error-budgets"]
+    },
+    {
+      "id": "19-prod-model-monitoring-q2",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to monitor data drift:",
+      "language": "python",
+      "code_template": "monitor_data_drift(df, ____, ____)",
+      "blanks": [
+        { "id": "b1", "options": ["threshold", "model_version", "data_type", "time_frame"], "answer": "threshold" },
+        { "id": "b2", "options": ["alert", "log", "ignore", "update"], "answer": "alert" }
+      ],
+      "explanation": "The function should take a threshold for acceptable drift and specify what action to take, such as sending an alert.",
+      "tags": ["data-drift-monitoring"]
+    },
+    {
+      "id": "19-prod-model-monitoring-q3",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print([x for x in range(5) if x % 2 == 0])",
+      "options": [
+        { "id": "a", "text": "[0, 1, 2, 3, 4]" },
+        { "id": "b", "text": "[0, 2, 4]" },
+        { "id": "c", "text": "[1, 3]" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "b",
+      "explanation": "The list comprehension filters even numbers from 0 to 4, resulting in [0, 2, 4].",
+      "tags": ["python", "filtering"]
+    },
+    {
+      "id": "19-prod-model-monitoring-q4",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Shadow deployments allow you to test new models with real traffic without affecting users.",
+      "answer": true,
+      "explanation": "Shadow deployments route real traffic to a new model while keeping the original model active, enabling safe testing.",
+      "tags": ["shadow-deployments"]
+    },
+    {
+      "id": "19-prod-model-monitoring-q5",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to implement data drift monitoring:",
+      "steps": [
+        { "id": "s1", "text": "Set acceptable drift thresholds" },
+        { "id": "s2", "text": "Collect new data" },
+        { "id": "s3", "text": "Compare new data with baseline" },
+        { "id": "s4", "text": "Trigger alerts if drift is detected" }
+      ],
+      "correctOrder": ["s2", "s3", "s1", "s4"],
+      "explanation": "First, you collect new data, then compare it against the baseline, set thresholds, and finally trigger alerts if necessary.",
+      "tags": ["data-drift-monitoring"]
+    },
+    {
+      "id": "19-prod-model-monitoring-q6",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the main goal of MLOps?",
+      "options": [
+        { "id": "a", "text": "To create more complex models" },
+        { "id": "b", "text": "To improve collaboration between teams" },
+        { "id": "c", "text": "To eliminate the need for data" },
+        { "id": "d", "text": "To reduce data storage costs" }
+      ],
+      "answer": "b",
+      "explanation": "MLOps aims to enhance collaboration between data scientists, engineers, and operations teams to streamline the ML lifecycle.",
+      "tags": ["MLOps"]
+    },
+    {
+      "id": "19-prod-model-monitoring-q7",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet for setting up shadow deployment:",
+      "language": "python",
+      "code_template": "shadow_deploy(model, ____, ____)",
+      "blanks": [
+        { "id": "b1", "options": ["traffic", "model_version", "endpoint", "timeout"], "answer": "endpoint" },
+        { "id": "b2", "options": ["priority", "version", "type", "data"], "answer": "version" }
+      ],
+      "explanation": "The function requires the endpoint to route the traffic and the version of the model to deploy.",
+      "tags": ["shadow-deployments"]
+    },
+    {
+      "id": "19-prod-model-monitoring-q8",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print([x**2 for x in range(3)])",
+      "options": [
+        { "id": "a", "text": "[0, 1, 4]" },
+        { "id": "b", "text": "[1, 4, 9]" },
+        { "id": "c", "text": "[0, 2, 3]" },
+        { "id": "d", "text": "[0, 1, 2]" }
+      ],
+      "answer": "a",
+      "explanation": "The list comprehension squares each number from 0 to 2, resulting in [0, 1, 4].",
+      "tags": ["python", "squares"]
+    },
+    {
+      "id": "19-prod-model-monitoring-q9",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Data drift can occur due to changes in the input data distribution.",
+      "answer": true,
+      "explanation": "Data drift happens when the statistical properties of the input data change over time, impacting model performance.",
+      "tags": ["data-drift-monitoring"]
+    },
+    {
+      "id": "19-prod-model-monitoring-q10",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these steps to manage latency in production models:",
+      "steps": [
+        { "id": "s1", "text": "Measure current latency" },
+        { "id": "s2", "text": "Identify bottlenecks" },
+        { "id": "s3", "text": "Implement optimizations" },
+        { "id": "s4", "text": "Monitor post-optimization performance" }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "You start by measuring the current latency, then identify bottlenecks, implement optimizations, and finally monitor the results.",
+      "tags": ["latency-error-budgets"]
+    },
+    {
+      "id": "19-prod-model-monitoring-q11",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What is a common approach for detecting data drift?",
+      "options": [
+        { "id": "a", "text": "Statistical tests" },
+        { "id": "b", "text": "Code reviews" },
+        { "id": "c", "text": "User feedback" },
+        { "id": "d", "text": "A/B testing" }
+      ],
+      "answer": "a",
+      "explanation": "Statistical tests are commonly used to compare the distribution of incoming data against the training dataset to detect drift.",
+      "tags": ["data-drift-monitoring"]
+    },
+    {
+      "id": "19-prod-model-monitoring-q12",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Fill in the blanks to optimize a model's performance:",
+      "language": "python",
+      "code_template": "optimize_model(model, ____, ____)",
+      "blanks": [
+        { "id": "b1", "options": ["learning_rate", "data_set", "num_epochs", "model_type"], "answer": "learning_rate" },
+        { "id": "b2", "options": ["batch_size", "validation_split", "dropout_rate", "activation_function"], "answer": "batch_size" }
+      ],
+      "explanation": "Optimizing the learning rate and batch size are crucial for improving the performance of models during training.",
+      "tags": ["model-optimization"]
+    },
+    {
+      "id": "19-prod-model-monitoring-q13",
+      "type": "tap_the_output",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What does this code print?",
+      "language": "python",
+      "code": "print(sum([1 for _ in range(5) if _ % 2 == 1]))",
+      "options": [
+        { "id": "a", "text": "0" },
+        { "id": "b", "text": "2" },
+        { "id": "c", "text": "3" },
+        { "id": "d", "text": "5" }
+      ],
+      "answer": "b",
+      "explanation": "The list comprehension counts odd numbers from 0 to 4, resulting in 2 odd numbers (1 and 3), hence the sum is 2.",
+      "tags": ["python", "counting"]
+    },
+    {
+      "id": "19-prod-model-monitoring-q14",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Latency measurement should include both processing and network delays.",
+      "answer": true,
+      "explanation": "Accurately measuring latency requires considering both processing time and any network delays, as both impact overall performance.",
+      "tags": ["latency-error-budgets"]
+    },
+    {
+      "id": "19-prod-model-monitoring-q15",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Which of the following is a key benefit of implementing shadow deployments?",
+      "options": [
+        { "id": "a", "text": "Reduced model complexity" },
+        { "id": "b", "text": "Increased system downtime" },
+        { "id": "c", "text": "Real-time performance evaluation" },
+        { "id": "d", "text": "Lower computational costs" }
+      ],
+      "answer": "c",
+      "explanation": "Shadow deployments enable real-time performance evaluation of new models against actual traffic without affecting user experience.",
+      "tags": ["shadow-deployments"]
+    }
+  ]
+}

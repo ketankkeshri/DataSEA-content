@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": 1,
+  "moduleId": "04-ci-pipelines-intro",
+  "type": "module",
+  "questions": [
+    {
+      "id": "04-ci-pipelines-intro-q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "What is the purpose of CI pipelines?",
+      "options": [
+        { "id": "a", "text": "To increase manual testing efforts." },
+        { "id": "b", "text": "To automate the integration of code changes." },
+        { "id": "c", "text": "To manage database migrations." },
+        { "id": "d", "text": "To deploy code to production only." }
+      ],
+      "answer": "b",
+      "explanation": "CI pipelines automate the integration and testing of code changes, improving efficiency."
+    },
+    {
+      "id": "04-ci-pipelines-intro-q2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which tool is commonly used for CI/CD?",
+      "options": [
+        { "id": "a", "text": "Jenkins" },
+        { "id": "b", "text": "Photoshop" },
+        { "id": "c", "text": "Excel" },
+        { "id": "d", "text": "Notepad" }
+      ],
+      "answer": "a",
+      "explanation": "Jenkins is a widely used tool for implementing CI/CD pipelines."
+    },
+    {
+      "id": "04-ci-pipelines-intro-q3",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the snippet to define a job in GitHub Actions:",
+      "language": "yaml",
+      "code_template": "jobs:\n  build:\n    runs-on: ____\n    steps:\n      - name: Checkout code\n        uses: actions/checkout@v2",
+      "blanks": [
+        { "id": "b1", "options": ["ubuntu-latest", "windows-latest", "macos-latest", "linux-latest"], "answer": "ubuntu-latest" }
+      ],
+      "explanation": "The 'runs-on' field specifies the OS environment for the job; 'ubuntu-latest' is a common choice."
+    },
+    {
+      "id": "04-ci-pipelines-intro-q4",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print('Hello, World!'.split(','))",
+      "options": [
+        { "id": "a", "text": "['Hello', ' World!']" },
+        { "id": "b", "text": "['Hello World!']" },
+        { "id": "c", "text": "['Hello', 'World!']" },
+        { "id": "d", "text": "Error" }
+      ],
+      "answer": "a",
+      "explanation": "The split method divides the string at commas, resulting in a list with two elements."
+    },
+    {
+      "id": "04-ci-pipelines-intro-q5",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Continuous integration helps reduce integration problems.",
+      "answer": true,
+      "explanation": "By integrating regularly, CI reduces integration issues and allows for faster feedback."
+    },
+    {
+      "id": "04-ci-pipelines-intro-q6",
+      "type": "mcq",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Which of the following is NOT a benefit of CI/CD?",
+      "options": [
+        { "id": "a", "text": "Faster release cycles" },
+        { "id": "b", "text": "Higher deployment risk" },
+        { "id": "c", "text": "Improved code quality" },
+        { "id": "d", "text": "Automated testing" }
+      ],
+      "answer": "b",
+      "explanation": "CI/CD aims to reduce deployment risk by facilitating smaller, more frequent releases."
+    },
+    {
+      "id": "04-ci-pipelines-intro-q7",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these pipeline steps correctly:",
+      "steps": [
+        { "id": "s1", "text": "Run tests" },
+        { "id": "s2", "text": "Code commit" },
+        { "id": "s3", "text": "Build application" },
+        { "id": "s4", "text": "Deploy to production" }
+      ],
+      "correctOrder": ["s2", "s3", "s1", "s4"],
+      "explanation": "The correct order starts with a code commit, followed by building, testing, and deploying."
+    },
+    {
+      "id": "04-ci-pipelines-intro-q8",
+      "type": "code_completion",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "Complete the command to build a Docker image:",
+      "language": "bash",
+      "code_template": "docker build -t myapp:latest ____",
+      "blanks": [
+        { "id": "b1", "options": [".", "./myapp", "../myapp", "src/"], "answer": ". " }
+      ],
+      "explanation": "The '.' specifies the current directory as the context for the Docker build."
+    },
+    {
+      "id": "04-ci-pipelines-intro-q9",
+      "type": "mcq",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "What is a common pattern for handling secrets in CI/CD?",
+      "options": [
+        { "id": "a", "text": "Hardcoding secrets in the code" },
+        { "id": "b", "text": "Using environment variables" },
+        { "id": "c", "text": "Storing secrets in public repositories" },
+        { "id": "d", "text": "Logging secrets for debugging" }
+      ],
+      "answer": "b",
+      "explanation": "Using environment variables is a best practice for safely managing secrets in CI/CD."
+    },
+    {
+      "id": "04-ci-pipelines-intro-q10",
+      "type": "tap_the_output",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "What does this print?",
+      "language": "python",
+      "code": "print(sum([1, 2, 3]) == 6)",
+      "options": [
+        { "id": "a", "text": "True" },
+        { "id": "b", "text": "False" },
+        { "id": "c", "text": "Error" },
+        { "id": "d", "text": "None" }
+      ],
+      "answer": "a",
+      "explanation": "The sum of the list [1, 2, 3] is indeed 6, so the expression evaluates to True."
+    },
+    {
+      "id": "04-ci-pipelines-intro-q11",
+      "type": "true_false",
+      "difficulty": "medium",
+      "xp": 30,
+      "coins": 10,
+      "question": "GitLab CI uses a YAML configuration file to define pipelines.",
+      "answer": true,
+      "explanation": "GitLab CI configurations are defined in a .gitlab-ci.yml file."
+    },
+    {
+      "id": "04-ci-pipelines-intro-q12",
+      "type": "mcq",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "Which symbol is used to denote a branch in Git?",
+      "options": [
+        { "id": "a", "text": "@" },
+        { "id": "b", "text": "#" },
+        { "id": "c", "text": "!" },
+        { "id": "d", "text": "HEAD" }
+      ],
+      "answer": "d",
+      "explanation": "HEAD is a reference to the current branch in Git."
+    },
+    {
+      "id": "04-ci-pipelines-intro-q13",
+      "type": "code_completion",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Complete the Git command to merge a branch:",
+      "language": "bash",
+      "code_template": "git merge ____",
+      "blanks": [
+        { "id": "b1", "options": ["develop", "feature", "main", "release"], "answer": "feature" }
+      ],
+      "explanation": "The 'git merge' command combines changes from the specified branch into the current branch."
+    },
+    {
+      "id": "04-ci-pipelines-intro-q14",
+      "type": "order_the_steps",
+      "difficulty": "hard",
+      "xp": 40,
+      "coins": 15,
+      "question": "Order these GitHub Actions steps correctly:",
+      "steps": [
+        { "id": "s1", "text": "Run tests" },
+        { "id": "s2", "text": "Trigger workflow" },
+        { "id": "s3", "text": "Build application" },
+        { "id": "s4", "text": "Deploy to staging" }
+      ],
+      "correctOrder": ["s2", "s3", "s1", "s4"],
+      "explanation": "The correct order starts with triggering the workflow, followed by building, testing, and deploying."
+    },
+    {
+      "id": "04-ci-pipelines-intro-q15",
+      "type": "true_false",
+      "difficulty": "easy",
+      "xp": 20,
+      "coins": 5,
+      "question": "CI/CD tools can help improve collaboration between developers.",
+      "answer": true,
+      "explanation": "CI/CD tools facilitate collaboration by automating integrations and deployments."
+    }
+  ]
+}
