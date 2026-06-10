@@ -38,79 +38,59 @@ from pathlib import Path
 
 # ── Config ──────────────────────────────────────────────────────────────
 
-SOURCE_DIR = Path.home() / "Downloads" / "DataSEA" / "MCQS"
-OUT_DIR = Path(__file__).resolve().parent.parent / "daily_pool"
+REPO_ROOT = Path(__file__).resolve().parent.parent
+SOURCE_DIR = REPO_ROOT / "sources"
+OUT_DIR = REPO_ROOT / "daily_pool"
 
 START_DATE = date(2026, 6, 10)
 DAILY_5_PER_DAY = 5
 RNG_SEED = 42
 
-# (track_id, source_filename, json_key_or_None_for_top_level_list, id_prefix)
-# All four files now carry a `difficulty` field (Easy / Medium / Hard, roughly
-# evenly split). We preserve it on the question object so Daily-Challenge can
-# pull Hard, Daily-5 can mix, and Review mode can filter by it later.
+# Canonical sources, produced by normalize_sources.py — one file per track.
+# Each file is `{schemaVersion, track, total, questions: [...]}` with a single
+# unified question schema, so this generator no longer cares about per-input quirks.
 SOURCES = [
-    ("data-analyst",    "data_analytics_mcq_10000_with_difficulty.json",                  "questions", "da"),
-    ("data-engineer",   "data_engineering_mcq_5000_with_difficulty.json",                 None,        "de"),
-    ("data-science-ml", "data_science_ml_interview_questions_5000_with_difficulty.json",  "questions", "ds"),
-    ("dataops-mlops",   "mlops_dataops_5000_questions.json",                              "questions", "mo"),
+    "data-analyst",
+    "data-engineer",
+    "data-science-ml",
+    "dataops-mlops",
 ]
 
-# ── Normalization ──────────────────────────────────────────────────────
+# ── Schedule shape ─────────────────────────────────────────────────────
 
-def normalize_question(track, prefix, raw, idx):
-    """Convert any of the 3 raw shapes into one consistent question schema."""
-    qid = f"{prefix}-{idx:05d}"
-
-    options = raw.get("options")
-    correct_index = 0
-    if isinstance(options, dict):
-        keys = sorted(options.keys())                        # ['A','B','C','D']
-        opts = [options[k] for k in keys]
-        correct_answers = raw.get("correct_answers") or []
-        if correct_answers and correct_answers[0] in keys:
-            correct_index = keys.index(correct_answers[0])
-    elif isinstance(options, list):
-        opts = list(options)
-        if "correct_option_index" in raw:
-            correct_index = int(raw["correct_option_index"])
-        else:
-            answer_text = raw.get("correct_answer")
-            if answer_text in opts:
-                correct_index = opts.index(answer_text)
-    else:
-        opts = []
-
+def to_schedule_question(track, raw):
+    """
+    Convert a canonical source question (from sources/<track>.json) into the
+    daily-pool question shape — adds source + xp/coins, preserves everything
+    else. `availableFrom` is set later by assign_dates().
+    """
     difficulty = (raw.get("difficulty") or "easy").lower()
     if difficulty not in {"easy", "medium", "hard"}:
         difficulty = "easy"
-
-    # XP / coin reward scales gently with difficulty.
     xp, coins = {"easy": (10, 2), "medium": (15, 3), "hard": (25, 5)}.get(
         difficulty, (10, 2),
     )
-
     return {
-        "id": qid,
-        "track": track,
-        "source": "daily-pool",
-        "category": raw.get("category", "General"),
-        "difficulty": difficulty,
-        "question": raw.get("question", ""),
-        "options": opts,
-        "correctIndex": correct_index,
-        "xp": xp,
-        "coins": coins,
+        "id":           raw["id"],
+        "track":        track,
+        "source":       "daily-pool",
+        "category":     raw.get("category", "General"),
+        "topic":        raw.get("topic", ""),
+        "difficulty":   difficulty,
+        "question":     raw.get("question", ""),
+        "options":      raw.get("options") or [],
+        "correctIndex": int(raw.get("correctIndex", 0)),
+        "tags":         raw.get("tags") or [],
+        "xp":           xp,
+        "coins":        coins,
     }
 
 
-def load_track(track, filename, key, prefix):
-    path = SOURCE_DIR / filename
+def load_track(track):
+    path = SOURCE_DIR / f"{track}.json"
     with open(path) as f:
         data = json.load(f)
-    raw_qs = data if key is None else data[key]
-    return [normalize_question(track, prefix, raw, i + 1)
-            for i, raw in enumerate(raw_qs)]
+    return [to_schedule_question(track, q) for q in data.get("questions", [])]
 
 
 # ── Date assignment ────────────────────────────────────────────────────
@@ -201,9 +181,9 @@ def write_pool():
     }
     rng = random.Random(RNG_SEED)
 
-    for track, filename, key, prefix in SOURCES:
+    for track in SOURCES:
         print(f"Loading {track}…", end=" ", flush=True)
-        questions = load_track(track, filename, key, prefix)
+        questions = load_track(track)
         assign_dates(questions, rng)
         by_month = bucket_by_month(questions)
 
